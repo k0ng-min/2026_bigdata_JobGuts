@@ -28,15 +28,16 @@ def add_table(doc,title,rows):
 def build(w,title,tables,body,nexts):
  d=Document(); black(d); sec=d.sections[0]; sec.top_margin=Inches(.7); sec.bottom_margin=Inches(.7)
  p=d.add_paragraph();p.alignment=WD_ALIGN_PARAGRAPH.CENTER;p.add_run(f'Week {w} 프로젝트 진행보고서').bold=True
- for line in ['프로젝트명: JobGuts','과목명: [직접 입력]','팀명: JOBGUTS','보고 기간: [직접 입력]','작성자: [직접 입력]']:
-  d.add_paragraph(line).alignment=WD_ALIGN_PARAGRAPH.CENTER
- for h,text in [('1. 이번 주 목표',f'Week {w} 명세에 따라 {title} 작업을 진행했다.'),('2. 실제 진행 내용 및 증거',body)]: d.add_heading(h,1);d.add_paragraph(text)
+ meta=d.add_table(rows=1, cols=2); meta.autofit=True; meta.cell(0,0).text='팀명: JOBGUTS'; meta.cell(0,1).text='작성자: [직접 입력]'; meta.cell(0,1).paragraphs[0].alignment=WD_ALIGN_PARAGRAPH.RIGHT
+ for h,text in [('1. 이번 주 목표',f'이번 주에는 {title} 작업을 실제 데이터와 실행 가능한 코드 기준으로 정리하는 것을 목표로 했다.'),('2. 실제 진행 내용 및 증거',body)]: d.add_heading(h,1);d.add_paragraph(text)
  for t,rows in tables:add_table(d,t,rows)
  d.add_paragraph(f'그림. Week {w} 증거 파일 경로: reports/assets/week{w}/')
- d.add_heading('3. 문제점 및 차단 요인',1);d.add_paragraph('실제 GLM API 연결은 구현 범위에서 제외했다. 원본의 직무 분류 열 부재와 기술 라벨 한계는 결과 해석 시 유의했다.')
- d.add_heading('4. 다음 주 계획',1);d.add_paragraph(nexts)
- d.add_heading('5. 역할 분담 및 실제 수행 내역',1);add_table(d,'역할별 수행 내역',[['데이터 확보·전처리','입력 범위, 품질 요약, 중복 기준'],['기술명 정규화·검증','사전·정규화 배열·메타데이터'],['Apriori·연관규칙 분석','트랜잭션·지표·규칙 산출물'],['서비스·GLM 준비','CLI 조회·근거 공고·fake provider']])
- d.add_heading('6. 결론',1);d.add_paragraph(body+' 다음 주 인계 파일과 조건은 본문 및 assets에 기록했다.')
+ d.add_heading('3. 분석 및 고찰',1);d.add_paragraph('표의 수치는 실행 후 생성된 artifacts 파일에서 확인한 값이다. 결과를 해석할 때에는 공고 원문 자체의 라벨 품질, 중복 기준, 빈 기술 목록 처리 기준이 분석 대상 수와 규칙 수에 직접 영향을 준다는 점을 함께 고려했다. 특히 JobGuts는 기술명만을 트랜잭션 항목으로 사용하고 직무·경력 조건은 필터와 설명 메타데이터로 분리한다.')
+ d.add_paragraph('이번 주 산출물은 다음 역할의 입력으로 사용된다. 데이터 확보·전처리 결과는 입력 범위를 고정하고, 정규화 결과는 동일 공고 집합에서 전후 비교가 가능하도록 원본 배열과 함께 유지한다. 분석 결과는 서비스 계층에서 재계산하지 않고 저장된 규칙과 근거 공고를 조회하는 방식으로 연결했다.')
+ d.add_heading('4. 문제점 및 차단 요인',1);d.add_paragraph('실제 GLM API 연결은 구현 범위에서 제외했다. 원본에는 공식 직무 분류 열이 없고 일부 경력 라벨과 기술 배열은 비어 있다. 따라서 확인되지 않은 값을 임의로 보완하지 않았으며, 제목 기반 직무 메타데이터와 사전 밖 기술명은 결과 해석의 한계로 남겼다.')
+ d.add_heading('5. 다음 주 계획',1);d.add_paragraph(nexts)
+ d.add_heading('6. 역할 분담 및 실제 수행 내역',1);add_table(d,'역할별 수행 내역',[['데이터 확보·전처리','입력 범위, 품질 요약, 중복 기준과 다음 입력 파일 전달'],['기술명 정규화·검증','사전·정규화 배열·메타데이터와 예외 목록 전달'],['Apriori·연관규칙 분석','트랜잭션·지표·규칙 산출물과 실험 조건 전달'],['서비스·GLM 준비','CLI 조회·근거 공고·fake provider 계약과 시나리오 전달']])
+ d.add_heading('7. 결론',1);d.add_paragraph(body+' 이번 주 결과는 다음 단계에서 같은 입력 파일, 사전 버전, 필터 조건을 유지해 재현해야 한다. 다음 주 인계 파일과 조건은 본문 및 reports/assets에 기록했다.')
  d.save(WEEKLY/f'week{w}_project_progress_report.docx')
 for w,x in weeks.items():
  (ASSETS/f'week{w}').mkdir(parents=True,exist_ok=True); build(w,*x)
