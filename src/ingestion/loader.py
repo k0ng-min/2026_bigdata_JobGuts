@@ -16,7 +16,7 @@ FIELD_ALIASES = {
     "raw_text": ("raw_text", "text", "description", "job_description"),
     "final_techs": ("final_techs",),
     "hard_skills": ("hard_skills",),
-    "job_role": ("job_role", "role", "category", "job_category", "title"),
+    "job_role": ("job_role", "role", "category", "job_category"),
     "experience_level": ("experience_level", "experience", "career_level"),
 }
 

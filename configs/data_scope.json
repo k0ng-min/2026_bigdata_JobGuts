@@ -8,7 +8,7 @@
     "required_columns": ["source", "job_id", "raw_text", "experience_level", "final_techs", "hard_skills"]
   },
   "input_file_contract": {
-    "expected_path": "data/raw/korean_it_recruit_postings.jsonl",
+    "expected_path": "data/raw/korean_it_recruit_postings.json",
     "accepted_formats": [".json", ".jsonl", ".ndjson", ".csv"],
     "selection_status": "blocked_until_an_approved_export_is_present",
     "selection_rule": "Select exactly one immutable export and record its SHA-256 in the generated summary."

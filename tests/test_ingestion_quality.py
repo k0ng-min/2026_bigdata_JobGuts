@@ -39,3 +39,11 @@ class IngestionQualityTests(unittest.TestCase):
         posting = load_postings(source)[0]
         self.assertEqual(posting.final_techs, ("Java", "Python"))
         self.assertEqual(posting.hard_skills, ("Java", "Python"))
+
+    def test_title_is_not_treated_as_a_job_role(self):
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        source = Path(temp_dir.name) / "postings.json"
+        source.write_text('[{"source":"a","job_id":"1","title":"Backend Engineer"}]', encoding="utf-8")
+
+        self.assertIsNone(load_postings(source)[0].job_role)

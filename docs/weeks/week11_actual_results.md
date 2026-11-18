@@ -2,26 +2,33 @@
 
 ## 실행 상태
 
-- 상태: 구현 완료, 실제 정규화 실행은 입력 데이터 부재로 보류
+- 상태: 완료
 - 확인 일자: 2026-11-18
-- 입력 상태: `data/raw/korean_it_recruit_postings.jsonl`이 아직 없어 변환 수·미등록 기술 수·전후 기술명 수를 생성하지 않았다.
+- 입력 행 수: 40,348
+- 사전 버전: `tech-dictionary.v1`
+
+## 정규화 결과
+
+- 출발 배열: `final_techs`
+- 출력 배열: `normalized_techs`
+- 별칭 변환 수: 127
+- 공고별 중복 제거 수: 0
+- 사전에 없는 기술명 수: 142
+- 원본 행·공고 식별자·`final_techs`는 유지했고 `normalized_techs`와 사전 버전만 추가했다.
 
 ## 구현 내용
 
 - `configs/tech_dictionary.json`에 버전이 있는 기술명 사전과 별칭을 추가했다.
-- `src/normalization/`은 `final_techs`를 출발 배열로 사용하고, 원본 배열·원본 행·공고 식별자는 보존한 채 `normalized_techs`를 추가한다.
-- 별칭 변환, 공고별 중복 제거, 미등록 기술 보존을 분리해 기록한다.
-- `configs/experiments.json`에 정규화 전후 동일 공고 집합 비교 계약을 추가했다. Apriori 파라미터는 실제 10주차 품질 결과가 나온 뒤에 확정한다.
+- `src/normalization/`은 알려진 별칭만 표준 표기로 변환하고 미등록 기술은 원문대로 보존한다.
+- `configs/experiments.json`에 정규화 전후 동일 공고 집합 비교 계약을 추가했다. Apriori 파라미터는 12주차에서 확정한다.
 - `src/llm/`에는 제공자 독립 계약과 fake provider만 있다. 실제 GLM 연결은 구현하지 않았다.
 
 ## 재현 명령
 
 ```powershell
-python -m src.normalization.run_week11
+python -m src.normalization.run_week11 --input data/raw/korean_it_recruit_postings.json --output data/processed/postings_normalized.jsonl
 python -m unittest discover -s tests -v
 ```
-
-입력 파일이 없으면 첫 번째 명령은 `artifacts/week11_normalization_summary.json`에 `blocked_missing_input` 상태만 기록한다.
 
 ## 12주차 인계
 
