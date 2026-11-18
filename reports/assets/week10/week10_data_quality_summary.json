@@ -1,0 +1,136 @@
+{
+  "report_schema_version": "week10.v1",
+  "input": {
+    "file_name": "korean_it_recruit_postings.json",
+    "path": "data\\raw\\korean_it_recruit_postings.json",
+    "sha256": "dc7cc15b1ee80dbf5f959095ee78aad0e8dd39d5156cf694e60591aa1bd9a58f",
+    "bytes": 177980800,
+    "data_scope_config_version": "week10.scope.v1"
+  },
+  "row_count": 40348,
+  "required_field_missing_rows": {
+    "raw_text": 0,
+    "final_techs": 21560,
+    "hard_skills": 9268,
+    "job_role": 40348,
+    "experience_level": 25950
+  },
+  "duplicate_check": {
+    "missing_source_or_job_id_rows": 0,
+    "source_job_id_duplicate_groups": 777,
+    "source_job_id_duplicate_rows_after_first": 777,
+    "suspected_same_body_distinct_id_groups": 744,
+    "suspected_same_body_distinct_id_rows": 1707,
+    "suspected_same_body_examples": [
+      {
+        "body_sha256": "9bec8ec2d702776abcab2e3a9feb89a2cd1cefcd2e099a304fe993277768064b",
+        "row_numbers": [
+          3,
+          3902
+        ]
+      },
+      {
+        "body_sha256": "b3d1e86a33ad7cd078cb0f5a311c145faea33f737d5cd63bc904983fb5585b0b",
+        "row_numbers": [
+          8,
+          1644,
+          2889,
+          2890
+        ]
+      },
+      {
+        "body_sha256": "d7f4f0568a6ac3e875078879c4a009f6282d95a9928277d1d7b79b830424af31",
+        "row_numbers": [
+          11,
+          136,
+          2910,
+          2925
+        ]
+      },
+      {
+        "body_sha256": "e2ac62201e607aba5c29f311842da18ddfe966f1ddd302c398d73b130b1b6eec",
+        "row_numbers": [
+          25,
+          44,
+          3008,
+          3022
+        ]
+      },
+      {
+        "body_sha256": "407a723e8908438a234e217d8e8ca40c45dffd310ccd79f955bbc9a4ba7d4ebd",
+        "row_numbers": [
+          31,
+          3881
+        ]
+      },
+      {
+        "body_sha256": "7a5327320e53eeb5f19fd9aefcd5e130e06f1d272674a8999ea49f75fc958f00",
+        "row_numbers": [
+          49,
+          2866,
+          3893
+        ]
+      },
+      {
+        "body_sha256": "6eb21f25e7a9622edcb47e27989dbd848fa4097bb2114cfb65b8a7f3150e1cc9",
+        "row_numbers": [
+          51,
+          2869,
+          3887
+        ]
+      },
+      {
+        "body_sha256": "ba62d56dabea2851cb6036842ef9f16d49bdc3b0427dd81aa499126e8a88b85a",
+        "row_numbers": [
+          56,
+          3888
+        ]
+      },
+      {
+        "body_sha256": "2c2d63b2111dbd593af43e8473c48adc7493934c0d13027768d3d6e644c9ddc5",
+        "row_numbers": [
+          58,
+          1321,
+          2848,
+          2849
+        ]
+      },
+      {
+        "body_sha256": "2bf05e65c94b375055000ada0d3c7eaeede0bbefdddc40127ff7a112159c9525",
+        "row_numbers": [
+          66,
+          103,
+          2887,
+          2982
+        ]
+      }
+    ]
+  },
+  "technology_field_comparison": {
+    "both_fields_present_rows": 40348,
+    "exact_same_set_rows": 8886,
+    "different_set_rows": 31462,
+    "final_techs_only_rows": 0,
+    "hard_skills_only_rows": 0,
+    "empty_both_rows": 8414
+  },
+  "job_role_counts": {
+    "unknown": 40348
+  },
+  "experience_level_counts": {
+    "1~3년차": 1692,
+    "3~5년차": 2589,
+    "5년이상": 2966,
+    "unknown": 25950,
+    "경력무관": 6597,
+    "신입": 554
+  },
+  "analysis_contract": {
+    "transaction_unit": "one source posting after source + job_id duplicate review",
+    "transaction_items": "selected raw technology field only; job role and experience are metadata filters",
+    "selected_starting_technology_field": "final_techs",
+    "empty_technology_policy": "exclude from Apriori transactions; retain in quality report",
+    "ambiguous_experience_policy": "preserve unknown or needs_review; never infer entry-level"
+  },
+  "status": "complete"
+}

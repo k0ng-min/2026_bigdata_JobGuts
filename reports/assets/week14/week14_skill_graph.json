@@ -1,0 +1,494 @@
+{
+  "nodes": [
+    {
+      "id": ".NET"
+    },
+    {
+      "id": "AWS"
+    },
+    {
+      "id": "Airflow"
+    },
+    {
+      "id": "Android"
+    },
+    {
+      "id": "Angular"
+    },
+    {
+      "id": "ArgoCD"
+    },
+    {
+      "id": "Azure"
+    },
+    {
+      "id": "Bash"
+    },
+    {
+      "id": "C"
+    },
+    {
+      "id": "C#"
+    },
+    {
+      "id": "C++"
+    },
+    {
+      "id": "CSS"
+    },
+    {
+      "id": "Datadog"
+    },
+    {
+      "id": "Django"
+    },
+    {
+      "id": "Express"
+    },
+    {
+      "id": "FastAPI"
+    },
+    {
+      "id": "Flask"
+    },
+    {
+      "id": "GCP"
+    },
+    {
+      "id": "Grafana"
+    },
+    {
+      "id": "HTML"
+    },
+    {
+      "id": "JPA"
+    },
+    {
+      "id": "Java"
+    },
+    {
+      "id": "JavaScript"
+    },
+    {
+      "id": "Kafka"
+    },
+    {
+      "id": "Kubernetes"
+    },
+    {
+      "id": "LangChain"
+    },
+    {
+      "id": "LlamaIndex"
+    },
+    {
+      "id": "MyBatis"
+    },
+    {
+      "id": "NestJS"
+    },
+    {
+      "id": "Next.js"
+    },
+    {
+      "id": "Node.js"
+    },
+    {
+      "id": "Prometheus"
+    },
+    {
+      "id": "PyTorch"
+    },
+    {
+      "id": "Python"
+    },
+    {
+      "id": "RabbitMQ"
+    },
+    {
+      "id": "React"
+    },
+    {
+      "id": "Redux"
+    },
+    {
+      "id": "Spring"
+    },
+    {
+      "id": "Spring Boot"
+    },
+    {
+      "id": "Tailwind CSS"
+    },
+    {
+      "id": "TensorFlow"
+    },
+    {
+      "id": "Terraform"
+    },
+    {
+      "id": "TypeScript"
+    },
+    {
+      "id": "Vite"
+    },
+    {
+      "id": "Zustand"
+    },
+    {
+      "id": "iOS"
+    }
+  ],
+  "edges": [
+    {
+      "source": "LlamaIndex",
+      "target": "LangChain",
+      "support": 0.005120299509992842,
+      "confidence": 0.9789473684210527,
+      "interest": 0.9640269257629015
+    },
+    {
+      "source": "TensorFlow",
+      "target": "PyTorch",
+      "support": 0.030997081979849146,
+      "confidence": 0.9494097807757167,
+      "interest": 0.895398879492889
+    },
+    {
+      "source": "Prometheus",
+      "target": "Grafana",
+      "support": 0.010460826955899356,
+      "confidence": 0.892018779342723,
+      "interest": 0.8774837355724208
+    },
+    {
+      "source": "Redux",
+      "target": "React",
+      "support": 0.007487749821064802,
+      "confidence": 0.9784172661870504,
+      "interest": 0.8495288666935746
+    },
+    {
+      "source": "Zustand",
+      "target": "React",
+      "support": 0.008974288388482079,
+      "confidence": 0.9702380952380952,
+      "interest": 0.8413496957446195
+    },
+    {
+      "source": "Zustand",
+      "target": "TypeScript",
+      "support": 0.008038319660848978,
+      "confidence": 0.8690476190476191,
+      "interest": 0.7762766010439853
+    },
+    {
+      "source": "Next.js",
+      "target": "React",
+      "support": 0.03947585751252546,
+      "confidence": 0.8873762376237624,
+      "interest": 0.7584878381302866
+    },
+    {
+      "source": "Node.js",
+      "target": "JavaScript",
+      "support": 0.05654352254583494,
+      "confidence": 0.9202508960573477,
+      "interest": 0.7576676223690804
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "React",
+      "support": 0.006772009029345372,
+      "confidence": 0.8848920863309353,
+      "interest": 0.7560036868374596
+    },
+    {
+      "source": "MyBatis",
+      "target": "Spring",
+      "support": 0.00919451632439575,
+      "confidence": 0.8789473684210526,
+      "interest": 0.7518207924148862
+    },
+    {
+      "source": "JPA",
+      "target": "Spring",
+      "support": 0.019930628200187192,
+      "confidence": 0.8765133171912833,
+      "interest": 0.749386741185117
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "CSS",
+      "support": 0.006166382205582778,
+      "confidence": 0.8057553956834532,
+      "interest": 0.7450825993392369
+    },
+    {
+      "source": "iOS",
+      "target": "Android",
+      "support": 0.01602158233771954,
+      "confidence": 0.773936170212766,
+      "interest": 0.7384794725306649
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "TypeScript",
+      "support": 0.006331553157518031,
+      "confidence": 0.8273381294964028,
+      "interest": 0.7345671114927691
+    },
+    {
+      "source": "Redux",
+      "target": "TypeScript",
+      "support": 0.006276496173539614,
+      "confidence": 0.8201438848920863,
+      "interest": 0.7273728668884526
+    },
+    {
+      "source": "MyBatis",
+      "target": "Java",
+      "support": 0.009745086164179927,
+      "confidence": 0.9315789473684211,
+      "interest": 0.7175724506443116
+    },
+    {
+      "source": "GCP",
+      "target": "AWS",
+      "support": 0.04195342179155426,
+      "confidence": 0.8819444444444444,
+      "interest": 0.7136352444224217
+    },
+    {
+      "source": "Grafana",
+      "target": "Prometheus",
+      "support": 0.010460826955899356,
+      "confidence": 0.7196969696969697,
+      "interest": 0.7079698321095668
+    },
+    {
+      "source": "CSS",
+      "target": "HTML",
+      "support": 0.04646809447778451,
+      "confidence": 0.7658802177858439,
+      "interest": 0.7047119085858219
+    },
+    {
+      "source": "HTML",
+      "target": "CSS",
+      "support": 0.04646809447778451,
+      "confidence": 0.7596759675967597,
+      "interest": 0.6990031712525434
+    },
+    {
+      "source": "ArgoCD",
+      "target": "Kubernetes",
+      "support": 0.0068270660133237905,
+      "confidence": 0.7701863354037267,
+      "interest": 0.6842423834134167
+    },
+    {
+      "source": ".NET",
+      "target": "C#",
+      "support": 0.015415955513956945,
+      "confidence": 0.7407407407407407,
+      "interest": 0.6728554794953517
+    },
+    {
+      "source": "Flask",
+      "target": "Python",
+      "support": 0.007432692837086384,
+      "confidence": 0.9183673469387755,
+      "interest": 0.6710513749077234
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "Next.js",
+      "support": 0.005450641413863349,
+      "confidence": 0.7122302158273381,
+      "interest": 0.6677441727727766
+    },
+    {
+      "source": "Datadog",
+      "target": "AWS",
+      "support": 0.006772009029345372,
+      "confidence": 0.831081081081081,
+      "interest": 0.6627718810590583
+    },
+    {
+      "source": "Bash",
+      "target": "Python",
+      "support": 0.005946154269669108,
+      "confidence": 0.907563025210084,
+      "interest": 0.6602470531790319
+    },
+    {
+      "source": "Zustand",
+      "target": "Next.js",
+      "support": 0.006496724109453284,
+      "confidence": 0.7023809523809523,
+      "interest": 0.6578949093263908
+    },
+    {
+      "source": "FastAPI",
+      "target": "Python",
+      "support": 0.030997081979849146,
+      "confidence": 0.9036918138041734,
+      "interest": 0.6563758417731212
+    },
+    {
+      "source": "Prometheus",
+      "target": "Kubernetes",
+      "support": 0.008643946484611573,
+      "confidence": 0.7370892018779343,
+      "interest": 0.6511452498876242
+    },
+    {
+      "source": "JPA",
+      "target": "Java",
+      "support": 0.019435115344381436,
+      "confidence": 0.8547215496368039,
+      "interest": 0.6407150529126945
+    },
+    {
+      "source": "Spring Boot",
+      "target": "Java",
+      "support": 0.005505698397841766,
+      "confidence": 0.8547008547008547,
+      "interest": 0.6406943579767452
+    },
+    {
+      "source": "Django",
+      "target": "Python",
+      "support": 0.014479986786323845,
+      "confidence": 0.8766666666666667,
+      "interest": 0.6293506946356145
+    },
+    {
+      "source": "Azure",
+      "target": "AWS",
+      "support": 0.034300501018554204,
+      "confidence": 0.78562421185372,
+      "interest": 0.6173150118316972
+    },
+    {
+      "source": "HTML",
+      "target": "JavaScript",
+      "support": 0.04762429114133128,
+      "confidence": 0.7785778577857786,
+      "interest": 0.6159945840975112
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Kafka",
+      "support": 0.006496724109453284,
+      "confidence": 0.644808743169399,
+      "interest": 0.6111689259585857
+    },
+    {
+      "source": "Express",
+      "target": "Node.js",
+      "support": 0.005505698397841766,
+      "confidence": 0.6666666666666666,
+      "interest": 0.6052230725467526
+    },
+    {
+      "source": "C",
+      "target": "C++",
+      "support": 0.06992236965259042,
+      "confidence": 0.7244723331431832,
+      "interest": 0.6020806577591606
+    },
+    {
+      "source": "Spring",
+      "target": "Java",
+      "support": 0.10356218686340363,
+      "confidence": 0.8146383715894326,
+      "interest": 0.6006318748653232
+    },
+    {
+      "source": "Terraform",
+      "target": "Kubernetes",
+      "support": 0.012828277266971316,
+      "confidence": 0.6773255813953488,
+      "interest": 0.5913816294050388
+    },
+    {
+      "source": "Flask",
+      "target": "FastAPI",
+      "support": 0.0050101855420360076,
+      "confidence": 0.6190476190476191,
+      "interest": 0.5847471180290649
+    },
+    {
+      "source": "Terraform",
+      "target": "AWS",
+      "support": 0.014259758850410174,
+      "confidence": 0.752906976744186,
+      "interest": 0.5845977767221633
+    },
+    {
+      "source": "Angular",
+      "target": "React",
+      "support": 0.005230413477949678,
+      "confidence": 0.7089552238805971,
+      "interest": 0.5800668243871213
+    },
+    {
+      "source": "Grafana",
+      "target": "Kubernetes",
+      "support": 0.009579915212244673,
+      "confidence": 0.6590909090909091,
+      "interest": 0.573146957100599
+    },
+    {
+      "source": "Next.js",
+      "target": "TypeScript",
+      "support": 0.029345372460496615,
+      "confidence": 0.6596534653465347,
+      "interest": 0.5668824473429009
+    },
+    {
+      "source": "PyTorch",
+      "target": "Python",
+      "support": 0.043715245278863626,
+      "confidence": 0.8093781855249745,
+      "interest": 0.5620622134939224
+    },
+    {
+      "source": "Vite",
+      "target": "TypeScript",
+      "support": 0.005505698397841766,
+      "confidence": 0.6535947712418301,
+      "interest": 0.5608237532381963
+    },
+    {
+      "source": "NestJS",
+      "target": "Node.js",
+      "support": 0.011727137587402962,
+      "confidence": 0.6209912536443148,
+      "interest": 0.5595476595244008
+    },
+    {
+      "source": "NestJS",
+      "target": "TypeScript",
+      "support": 0.012167593459230304,
+      "confidence": 0.6443148688046647,
+      "interest": 0.551543850801031
+    },
+    {
+      "source": "Airflow",
+      "target": "Python",
+      "support": 0.014479986786323845,
+      "confidence": 0.796969696969697,
+      "interest": 0.5496537249386448
+    },
+    {
+      "source": "TensorFlow",
+      "target": "Python",
+      "support": 0.025766668501899466,
+      "confidence": 0.7892074198988196,
+      "interest": 0.5418914478677674
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "normal": {
+    "status": "ok",
+    "recommendations": [
+      {
+        "antecedent": [
+          "LlamaIndex"
+        ],
+        "consequent": [
+          "LangChain"
+        ],
+        "support": 0.005120299509992842,
+        "support_count": 93,
+        "confidence": 0.9789473684210527,
+        "consequent_probability": 0.014920442658151187,
+        "interest": 0.9640269257629015,
+        "transaction_count": 18163
+      }
+    ],
+    "evidence_postings": [
+      {
+        "source": "wanted",
+        "job_id": "354958",
+        "title": "생성형 AI(Gen AI) Engineer"
+      },
+      {
+        "source": "wanted",
+        "job_id": "360822",
+        "title": "AI Agent 개발"
+      },
+      {
+        "source": "wanted",
+        "job_id": "359267",
+        "title": "Full-Time Backend Engineer"
+      }
+    ],
+    "applied_filters": {
+      "job_role": "all",
+      "experience_segment": "all"
+    }
+  },
+  "no_rules": {
+    "status": "no_rules",
+    "recommendations": [],
+    "next_action": "Add a known skill or broaden filters."
+  }
+}

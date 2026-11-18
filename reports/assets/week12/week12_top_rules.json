@@ -1,0 +1,1406 @@
+{
+  "raw": [
+    {
+      "antecedent": [
+        "TensorFlow"
+      ],
+      "consequent": [
+        "PyTorch"
+      ],
+      "support": 0.030175320296695885,
+      "support_count": 537,
+      "confidence": 0.9487632508833922,
+      "consequent_probability": 0.05282085861991459,
+      "interest": 0.8959423922634776,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Prometheus"
+      ],
+      "consequent": [
+        "Grafana"
+      ],
+      "support": 0.010339402112834345,
+      "support_count": 184,
+      "confidence": 0.8932038834951457,
+      "consequent_probability": 0.014385255113508653,
+      "interest": 0.878818628381637,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Redux"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.007473589570690043,
+      "support_count": 133,
+      "confidence": 0.9851851851851852,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.8559988511775429,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.008934592043155765,
+      "support_count": 159,
+      "confidence": 0.9754601226993865,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.8462737886917444,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.007923128792987188,
+      "support_count": 141,
+      "confidence": 0.8650306748466258,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.772481787456201,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.006799280737244324,
+      "support_count": 121,
+      "confidence": 0.8897058823529411,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.7605195483452989,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Next.js"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.03939087435378737,
+      "support_count": 701,
+      "confidence": 0.8862199747155499,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.7570336407079077,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Node.js"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.056585749606653184,
+      "support_count": 1007,
+      "confidence": 0.919634703196347,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.7565643503080575,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "CSS"
+      ],
+      "support": 0.006237356709372893,
+      "support_count": 111,
+      "confidence": 0.8161764705882353,
+      "consequent_probability": 0.06063160260732749,
+      "interest": 0.7555448679809078,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "MyBatis"
+      ],
+      "consequent": [
+        "Spring"
+      ],
+      "support": 0.009159361654304338,
+      "support_count": 163,
+      "confidence": 0.8763440860215054,
+      "consequent_probability": 0.12778152393796358,
+      "interest": 0.7485625620835418,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "JPA"
+      ],
+      "consequent": [
+        "Spring"
+      ],
+      "support": 0.019723533378287257,
+      "support_count": 351,
+      "confidence": 0.8731343283582089,
+      "consequent_probability": 0.12778152393796358,
+      "interest": 0.7453528044202453,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.006349741514947179,
+      "support_count": 113,
+      "confidence": 0.8308823529411765,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.7383334655507517,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "iOS"
+      ],
+      "consequent": [
+        "Android"
+      ],
+      "support": 0.015846257585974376,
+      "support_count": 282,
+      "confidence": 0.7726027397260274,
+      "consequent_probability": 0.03556979096426163,
+      "interest": 0.7370329487617658,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Redux"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.006181164306585749,
+      "support_count": 110,
+      "confidence": 0.8148148148148148,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.72226592742439,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "MyBatis"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.009777478084962913,
+      "support_count": 174,
+      "confidence": 0.9354838709677419,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.7207165075152806,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "GCP"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.041919532479208814,
+      "support_count": 746,
+      "confidence": 0.8807556080283353,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.7142013261672429,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Grafana"
+      ],
+      "consequent": [
+        "Prometheus"
+      ],
+      "support": 0.010339402112834345,
+      "support_count": 184,
+      "confidence": 0.71875,
+      "consequent_probability": 0.011575634974151495,
+      "interest": 0.7071743650258485,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "CSS"
+      ],
+      "consequent": [
+        "HTML"
+      ],
+      "support": 0.04624634749381883,
+      "support_count": 823,
+      "confidence": 0.76274328081557,
+      "consequent_probability": 0.06102494942683749,
+      "interest": 0.7017183313887325,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "HTML"
+      ],
+      "consequent": [
+        "CSS"
+      ],
+      "support": 0.04624634749381883,
+      "support_count": 823,
+      "confidence": 0.7578268876611418,
+      "consequent_probability": 0.06063160260732749,
+      "interest": 0.6971952850538143,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "ArgoCD"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.006855473140031468,
+      "support_count": 122,
+      "confidence": 0.7672955974842768,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.6818831452478191,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Flask"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.006967857945605754,
+      "support_count": 124,
+      "confidence": 0.9185185185185185,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6727891411303414,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        ".NET"
+      ],
+      "consequent": [
+        "C#"
+      ],
+      "support": 0.015396718363677231,
+      "support_count": 274,
+      "confidence": 0.738544474393531,
+      "consequent_probability": 0.06782423016408182,
+      "interest": 0.6707202442294492,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "Next.js"
+      ],
+      "support": 0.005394470667565745,
+      "support_count": 96,
+      "confidence": 0.7058823529411765,
+      "consequent_probability": 0.044448190604630254,
+      "interest": 0.6614341623365463,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Bash"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.005956394695437177,
+      "support_count": 106,
+      "confidence": 0.905982905982906,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6602535285947289,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Datadog"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.006686895931670038,
+      "support_count": 119,
+      "confidence": 0.8263888888888888,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.6598346070277965,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "FastAPI"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.030737244324567318,
+      "support_count": 547,
+      "confidence": 0.9026402640264026,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6569108866382255,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Prometheus"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.008541245223645763,
+      "support_count": 152,
+      "confidence": 0.7378640776699029,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.6524516254334453,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "Next.js"
+      ],
+      "support": 0.006349741514947179,
+      "support_count": 113,
+      "confidence": 0.6932515337423313,
+      "consequent_probability": 0.044448190604630254,
+      "interest": 0.648803343137701,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "JPA"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.019386378961564397,
+      "support_count": 345,
+      "confidence": 0.8582089552238806,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.6434415917714194,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Spring Boot"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.005450663070352888,
+      "support_count": 97,
+      "confidence": 0.8508771929824561,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.636109829529995,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Django"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.014553832321870084,
+      "support_count": 259,
+      "confidence": 0.8809523809523809,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6352230035642038,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Azure"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.03410878849179591,
+      "support_count": 607,
+      "confidence": 0.7862694300518135,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.619715148190721,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "HTML"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.047594965160710274,
+      "support_count": 847,
+      "confidence": 0.7799263351749539,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.6168559822866644,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "RabbitMQ"
+      ],
+      "consequent": [
+        "Kafka"
+      ],
+      "support": 0.006293549112160036,
+      "support_count": 112,
+      "confidence": 0.6363636363636364,
+      "consequent_probability": 0.032760170824904476,
+      "interest": 0.6036034655387319,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "C"
+      ],
+      "consequent": [
+        "C++"
+      ],
+      "support": 0.06889188581703753,
+      "support_count": 1226,
+      "confidence": 0.722877358490566,
+      "consequent_probability": 0.12081366599235784,
+      "interest": 0.6020636924982081,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Express"
+      ],
+      "consequent": [
+        "Node.js"
+      ],
+      "support": 0.005506855473140031,
+      "support_count": 98,
+      "confidence": 0.6621621621621622,
+      "consequent_probability": 0.06153068105192178,
+      "interest": 0.6006314811102403,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Spring"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.10412452236457631,
+      "support_count": 1853,
+      "confidence": 0.8148636763412489,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.6000963128887877,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Terraform"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.012811867835468645,
+      "support_count": 228,
+      "confidence": 0.6785714285714286,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.5931589763349709,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Terraform"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.014160485502360081,
+      "support_count": 252,
+      "confidence": 0.75,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.5834457181389077,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Angular"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.005225893459204316,
+      "support_count": 93,
+      "confidence": 0.7045454545454546,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.5753591205378124,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Grafana"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.009440323668240054,
+      "support_count": 168,
+      "confidence": 0.65625,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.5708375477635423,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "PyTorch"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.04293099572937739,
+      "support_count": 764,
+      "confidence": 0.8127659574468085,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5670365800586313,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Next.js"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.02922004944931445,
+      "support_count": 520,
+      "confidence": 0.6573957016434893,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5648468142530645,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "NestJS"
+      ],
+      "consequent": [
+        "Node.js"
+      ],
+      "support": 0.011800404585300068,
+      "support_count": 210,
+      "confidence": 0.621301775147929,
+      "consequent_probability": 0.06153068105192178,
+      "interest": 0.5597710940960071,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Vite"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.005450663070352888,
+      "support_count": 97,
+      "confidence": 0.6466666666666666,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5541177792762418,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "TensorFlow"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.025342773657001574,
+      "support_count": 451,
+      "confidence": 0.7968197879858657,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5510904105976886,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "NestJS"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.012137559002022926,
+      "support_count": 216,
+      "confidence": 0.6390532544378699,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5465043670474451,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Airflow"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.014160485502360081,
+      "support_count": 252,
+      "confidence": 0.7899686520376176,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5442392746494404,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "PyTorch"
+      ],
+      "consequent": [
+        "TensorFlow"
+      ],
+      "support": 0.030175320296695885,
+      "support_count": 537,
+      "confidence": 0.5712765957446808,
+      "consequent_probability": 0.03180489997752304,
+      "interest": 0.5394716957671578,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "CSS"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.04231287929871881,
+      "support_count": 753,
+      "confidence": 0.6978683966635774,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.5347980437752878,
+      "transaction_count": 17796
+    }
+  ],
+  "normalized": [
+    {
+      "antecedent": [
+        "TensorFlow"
+      ],
+      "consequent": [
+        "PyTorch"
+      ],
+      "support": 0.030175320296695885,
+      "support_count": 537,
+      "confidence": 0.9487632508833922,
+      "consequent_probability": 0.05282085861991459,
+      "interest": 0.8959423922634776,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Prometheus"
+      ],
+      "consequent": [
+        "Grafana"
+      ],
+      "support": 0.010339402112834345,
+      "support_count": 184,
+      "confidence": 0.8932038834951457,
+      "consequent_probability": 0.014385255113508653,
+      "interest": 0.878818628381637,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Redux"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.007473589570690043,
+      "support_count": 133,
+      "confidence": 0.9851851851851852,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.8559988511775429,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.008934592043155765,
+      "support_count": 159,
+      "confidence": 0.9754601226993865,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.8462737886917444,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.007923128792987188,
+      "support_count": 141,
+      "confidence": 0.8650306748466258,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.772481787456201,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.006799280737244324,
+      "support_count": 121,
+      "confidence": 0.8897058823529411,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.7605195483452989,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Next.js"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.03939087435378737,
+      "support_count": 701,
+      "confidence": 0.8862199747155499,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.7570336407079077,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Node.js"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.056585749606653184,
+      "support_count": 1007,
+      "confidence": 0.919634703196347,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.7565643503080575,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "CSS"
+      ],
+      "support": 0.006237356709372893,
+      "support_count": 111,
+      "confidence": 0.8161764705882353,
+      "consequent_probability": 0.06063160260732749,
+      "interest": 0.7555448679809078,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "MyBatis"
+      ],
+      "consequent": [
+        "Spring"
+      ],
+      "support": 0.009159361654304338,
+      "support_count": 163,
+      "confidence": 0.8763440860215054,
+      "consequent_probability": 0.12778152393796358,
+      "interest": 0.7485625620835418,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "JPA"
+      ],
+      "consequent": [
+        "Spring"
+      ],
+      "support": 0.019723533378287257,
+      "support_count": 351,
+      "confidence": 0.8731343283582089,
+      "consequent_probability": 0.12778152393796358,
+      "interest": 0.7453528044202453,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.006349741514947179,
+      "support_count": 113,
+      "confidence": 0.8308823529411765,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.7383334655507517,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "iOS"
+      ],
+      "consequent": [
+        "Android"
+      ],
+      "support": 0.015846257585974376,
+      "support_count": 282,
+      "confidence": 0.7726027397260274,
+      "consequent_probability": 0.03556979096426163,
+      "interest": 0.7370329487617658,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Redux"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.006181164306585749,
+      "support_count": 110,
+      "confidence": 0.8148148148148148,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.72226592742439,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "MyBatis"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.009777478084962913,
+      "support_count": 174,
+      "confidence": 0.9354838709677419,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.7207165075152806,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "GCP"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.041919532479208814,
+      "support_count": 746,
+      "confidence": 0.8807556080283353,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.7142013261672429,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Grafana"
+      ],
+      "consequent": [
+        "Prometheus"
+      ],
+      "support": 0.010339402112834345,
+      "support_count": 184,
+      "confidence": 0.71875,
+      "consequent_probability": 0.011575634974151495,
+      "interest": 0.7071743650258485,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "CSS"
+      ],
+      "consequent": [
+        "HTML"
+      ],
+      "support": 0.04624634749381883,
+      "support_count": 823,
+      "confidence": 0.76274328081557,
+      "consequent_probability": 0.06102494942683749,
+      "interest": 0.7017183313887325,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "HTML"
+      ],
+      "consequent": [
+        "CSS"
+      ],
+      "support": 0.04624634749381883,
+      "support_count": 823,
+      "confidence": 0.7578268876611418,
+      "consequent_probability": 0.06063160260732749,
+      "interest": 0.6971952850538143,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "ArgoCD"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.006855473140031468,
+      "support_count": 122,
+      "confidence": 0.7672955974842768,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.6818831452478191,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Flask"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.006967857945605754,
+      "support_count": 124,
+      "confidence": 0.9185185185185185,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6727891411303414,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        ".NET"
+      ],
+      "consequent": [
+        "C#"
+      ],
+      "support": 0.015396718363677231,
+      "support_count": 274,
+      "confidence": 0.738544474393531,
+      "consequent_probability": 0.06782423016408182,
+      "interest": 0.6707202442294492,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Tailwind CSS"
+      ],
+      "consequent": [
+        "Next.js"
+      ],
+      "support": 0.005394470667565745,
+      "support_count": 96,
+      "confidence": 0.7058823529411765,
+      "consequent_probability": 0.044448190604630254,
+      "interest": 0.6614341623365463,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Bash"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.005956394695437177,
+      "support_count": 106,
+      "confidence": 0.905982905982906,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6602535285947289,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Datadog"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.006686895931670038,
+      "support_count": 119,
+      "confidence": 0.8263888888888888,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.6598346070277965,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "FastAPI"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.030737244324567318,
+      "support_count": 547,
+      "confidence": 0.9026402640264026,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6569108866382255,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Prometheus"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.008541245223645763,
+      "support_count": 152,
+      "confidence": 0.7378640776699029,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.6524516254334453,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Zustand"
+      ],
+      "consequent": [
+        "Next.js"
+      ],
+      "support": 0.006349741514947179,
+      "support_count": 113,
+      "confidence": 0.6932515337423313,
+      "consequent_probability": 0.044448190604630254,
+      "interest": 0.648803343137701,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "JPA"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.019386378961564397,
+      "support_count": 345,
+      "confidence": 0.8582089552238806,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.6434415917714194,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Spring Boot"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.005450663070352888,
+      "support_count": 97,
+      "confidence": 0.8508771929824561,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.636109829529995,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Django"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.014553832321870084,
+      "support_count": 259,
+      "confidence": 0.8809523809523809,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.6352230035642038,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Azure"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.03410878849179591,
+      "support_count": 607,
+      "confidence": 0.7862694300518135,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.619715148190721,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "HTML"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.047594965160710274,
+      "support_count": 847,
+      "confidence": 0.7799263351749539,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.6168559822866644,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "RabbitMQ"
+      ],
+      "consequent": [
+        "Kafka"
+      ],
+      "support": 0.006293549112160036,
+      "support_count": 112,
+      "confidence": 0.6363636363636364,
+      "consequent_probability": 0.032760170824904476,
+      "interest": 0.6036034655387319,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "C"
+      ],
+      "consequent": [
+        "C++"
+      ],
+      "support": 0.06889188581703753,
+      "support_count": 1226,
+      "confidence": 0.722877358490566,
+      "consequent_probability": 0.12081366599235784,
+      "interest": 0.6020636924982081,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Express"
+      ],
+      "consequent": [
+        "Node.js"
+      ],
+      "support": 0.005506855473140031,
+      "support_count": 98,
+      "confidence": 0.6621621621621622,
+      "consequent_probability": 0.06153068105192178,
+      "interest": 0.6006314811102403,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Spring"
+      ],
+      "consequent": [
+        "Java"
+      ],
+      "support": 0.10412452236457631,
+      "support_count": 1853,
+      "confidence": 0.8148636763412489,
+      "consequent_probability": 0.21476736345246122,
+      "interest": 0.6000963128887877,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Terraform"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.012811867835468645,
+      "support_count": 228,
+      "confidence": 0.6785714285714286,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.5931589763349709,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Terraform"
+      ],
+      "consequent": [
+        "AWS"
+      ],
+      "support": 0.014160485502360081,
+      "support_count": 252,
+      "confidence": 0.75,
+      "consequent_probability": 0.1665542818610924,
+      "interest": 0.5834457181389077,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Angular"
+      ],
+      "consequent": [
+        "React"
+      ],
+      "support": 0.005225893459204316,
+      "support_count": 93,
+      "confidence": 0.7045454545454546,
+      "consequent_probability": 0.12918633400764218,
+      "interest": 0.5753591205378124,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Grafana"
+      ],
+      "consequent": [
+        "Kubernetes"
+      ],
+      "support": 0.009440323668240054,
+      "support_count": 168,
+      "confidence": 0.65625,
+      "consequent_probability": 0.08541245223645763,
+      "interest": 0.5708375477635423,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "PyTorch"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.04293099572937739,
+      "support_count": 764,
+      "confidence": 0.8127659574468085,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5670365800586313,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Next.js"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.02922004944931445,
+      "support_count": 520,
+      "confidence": 0.6573957016434893,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5648468142530645,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "NestJS"
+      ],
+      "consequent": [
+        "Node.js"
+      ],
+      "support": 0.011800404585300068,
+      "support_count": 210,
+      "confidence": 0.621301775147929,
+      "consequent_probability": 0.06153068105192178,
+      "interest": 0.5597710940960071,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Vite"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.005450663070352888,
+      "support_count": 97,
+      "confidence": 0.6466666666666666,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5541177792762418,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "TensorFlow"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.025342773657001574,
+      "support_count": 451,
+      "confidence": 0.7968197879858657,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5510904105976886,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "NestJS"
+      ],
+      "consequent": [
+        "TypeScript"
+      ],
+      "support": 0.012137559002022926,
+      "support_count": 216,
+      "confidence": 0.6390532544378699,
+      "consequent_probability": 0.09254888739042481,
+      "interest": 0.5465043670474451,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "Airflow"
+      ],
+      "consequent": [
+        "Python"
+      ],
+      "support": 0.014160485502360081,
+      "support_count": 252,
+      "confidence": 0.7899686520376176,
+      "consequent_probability": 0.24572937738817713,
+      "interest": 0.5442392746494404,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "PyTorch"
+      ],
+      "consequent": [
+        "TensorFlow"
+      ],
+      "support": 0.030175320296695885,
+      "support_count": 537,
+      "confidence": 0.5712765957446808,
+      "consequent_probability": 0.03180489997752304,
+      "interest": 0.5394716957671578,
+      "transaction_count": 17796
+    },
+    {
+      "antecedent": [
+        "CSS"
+      ],
+      "consequent": [
+        "JavaScript"
+      ],
+      "support": 0.04231287929871881,
+      "support_count": 753,
+      "confidence": 0.6978683966635774,
+      "consequent_probability": 0.1630703528882895,
+      "interest": 0.5347980437752878,
+      "transaction_count": 17796
+    }
+  ]
+}

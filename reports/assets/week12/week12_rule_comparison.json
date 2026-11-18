@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "input_row_count": 40348,
+  "segment": {
+    "job_role": "all",
+    "experience_level": "all"
+  },
+  "parameters": {
+    "minimum_support": 0.005,
+    "minimum_confidence": 0.2,
+    "maximum_itemset_size": 2,
+    "duplicate_policy": "keep first source + job_id occurrence; do not auto-drop same-body distinct IDs",
+    "segment": "all postings with non-empty final_techs after source + job_id de-duplication"
+  },
+  "raw": {
+    "transaction_count": 17796,
+    "rule_count": 694,
+    "excluded_source_job_id_duplicates": 777,
+    "excluded_same_body_duplicates": 933,
+    "excluded_empty_transactions": 20842
+  },
+  "normalized": {
+    "transaction_count": 17796,
+    "rule_count": 694,
+    "excluded_source_job_id_duplicates": 777,
+    "excluded_same_body_duplicates": 933,
+    "excluded_empty_transactions": 20842
+  },
+  "common_rule_count": 694,
+  "interest_formula": "confidence(A -> B) - P(B), calculated in the same segment"
+}
