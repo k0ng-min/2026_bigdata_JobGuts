@@ -1,0 +1,2434 @@
+{
+  "version": "tech-dictionary.v2",
+  "matching": "case-insensitive exact spellings; comparison keys preserve + and #",
+  "standard_name_source": "final_techs vocabulary of the input export; no standard name is invented",
+  "standard_name_count": 156,
+  "minimum_occurrences_considered": 89,
+  "category_labels": {
+    "language": "언어",
+    "framework": "프레임워크·라이브러리",
+    "database": "데이터베이스",
+    "cloud": "클라우드·인프라",
+    "devops": "데브옵스·CI/CD",
+    "data_ml": "데이터·ML",
+    "api_protocol": "API·프로토콜",
+    "tool": "도구·협업",
+    "os": "운영체제·플랫폼",
+    "concept": "개념·방법론"
+  },
+  "rule_counts": {
+    "exact": 97,
+    "case": 16,
+    "curated": 13,
+    "punctuation": 4
+  },
+  "technologies": [
+    {
+      "canonical": ".NET",
+      "category": "framework",
+      "standard_name_posting_count": 389,
+      "spellings": [
+        {
+          "spelling": ".NET",
+          "rule": "exact",
+          "occurrences": 281,
+          "section_occurrences": 52
+        },
+        {
+          "spelling": ".Net",
+          "rule": "case",
+          "occurrences": 116,
+          "section_occurrences": 78
+        },
+        {
+          "spelling": "dot net",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "dotnet",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "dotnet core",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "net core",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "AI",
+      "category": "concept",
+      "standard_name_posting_count": 5549,
+      "spellings": [
+        {
+          "spelling": "AI",
+          "rule": "exact",
+          "occurrences": 10773,
+          "section_occurrences": 995
+        },
+        {
+          "spelling": "Ai",
+          "rule": "case",
+          "occurrences": 107,
+          "section_occurrences": 45
+        }
+      ]
+    },
+    {
+      "canonical": "ASP.NET",
+      "category": "framework",
+      "standard_name_posting_count": 107,
+      "spellings": [
+        {
+          "spelling": "ASP.NET",
+          "rule": "exact",
+          "occurrences": 126,
+          "section_occurrences": 58
+        },
+        {
+          "spelling": "asp net",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "asp-net",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "aspnet",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "AWS",
+      "category": "cloud",
+      "standard_name_posting_count": 3375,
+      "spellings": [
+        {
+          "spelling": "AWS",
+          "rule": "exact",
+          "occurrences": 2932,
+          "section_occurrences": 1008
+        }
+      ]
+    },
+    {
+      "canonical": "Airflow",
+      "category": "data_ml",
+      "standard_name_posting_count": 352,
+      "spellings": [
+        {
+          "spelling": "Airflow",
+          "rule": "exact",
+          "occurrences": 359,
+          "section_occurrences": 98
+        },
+        {
+          "spelling": "apache airflow",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Ajax",
+      "category": "api_protocol",
+      "standard_name_posting_count": 127,
+      "spellings": [
+        {
+          "spelling": "Ajax",
+          "rule": "exact",
+          "occurrences": 104,
+          "section_occurrences": 81
+        }
+      ]
+    },
+    {
+      "canonical": "Android",
+      "category": "os",
+      "standard_name_posting_count": 684,
+      "spellings": [
+        {
+          "spelling": "Android",
+          "rule": "exact",
+          "occurrences": 651,
+          "section_occurrences": 227
+        }
+      ]
+    },
+    {
+      "canonical": "Angular",
+      "category": "framework",
+      "standard_name_posting_count": 149,
+      "spellings": [
+        {
+          "spelling": "Angular",
+          "rule": "exact",
+          "occurrences": 100,
+          "section_occurrences": 37
+        },
+        {
+          "spelling": "angular.js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "angularjs",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Apache",
+      "category": "cloud",
+      "standard_name_posting_count": 225,
+      "spellings": [
+        {
+          "spelling": "Apache",
+          "rule": "exact",
+          "occurrences": 236,
+          "section_occurrences": 75
+        }
+      ]
+    },
+    {
+      "canonical": "ArgoCD",
+      "category": "devops",
+      "standard_name_posting_count": 196,
+      "spellings": [
+        {
+          "spelling": "ArgoCD",
+          "rule": "exact",
+          "occurrences": 186,
+          "section_occurrences": 67
+        },
+        {
+          "spelling": "argo-cd",
+          "rule": "curated",
+          "occurrences": 1,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "argo cd",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Azure",
+      "category": "cloud",
+      "standard_name_posting_count": 834,
+      "spellings": [
+        {
+          "spelling": "Azure",
+          "rule": "exact",
+          "occurrences": 893,
+          "section_occurrences": 187
+        }
+      ]
+    },
+    {
+      "canonical": "Bash",
+      "category": "language",
+      "standard_name_posting_count": 121,
+      "spellings": [
+        {
+          "spelling": "Bash",
+          "rule": "exact",
+          "occurrences": 110,
+          "section_occurrences": 21
+        }
+      ]
+    },
+    {
+      "canonical": "Bitbucket",
+      "category": "tool",
+      "standard_name_posting_count": 54,
+      "spellings": [
+        {
+          "spelling": "bit bucket",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "C",
+      "category": "language",
+      "standard_name_posting_count": 1798,
+      "spellings": [
+        {
+          "spelling": "C",
+          "rule": "exact",
+          "occurrences": 1312,
+          "section_occurrences": 380
+        }
+      ]
+    },
+    {
+      "canonical": "C#",
+      "category": "language",
+      "standard_name_posting_count": 1255,
+      "spellings": [
+        {
+          "spelling": "C#",
+          "rule": "exact",
+          "occurrences": 1260,
+          "section_occurrences": 435
+        },
+        {
+          "spelling": "c sharp",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "c-sharp",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "csharp",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "C++",
+      "category": "language",
+      "standard_name_posting_count": 2282,
+      "spellings": [
+        {
+          "spelling": "C++",
+          "rule": "exact",
+          "occurrences": 1551,
+          "section_occurrences": 571
+        },
+        {
+          "spelling": "c plus plus",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "cplusplus",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "cpp",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "CI/CD",
+      "category": "concept",
+      "standard_name_posting_count": 882,
+      "spellings": [
+        {
+          "spelling": "CI/CD",
+          "rule": "exact",
+          "occurrences": 1426,
+          "section_occurrences": 320
+        }
+      ]
+    },
+    {
+      "canonical": "CSS",
+      "category": "language",
+      "standard_name_posting_count": 1172,
+      "spellings": [
+        {
+          "spelling": "CSS",
+          "rule": "exact",
+          "occurrences": 731,
+          "section_occurrences": 273
+        },
+        {
+          "spelling": "CSS3",
+          "rule": "curated",
+          "occurrences": 144,
+          "section_occurrences": 77
+        }
+      ]
+    },
+    {
+      "canonical": "ChromaDB",
+      "category": "database",
+      "standard_name_posting_count": 17,
+      "spellings": [
+        {
+          "spelling": "chroma",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "chroma db",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Claude Code",
+      "category": "tool",
+      "standard_name_posting_count": 235,
+      "spellings": [
+        {
+          "spelling": "claude-code",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "claudecode",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Computer Vision",
+      "category": "concept",
+      "standard_name_posting_count": 246,
+      "spellings": [
+        {
+          "spelling": "computer-vision",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "computervision",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Datadog",
+      "category": "devops",
+      "standard_name_posting_count": 175,
+      "spellings": [
+        {
+          "spelling": "Datadog",
+          "rule": "exact",
+          "occurrences": 175,
+          "section_occurrences": 63
+        }
+      ]
+    },
+    {
+      "canonical": "Deep Learning",
+      "category": "concept",
+      "standard_name_posting_count": 928,
+      "spellings": [
+        {
+          "spelling": "deep-learning",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "deeplearning",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "DevOps",
+      "category": "concept",
+      "standard_name_posting_count": 341,
+      "spellings": [
+        {
+          "spelling": "DevOps",
+          "rule": "exact",
+          "occurrences": 817,
+          "section_occurrences": 167
+        }
+      ]
+    },
+    {
+      "canonical": "Django",
+      "category": "framework",
+      "standard_name_posting_count": 356,
+      "spellings": [
+        {
+          "spelling": "Django",
+          "rule": "exact",
+          "occurrences": 249,
+          "section_occurrences": 99
+        }
+      ]
+    },
+    {
+      "canonical": "Docker",
+      "category": "devops",
+      "standard_name_posting_count": 2219,
+      "spellings": [
+        {
+          "spelling": "Docker",
+          "rule": "exact",
+          "occurrences": 1701,
+          "section_occurrences": 670
+        }
+      ]
+    },
+    {
+      "canonical": "DynamoDB",
+      "category": "database",
+      "standard_name_posting_count": 78,
+      "spellings": [
+        {
+          "spelling": "dynamo",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "dynamo db",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Elasticsearch",
+      "category": "database",
+      "standard_name_posting_count": 418,
+      "spellings": [
+        {
+          "spelling": "Elasticsearch",
+          "rule": "exact",
+          "occurrences": 230,
+          "section_occurrences": 84
+        },
+        {
+          "spelling": "elastic search",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Express",
+      "category": "framework",
+      "standard_name_posting_count": 163,
+      "spellings": [
+        {
+          "spelling": "express.js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "expressjs",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "FastAPI",
+      "category": "framework",
+      "standard_name_posting_count": 701,
+      "spellings": [
+        {
+          "spelling": "FastAPI",
+          "rule": "exact",
+          "occurrences": 593,
+          "section_occurrences": 209
+        }
+      ]
+    },
+    {
+      "canonical": "Figma",
+      "category": "tool",
+      "standard_name_posting_count": 885,
+      "spellings": [
+        {
+          "spelling": "Figma",
+          "rule": "exact",
+          "occurrences": 820,
+          "section_occurrences": 172
+        }
+      ]
+    },
+    {
+      "canonical": "Firebase",
+      "category": "cloud",
+      "standard_name_posting_count": 122,
+      "spellings": [
+        {
+          "spelling": "Firebase",
+          "rule": "exact",
+          "occurrences": 114,
+          "section_occurrences": 40
+        }
+      ]
+    },
+    {
+      "canonical": "Flask",
+      "category": "framework",
+      "standard_name_posting_count": 163,
+      "spellings": [
+        {
+          "spelling": "Flask",
+          "rule": "exact",
+          "occurrences": 125,
+          "section_occurrences": 45
+        }
+      ]
+    },
+    {
+      "canonical": "Flutter",
+      "category": "framework",
+      "standard_name_posting_count": 329,
+      "spellings": [
+        {
+          "spelling": "Flutter",
+          "rule": "exact",
+          "occurrences": 288,
+          "section_occurrences": 98
+        }
+      ]
+    },
+    {
+      "canonical": "GCP",
+      "category": "cloud",
+      "standard_name_posting_count": 947,
+      "spellings": [
+        {
+          "spelling": "GCP",
+          "rule": "exact",
+          "occurrences": 976,
+          "section_occurrences": 209
+        }
+      ]
+    },
+    {
+      "canonical": "Generative AI",
+      "category": "concept",
+      "standard_name_posting_count": 14,
+      "spellings": [
+        {
+          "spelling": "gen ai",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "genai",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "generative-ai",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "generativeai",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Git",
+      "category": "devops",
+      "standard_name_posting_count": 2507,
+      "spellings": [
+        {
+          "spelling": "Git",
+          "rule": "exact",
+          "occurrences": 1920,
+          "section_occurrences": 784
+        }
+      ]
+    },
+    {
+      "canonical": "GitHub",
+      "category": "tool",
+      "standard_name_posting_count": 920,
+      "spellings": [
+        {
+          "spelling": "GitHub",
+          "rule": "exact",
+          "occurrences": 778,
+          "section_occurrences": 309
+        },
+        {
+          "spelling": "Github",
+          "rule": "case",
+          "occurrences": 250,
+          "section_occurrences": 96
+        },
+        {
+          "spelling": "git hub",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "GitHub Actions",
+      "category": "devops",
+      "standard_name_posting_count": 3,
+      "spellings": [
+        {
+          "spelling": "gh actions",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "github action",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "github-actions",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "GitLab",
+      "category": "tool",
+      "standard_name_posting_count": 257,
+      "spellings": [
+        {
+          "spelling": "GitLab",
+          "rule": "exact",
+          "occurrences": 262,
+          "section_occurrences": 99
+        },
+        {
+          "spelling": "git lab",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Go",
+      "category": "language",
+      "standard_name_posting_count": 629,
+      "spellings": [
+        {
+          "spelling": "Go",
+          "rule": "exact",
+          "occurrences": 266,
+          "section_occurrences": 56
+        },
+        {
+          "spelling": "Golang",
+          "rule": "curated",
+          "occurrences": 127,
+          "section_occurrences": 32
+        }
+      ]
+    },
+    {
+      "canonical": "Grafana",
+      "category": "devops",
+      "standard_name_posting_count": 303,
+      "spellings": [
+        {
+          "spelling": "Grafana",
+          "rule": "exact",
+          "occurrences": 347,
+          "section_occurrences": 98
+        }
+      ]
+    },
+    {
+      "canonical": "GraphQL",
+      "category": "api_protocol",
+      "standard_name_posting_count": 215,
+      "spellings": [
+        {
+          "spelling": "GraphQL",
+          "rule": "exact",
+          "occurrences": 152,
+          "section_occurrences": 69
+        },
+        {
+          "spelling": "graph ql",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "HTML",
+      "category": "language",
+      "standard_name_posting_count": 1181,
+      "spellings": [
+        {
+          "spelling": "HTML",
+          "rule": "exact",
+          "occurrences": 664,
+          "section_occurrences": 231
+        },
+        {
+          "spelling": "HTML5",
+          "rule": "curated",
+          "occurrences": 268,
+          "section_occurrences": 152
+        }
+      ]
+    },
+    {
+      "canonical": "Hibernate",
+      "category": "framework",
+      "standard_name_posting_count": 90,
+      "spellings": [
+        {
+          "spelling": "Hibernate",
+          "rule": "exact",
+          "occurrences": 104,
+          "section_occurrences": 26
+        }
+      ]
+    },
+    {
+      "canonical": "Hugging Face",
+      "category": "data_ml",
+      "standard_name_posting_count": 63,
+      "spellings": [
+        {
+          "spelling": "huggingface",
+          "rule": "curated",
+          "occurrences": 1,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "hugging-face",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "JPA",
+      "category": "framework",
+      "standard_name_posting_count": 477,
+      "spellings": [
+        {
+          "spelling": "JPA",
+          "rule": "exact",
+          "occurrences": 360,
+          "section_occurrences": 176
+        }
+      ]
+    },
+    {
+      "canonical": "Java",
+      "category": "language",
+      "standard_name_posting_count": 4120,
+      "spellings": [
+        {
+          "spelling": "Java",
+          "rule": "exact",
+          "occurrences": 2935,
+          "section_occurrences": 485
+        },
+        {
+          "spelling": "JAVA",
+          "rule": "case",
+          "occurrences": 2568,
+          "section_occurrences": 1339
+        },
+        {
+          "spelling": "java",
+          "rule": "case",
+          "occurrences": 620,
+          "section_occurrences": 35
+        }
+      ]
+    },
+    {
+      "canonical": "JavaScript",
+      "category": "language",
+      "standard_name_posting_count": 3184,
+      "spellings": [
+        {
+          "spelling": "JavaScript",
+          "rule": "exact",
+          "occurrences": 820,
+          "section_occurrences": 216
+        },
+        {
+          "spelling": "Javascript",
+          "rule": "case",
+          "occurrences": 549,
+          "section_occurrences": 484
+        },
+        {
+          "spelling": "JS",
+          "rule": "curated",
+          "occurrences": 130,
+          "section_occurrences": 8
+        },
+        {
+          "spelling": "es6",
+          "rule": "curated",
+          "occurrences": 4,
+          "section_occurrences": 3
+        },
+        {
+          "spelling": "ecmascript",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "javascript es6",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Jenkins",
+      "category": "devops",
+      "standard_name_posting_count": 471,
+      "spellings": [
+        {
+          "spelling": "Jenkins",
+          "rule": "exact",
+          "occurrences": 429,
+          "section_occurrences": 171
+        }
+      ]
+    },
+    {
+      "canonical": "Jira",
+      "category": "tool",
+      "standard_name_posting_count": 804,
+      "spellings": [
+        {
+          "spelling": "Jira",
+          "rule": "exact",
+          "occurrences": 721,
+          "section_occurrences": 255
+        },
+        {
+          "spelling": "JIRA",
+          "rule": "case",
+          "occurrences": 114,
+          "section_occurrences": 20
+        }
+      ]
+    },
+    {
+      "canonical": "Jupyter Notebook",
+      "category": "tool",
+      "standard_name_posting_count": 8,
+      "spellings": [
+        {
+          "spelling": "jupyter",
+          "rule": "curated",
+          "occurrences": 2,
+          "section_occurrences": 1
+        },
+        {
+          "spelling": "jupyterlab",
+          "rule": "curated",
+          "occurrences": 1,
+          "section_occurrences": 1
+        },
+        {
+          "spelling": "jupyter notebooks",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Kafka",
+      "category": "cloud",
+      "standard_name_posting_count": 690,
+      "spellings": [
+        {
+          "spelling": "Kafka",
+          "rule": "exact",
+          "occurrences": 630,
+          "section_occurrences": 193
+        },
+        {
+          "spelling": "apache kafka",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Kotlin",
+      "category": "language",
+      "standard_name_posting_count": 934,
+      "spellings": [
+        {
+          "spelling": "Kotlin",
+          "rule": "exact",
+          "occurrences": 631,
+          "section_occurrences": 231
+        }
+      ]
+    },
+    {
+      "canonical": "Kubernetes",
+      "category": "devops",
+      "standard_name_posting_count": 1748,
+      "spellings": [
+        {
+          "spelling": "Kubernetes",
+          "rule": "exact",
+          "occurrences": 1233,
+          "section_occurrences": 259
+        },
+        {
+          "spelling": "kubernetes",
+          "rule": "case",
+          "occurrences": 159,
+          "section_occurrences": 140
+        },
+        {
+          "spelling": "k8s",
+          "rule": "curated",
+          "occurrences": 139,
+          "section_occurrences": 23
+        },
+        {
+          "spelling": "K8S",
+          "rule": "curated",
+          "occurrences": 92,
+          "section_occurrences": 25
+        },
+        {
+          "spelling": "k8",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "LLM",
+      "category": "concept",
+      "standard_name_posting_count": 1003,
+      "spellings": [
+        {
+          "spelling": "LLM",
+          "rule": "exact",
+          "occurrences": 1957,
+          "section_occurrences": 253
+        }
+      ]
+    },
+    {
+      "canonical": "LangChain",
+      "category": "framework",
+      "standard_name_posting_count": 284,
+      "spellings": [
+        {
+          "spelling": "LangChain",
+          "rule": "exact",
+          "occurrences": 338,
+          "section_occurrences": 60
+        }
+      ]
+    },
+    {
+      "canonical": "LightGBM",
+      "category": "data_ml",
+      "standard_name_posting_count": 16,
+      "spellings": [
+        {
+          "spelling": "lgbm",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "light gbm",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Linux",
+      "category": "os",
+      "standard_name_posting_count": 2777,
+      "spellings": [
+        {
+          "spelling": "Linux",
+          "rule": "exact",
+          "occurrences": 2327,
+          "section_occurrences": 820
+        }
+      ]
+    },
+    {
+      "canonical": "LlamaIndex",
+      "category": "framework",
+      "standard_name_posting_count": 97,
+      "spellings": [
+        {
+          "spelling": "LlamaIndex",
+          "rule": "exact",
+          "occurrences": 125,
+          "section_occurrences": 21
+        }
+      ]
+    },
+    {
+      "canonical": "ML",
+      "category": "concept",
+      "standard_name_posting_count": 934,
+      "spellings": [
+        {
+          "spelling": "ML",
+          "rule": "exact",
+          "occurrences": 505,
+          "section_occurrences": 43
+        }
+      ]
+    },
+    {
+      "canonical": "MLOps",
+      "category": "concept",
+      "standard_name_posting_count": 250,
+      "spellings": [
+        {
+          "spelling": "MLOps",
+          "rule": "exact",
+          "occurrences": 883,
+          "section_occurrences": 82
+        }
+      ]
+    },
+    {
+      "canonical": "MLflow",
+      "category": "data_ml",
+      "standard_name_posting_count": 139,
+      "spellings": [
+        {
+          "spelling": "MLflow",
+          "rule": "exact",
+          "occurrences": 111,
+          "section_occurrences": 25
+        },
+        {
+          "spelling": "ml flow",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "MSSQL",
+      "category": "database",
+      "standard_name_posting_count": 450,
+      "spellings": [
+        {
+          "spelling": "MSSQL",
+          "rule": "exact",
+          "occurrences": 420,
+          "section_occurrences": 254
+        },
+        {
+          "spelling": "MS-SQL",
+          "rule": "punctuation",
+          "occurrences": 160,
+          "section_occurrences": 44
+        },
+        {
+          "spelling": "ms sql",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "mssql server",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "sql server",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "sqlserver",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "MariaDB",
+      "category": "database",
+      "standard_name_posting_count": 407,
+      "spellings": [
+        {
+          "spelling": "MariaDB",
+          "rule": "exact",
+          "occurrences": 368,
+          "section_occurrences": 202
+        },
+        {
+          "spelling": "maria db",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "MediaPipe",
+      "category": "data_ml",
+      "standard_name_posting_count": 5,
+      "spellings": [
+        {
+          "spelling": "media pipe",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "MongoDB",
+      "category": "database",
+      "standard_name_posting_count": 523,
+      "spellings": [
+        {
+          "spelling": "MongoDB",
+          "rule": "exact",
+          "occurrences": 347,
+          "section_occurrences": 154
+        },
+        {
+          "spelling": "mongo",
+          "rule": "curated",
+          "occurrences": 1,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "mongo db",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "MyBatis",
+      "category": "framework",
+      "standard_name_posting_count": 196,
+      "spellings": [
+        {
+          "spelling": "MyBatis",
+          "rule": "exact",
+          "occurrences": 150,
+          "section_occurrences": 92
+        }
+      ]
+    },
+    {
+      "canonical": "MySQL",
+      "category": "database",
+      "standard_name_posting_count": 1694,
+      "spellings": [
+        {
+          "spelling": "MySQL",
+          "rule": "exact",
+          "occurrences": 1276,
+          "section_occurrences": 619
+        },
+        {
+          "spelling": "my sql",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "NLP",
+      "category": "concept",
+      "standard_name_posting_count": 387,
+      "spellings": [
+        {
+          "spelling": "NLP",
+          "rule": "exact",
+          "occurrences": 395,
+          "section_occurrences": 40
+        }
+      ]
+    },
+    {
+      "canonical": "NestJS",
+      "category": "framework",
+      "standard_name_posting_count": 409,
+      "spellings": [
+        {
+          "spelling": "NestJS",
+          "rule": "exact",
+          "occurrences": 283,
+          "section_occurrences": 82
+        },
+        {
+          "spelling": "Nest.js",
+          "rule": "punctuation",
+          "occurrences": 104,
+          "section_occurrences": 67
+        },
+        {
+          "spelling": "nest js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Next.js",
+      "category": "framework",
+      "standard_name_posting_count": 915,
+      "spellings": [
+        {
+          "spelling": "Next.js",
+          "rule": "exact",
+          "occurrences": 692,
+          "section_occurrences": 329
+        },
+        {
+          "spelling": "nextjs",
+          "rule": "curated",
+          "occurrences": 20,
+          "section_occurrences": 1
+        },
+        {
+          "spelling": "next js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Nginx",
+      "category": "cloud",
+      "standard_name_posting_count": 212,
+      "spellings": [
+        {
+          "spelling": "Nginx",
+          "rule": "exact",
+          "occurrences": 146,
+          "section_occurrences": 66
+        }
+      ]
+    },
+    {
+      "canonical": "NoSQL",
+      "category": "concept",
+      "standard_name_posting_count": 497,
+      "spellings": [
+        {
+          "spelling": "NoSQL",
+          "rule": "exact",
+          "occurrences": 432,
+          "section_occurrences": 107
+        },
+        {
+          "spelling": "no sql",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Node.js",
+      "category": "framework",
+      "standard_name_posting_count": 1251,
+      "spellings": [
+        {
+          "spelling": "Node.js",
+          "rule": "exact",
+          "occurrences": 837,
+          "section_occurrences": 350
+        },
+        {
+          "spelling": "nodejs",
+          "rule": "curated",
+          "occurrences": 50,
+          "section_occurrences": 3
+        },
+        {
+          "spelling": "node js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Notion",
+      "category": "tool",
+      "standard_name_posting_count": 474,
+      "spellings": [
+        {
+          "spelling": "Notion",
+          "rule": "exact",
+          "occurrences": 566,
+          "section_occurrences": 116
+        }
+      ]
+    },
+    {
+      "canonical": "Nuxt.js",
+      "category": "framework",
+      "standard_name_posting_count": 41,
+      "spellings": [
+        {
+          "spelling": "nuxt",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "nuxtjs",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "OCR",
+      "category": "concept",
+      "standard_name_posting_count": 79,
+      "spellings": [
+        {
+          "spelling": "OCR",
+          "rule": "exact",
+          "occurrences": 165,
+          "section_occurrences": 24
+        }
+      ]
+    },
+    {
+      "canonical": "OpenCV",
+      "category": "data_ml",
+      "standard_name_posting_count": 393,
+      "spellings": [
+        {
+          "spelling": "OpenCV",
+          "rule": "exact",
+          "occurrences": 332,
+          "section_occurrences": 124
+        },
+        {
+          "spelling": "open cv",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Oracle",
+      "category": "database",
+      "standard_name_posting_count": 1075,
+      "spellings": [
+        {
+          "spelling": "Oracle",
+          "rule": "exact",
+          "occurrences": 979,
+          "section_occurrences": 412
+        }
+      ]
+    },
+    {
+      "canonical": "PHP",
+      "category": "language",
+      "standard_name_posting_count": 423,
+      "spellings": [
+        {
+          "spelling": "PHP",
+          "rule": "exact",
+          "occurrences": 405,
+          "section_occurrences": 156
+        }
+      ]
+    },
+    {
+      "canonical": "Pandas",
+      "category": "data_ml",
+      "standard_name_posting_count": 265,
+      "spellings": [
+        {
+          "spelling": "Pandas",
+          "rule": "exact",
+          "occurrences": 94,
+          "section_occurrences": 43
+        }
+      ]
+    },
+    {
+      "canonical": "PostgreSQL",
+      "category": "database",
+      "standard_name_posting_count": 1292,
+      "spellings": [
+        {
+          "spelling": "PostgreSQL",
+          "rule": "exact",
+          "occurrences": 1041,
+          "section_occurrences": 438
+        },
+        {
+          "spelling": "postgres",
+          "rule": "curated",
+          "occurrences": 2,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "psql",
+          "rule": "curated",
+          "occurrences": 1,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "postgre",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "postgre sql",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "PowerShell",
+      "category": "language",
+      "standard_name_posting_count": 48,
+      "spellings": [
+        {
+          "spelling": "power shell",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Prometheus",
+      "category": "devops",
+      "standard_name_posting_count": 245,
+      "spellings": [
+        {
+          "spelling": "Prometheus",
+          "rule": "exact",
+          "occurrences": 274,
+          "section_occurrences": 75
+        }
+      ]
+    },
+    {
+      "canonical": "PyTorch",
+      "category": "data_ml",
+      "standard_name_posting_count": 1026,
+      "spellings": [
+        {
+          "spelling": "PyTorch",
+          "rule": "exact",
+          "occurrences": 648,
+          "section_occurrences": 154
+        },
+        {
+          "spelling": "Pytorch",
+          "rule": "case",
+          "occurrences": 214,
+          "section_occurrences": 122
+        }
+      ]
+    },
+    {
+      "canonical": "Python",
+      "category": "language",
+      "standard_name_posting_count": 4747,
+      "spellings": [
+        {
+          "spelling": "Python",
+          "rule": "exact",
+          "occurrences": 4613,
+          "section_occurrences": 1352
+        },
+        {
+          "spelling": "python",
+          "rule": "case",
+          "occurrences": 418,
+          "section_occurrences": 20
+        }
+      ]
+    },
+    {
+      "canonical": "R",
+      "category": "language",
+      "standard_name_posting_count": 615,
+      "spellings": [
+        {
+          "spelling": "R",
+          "rule": "exact",
+          "occurrences": 1971,
+          "section_occurrences": 97
+        }
+      ]
+    },
+    {
+      "canonical": "RDBMS",
+      "category": "concept",
+      "standard_name_posting_count": 978,
+      "spellings": [
+        {
+          "spelling": "RDBMS",
+          "rule": "exact",
+          "occurrences": 861,
+          "section_occurrences": 230
+        }
+      ]
+    },
+    {
+      "canonical": "REST API",
+      "category": "api_protocol",
+      "standard_name_posting_count": 1698,
+      "spellings": [
+        {
+          "spelling": "RESTful",
+          "rule": "curated",
+          "occurrences": 617,
+          "section_occurrences": 97
+        },
+        {
+          "spelling": "RestAPI",
+          "rule": "punctuation",
+          "occurrences": 194,
+          "section_occurrences": 174
+        },
+        {
+          "spelling": "Restful",
+          "rule": "curated",
+          "occurrences": 116,
+          "section_occurrences": 81
+        },
+        {
+          "spelling": "rest-api",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "restful api",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "RabbitMQ",
+      "category": "cloud",
+      "standard_name_posting_count": 210,
+      "spellings": [
+        {
+          "spelling": "RabbitMQ",
+          "rule": "exact",
+          "occurrences": 158,
+          "section_occurrences": 33
+        }
+      ]
+    },
+    {
+      "canonical": "React",
+      "category": "framework",
+      "standard_name_posting_count": 2580,
+      "spellings": [
+        {
+          "spelling": "React",
+          "rule": "exact",
+          "occurrences": 2369,
+          "section_occurrences": 887
+        },
+        {
+          "spelling": "REACT",
+          "rule": "case",
+          "occurrences": 128,
+          "section_occurrences": 1
+        },
+        {
+          "spelling": "react",
+          "rule": "case",
+          "occurrences": 116,
+          "section_occurrences": 18
+        },
+        {
+          "spelling": "React.js",
+          "rule": "curated",
+          "occurrences": 107,
+          "section_occurrences": 24
+        },
+        {
+          "spelling": "ReactJS",
+          "rule": "curated",
+          "occurrences": 99,
+          "section_occurrences": 59
+        }
+      ]
+    },
+    {
+      "canonical": "React Native",
+      "category": "framework",
+      "standard_name_posting_count": 29,
+      "spellings": [
+        {
+          "spelling": "react-native",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "reactnative",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "React Query",
+      "category": "framework",
+      "standard_name_posting_count": 101,
+      "spellings": [
+        {
+          "spelling": "react-query",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "reactquery",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "tanstack query",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "tanstack-query",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Redis",
+      "category": "database",
+      "standard_name_posting_count": 937,
+      "spellings": [
+        {
+          "spelling": "Redis",
+          "rule": "exact",
+          "occurrences": 715,
+          "section_occurrences": 338
+        }
+      ]
+    },
+    {
+      "canonical": "Redux",
+      "category": "framework",
+      "standard_name_posting_count": 164,
+      "spellings": [
+        {
+          "spelling": "Redux",
+          "rule": "exact",
+          "occurrences": 123,
+          "section_occurrences": 51
+        }
+      ]
+    },
+    {
+      "canonical": "Ruby on Rails",
+      "category": "framework",
+      "standard_name_posting_count": 26,
+      "spellings": [
+        {
+          "spelling": "rails",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "ror",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "ruby-on-rails",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Rust",
+      "category": "language",
+      "standard_name_posting_count": 573,
+      "spellings": [
+        {
+          "spelling": "Rust",
+          "rule": "exact",
+          "occurrences": 118,
+          "section_occurrences": 33
+        }
+      ]
+    },
+    {
+      "canonical": "SQL",
+      "category": "language",
+      "standard_name_posting_count": 2096,
+      "spellings": [
+        {
+          "spelling": "SQL",
+          "rule": "exact",
+          "occurrences": 1808,
+          "section_occurrences": 459
+        }
+      ]
+    },
+    {
+      "canonical": "SQLite",
+      "category": "database",
+      "standard_name_posting_count": 29,
+      "spellings": [
+        {
+          "spelling": "sqlite3",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Scikit-Learn",
+      "category": "data_ml",
+      "standard_name_posting_count": 98,
+      "spellings": [
+        {
+          "spelling": "scikit",
+          "rule": "curated",
+          "occurrences": 39,
+          "section_occurrences": 17
+        },
+        {
+          "spelling": "scikit learn",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "scikitlearn",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "sklearn",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Shell",
+      "category": "language",
+      "standard_name_posting_count": 290,
+      "spellings": [
+        {
+          "spelling": "Shell",
+          "rule": "exact",
+          "occurrences": 247,
+          "section_occurrences": 63
+        }
+      ]
+    },
+    {
+      "canonical": "Slack",
+      "category": "tool",
+      "standard_name_posting_count": 449,
+      "spellings": [
+        {
+          "spelling": "Slack",
+          "rule": "exact",
+          "occurrences": 527,
+          "section_occurrences": 141
+        }
+      ]
+    },
+    {
+      "canonical": "Snowflake",
+      "category": "database",
+      "standard_name_posting_count": 66,
+      "spellings": [
+        {
+          "spelling": "Snowflake",
+          "rule": "exact",
+          "occurrences": 90,
+          "section_occurrences": 16
+        }
+      ]
+    },
+    {
+      "canonical": "Spark",
+      "category": "data_ml",
+      "standard_name_posting_count": 245,
+      "spellings": [
+        {
+          "spelling": "Spark",
+          "rule": "exact",
+          "occurrences": 222,
+          "section_occurrences": 44
+        },
+        {
+          "spelling": "apache spark",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Spring",
+      "category": "framework",
+      "standard_name_posting_count": 2505,
+      "spellings": [
+        {
+          "spelling": "Spring",
+          "rule": "exact",
+          "occurrences": 2116,
+          "section_occurrences": 958
+        },
+        {
+          "spelling": "spring",
+          "rule": "case",
+          "occurrences": 106,
+          "section_occurrences": 9
+        }
+      ]
+    },
+    {
+      "canonical": "Spring Boot",
+      "category": "framework",
+      "standard_name_posting_count": 126,
+      "spellings": [
+        {
+          "spelling": "SpringBoot",
+          "rule": "punctuation",
+          "occurrences": 121,
+          "section_occurrences": 41
+        },
+        {
+          "spelling": "spring-boot",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Styled-Components",
+      "category": "framework",
+      "standard_name_posting_count": 66,
+      "spellings": [
+        {
+          "spelling": "styled components",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "styled-component",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "styledcomponents",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Svelte",
+      "category": "framework",
+      "standard_name_posting_count": 36,
+      "spellings": [
+        {
+          "spelling": "sveltejs",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Swift",
+      "category": "language",
+      "standard_name_posting_count": 251,
+      "spellings": [
+        {
+          "spelling": "Swift",
+          "rule": "exact",
+          "occurrences": 166,
+          "section_occurrences": 77
+        }
+      ]
+    },
+    {
+      "canonical": "Tailwind CSS",
+      "category": "framework",
+      "standard_name_posting_count": 153,
+      "spellings": [
+        {
+          "spelling": "Tailwind",
+          "rule": "curated",
+          "occurrences": 136,
+          "section_occurrences": 57
+        },
+        {
+          "spelling": "tailwindcss",
+          "rule": "curated",
+          "occurrences": 3,
+          "section_occurrences": 2
+        },
+        {
+          "spelling": "tailwind-css",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "TensorFlow",
+      "category": "data_ml",
+      "standard_name_posting_count": 611,
+      "spellings": [
+        {
+          "spelling": "TensorFlow",
+          "rule": "exact",
+          "occurrences": 352,
+          "section_occurrences": 79
+        },
+        {
+          "spelling": "Tensorflow",
+          "rule": "case",
+          "occurrences": 147,
+          "section_occurrences": 78
+        },
+        {
+          "spelling": "tensor flow",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Terraform",
+      "category": "devops",
+      "standard_name_posting_count": 372,
+      "spellings": [
+        {
+          "spelling": "Terraform",
+          "rule": "exact",
+          "occurrences": 339,
+          "section_occurrences": 77
+        }
+      ]
+    },
+    {
+      "canonical": "Three.js",
+      "category": "framework",
+      "standard_name_posting_count": 55,
+      "spellings": [
+        {
+          "spelling": "three js",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "threejs",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "TypeScript",
+      "category": "language",
+      "standard_name_posting_count": 1906,
+      "spellings": [
+        {
+          "spelling": "TypeScript",
+          "rule": "exact",
+          "occurrences": 1101,
+          "section_occurrences": 532
+        },
+        {
+          "spelling": "Typescript",
+          "rule": "case",
+          "occurrences": 160,
+          "section_occurrences": 57
+        },
+        {
+          "spelling": "ts",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "typescripts",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Ubuntu",
+      "category": "os",
+      "standard_name_posting_count": 114,
+      "spellings": [
+        {
+          "spelling": "Ubuntu",
+          "rule": "exact",
+          "occurrences": 158,
+          "section_occurrences": 48
+        }
+      ]
+    },
+    {
+      "canonical": "VS Code",
+      "category": "tool",
+      "standard_name_posting_count": 44,
+      "spellings": [
+        {
+          "spelling": "vscode",
+          "rule": "curated",
+          "occurrences": 2,
+          "section_occurrences": 1
+        },
+        {
+          "spelling": "visual studio code",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vs-code",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Vector DB",
+      "category": "concept",
+      "standard_name_posting_count": 146,
+      "spellings": [
+        {
+          "spelling": "vector database",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vector db",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vector store",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vectordb",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vectorstore",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Vite",
+      "category": "tool",
+      "standard_name_posting_count": 173,
+      "spellings": [
+        {
+          "spelling": "Vite",
+          "rule": "exact",
+          "occurrences": 105,
+          "section_occurrences": 48
+        }
+      ]
+    },
+    {
+      "canonical": "Vue.js",
+      "category": "framework",
+      "standard_name_posting_count": 1194,
+      "spellings": [
+        {
+          "spelling": "Vue.js",
+          "rule": "exact",
+          "occurrences": 704,
+          "section_occurrences": 236
+        },
+        {
+          "spelling": "Vue3",
+          "rule": "curated",
+          "occurrences": 547,
+          "section_occurrences": 8
+        },
+        {
+          "spelling": "Vue",
+          "rule": "curated",
+          "occurrences": 360,
+          "section_occurrences": 51
+        },
+        {
+          "spelling": "vuejs",
+          "rule": "curated",
+          "occurrences": 11,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vue 3",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "vue2",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "WebGL",
+      "category": "framework",
+      "standard_name_posting_count": 71,
+      "spellings": [
+        {
+          "spelling": "WebGL",
+          "rule": "exact",
+          "occurrences": 90,
+          "section_occurrences": 24
+        }
+      ]
+    },
+    {
+      "canonical": "WebSocket",
+      "category": "api_protocol",
+      "standard_name_posting_count": 241,
+      "spellings": [
+        {
+          "spelling": "WebSocket",
+          "rule": "exact",
+          "occurrences": 235,
+          "section_occurrences": 55
+        },
+        {
+          "spelling": "web socket",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "websockets",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Webpack",
+      "category": "tool",
+      "standard_name_posting_count": 93,
+      "spellings": [
+        {
+          "spelling": "web pack",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "XGBoost",
+      "category": "data_ml",
+      "standard_name_posting_count": 18,
+      "spellings": [
+        {
+          "spelling": "xg boost",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        },
+        {
+          "spelling": "xgb",
+          "rule": "curated",
+          "occurrences": 0,
+          "section_occurrences": 0
+        }
+      ]
+    },
+    {
+      "canonical": "Zustand",
+      "category": "framework",
+      "standard_name_posting_count": 191,
+      "spellings": [
+        {
+          "spelling": "Zustand",
+          "rule": "exact",
+          "occurrences": 180,
+          "section_occurrences": 82
+        }
+      ]
+    },
+    {
+      "canonical": "gRPC",
+      "category": "api_protocol",
+      "standard_name_posting_count": 135,
+      "spellings": [
+        {
+          "spelling": "gRPC",
+          "rule": "exact",
+          "occurrences": 128,
+          "section_occurrences": 27
+        }
+      ]
+    },
+    {
+      "canonical": "iOS",
+      "category": "os",
+      "standard_name_posting_count": 402,
+      "spellings": [
+        {
+          "spelling": "iOS",
+          "rule": "exact",
+          "occurrences": 481,
+          "section_occurrences": 142
+        },
+        {
+          "spelling": "IOS",
+          "rule": "case",
+          "occurrences": 121,
+          "section_occurrences": 11
+        }
+      ]
+    }
+  ]
+}

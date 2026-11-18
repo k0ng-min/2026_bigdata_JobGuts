@@ -1,0 +1,2794 @@
+{
+  "status": "complete",
+  "basis": {
+    "posting_count": 17796,
+    "minimum_occurrences": 89,
+    "candidates_considered": 593
+  },
+  "totals": {
+    "resolved_by_dictionary": 130,
+    "needs_agent_judgement": 463,
+    "resolved_occurrence_share": 0.4072,
+    "review_occurrence_share": 0.5928
+  },
+  "candidates": [
+    {
+      "name": "API",
+      "count": 3770,
+      "section_count": 953,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "D",
+      "count": 2729,
+      "section_count": 177,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SI",
+      "count": 2584,
+      "section_count": 672,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SW",
+      "count": 2335,
+      "section_count": 159,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PM",
+      "count": 2326,
+      "section_count": 69,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AI/ML",
+      "count": 2021,
+      "section_count": 64,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ERP",
+      "count": 1960,
+      "section_count": 612,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DB",
+      "count": 1927,
+      "section_count": 262,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PL",
+      "count": 1695,
+      "section_count": 29,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CRM",
+      "count": 1521,
+      "section_count": 555,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "K",
+      "count": 1417,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PO",
+      "count": 1408,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Agent",
+      "count": 1382,
+      "section_count": 148,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DBA",
+      "count": 1259,
+      "section_count": 27,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UI",
+      "count": 1219,
+      "section_count": 151,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Claude",
+      "count": 1152,
+      "section_count": 210,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Boot",
+      "count": 1131,
+      "section_count": 571,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SaaS",
+      "count": 1126,
+      "section_count": 90,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Cloud",
+      "count": 1123,
+      "section_count": 253,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "B2B",
+      "count": 1103,
+      "section_count": 47,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Data",
+      "count": 1062,
+      "section_count": 136,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RAG",
+      "count": 961,
+      "section_count": 197,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "REST",
+      "count": 919,
+      "section_count": 192,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "QA",
+      "count": 911,
+      "section_count": 36,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "S/W",
+      "count": 904,
+      "section_count": 33,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MD",
+      "count": 832,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UI/UX",
+      "count": 812,
+      "section_count": 63,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Web",
+      "count": 807,
+      "section_count": 69,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DBMS",
+      "count": 795,
+      "section_count": 111,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Vision",
+      "count": 795,
+      "section_count": 90,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MES",
+      "count": 767,
+      "section_count": 67,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SM",
+      "count": 727,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OS",
+      "count": 717,
+      "section_count": 114,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UX",
+      "count": 708,
+      "section_count": 44,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MT",
+      "count": 707,
+      "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "C/C++",
+      "count": 697,
+      "section_count": 93,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "JSP",
+      "count": 681,
+      "section_count": 296,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Windows",
+      "count": 671,
+      "section_count": 113,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Google",
+      "count": 668,
+      "section_count": 95,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Software",
+      "count": 659,
+      "section_count": 36,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AX",
+      "count": 647,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "B",
+      "count": 645,
+      "section_count": 78,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OJT",
+      "count": 632,
+      "section_count": 29,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SK",
+      "count": 615,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LG",
+      "count": 608,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MS",
+      "count": 604,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CS",
+      "count": 595,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LIG",
+      "count": 592,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GPU",
+      "count": 565,
+      "section_count": 80,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IoT",
+      "count": 544,
+      "section_count": 48,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "APP",
+      "count": 533,
+      "section_count": 54,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ChatGPT",
+      "count": 500,
+      "section_count": 57,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PoC",
+      "count": 490,
+      "section_count": 40,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MSA",
+      "count": 490,
+      "section_count": 119,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HR",
+      "count": 462,
+      "section_count": 55,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Excel",
+      "count": 445,
+      "section_count": 80,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Cursor",
+      "count": 436,
+      "section_count": 73,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Confluence",
+      "count": 431,
+      "section_count": 131,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GUI",
+      "count": 420,
+      "section_count": 36,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HW",
+      "count": 414,
+      "section_count": 56,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "KPI",
+      "count": 393,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MCU",
+      "count": 391,
+      "section_count": 78,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "App",
+      "count": 385,
+      "section_count": 55,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Computer",
+      "count": 376,
+      "section_count": 27,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Refresh",
+      "count": 376,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TCP/IP",
+      "count": 366,
+      "section_count": 83,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "BI",
+      "count": 365,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Embedded",
+      "count": 349,
+      "section_count": 99,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ETL",
+      "count": 348,
+      "section_count": 48,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PLC",
+      "count": 347,
+      "section_count": 46,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Actions",
+      "count": 346,
+      "section_count": 148,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Security",
+      "count": 346,
+      "section_count": 41,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "KT",
+      "count": 345,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "WEB",
+      "count": 344,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "End-to-End",
+      "count": 340,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PMO",
+      "count": 339,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IaC",
+      "count": 325,
+      "section_count": 51,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ROS",
+      "count": 325,
+      "section_count": 85,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Global",
+      "count": 322,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Gemini",
+      "count": 321,
+      "section_count": 59,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Learning",
+      "count": 321,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Network",
+      "count": 316,
+      "section_count": 79,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Copilot",
+      "count": 316,
+      "section_count": 49,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Photoshop",
+      "count": 315,
+      "section_count": 67,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PCB",
+      "count": 314,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SAP",
+      "count": 313,
+      "section_count": 40,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Power",
+      "count": 309,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Infra",
+      "count": 307,
+      "section_count": 137,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SDK",
+      "count": 307,
+      "section_count": 41,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AE",
+      "count": 298,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "H/W",
+      "count": 297,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Model",
+      "count": 295,
+      "section_count": 26,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Database",
+      "count": 293,
+      "section_count": 111,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "F",
+      "count": 292,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ript",
+      "count": 290,
+      "section_count": 56,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Core",
+      "count": 289,
+      "section_count": 46,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Ltd",
+      "count": 287,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MCP",
+      "count": 284,
+      "section_count": 58,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Inc",
+      "count": 282,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Query",
+      "count": 280,
+      "section_count": 119,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "S3",
+      "count": 277,
+      "section_count": 119,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "B2C",
+      "count": 277,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Microsoft",
+      "count": 276,
+      "section_count": 82,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DX",
+      "count": 274,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ISO",
+      "count": 274,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CAD",
+      "count": 270,
+      "section_count": 39,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Studio",
+      "count": 269,
+      "section_count": 68,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "WMS",
+      "count": 268,
+      "section_count": 33,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "A/B",
+      "count": 267,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OpenAI",
+      "count": 264,
+      "section_count": 38,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VLM",
+      "count": 260,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Vector",
+      "count": 259,
+      "section_count": 55,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Unix",
+      "count": 257,
+      "section_count": 74,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Codex",
+      "count": 253,
+      "section_count": 47,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RTOS",
+      "count": 253,
+      "section_count": 59,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CEO",
+      "count": 252,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NVIDIA",
+      "count": 252,
+      "section_count": 32,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ROS2",
+      "count": 251,
+      "section_count": 41,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RDS",
+      "count": 250,
+      "section_count": 90,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OO",
+      "count": 250,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Sales",
+      "count": 248,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Unity",
+      "count": 248,
+      "section_count": 41,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TA",
+      "count": 247,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "WPF",
+      "count": 246,
+      "section_count": 74,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EKS",
+      "count": 241,
+      "section_count": 78,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "recruit",
+      "count": 238,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Agentic",
+      "count": 236,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ICT",
+      "count": 236,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Visual",
+      "count": 233,
+      "section_count": 60,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LangGraph",
+      "count": 232,
+      "section_count": 35,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MFC",
+      "count": 230,
+      "section_count": 45,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Illustrator",
+      "count": 229,
+      "section_count": 45,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EC2",
+      "count": 228,
+      "section_count": 92,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Digital",
+      "count": 228,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ECS",
+      "count": 227,
+      "section_count": 76,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Adobe",
+      "count": 226,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LiDAR",
+      "count": 221,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Korea",
+      "count": 218,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SE",
+      "count": 216,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SoC",
+      "count": 216,
+      "section_count": 25,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RDB",
+      "count": 215,
+      "section_count": 48,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Deep",
+      "count": 215,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Flow",
+      "count": 209,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PM/PL",
+      "count": 209,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SCM",
+      "count": 208,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Physical",
+      "count": 207,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "M",
+      "count": 206,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SEO",
+      "count": 205,
+      "section_count": 27,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UX/UI",
+      "count": 204,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VPN",
+      "count": 203,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Mobile",
+      "count": 203,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Script",
+      "count": 201,
+      "section_count": 50,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Infrastructure",
+      "count": 200,
+      "section_count": 51,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Point",
+      "count": 200,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SI/SM",
+      "count": 200,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Robot",
+      "count": 198,
+      "section_count": 26,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "FPGA",
+      "count": 198,
+      "section_count": 35,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ITO",
+      "count": 197,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GPT",
+      "count": 195,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Control",
+      "count": 193,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HRD",
+      "count": 192,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Detection",
+      "count": 191,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LMS",
+      "count": 190,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TensorRT",
+      "count": 190,
+      "section_count": 39,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "O",
+      "count": 189,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Edge",
+      "count": 188,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Workspace",
+      "count": 187,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "data",
+      "count": 187,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Growth",
+      "count": 187,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CUDA",
+      "count": 186,
+      "section_count": 64,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ISMS",
+      "count": 186,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ARM",
+      "count": 185,
+      "section_count": 38,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Life",
+      "count": 184,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Firmware",
+      "count": 184,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RPA",
+      "count": 184,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "S",
+      "count": 183,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "km",
+      "count": 182,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "X",
+      "count": 181,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Analytics",
+      "count": 180,
+      "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PG",
+      "count": 179,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IR",
+      "count": 178,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PT",
+      "count": 178,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Tableau",
+      "count": 178,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UART",
+      "count": 177,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SLAM",
+      "count": 176,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "tuning",
+      "count": 175,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "FW",
+      "count": 175,
+      "section_count": 40,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RF",
+      "count": 175,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OA",
+      "count": 175,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HRM",
+      "count": 175,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Agile",
+      "count": 174,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IDC",
+      "count": 174,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ORM",
+      "count": 172,
+      "section_count": 38,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Planning",
+      "count": 172,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SPI",
+      "count": 169,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Responsibilities",
+      "count": 168,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Key",
+      "count": 166,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "E2E",
+      "count": 166,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "STEP",
+      "count": 166,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Workflow",
+      "count": 165,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Object",
+      "count": 164,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Observability",
+      "count": 164,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VMware",
+      "count": 164,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CTO",
+      "count": 163,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Integration",
+      "count": 162,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Knowledge",
+      "count": 162,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Device",
+      "count": 162,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Camera",
+      "count": 162,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Lambda",
+      "count": 161,
+      "section_count": 72,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CI",
+      "count": 160,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PR",
+      "count": 160,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Ansible",
+      "count": 160,
+      "section_count": 29,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DW",
+      "count": 159,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "I2C",
+      "count": 154,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Marketing",
+      "count": 154,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MQTT",
+      "count": 153,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Salesforce",
+      "count": 152,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SRE",
+      "count": 151,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Y",
+      "count": 151,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CV",
+      "count": 149,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ONNX",
+      "count": 149,
+      "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GIS",
+      "count": 148,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AMR",
+      "count": 148,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Machine",
+      "count": 148,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CJ",
+      "count": 148,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "software",
+      "count": 147,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Preferred",
+      "count": 146,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "English",
+      "count": 146,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AI/LLM",
+      "count": 145,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ISMS-P",
+      "count": 145,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PowerPoint",
+      "count": 145,
+      "section_count": 55,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Search",
+      "count": 144,
+      "section_count": 32,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Pipeline",
+      "count": 144,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VOC",
+      "count": 144,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Enterprise",
+      "count": 144,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "end-to-end",
+      "count": 143,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Engine",
+      "count": 143,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Field",
+      "count": 143,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Culture",
+      "count": 143,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Window",
+      "count": 143,
+      "section_count": 96,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Qualifications",
+      "count": 141,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "LLMOps",
+      "count": 141,
+      "section_count": 53,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MVP",
+      "count": 141,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MSP",
+      "count": 141,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IMU",
+      "count": 140,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Jquery",
+      "count": 139,
+      "section_count": 122,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Graph",
+      "count": 139,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Word",
+      "count": 139,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "KB",
+      "count": 139,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Ethernet",
+      "count": 138,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Scientist",
+      "count": 138,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Center",
+      "count": 138,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Strong",
+      "count": 136,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Science",
+      "count": 136,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ELK",
+      "count": 135,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "communication",
+      "count": 135,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PLM",
+      "count": 135,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CISSP",
+      "count": 135,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CPU",
+      "count": 134,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CMS",
+      "count": 133,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DSP",
+      "count": 133,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Robotics",
+      "count": 133,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "P",
+      "count": 133,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "BigQuery",
+      "count": 132,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "naver.com",
+      "count": 132,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NPU",
+      "count": 131,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "L",
+      "count": 131,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NC",
+      "count": 131,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ASAP",
+      "count": 131,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NCP",
+      "count": 130,
+      "section_count": 27,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DLP",
+      "count": 129,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Admin",
+      "count": 128,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Container",
+      "count": 128,
+      "section_count": 26,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NH",
+      "count": 128,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TOWER",
+      "count": 127,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Z",
+      "count": 126,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CCTV",
+      "count": 126,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IAM",
+      "count": 126,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Innovation",
+      "count": 126,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Storage",
+      "count": 125,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Cytiva",
+      "count": 125,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "agent",
+      "count": 124,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Pro",
+      "count": 123,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PI",
+      "count": 123,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Playwright",
+      "count": 122,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AI-Native",
+      "count": 122,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Action",
+      "count": 122,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Amazon",
+      "count": 122,
+      "section_count": 36,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DA",
+      "count": 122,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CX",
+      "count": 121,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Interface",
+      "count": 121,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CVPR",
+      "count": 121,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Automation",
+      "count": 121,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Protocol",
+      "count": 120,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "learning",
+      "count": 120,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Unreal",
+      "count": 120,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Tomcat",
+      "count": 119,
+      "section_count": 45,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EDA",
+      "count": 119,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Helm",
+      "count": 119,
+      "section_count": 42,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ISTQB",
+      "count": 119,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "No.1",
+      "count": 119,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Prompt",
+      "count": 118,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "vLLM",
+      "count": 118,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Sr",
+      "count": 118,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "e.g",
+      "count": 118,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SIEM",
+      "count": 118,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PD",
+      "count": 118,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SPA",
+      "count": 117,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Meta",
+      "count": 117,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Smart",
+      "count": 117,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "KORNIC",
+      "count": 117,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GLORY",
+      "count": 117,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MTS",
+      "count": 116,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EMR",
+      "count": 115,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GA4",
+      "count": 115,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "F/W",
+      "count": 115,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SSR",
+      "count": 114,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "including",
+      "count": 114,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AA",
+      "count": 114,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CNS",
+      "count": 114,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Sentry",
+      "count": 113,
+      "section_count": 60,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Driver",
+      "count": 113,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Sensor",
+      "count": 113,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "model",
+      "count": 113,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IPO",
+      "count": 113,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "cloud",
+      "count": 112,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Fine",
+      "count": 112,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Generation",
+      "count": 112,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AMD",
+      "count": 112,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Perception",
+      "count": 112,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Transformation",
+      "count": 112,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Retrieval",
+      "count": 111,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NeurIPS",
+      "count": 111,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GA",
+      "count": 111,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "functional",
+      "count": 111,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MVVM",
+      "count": 110,
+      "section_count": 38,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "POS",
+      "count": 110,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "performance",
+      "count": 110,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Partner",
+      "count": 110,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "POP",
+      "count": 110,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Programming",
+      "count": 109,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VPC",
+      "count": 109,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Modbus",
+      "count": 109,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EDR",
+      "count": 109,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Transformer",
+      "count": 109,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Image",
+      "count": 109,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "understanding",
+      "count": 108,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ELT",
+      "count": 108,
+      "section_count": 14,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ROAS",
+      "count": 108,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CT",
+      "count": 108,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OrCAD",
+      "count": 108,
+      "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Nexacro",
+      "count": 108,
+      "section_count": 49,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "FE",
+      "count": 107,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "M365",
+      "count": 107,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HPC",
+      "count": 107,
+      "section_count": 24,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HTS",
+      "count": 107,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CISA",
+      "count": 107,
+      "section_count": 25,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OracleDB",
+      "count": 107,
+      "section_count": 102,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NHN",
+      "count": 106,
+      "section_count": 19,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "jQuery",
+      "count": 106,
+      "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VC",
+      "count": 106,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Splunk",
+      "count": 106,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "STM32",
+      "count": 106,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Consulting",
+      "count": 106,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "fr",
+      "count": 106,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Public",
+      "count": 105,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Medical",
+      "count": 105,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CloudWatch",
+      "count": 105,
+      "section_count": 36,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Intelligence",
+      "count": 105,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Automotive",
+      "count": 105,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "B2G",
+      "count": 105,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IPS",
+      "count": 105,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "JSON",
+      "count": 104,
+      "section_count": 31,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OpenSearch",
+      "count": 104,
+      "section_count": 29,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Isaac",
+      "count": 104,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "E-mail",
+      "count": 104,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TMS",
+      "count": 103,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "tier",
+      "count": 103,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Node",
+      "count": 103,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Verilog",
+      "count": 103,
+      "section_count": 38,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Javasc",
+      "count": 103,
+      "section_count": 22,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Feature",
+      "count": 102,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "across",
+      "count": 102,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DNS",
+      "count": 102,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Performance",
+      "count": 102,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "HMI",
+      "count": 102,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Selenium",
+      "count": 101,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Optimization",
+      "count": 101,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "V1",
+      "count": 101,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "field",
+      "count": 100,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "RFP",
+      "count": 100,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Jr",
+      "count": 100,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Segmentation",
+      "count": 100,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "boot",
+      "count": 99,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "degree",
+      "count": 99,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "PADS",
+      "count": 99,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "H",
+      "count": 99,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Memory",
+      "count": 98,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Communication",
+      "count": 98,
+      "section_count": 12,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "BLE",
+      "count": 98,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Jetson",
+      "count": 98,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OEM",
+      "count": 98,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "WebView",
+      "count": 97,
+      "section_count": 20,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Store",
+      "count": 97,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "NICE",
+      "count": 97,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Foundation",
+      "count": 97,
+      "section_count": 18,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Sim",
+      "count": 97,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Pool",
+      "count": 97,
+      "section_count": 0,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "BSP",
+      "count": 97,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "DC",
+      "count": 97,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "amework",
+      "count": 97,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SLA",
+      "count": 96,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TOEIC",
+      "count": 96,
+      "section_count": 47,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "ASP",
+      "count": 96,
+      "section_count": 37,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Day",
+      "count": 96,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CCNA",
+      "count": 96,
+      "section_count": 32,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Premiere",
+      "count": 96,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "IBM",
+      "count": 96,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Monitoring",
+      "count": 95,
+      "section_count": 46,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "WAF",
+      "count": 95,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TCP",
+      "count": 95,
+      "section_count": 16,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GitOps",
+      "count": 95,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "QC",
+      "count": 95,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SQS",
+      "count": 94,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Safety",
+      "count": 94,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Motion",
+      "count": 94,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Orchestration",
+      "count": 94,
+      "section_count": 21,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "industry",
+      "count": 94,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VLA",
+      "count": 94,
+      "section_count": 13,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Navigation",
+      "count": 94,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "I/O",
+      "count": 93,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OOP",
+      "count": 93,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Collaboration",
+      "count": 93,
+      "section_count": 27,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Anthropic",
+      "count": 93,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "TikTok",
+      "count": 93,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "O2O",
+      "count": 93,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Function",
+      "count": 93,
+      "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Requirements",
+      "count": 92,
+      "section_count": 6,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Auto",
+      "count": 92,
+      "section_count": 10,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MVC",
+      "count": 91,
+      "section_count": 39,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Context",
+      "count": 91,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Compose",
+      "count": 91,
+      "section_count": 23,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Wi-Fi",
+      "count": 91,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Gateway",
+      "count": 91,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AP",
+      "count": 91,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "optimization",
+      "count": 91,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "MM",
+      "count": 91,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Naver",
+      "count": 90,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Hardware",
+      "count": 90,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "On-Premise",
+      "count": 90,
+      "section_count": 15,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Program",
+      "count": 90,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "AGV",
+      "count": 90,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "GTM",
+      "count": 90,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "BM",
+      "count": 90,
+      "section_count": 5,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "EMC",
+      "count": 90,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "JWT",
+      "count": 89,
+      "section_count": 30,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Databricks",
+      "count": 89,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Builder",
+      "count": 89,
+      "section_count": 9,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "learn",
+      "count": 89,
+      "section_count": 25,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Logic",
+      "count": 89,
+      "section_count": 8,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "world",
+      "count": 89,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "SCADA",
+      "count": 89,
+      "section_count": 11,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Family",
+      "count": 89,
+      "section_count": 2,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    }
+  ]
+}
