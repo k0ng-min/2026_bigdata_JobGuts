@@ -465,9 +465,9 @@ tests/test_llm_contracts.py:3:  from src.llm import FakeLLMProvider, LLMRequest
 
 ## 2-4. 에이전트를 추가할 때 건드릴 파일 / 새로 만들 파일
 
-### 전제: 지금은 모든 파일이 경민 님 작업물입니다
+### 전제: 지금은 모든 파일이 팀원 작업물입니다
 
-`gyeongseon` 브랜치는 `origin/k0ng_min`을 fast-forward한 것이라, **현재 저장소의 모든 파일이 경민 님 커밋입니다.**
+`gyeongseon` 브랜치는 `origin/k0ng_min`을 fast-forward한 것이라, **현재 저장소의 모든 파일이 팀원 커밋입니다.**
 그리고 변경 이력을 보면 활발히 손대는 영역이 뚜렷합니다.
 
 | 파일 | 변경 횟수 | 충돌 위험 |
@@ -482,7 +482,7 @@ tests/test_llm_contracts.py:3:  from src.llm import FakeLLMProvider, LLMRequest
 | `src/ingestion/loader.py` | 2 | 중간 |
 
 특히 최근 4개 커밋(`6ba2365` → `f279ebe` → `0fbe847` revert → `5482b2a`)이 **모두 `web_server.py`**입니다.
-경민 님이 지금 작업 중인 파일이므로 **절대 건드리지 않는 것이 좋습니다.**
+담당 팀원이 지금 작업 중인 파일이므로 **절대 건드리지 않는 것이 좋습니다.**
 
 ### 권장: 새로 만들 파일 (충돌 위험 거의 없음)
 
@@ -497,10 +497,10 @@ tests/test_llm_contracts.py:3:  from src.llm import FakeLLMProvider, LLMRequest
 | `configs/agent.json` | 모델명·최대 반복 횟수·도구 목록 |
 | `tests/test_agent_loop.py` | 루프 단위 테스트 (`FakeLLMProvider` 재사용) |
 | `tests/test_agent_tools.py` | 도구 스키마·인자 검증 |
-| `docs/gyeongseon/02_agent_design.md` | 설계 문서 (경민 님 문서와 분리) |
+| `docs/gyeongseon/03_agent_design.md` | 설계 문서 (팀원 문서와 분리) |
 | `requirements.txt` | 의존성 고정 (현재 없음) |
 
-**왜 안전한가:** git은 파일 단위로 병합합니다. 새 파일만 추가하면 경민 님이 기존 파일을 어떻게 바꾸든
+**왜 안전한가:** git은 파일 단위로 병합합니다. 새 파일만 추가하면 팀원이 기존 파일을 어떻게 바꾸든
 **merge conflict가 발생하지 않습니다.** 특히 `src/llm/`은 `LLMProvider`가 `Protocol`로 정의되어 있어
 (`contracts.py:22`) 기존 코드를 **한 줄도 고치지 않고** 새 provider를 끼울 수 있습니다. 설계가 잘 되어 있는 부분입니다.
 
@@ -512,7 +512,7 @@ tests/test_llm_contracts.py:3:  from src.llm import FakeLLMProvider, LLMRequest
 | `configs/tech_dictionary.json` | 142개 항목·`category` 추가 | 중간 | 기존 파일 수정 대신 **`configs/tech_dictionary_v2.json`**을 새로 만들고 `--dictionary`로 지정 (CLI가 이미 지원: `app.py:8`) |
 | `src/service/app.py` | 에이전트 모드 플래그 | 높음 | **건드리지 말고** `src/agent/run_agent.py`를 새 진입점으로 |
 | `README.md` | 에이전트 사용법 | **매우 높음** | 내 문서는 `docs/gyeongseon/`에만 쓰고, README는 **합치는 시점에 한 줄 링크만** 추가 |
-| `src/service/web_server.py` | UI에 에이전트 연결 | **매우 높음** | 경민 님 작업 중. 손대지 않음 |
+| `src/service/web_server.py` | UI에 에이전트 연결 | **매우 높음** | 담당 팀원 작업 중. 손대지 않음 |
 
 ### 특히 주의: 규칙이 50개만 저장되는 문제
 
@@ -533,10 +533,10 @@ tests/test_llm_contracts.py:3:  from src.llm import FakeLLMProvider, LLMRequest
 
 ### 병합 순서 제안
 
-1. 경민 님께 `week12_actual_results.md` 수치와 13·14주차 산출물이 구버전이라는 점을 먼저 공유 (이 문서 1-5 참조)
+1. 팀원에게 `week12_actual_results.md` 수치와 13·14주차 산출물이 구버전이라는 점을 먼저 공유 (이 문서 1-5 참조)
 2. 내 작업은 `src/agent/`, `tests/test_agent_*.py`, `docs/gyeongseon/`, `configs/agent.json`에만 추가
 3. `src/analysis/run_week12.py`와 `configs/tech_dictionary.json`은 **합의 후** 별도 작은 커밋으로 분리
-4. `README.md`, `src/service/app.py`, `src/service/web_server.py`는 마지막에 경민 님이 직접 반영
+4. `README.md`, `src/service/app.py`, `src/service/web_server.py`는 마지막에 담당 팀원이 직접 반영
 
 ---
 
