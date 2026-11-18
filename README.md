@@ -21,6 +21,7 @@
 - [12주차 계획](docs/weeks/week12_association_rules.md)
 - [13주차 계획](docs/weeks/week13_retrieval_and_service_integration.md)
 - [14주차 계획](docs/weeks/week14_segment_comparison_and_validation.md)
+- [최종 보고서](docs/final_report.md)
 
 ## 저장소 구조
 
@@ -47,3 +48,7 @@
 ```
 
 상세 구현 순서와 산출물 기준은 `docs/`의 문서를 따른다.
+
+## 실행
+
+원본 데이터를 준비한 뒤 `./scripts/run_pipeline.ps1`을 실행하면 품질 점검, 정규화, 규칙 분석, 테스트와 CLI 추천 예시를 순서대로 재현한다.
