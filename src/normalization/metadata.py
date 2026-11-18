@@ -12,10 +12,10 @@ def classify_role(title: str | None) -> tuple[str, str]:
     matched = [role for role, terms in ROLE_TERMS.items() if any(term in text for term in terms)]
     if len(matched) == 1:
         return matched[0], "title_rule"
-    return "unknown", "needs_review" if matched else "unclassified"
+    return "other_tech", "fallback_title"
 
 def classify_experience(label: str | None) -> tuple[str, str]:
     value = (label or "").strip()
     if value in {"신입", "경력무관"}: return "entry", "source_label"
     if value in {"1~3년차", "3~5년차", "5년이상"}: return value, "source_label"
-    return "unknown", "needs_review"
+    return "other", "fallback_label"
