@@ -46,14 +46,18 @@ def main() -> int:
     parser.add_argument("--input", type=Path, default=Path("data/processed/postings_normalized.jsonl"))
     parser.add_argument("--config", type=Path, default=Path("configs/experiments.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
+    parser.add_argument("--top-n", type=int, default=50, help="How many rules to keep in the display-only top-N artifact.")
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
     args.artifact_dir.mkdir(parents=True, exist_ok=True)
     comparison_path = args.artifact_dir / "week12_rule_comparison.json"
+    all_rules_path = args.artifact_dir / "week12_all_rules.json"
     top_rules_path = args.artifact_dir / "week12_top_rules.json"
     if not args.input.is_file():
         comparison_path.write_text(json.dumps({"status": "blocked_missing_input", "expected_path": str(args.input)}, indent=2) + "\n", encoding="utf-8")
-        top_rules_path.write_text("[]\n", encoding="utf-8")
+        blocked = {"status": "blocked_missing_input", "raw": [], "normalized": []}
+        all_rules_path.write_text(json.dumps(blocked, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        top_rules_path.write_text(json.dumps(blocked, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return 0
     records = _records(args.input)
     parameters = config["week12_parameters"]
@@ -75,8 +79,24 @@ def main() -> int:
         "interest_formula": "confidence(A -> B) - P(B), calculated in the same segment",
     }
     comparison_path.write_text(json.dumps(comparison, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    top_rules_path.write_text(json.dumps({"raw": raw_rules[:50], "normalized": normalized_rules[:50]}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {comparison_path} and {top_rules_path}")
+    all_rules_path.write_text(json.dumps({
+        "status": "complete",
+        "scope": "every rule that passed the configured support and confidence thresholds",
+        "parameters": parameters,
+        "rule_count": {"raw": len(raw_rules), "normalized": len(normalized_rules)},
+        "raw": raw_rules,
+        "normalized": normalized_rules,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    top_rules_path.write_text(json.dumps({
+        "status": "complete",
+        "scope": f"display-only preview: highest-interest {args.top_n} rules per experiment",
+        "selected_top_n": args.top_n,
+        "rule_count": {"raw": len(raw_rules), "normalized": len(normalized_rules)},
+        "source_artifact": all_rules_path.name,
+        "raw": raw_rules[:args.top_n],
+        "normalized": normalized_rules[:args.top_n],
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {comparison_path}, {all_rules_path} ({len(normalized_rules)} rules) and {top_rules_path} (top {args.top_n})")
     return 0
 
 

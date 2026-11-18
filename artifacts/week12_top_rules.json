@@ -1,4 +1,12 @@
 {
+  "status": "complete",
+  "scope": "display-only preview: highest-interest 50 rules per experiment",
+  "selected_top_n": 50,
+  "rule_count": {
+    "raw": 694,
+    "normalized": 694
+  },
+  "source_artifact": "week12_all_rules.json",
   "raw": [
     {
       "antecedent": [
