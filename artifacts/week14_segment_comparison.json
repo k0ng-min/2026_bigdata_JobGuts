@@ -1,0 +1,16 @@
+{
+  "job_role_counts": {
+    "unknown": 37964,
+    "frontend": 562,
+    "backend": 1468,
+    "fullstack": 354
+  },
+  "experience_segment_counts": {
+    "entry": 7151,
+    "1~3년차": 1692,
+    "3~5년차": 2589,
+    "5년이상": 2966,
+    "unknown": 25950
+  },
+  "status": "needs_review_for_segment_comparison"
+}

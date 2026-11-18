@@ -10,6 +10,7 @@ from src.ingestion.loader import load_postings
 
 from .dictionary import TechnologyDictionary
 from .normalizer import normalize_technologies
+from .metadata import classify_experience, classify_role
 
 
 def main() -> int:
@@ -42,6 +43,8 @@ def main() -> int:
             row = dict(posting.raw)
             row["normalized_techs"] = list(normalized.normalized_techs)
             row["normalization_dictionary_version"] = dictionary.version
+            row["job_role"], row["job_role_status"] = classify_role(row.get("title"))
+            row["experience_segment"], row["experience_status"] = classify_experience(row.get("experience_level"))
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
             transformed += normalized.transformed_count
             duplicates += normalized.duplicate_count
