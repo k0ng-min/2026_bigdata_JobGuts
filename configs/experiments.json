@@ -1,0 +1,15 @@
+{
+  "version": "week11.experiment-contract.v1",
+  "comparison": {
+    "same_posting_identifier_set_required": true,
+    "raw_transaction_field": "final_techs",
+    "normalized_transaction_field": "normalized_techs",
+    "itemset_excludes": ["job_role", "experience_level"]
+  },
+  "week12_parameters_pending": {
+    "minimum_support": null,
+    "minimum_confidence": null,
+    "maximum_itemset_size": null,
+    "reason": "Set only after the week-10 quality report uses the approved input export."
+  }
+}

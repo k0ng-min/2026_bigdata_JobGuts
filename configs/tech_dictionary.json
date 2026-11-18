@@ -1,0 +1,20 @@
+{
+  "version": "tech-dictionary.v1",
+  "matching": "case-insensitive exact aliases after trimming whitespace",
+  "canonical_technologies": {
+    "JavaScript": ["javascript", "js", "javascript es6"],
+    "TypeScript": ["typescript", "ts", "typescripts"],
+    "Node.js": ["node.js", "nodejs", "node js"],
+    "React": ["react", "react.js", "reactjs"],
+    "Vue.js": ["vue", "vue.js", "vuejs"],
+    "Next.js": ["next.js", "nextjs", "next js"],
+    "PostgreSQL": ["postgresql", "postgres", "postgre sql"],
+    "MySQL": ["mysql", "my sql"],
+    "GitHub": ["github", "git hub"],
+    "GitHub Actions": ["github actions", "github action"],
+    "Kubernetes": ["kubernetes", "k8s"],
+    "TensorFlow": ["tensorflow", "tensor flow"],
+    "ASP.NET": ["asp.net", "asp net"],
+    "AJAX": ["ajax"]
+  }
+}

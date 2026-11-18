@@ -1,0 +1,8 @@
+{
+  "status": "blocked_missing_input",
+  "input": {
+    "expected_path": "data\\raw\\korean_it_recruit_postings.jsonl"
+  },
+  "dictionary_version": "tech-dictionary.v1",
+  "next_action": "Create the approved week-10 input export, then rerun this command."
+}

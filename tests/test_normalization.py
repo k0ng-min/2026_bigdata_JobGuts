@@ -1,0 +1,26 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from src.normalization.dictionary import TechnologyDictionary
+from src.normalization.normalizer import normalize_technologies
+
+
+class NormalizationTests(unittest.TestCase):
+    def test_aliases_are_canonicalized_and_duplicates_are_removed(self):
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        dictionary_path = Path(temp_dir.name) / "dictionary.json"
+        dictionary_path.write_text(json.dumps({
+            "version": "test.v1",
+            "canonical_technologies": {"JavaScript": ["js", "javascript"]}
+        }), encoding="utf-8")
+        dictionary = TechnologyDictionary.from_json(dictionary_path)
+
+        result = normalize_technologies(("JS", "JavaScript", "Rust"), dictionary)
+
+        self.assertEqual(result.normalized_techs, ("JavaScript", "Rust"))
+        self.assertEqual(result.transformed_count, 1)
+        self.assertEqual(result.duplicate_count, 1)
+        self.assertEqual(result.unknown_techs, ("Rust",))
