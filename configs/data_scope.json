@@ -1,0 +1,32 @@
+{
+  "version": "week10.scope.v1",
+  "data_source": {
+    "name": "young-cc/korean-it-recruit-dataset",
+    "url": "https://huggingface.co/datasets/young-cc/korean-it-recruit-dataset",
+    "split": "train",
+    "license": "CC-BY-4.0",
+    "required_columns": ["source", "job_id", "raw_text", "experience_level", "final_techs", "hard_skills"]
+  },
+  "input_file_contract": {
+    "expected_path": "data/raw/korean_it_recruit_postings.jsonl",
+    "accepted_formats": [".json", ".jsonl", ".ndjson", ".csv"],
+    "selection_status": "blocked_until_an_approved_export_is_present",
+    "selection_rule": "Select exactly one immutable export and record its SHA-256 in the generated summary."
+  },
+  "duplicate_policy": {
+    "primary_key": ["source", "job_id"],
+    "missing_id_policy": "retain_for_review",
+    "same_body_distinct_id_policy": "flag_for_review_do_not_auto_drop"
+  },
+  "technology_policy": {
+    "starting_field": "final_techs",
+    "comparison_field": "hard_skills",
+    "empty_list_policy": "exclude_from_analysis_transactions_retain_in_quality_report"
+  },
+  "segment_policy": {
+    "job_roles_in_initial_scope": ["backend", "frontend"],
+    "fullstack_policy": "separate_segment",
+    "experience_policy": "retain_raw_label_and_text; ambiguous_or_conflicting_values_are_unknown_or_needs_review",
+    "apriori_itemset_excludes": ["job_role", "experience_level"]
+  }
+}

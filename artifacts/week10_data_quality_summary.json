@@ -1,0 +1,8 @@
+{
+  "report_schema_version": "week10.v1",
+  "status": "blocked_missing_input",
+  "input": {
+    "expected_path": "data\\raw\\korean_it_recruit_postings.jsonl"
+  },
+  "next_action": "Place one approved export at the expected path or pass --input, then rerun this command."
+}
