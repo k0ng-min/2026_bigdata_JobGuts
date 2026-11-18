@@ -2,7 +2,7 @@
 
 ## Team Information
 
-- **Team Name:**
+- **Team Name:** JOBGUTS
 - **Team Leader:** 서동균 (2021270664)
 - **Team Members:**
   - 김경선 (2022270656)
