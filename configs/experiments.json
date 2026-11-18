@@ -6,10 +6,11 @@
     "normalized_transaction_field": "normalized_techs",
     "itemset_excludes": ["job_role", "experience_level"]
   },
-  "week12_parameters_pending": {
-    "minimum_support": null,
-    "minimum_confidence": null,
-    "maximum_itemset_size": null,
-    "reason": "Set only after the week-10 quality report uses the approved input export."
+  "week12_parameters": {
+    "minimum_support": 0.005,
+    "minimum_confidence": 0.2,
+    "maximum_itemset_size": 2,
+    "duplicate_policy": "keep first source + job_id occurrence; do not auto-drop same-body distinct IDs",
+    "segment": "all postings with non-empty final_techs after source + job_id de-duplication"
   }
 }
