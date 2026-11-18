@@ -1,16 +1,423 @@
 {
-  "job_role_counts": {
-    "unknown": 37964,
-    "frontend": 562,
-    "backend": 1468,
-    "fullstack": 354
-  },
-  "experience_segment_counts": {
-    "entry": 7151,
-    "1~3년차": 1692,
-    "3~5년차": 2589,
-    "5년이상": 2966,
-    "unknown": 25950
-  },
-  "status": "needs_review_for_segment_comparison"
+  "top_triples": [
+    {
+      "items": [
+        "C",
+        "C++",
+        "Python"
+      ],
+      "count": 296
+    },
+    {
+      "items": [
+        "C",
+        "C++",
+        "Linux"
+      ],
+      "count": 283
+    },
+    {
+      "items": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "count": 277
+    },
+    {
+      "items": [
+        "Java",
+        "JavaScript",
+        "Spring"
+      ],
+      "count": 266
+    },
+    {
+      "items": [
+        "Java",
+        "REST API",
+        "Spring"
+      ],
+      "count": 249
+    },
+    {
+      "items": [
+        "AWS",
+        "Azure",
+        "GCP"
+      ],
+      "count": 237
+    },
+    {
+      "items": [
+        "AWS",
+        "Java",
+        "Spring"
+      ],
+      "count": 226
+    },
+    {
+      "items": [
+        "Java",
+        "MySQL",
+        "Spring"
+      ],
+      "count": 226
+    },
+    {
+      "items": [
+        "JavaScript",
+        "React",
+        "TypeScript"
+      ],
+      "count": 215
+    },
+    {
+      "items": [
+        "Java",
+        "React",
+        "Spring"
+      ],
+      "count": 210
+    },
+    {
+      "items": [
+        "PyTorch",
+        "Python",
+        "TensorFlow"
+      ],
+      "count": 205
+    },
+    {
+      "items": [
+        "AI",
+        "ML",
+        "Python"
+      ],
+      "count": 204
+    },
+    {
+      "items": [
+        "AI",
+        "LLM",
+        "Python"
+      ],
+      "count": 199
+    },
+    {
+      "items": [
+        "Git",
+        "Java",
+        "Spring"
+      ],
+      "count": 198
+    },
+    {
+      "items": [
+        "AI",
+        "Docker",
+        "Python"
+      ],
+      "count": 195
+    },
+    {
+      "items": [
+        "AI",
+        "PyTorch",
+        "Python"
+      ],
+      "count": 195
+    },
+    {
+      "items": [
+        "AWS",
+        "Docker",
+        "Kubernetes"
+      ],
+      "count": 193
+    },
+    {
+      "items": [
+        "Java",
+        "SQL",
+        "Spring"
+      ],
+      "count": 192
+    },
+    {
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Python"
+      ],
+      "count": 191
+    },
+    {
+      "items": [
+        "Java",
+        "Oracle",
+        "Spring"
+      ],
+      "count": 187
+    },
+    {
+      "items": [
+        "JavaScript",
+        "Node.js",
+        "React"
+      ],
+      "count": 186
+    },
+    {
+      "items": [
+        "C++",
+        "Linux",
+        "Python"
+      ],
+      "count": 183
+    },
+    {
+      "items": [
+        "AI",
+        "AWS",
+        "Python"
+      ],
+      "count": 176
+    },
+    {
+      "items": [
+        "Docker",
+        "Linux",
+        "Python"
+      ],
+      "count": 176
+    },
+    {
+      "items": [
+        "AI",
+        "Linux",
+        "Python"
+      ],
+      "count": 175
+    },
+    {
+      "items": [
+        "AI",
+        "Python",
+        "SQL"
+      ],
+      "count": 175
+    },
+    {
+      "items": [
+        "AI",
+        "Java",
+        "Spring"
+      ],
+      "count": 173
+    },
+    {
+      "items": [
+        "AWS",
+        "GCP",
+        "Python"
+      ],
+      "count": 173
+    },
+    {
+      "items": [
+        "HTML",
+        "JavaScript",
+        "React"
+      ],
+      "count": 172
+    },
+    {
+      "items": [
+        "Docker",
+        "Java",
+        "Spring"
+      ],
+      "count": 169
+    },
+    {
+      "items": [
+        "Java",
+        "PostgreSQL",
+        "Spring"
+      ],
+      "count": 165
+    },
+    {
+      "items": [
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "count": 165
+    },
+    {
+      "items": [
+        "Java",
+        "JavaScript",
+        "React"
+      ],
+      "count": 165
+    },
+    {
+      "items": [
+        "CSS",
+        "HTML",
+        "React"
+      ],
+      "count": 163
+    },
+    {
+      "items": [
+        "AWS",
+        "Docker",
+        "Python"
+      ],
+      "count": 163
+    },
+    {
+      "items": [
+        "Java",
+        "Linux",
+        "Spring"
+      ],
+      "count": 162
+    },
+    {
+      "items": [
+        "AI",
+        "C++",
+        "Python"
+      ],
+      "count": 156
+    },
+    {
+      "items": [
+        "AI",
+        "Java",
+        "Python"
+      ],
+      "count": 156
+    },
+    {
+      "items": [
+        "JavaScript",
+        "Node.js",
+        "TypeScript"
+      ],
+      "count": 156
+    },
+    {
+      "items": [
+        "Git",
+        "JavaScript",
+        "React"
+      ],
+      "count": 155
+    },
+    {
+      "items": [
+        "C",
+        "C#",
+        "C++"
+      ],
+      "count": 154
+    },
+    {
+      "items": [
+        "AI",
+        "PyTorch",
+        "TensorFlow"
+      ],
+      "count": 154
+    },
+    {
+      "items": [
+        "Java",
+        "JavaScript",
+        "Oracle"
+      ],
+      "count": 153
+    },
+    {
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "Linux"
+      ],
+      "count": 152
+    },
+    {
+      "items": [
+        "JavaScript",
+        "REST API",
+        "React"
+      ],
+      "count": 150
+    },
+    {
+      "items": [
+        "AI",
+        "JavaScript",
+        "React"
+      ],
+      "count": 148
+    },
+    {
+      "items": [
+        "Next.js",
+        "React",
+        "TypeScript"
+      ],
+      "count": 144
+    },
+    {
+      "items": [
+        "AI",
+        "AWS",
+        "GCP"
+      ],
+      "count": 143
+    },
+    {
+      "items": [
+        "AWS",
+        "Java",
+        "REST API"
+      ],
+      "count": 142
+    },
+    {
+      "items": [
+        "AWS",
+        "Azure",
+        "Python"
+      ],
+      "count": 141
+    }
+  ],
+  "segments": {
+    "other_tech|entry": 3206,
+    "frontend|entry": 218,
+    "backend|entry": 721,
+    "fullstack|entry": 162,
+    "other_tech|1~3년차": 528,
+    "fullstack|1~3년차": 26,
+    "frontend|1~3년차": 35,
+    "backend|1~3년차": 78,
+    "frontend|3~5년차": 119,
+    "backend|3~5년차": 234,
+    "other_tech|3~5년차": 978,
+    "fullstack|3~5년차": 71,
+    "backend|5년이상": 229,
+    "other_tech|5년이상": 1126,
+    "frontend|5년이상": 97,
+    "fullstack|5년이상": 56,
+    "other_tech|other": 10904
+  }
 }
