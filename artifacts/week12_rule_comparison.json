@@ -9,8 +9,8 @@
     "minimum_support": 0.005,
     "minimum_confidence": 0.2,
     "maximum_itemset_size": 2,
-    "duplicate_policy": "keep first source + job_id occurrence; do not auto-drop same-body distinct IDs",
-    "segment": "all postings with non-empty final_techs after source + job_id de-duplication"
+    "duplicate_policy": "keep first source + job_id occurrence; also keep only the first posting per distinct raw_text body",
+    "segment": "all postings with a non-empty technology list after source + job_id and raw_text body de-duplication"
   },
   "raw": {
     "transaction_count": 17796,

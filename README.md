@@ -2,7 +2,7 @@
 
 > 국내 IT 채용공고의 기술 조합을 분석해, 보유 기술 다음에 함께 검토할 기술과 실제 근거 공고를 제시합니다.
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white) ![CLI](https://img.shields.io/badge/interface-CLI-222222) ![Tests](https://img.shields.io/badge/tests-8%20passed-2E8B57) ![Data](https://img.shields.io/badge/data-40%2C348%20postings-6A5ACD)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white) ![CLI](https://img.shields.io/badge/interface-CLI-222222) ![Tests](https://img.shields.io/badge/tests-20%20passed-2E8B57) ![Data](https://img.shields.io/badge/data-40%2C348%20postings-6A5ACD)
 
 `Apriori` · `Association Rules` · `Evidence-based Recommendation` · `Reproducible Pipeline`
 
@@ -21,8 +21,8 @@
 | 분석 트랜잭션 | 17,796 |
 | 중복 제외 | `source + job_id` 777행, 동일 본문 933행 |
 | 정규화 사전 | `tech-dictionary.v1`, 별칭 변환 127건 |
-| 연관규칙 | 최소 support 0.005, confidence 0.2에서 694개 |
-| 테스트 | `unittest` 8개 통과 |
+| 연관규칙 | 최소 support 0.005, confidence 0.2에서 694개 (선행 기술 94종) |
+| 테스트 | `unittest` 20개 통과 |
 
 **핵심 발견 예시:** `TensorFlow → PyTorch` 규칙은 support **0.0302**, confidence **0.9488**, interest **0.8959**로 계산되었습니다. 이 수치는 17,796개 분석 트랜잭션과 현재 사전·필터 조건에만 적용됩니다.
 
@@ -42,21 +42,23 @@ flowchart LR
 - **지표**: support는 조합의 비율, confidence는 선행 기술 보유 시 결과 기술의 조건부 비율입니다. `interest = confidence(A → B) - P(B)`이며 동일 분석 세그먼트에서 계산합니다.
 - **근거 제시**: 추천 결과에는 `source`, `job_id`, `title`의 실제 공고 근거를 최대 3건 제공합니다.
 - **CLI 서비스**: 규칙 없음은 `no_rules`, 근거가 필터를 만족하지 않으면 `insufficient_sample` 상태로 반환합니다.
+- **필터**: 직무(`--role`), 경력 라벨(`--experience`), 신입 지원 가능 여부(`--entry-eligible`)로 근거 공고를 좁힙니다. 경력 라벨은 원본 표기를 그대로 유지하며 `경력무관`을 `신입`으로 바꾸지 않습니다.
 - **GLM 상태**: 제공자 독립 인터페이스와 fake provider만 구현되어 있습니다. 실제 GLM API·키·SDK·HTTP 호출은 **미구현**입니다.
 
 ```powershell
 python -m src.service.app --skills TensorFlow
 python -m src.service.app --skills NotARealSkill
 python -m src.service.app --skills TensorFlow --role frontend
+python -m src.service.app --skills TensorFlow --entry-eligible
 ```
 
 ## 실행 결과
 
 ### 기술 조합과 세그먼트
 
-`artifacts/week14_segment_comparison.json`에는 실제 상위 3개 기술 조합과 제목·경력 라벨 기반 세그먼트 표본이 있습니다. 예를 들어 `JavaScript + React + TypeScript` 조합은 **215**회, `PyTorch + Python + TensorFlow` 조합은 **205**회 관측되었습니다.
+`artifacts/week14_segment_comparison.json`에는 실제 상위 3개 기술 조합과 제목·경력 라벨 기반 세그먼트 표본이 있습니다. 12주차와 동일한 적격 공고 **17,796**건에서 `AWS + Java + Spring` 조합은 **724**회, `Java + JavaScript + Spring` 조합은 **710**회, `CSS + HTML + JavaScript` 조합은 **647**회 관측되었습니다.
 
-기술 연결 그래프 데이터는 [week14_skill_graph.json](artifacts/week14_skill_graph.json)에 저장됩니다. 노드는 기술명, 방향 엣지는 규칙이며, 각 엣지의 `support`, `confidence`, `interest`는 해당 규칙 테이블 값입니다.
+기술 연결 그래프 데이터는 [week14_skill_graph.json](artifacts/week14_skill_graph.json)에 저장됩니다. 노드 94개, 엣지 694개로 전체 규칙을 보존하며, 각 엣지의 `support`, `confidence`, `interest`는 해당 규칙 테이블 값입니다.
 
 <details>
 <summary>분석 조건과 세부 지표 보기</summary>
@@ -92,7 +94,9 @@ Invoke-WebRequest -Uri "https://huggingface.co/datasets/young-cc/korean-it-recru
 ./scripts/run_pipeline.ps1
 ```
 
-실행 순서: 원본 품질 점검 → 정규화 → 규칙 분석 → 테스트 → CLI 추천 예시입니다. 생성되는 주요 결과는 `artifacts/week10_data_quality_summary.json`, `artifacts/week11_normalization_summary.json`, `artifacts/week12_rule_comparison.json`, `artifacts/week12_top_rules.json`입니다.
+실행 순서: 원본 품질 점검 → 정규화 → 규칙 분석 → 서비스 시나리오 → 세그먼트·그래프 → 테스트 → CLI 추천 예시입니다. 생성되는 주요 결과는 `artifacts/week10_data_quality_summary.json`, `artifacts/week11_normalization_summary.json`, `artifacts/week12_rule_comparison.json`, `artifacts/week12_all_rules.json`(전체 694개 규칙), `artifacts/week12_top_rules.json`(보고용 상위 N개), `artifacts/week13_service_scenarios.json`, `artifacts/week14_segment_comparison.json`, `artifacts/week14_skill_graph.json`입니다.
+
+WSL이나 macOS에서는 `Invoke-WebRequest`를 `curl -fL -o <경로> "<주소>"`로, `./scripts/run_pipeline.ps1`을 같은 순서의 `python -m ...` 명령으로 바꿔 실행합니다. 전체 명령은 [01_baseline_check.md](docs/gyeongseon/01_baseline_check.md)의 마지막 절에 있습니다.
 
 비밀값은 저장소에 넣지 않습니다. 향후 GLM을 연결할 경우에도 `.env`에서만 관리해야 하며, 현재는 필요한 환경변수가 확정되지 않았습니다.
 
@@ -114,7 +118,7 @@ flowchart LR
 | `data/` | 원본·중간·처리 데이터 경로. 대용량 데이터는 Git 제외 |
 | `src/ingestion/` | 로더, 스키마·결측·중복 품질 점검 |
 | `src/normalization/` | 기술 사전, 정규화, 직무·경력 메타데이터 |
-| `src/analysis/` | 규칙, interest, 그래프 데이터 |
+| `src/analysis/` | 규칙, interest, 세그먼트 요약, 그래프 데이터 |
 | `src/retrieval/` | 저장된 규칙과 근거 공고 조회 |
 | `src/service/` | CLI 추천 흐름 |
 | `configs/` | 데이터 범위·기술 사전·실험 파라미터 |
@@ -131,7 +135,7 @@ flowchart LR
 | 11주차 | 기술 사전·정규화·LLM mock 계약 | 별칭 변환 127건, 실제 GLM 미연결 |
 | 12주차 | 규칙·interest·전후 비교 | 17,796 트랜잭션, 694 규칙 |
 | 13주차 | 규칙 조회·근거 공고·CLI | 정상·규칙 없음 경로 검증 |
-| 14주차 | 세그먼트 요약·그래프·통합 검증 | CLI 시나리오와 8개 테스트 통과 |
+| 14주차 | 세그먼트 요약·그래프·통합 검증 | CLI 시나리오와 20개 테스트 통과 |
 
 자세한 실제 기록: [10주차](docs/weeks/week10_actual_results.md) · [11주차](docs/weeks/week11_actual_results.md) · [12주차](docs/weeks/week12_actual_results.md) · [13주차](docs/weeks/week13_actual_results.md) · [14주차](docs/weeks/week14_actual_results.md)
 
@@ -149,7 +153,8 @@ flowchart LR
 - **GLM 최종 연결**: 현재 미구현. provider interface와 fake provider만 있습니다.
 - **데이터 최신화**: 새 export를 받아 동일 재현 파이프라인을 다시 실행해야 합니다.
 - **추천 품질 평가**: 사용자 피드백이나 별도 평가셋을 이용한 품질 측정은 미구현입니다.
-- **UI·배포·모니터링**: 현재는 CLI이며, 웹 UI·운영 배포·모니터링은 향후 작업입니다.
+- **기술명 사전**: `tech-dictionary.v1`의 별칭 변환 127건은 전부 `Ajax` → `AJAX` 한 종류이며, 원본 어휘 156개 중 14개만 등재되어 있습니다. 사전 확장은 향후 작업입니다.
+- **UI·배포·모니터링**: 기준 인터페이스는 CLI이며, `src/service/web_server.py`에 로컬 확인용 웹 화면이 있습니다. 외부 공개 배포와 모니터링은 향후 작업입니다.
 
 ---
 
