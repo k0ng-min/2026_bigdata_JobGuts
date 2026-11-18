@@ -14,8 +14,18 @@ def classify_role(title: str | None) -> tuple[str, str]:
         return matched[0], "title_rule"
     return "other_tech", "fallback_title"
 
+# "경력무관" means the posting does not require experience, which is not the same
+# claim as "신입". Both are kept as their own segment and the overlap that matters
+# for entry-level recommendation is exposed as a separate eligibility flag.
+KNOWN_EXPERIENCE_LABELS = ("신입", "경력무관", "1~3년차", "3~5년차", "5년이상")
+ENTRY_ELIGIBLE_LABELS = ("신입", "경력무관")
+
 def classify_experience(label: str | None) -> tuple[str, str]:
+    """Return the source label unchanged; never collapse distinct labels together."""
     value = (label or "").strip()
-    if value in {"신입", "경력무관"}: return "entry", "source_label"
-    if value in {"1~3년차", "3~5년차", "5년이상"}: return value, "source_label"
-    return "other", "fallback_label"
+    if value in KNOWN_EXPERIENCE_LABELS: return value, "source_label"
+    return "unknown", "missing_or_unrecognized_label"
+
+def is_entry_eligible(label: str | None) -> bool:
+    """True when the source label states that an entry-level applicant may apply."""
+    return (label or "").strip() in ENTRY_ELIGIBLE_LABELS
