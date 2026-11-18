@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from hashlib import sha256
 from pathlib import Path
 
 from .apriori import mine_pair_rules
@@ -16,20 +17,28 @@ def _records(path: Path) -> list[dict]:
 
 def _deduplicated_transactions(records: list[dict], field: str) -> tuple[list[set[str]], dict]:
     seen_ids: set[tuple[str, str]] = set()
+    seen_bodies: set[str] = set()
     transactions: list[set[str]] = []
-    excluded_empty = excluded_duplicate = 0
+    excluded_empty = excluded_duplicate = excluded_same_body = 0
     for row in records:
         key = (str(row.get("source", "")), str(row.get("job_id", "")))
         if key in seen_ids:
             excluded_duplicate += 1
             continue
         seen_ids.add(key)
+        body = " ".join(str(row.get("raw_text", "")).casefold().split())
+        body_hash = sha256(body.encode("utf-8")).hexdigest() if body else ""
+        if body_hash and body_hash in seen_bodies:
+            excluded_same_body += 1
+            continue
+        if body_hash:
+            seen_bodies.add(body_hash)
         transaction = {str(item).strip() for item in row.get(field, []) if str(item).strip()}
         if not transaction:
             excluded_empty += 1
             continue
         transactions.append(transaction)
-    return transactions, {"excluded_source_job_id_duplicates": excluded_duplicate, "excluded_empty_transactions": excluded_empty}
+    return transactions, {"excluded_source_job_id_duplicates": excluded_duplicate, "excluded_same_body_duplicates": excluded_same_body, "excluded_empty_transactions": excluded_empty}
 
 
 def main() -> int:

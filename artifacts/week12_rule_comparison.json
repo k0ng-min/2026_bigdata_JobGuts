@@ -13,17 +13,19 @@
     "segment": "all postings with non-empty final_techs after source + job_id de-duplication"
   },
   "raw": {
-    "transaction_count": 18163,
-    "rule_count": 707,
+    "transaction_count": 17796,
+    "rule_count": 694,
     "excluded_source_job_id_duplicates": 777,
-    "excluded_empty_transactions": 21408
+    "excluded_same_body_duplicates": 933,
+    "excluded_empty_transactions": 20842
   },
   "normalized": {
-    "transaction_count": 18163,
-    "rule_count": 707,
+    "transaction_count": 17796,
+    "rule_count": 694,
     "excluded_source_job_id_duplicates": 777,
-    "excluded_empty_transactions": 21408
+    "excluded_same_body_duplicates": 933,
+    "excluded_empty_transactions": 20842
   },
-  "common_rule_count": 707,
+  "common_rule_count": 694,
   "interest_formula": "confidence(A -> B) - P(B), calculated in the same segment"
 }
