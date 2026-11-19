@@ -15,7 +15,7 @@ class App(BaseHTTPRequestHandler):
   u=urlparse(self.path)
   if u.path=='/': self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8');self.end_headers();self.wfile.write(HTML.encode());return
   if u.path=='/api/recommend':
-   q=parse_qs(u.query); raw=q.get('skills',[''])[0]; d=TechnologyDictionary.from_json(ROOT/'configs/tech_dictionary_v2.json'); skills=[d.canonicalize(x.strip()) or x.strip() for x in raw.split(',') if x.strip()]; data=RuleRepository(ROOT/'artifacts/week12_all_rules.json',ROOT/'data/processed/postings_normalized.jsonl').recommend(skills); self.send_response(200);self.send_header('Content-Type','application/json; charset=utf-8');self.end_headers();self.wfile.write(json.dumps(data,ensure_ascii=False).encode());return
+   q=parse_qs(u.query); raw=q.get('skills',[''])[0]; d=TechnologyDictionary.from_json(ROOT/'configs/tech_dictionary.json'); skills=[d.canonicalize(x.strip()) or x.strip() for x in raw.split(',') if x.strip()]; data=RuleRepository(ROOT/'artifacts/week12_all_rules.json',ROOT/'data/processed/postings_normalized.jsonl').recommend(skills); self.send_response(200);self.send_header('Content-Type','application/json; charset=utf-8');self.end_headers();self.wfile.write(json.dumps(data,ensure_ascii=False).encode());return
   self.send_error(404)
 if __name__=='__main__':
  print('JobGuts UI: http://127.0.0.1:8765'); ThreadingHTTPServer(('127.0.0.1',8765),App).serve_forever()

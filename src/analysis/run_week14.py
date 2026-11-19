@@ -18,12 +18,11 @@ from pathlib import Path
 from .graph import graph_from_rules
 
 
-def _eligible_rows(records: list[dict], field: str, excluded_technologies: set[str] | None = None) -> list[dict]:
+def _eligible_rows(records: list[dict], field: str) -> list[dict]:
     """Apply the week-12 duplicate and empty-transaction policy, keeping whole rows."""
     seen_ids: set[tuple[str, str]] = set()
     seen_bodies: set[str] = set()
     rows: list[dict] = []
-    excluded_technologies = excluded_technologies or set()
     for row in records:
         key = (str(row.get("source", "")), str(row.get("job_id", "")))
         if key in seen_ids:
@@ -35,11 +34,8 @@ def _eligible_rows(records: list[dict], field: str, excluded_technologies: set[s
             continue
         if body_hash:
             seen_bodies.add(body_hash)
-        items = {str(item).strip() for item in row.get(field, []) if str(item).strip()} - excluded_technologies
-        if items:
-            filtered = dict(row)
-            filtered[field] = sorted(items)
-            rows.append(filtered)
+        if {str(item).strip() for item in row.get(field, []) if str(item).strip()}:
+            rows.append(row)
     return rows
 
 
@@ -51,8 +47,6 @@ def main() -> int:
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     parser.add_argument("--field", default="normalized_techs")
     parser.add_argument("--top-triples", type=int, default=50)
-    parser.add_argument("--categories", type=Path, default=Path("configs/tech_categories.json"))
-    parser.add_argument("--exclude-category", action="append", default=["concept"])
     args = parser.parse_args()
     args.artifact_dir.mkdir(parents=True, exist_ok=True)
     segment_path = args.artifact_dir / "week14_segment_comparison.json"
@@ -66,12 +60,7 @@ def main() -> int:
 
     with args.input.open(encoding="utf-8") as handle:
         records = [json.loads(line) for line in handle if line.strip()]
-    category_payload = json.loads(args.categories.read_text(encoding="utf-8"))
-    excluded_technologies = {
-        name for name, category in category_payload.get("categories", {}).items()
-        if category in set(args.exclude_category)
-    }
-    rows = _eligible_rows(records, args.field, excluded_technologies)
+    rows = _eligible_rows(records, args.field)
 
     expected = json.loads(args.comparison.read_text(encoding="utf-8"))["normalized"]["transaction_count"]
     if len(rows) != expected:
@@ -92,8 +81,6 @@ def main() -> int:
         "status": "complete",
         "basis": {
             "source_field": args.field,
-            "excluded_categories": args.exclude_category,
-            "excluded_technologies": sorted(excluded_technologies),
             "posting_set": "week-12 eligible transactions (first source + job_id occurrence, distinct raw_text body, non-empty technology list)",
             "posting_count": len(rows),
             "matches_week12_transaction_count": True,

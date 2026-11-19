@@ -23,7 +23,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rules", type=Path, default=Path("artifacts/week12_all_rules.json"))
     parser.add_argument("--postings", type=Path, default=Path("data/processed/postings_normalized.jsonl"))
-    parser.add_argument("--dictionary", type=Path, default=Path("configs/tech_dictionary_v2.json"))
+    parser.add_argument("--dictionary", type=Path, default=Path("configs/tech_dictionary.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     args = parser.parse_args()
     args.artifact_dir.mkdir(parents=True, exist_ok=True)

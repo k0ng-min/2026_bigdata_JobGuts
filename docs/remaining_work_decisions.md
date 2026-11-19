@@ -1,11 +1,10 @@
-# 남은 작업과 결정 사항
+# Remaining Work Decisions
 
-- 현재 지원 인터페이스는 CLI와 로컬 조회 화면이며, 외부 HTTP 서비스 배포는 범위 밖이다.
-- 정확히 같은 `source + job_id`는 첫 번째 공고만 분석에 사용한다.
-- 서로 다른 ID지만 본문이 같은 공고는 중복으로 제외하며, 제외 수를 산출물에 남긴다.
-- 직무는 제목의 명시적 신호만 메타데이터로 분류한다. 그 외 값은 `other_tech`으로 남긴다.
-- 결측 경력 라벨은 `unknown`으로 유지하며 제목·본문으로 신입 여부를 추정하지 않는다.
-- 사전에 없는 기술명은 검토된 표준 표기가 생길 때까지 원문을 보존한다.
-- `concept` 범주(예: `AI`, `DevOps`)는 기술 조합 자체가 아니므로 Apriori 항목에서 제외한다.
+- The CLI is the supported interface; no HTTP API is required.
+- Keep the first occurrence of an exact `source + job_id` duplicate for analysis.
+- Keep different IDs with the same body as review candidates rather than deleting them.
+- Use title-based role classification only as metadata. Explicit backend, frontend, or fullstack titles are classified; all other titles remain `unknown` or `needs_review`.
+- Keep missing experience labels as `unknown`; do not infer entry-level status from title or body text.
+- Keep unmapped technology names unchanged until a reviewed canonical alias is available.
 
-원본 데이터에는 권위 있는 직무 열이 없다. 따라서 직무 세그먼트 비교는 제목에 근거한 제한적 결과이며, 직무별 전체 시장 결과로 해석하지 않는다. 필터 뒤 근거 공고가 없으면 CLI는 `insufficient_sample`을 반환한다.
+The source dataset lacks an authoritative job-role column. Consequently, role-segment comparison is limited to explicit title classifications and cannot be presented as an authoritative role-level result. The CLI returns `insufficient_sample` when a filtered request has no evidence.
