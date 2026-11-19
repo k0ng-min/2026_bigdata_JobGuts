@@ -1,0 +1,138 @@
+{
+  "status": "complete",
+  "provider": "fake",
+  "is_mock": true,
+  "mock_warning": "Decisions came from a deterministic rule table, not from a language model. These numbers show that the flow runs end to end; they are not model performance.",
+  "prompt_version": "agent-judge.v1",
+  "dictionary_version": "tech-dictionary.v2",
+  "basis": {
+    "posting_count": 17796,
+    "distinct_candidates": 27641,
+    "candidate_occurrences": 375677,
+    "minimum_occurrences_for_llm": 89,
+    "candidates_considered": 608
+  },
+  "decisions": {
+    "canonical": 147,
+    "needs_review": 433,
+    "not_a_technology": 19,
+    "new_technology": 9
+  },
+  "decision_meanings": {
+    "canonical": "the spelling denotes a technology already in the final_techs vocabulary",
+    "not_a_technology": "the spelling is a business term, a role, a company name or an ordinary word",
+    "new_technology": "the spelling denotes a real technology that the vocabulary does not contain",
+    "needs_review": "undecided; the original spelling is preserved for a person to judge"
+  },
+  "routes": {
+    "dictionary": 127,
+    "model": 448,
+    "cache": 33
+  },
+  "cost": {
+    "cache_hits": 33,
+    "dictionary_hits": 127,
+    "learned_hits": 0,
+    "llm_calls": 448,
+    "llm_calls_skipped_by_budget": 0,
+    "cache": {
+      "lookups": 608,
+      "hits": 33,
+      "misses": 575,
+      "hit_rate": 0.0543
+    },
+    "calls_avoided_by_cache_and_memory": 219163
+  },
+  "memory": {
+    "confirmed_spellings": 296,
+    "standard_names": 130,
+    "learned_mappings": 128,
+    "rejected": 19,
+    "new_technologies": 9,
+    "undecided": 419
+  },
+  "dropped_occurrences": 24351,
+  "dropped_top": [
+    {
+      "name": "D",
+      "count": 2729
+    },
+    {
+      "name": "SI",
+      "count": 2584
+    },
+    {
+      "name": "SW",
+      "count": 2335
+    },
+    {
+      "name": "PM",
+      "count": 2326
+    },
+    {
+      "name": "ERP",
+      "count": 1960
+    },
+    {
+      "name": "CRM",
+      "count": 1521
+    },
+    {
+      "name": "K",
+      "count": 1417
+    },
+    {
+      "name": "PO",
+      "count": 1408
+    },
+    {
+      "name": "DBA",
+      "count": 1259
+    },
+    {
+      "name": "SaaS",
+      "count": 1126
+    },
+    {
+      "name": "B2B",
+      "count": 1103
+    },
+    {
+      "name": "QA",
+      "count": 911
+    },
+    {
+      "name": "MD",
+      "count": 832
+    },
+    {
+      "name": "B",
+      "count": 645
+    },
+    {
+      "name": "SK",
+      "count": 615
+    },
+    {
+      "name": "LG",
+      "count": 608
+    },
+    {
+      "name": "MS",
+      "count": 604
+    },
+    {
+      "name": "KORNIC",
+      "count": 117
+    },
+    {
+      "name": "GLORY",
+      "count": 117
+    },
+    {
+      "name": "si",
+      "count": 36
+    }
+  ],
+  "cleaned_output": "data/processed/postings_agent_cleaned.jsonl"
+}
