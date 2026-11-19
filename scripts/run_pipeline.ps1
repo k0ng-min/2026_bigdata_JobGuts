@@ -25,6 +25,7 @@ if (-not (Test-Path $InputPath)) {
 & $Python -m src.analysis.run_week12
 & $Python -m src.service.run_week13
 & $Python -m src.analysis.run_week14
+& $Python scripts/build_visualizations.py
 
 # Cleanup agent. The default provider is fake: no API key and no network call.
 & $Python -m src.agent.run_extract

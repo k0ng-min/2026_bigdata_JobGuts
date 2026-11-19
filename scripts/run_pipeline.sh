@@ -16,6 +16,7 @@ INPUT="data/raw/korean_it_recruit_postings.json"
 "$PYTHON" -m src.analysis.run_week12
 "$PYTHON" -m src.service.run_week13
 "$PYTHON" -m src.analysis.run_week14
+"$PYTHON" scripts/build_visualizations.py
 
 # Cleanup agent. The default provider is fake: no API key and no network call.
 "$PYTHON" -m src.agent.run_extract
