@@ -54,7 +54,7 @@ def main() -> int:
         }
     output_path.write_text(json.dumps({
         "status": "complete",
-        "rules_artifact": str(args.rules),
+        "rules_artifact": args.rules.as_posix(),
         "rule_count": len(repository.rules),
         "dictionary_version": dictionary.version,
         "scenarios": scenarios,

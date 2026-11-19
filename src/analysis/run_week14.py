@@ -94,7 +94,7 @@ def main() -> int:
     graph = graph_from_rules(rules)
     graph_path.write_text(json.dumps({
         "status": "complete",
-        "basis": {"rules_artifact": str(args.rules), "rule_count": len(rules), "transaction_count": len(rows)},
+        "basis": {"rules_artifact": args.rules.as_posix(), "rule_count": len(rules), "transaction_count": len(rows)},
         **graph,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {segment_path} ({len(rows)} postings, {len(segments)} segments) and {graph_path} ({len(graph['nodes'])} nodes, {len(graph['edges'])} edges)")

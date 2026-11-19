@@ -66,7 +66,7 @@ def main() -> int:
         "experience_policy": "source labels are retained as-is; entry eligibility is a separate flag and is never used to relabel 경력무관 as 신입",
         "experience_segment_counts": dict(sorted(experience_segment_counts.items(), key=lambda item: -item[1])),
         "entry_eligible_row_count": entry_eligible_rows,
-        "output_path": str(args.output)
+        "output_path": args.output.as_posix()
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {args.output} and {summary_path}")
     return 0

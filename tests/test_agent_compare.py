@@ -168,3 +168,26 @@ class ReviewSheetTests(unittest.TestCase):
             with path.open(encoding="utf-8-sig", newline="") as handle:
                 rows = list(csv.DictReader(handle))
             self.assertEqual([row["rule_id"] for row in rows], [row["rule_id"] for row in self.rows])
+
+
+class RecordedPathsAreOsIndependentTests(unittest.TestCase):
+    """A path written into an artifact must read the same on Windows and WSL."""
+
+    ARTIFACTS = {
+        "week10_data_quality_summary.json": ("input", "path"),
+        "week11_normalization_summary.json": ("output_path",),
+        "week13_service_scenarios.json": ("rules_artifact",),
+        "week14_skill_graph.json": ("basis", "rules_artifact"),
+        "agent_run_summary.json": ("cleaned_output",),
+    }
+
+    def test_no_artifact_records_a_backslash_path(self):
+        for name, keys in self.ARTIFACTS.items():
+            path = ROOT / "artifacts" / name
+            if not path.is_file():
+                continue
+            value = json.loads(path.read_text(encoding="utf-8"))
+            for key in keys:
+                value = value[key]
+            self.assertNotIn("\\", str(value), f"{name} -> {'.'.join(keys)}")
+            self.assertIn("/", str(value), f"{name} -> {'.'.join(keys)}")

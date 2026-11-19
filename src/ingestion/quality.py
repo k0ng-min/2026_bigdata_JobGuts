@@ -111,7 +111,10 @@ def file_provenance(path: str | Path, config_version: str) -> dict[str, Any]:
     content = input_path.read_bytes()
     return {
         "file_name": input_path.name,
-        "path": str(input_path),
+        # as_posix keeps the recorded path identical on Windows and WSL. With
+        # str() the same run produced data\\raw\\... on one and data/raw/... on
+        # the other, so every teammate saw a spurious diff on this artifact.
+        "path": input_path.as_posix(),
         "sha256": sha256(content).hexdigest(),
         "bytes": len(content),
         "data_scope_config_version": config_version,

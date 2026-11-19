@@ -159,6 +159,12 @@ sha256sum data/raw/korean_it_recruit_postings.json
 .venv/bin/python -m src.agent.run_recommend --skills .NET --role frontend --experience 1~3년차
 ```
 
+3~6단계를 한 번에 돌리려면 다음 한 줄이면 됩니다 (위 명령과 같은 내용입니다).
+
+```bash
+./scripts/run_pipeline.sh
+```
+
 소요 시간: 데이터 받기 약 20초, 전 단계 합계 약 4분 (에이전트 1분, 비교 1분 20초 포함).
 
 ## 4-2. Windows PowerShell
@@ -167,30 +173,43 @@ sha256sum data/raw/korean_it_recruit_postings.json
 cd ~\projects\JobGuts
 git fetch origin; git switch gyeongseon; git pull
 
-# 1) 가상환경
+# 0) 170 MiB 내려받기 전에 진행률 표시를 끕니다 (Windows PowerShell 5.1 에서 몇 배 빨라집니다)
+$ProgressPreference = 'SilentlyContinue'
+
+# 1) 가상환경 ("python" 이 Microsoft Store 안내로 뜨면 py -3 를 쓰세요)
 python -m venv .venv
-.\.venv\Scripts\pip install python-docx
+.\.venv\Scripts\python -m pip install python-docx
 
 # 2) 원본 데이터
-New-Item -ItemType Directory -Force data\raw, data\processed | Out-Null
-Invoke-WebRequest -Uri "https://huggingface.co/datasets/young-cc/korean-it-recruit-dataset/resolve/main/master_merged_v5.json?download=true" `
+New-Item -ItemType Directory -Force -Path data\raw, data\processed | Out-Null
+Invoke-WebRequest `
+  -Uri "https://huggingface.co/datasets/young-cc/korean-it-recruit-dataset/resolve/main/master_merged_v5.json?download=true" `
   -OutFile data\raw\korean_it_recruit_postings.json
-Get-FileHash data\raw\korean_it_recruit_postings.json -Algorithm SHA256
+(Get-FileHash data\raw\korean_it_recruit_postings.json -Algorithm SHA256).Hash
 # 기대값: DC7CC15B1EE80DBF5F959095EE78AAD0E8DD39D5156CF694E60591AA1BD9A58F
 
-# 3) 10~14주차 (스크립트 한 번으로)
+# 3) 전체를 한 번에 (10~14주차 + 에이전트 + 테스트 + 보고서)
 .\scripts\run_pipeline.ps1
+```
 
-# 또는 단계별로
-.\.venv\Scripts\python -m src.ingestion.run_week10 --input data/raw/korean_it_recruit_postings.json `
-  --config configs/data_scope.json --output-dir artifacts
-.\.venv\Scripts\python -m src.normalization.run_week11 --input data/raw/korean_it_recruit_postings.json `
-  --output data/processed/postings_normalized.jsonl --artifact-dir artifacts
+`run_pipeline.ps1` 이 차단되면 (`이 시스템에서 스크립트를 실행할 수 없으므로`) 현재 세션에서만 허용합니다.
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\scripts\run_pipeline.ps1
+```
+
+스크립트를 쓰지 않고 단계별로 돌리려면 이렇게 합니다. **가상환경 인터프리터를 직접 부릅니다.**
+
+```powershell
+# 3) 10~14주차
+.\.venv\Scripts\python -m src.ingestion.run_week10 --input data/raw/korean_it_recruit_postings.json --config configs/data_scope.json --output-dir artifacts
+.\.venv\Scripts\python -m src.normalization.run_week11 --input data/raw/korean_it_recruit_postings.json --output data/processed/postings_normalized.jsonl --artifact-dir artifacts
 .\.venv\Scripts\python -m src.analysis.run_week12
 .\.venv\Scripts\python -m src.service.run_week13
 .\.venv\Scripts\python -m src.analysis.run_week14
 
-# 4) 에이전트
+# 4) 에이전트 (기본 provider=fake, 키·네트워크 불필요)
 .\.venv\Scripts\python -m src.agent.run_extract
 .\.venv\Scripts\python -m src.agent.build_dictionary
 .\.venv\Scripts\python -m src.agent.run_agent
@@ -200,16 +219,25 @@ Get-FileHash data\raw\korean_it_recruit_postings.json -Algorithm SHA256
 .\.venv\Scripts\python -m unittest discover -s tests
 .\.venv\Scripts\python scripts\build_weekly_reports.py
 
-# 6) 추천 확인
-.\.venv\Scripts\python -m src.agent.run_recommend --skills 파이썬
+# 6) 추천 확인 (한글 인수는 따옴표로 감쌉니다)
+.\.venv\Scripts\python -m src.agent.run_recommend --skills "파이썬"
+.\.venv\Scripts\python -m src.agent.run_recommend --skills ".NET" --role frontend --experience "1~3년차"
 ```
 
-### PowerShell에서 주의할 점 두 가지
+### PowerShell에서 주의할 점
 
 | 항목 | 내용 |
 | --- | --- |
-| `--experience 1~3년차` | PowerShell에서 한글 인수가 깨지면 `--experience "1~3년차"` 로 따옴표를 씌웁니다 |
-| 줄바꿈 diff | Windows는 CRLF, WSL은 LF로 파일을 씁니다. `reports/assets/week10/week10_raw_text_samples.csv` 가 내용 변화 없이 전체 diff로 보일 수 있습니다. 커밋 전에 `git diff` 로 확인하세요 (6-2절) |
+| 실행 정책 | `.ps1` 실행이 막히면 `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` (현재 창에만 적용) |
+| 가상환경 | `run_pipeline.ps1` 은 `.venv\Scripts\python.exe` 를 직접 부릅니다. 활성화하지 않아도 됩니다 |
+| 한글 인수 | `--skills "파이썬"`, `--experience "1~3년차"` 처럼 따옴표를 씌웁니다 |
+| 한글 출력이 깨지면 | `[Console]::OutputEncoding = [Text.Encoding]::UTF8` 를 먼저 실행합니다 |
+| 내려받기 속도 | `$ProgressPreference = 'SilentlyContinue'` 를 먼저 설정합니다 |
+| 줄바꿈 diff | Windows는 CRLF, WSL은 LF로 파일을 씁니다. `reports/assets/week10/week10_raw_text_samples.csv` 가 내용 변화 없이 전체 diff로 보일 수 있습니다 (6-3절) |
+
+> PowerShell 명령은 이 환경(WSL)에서 **실행해 보지 못했습니다.** 문법과 경로를 검토해
+> 자동 변수 `$Input` 사용, 시스템 Python 호출, 에이전트 단계 누락 세 가지를 고쳤습니다.
+> WSL 쪽 동등 스크립트 `scripts/run_pipeline.sh` 는 실제로 실행해 확인했습니다.
 
 ## 4-3. 재현 확인 방법
 
@@ -219,8 +247,27 @@ git status --short -- artifacts/ configs/
 # 출력이 비어 있으면 완전 재현
 ```
 
-단, `artifacts/week10_data_quality_summary.json`의 `path` 한 줄은 OS에 따라
-`data\raw\...` 와 `data/raw/...` 로 달라집니다. 수치는 동일합니다.
+**이 문서의 명령을 임시 폴더에 새로 clone해서 처음부터 끝까지 실행해 확인했습니다.**
+추적되는 산출물·설정 **28개 중 28개가 바이트 단위로 동일**했고, 추적되지 않는
+`postings_normalized.jsonl`·`postings_agent_cleaned.jsonl`·`agent_cache.json` 도 동일했습니다.
+
+| 파일 | 상태 |
+| --- | --- |
+| `artifacts/` 전체, `configs/` 전체 | **동일** |
+| `reports/weekly/*.docx` | 바이트가 매번 달라집니다 (zip 내부 타임스탬프). 내용은 동일 |
+| `reports/assets/week10/week10_raw_text_samples.csv` | Windows(CRLF)와 WSL(LF)에서 전체 diff로 보입니다. 내용은 동일 (6-3절) |
+| `artifacts/agent_run_summary.json` 등 3개 | **같은 체크아웃에서 두 번째로 돌리면** `llm_calls` 가 447에서 0으로, 경로가 전부 `cache` 로 바뀝니다. 캐시가 작동한다는 뜻이며 판단 결과는 동일합니다. 커밋된 값은 캐시가 없는 상태의 실행 결과입니다 |
+
+캐시 파일(`artifacts/agent_cache.json`)은 `.gitignore` 대상이라 **새 clone에는 없습니다.**
+그래서 새로 clone한 재현에서는 세 파일도 커밋본과 일치했습니다. 같은 체크아웃에서 다시 돌려
+커밋본과 맞추고 싶으면 캐시를 지우고 실행합니다.
+
+```bash
+rm -f artifacts/agent_cache.json && .venv/bin/python -m src.agent.run_agent
+```
+
+경로 기록은 OS에 무관하게 같습니다. 이전에는 `data\raw\...` 와 `data/raw/...` 로 갈렸는데,
+산출물에 경로를 쓰는 다섯 곳을 모두 `as_posix()` 로 통일했습니다.
 
 ---
 

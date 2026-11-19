@@ -183,7 +183,7 @@ def main() -> int:
         "memory": memory.statistics,
         "dropped_occurrences": sum(dropped.values()),
         "dropped_top": [{"name": name, "count": count} for name, count in dropped.most_common(20)],
-        "cleaned_output": str(args.cleaned_output),
+        "cleaned_output": args.cleaned_output.as_posix(),
     }
     (args.artifact_dir / "agent_run_summary.json").write_text(
         json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
