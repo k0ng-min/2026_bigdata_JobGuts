@@ -38,7 +38,7 @@ python scripts/build_visualizations.py
 python -m unittest discover -s tests -q
 ~~~
 
-이 실행에서 148개 테스트가 통과했다. 실제 결과 파일은 `artifacts/week11_normalization_summary.json`, `artifacts/week12_all_rules.json`, `artifacts/week13_service_scenarios.json`, `artifacts/week14_skill_graph.json`이다.
+이 실행에서 150개 테스트가 통과했다. 실제 결과 파일은 `artifacts/week11_normalization_summary.json`, `artifacts/week12_all_rules.json`, `artifacts/week13_service_scenarios.json`, `artifacts/week14_skill_graph.json`이다.
 
 ## 검수·어휘 확장 판단
 
