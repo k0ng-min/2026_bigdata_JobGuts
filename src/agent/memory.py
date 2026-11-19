@@ -76,3 +76,26 @@ class AgentMemory:
             "new_technologies": len(self.new_technologies),
             "undecided": len(self.undecided),
         }
+
+
+def as_technology_dictionary(path: str | Path):
+    """Load dictionary v2 (or v1) through the pipeline's own dictionary loader.
+
+    v2 groups spellings under each standard name with their evidence; the
+    loader expects the flat v1 shape, so the entries are flattened here rather
+    than changing a module the rest of the pipeline depends on.
+    """
+    from src.normalization.dictionary import TechnologyDictionary
+
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    if "canonical_technologies" in payload:
+        return TechnologyDictionary.from_json(path)
+    flattened = {
+        record["canonical"]: [item["spelling"] for item in record["spellings"]]
+        for record in payload["technologies"]
+    }
+    aliases: dict[str, str] = {}
+    for canonical, spellings in flattened.items():
+        for spelling in [canonical, *spellings]:
+            aliases[lookup_key(spelling)] = canonical
+    return TechnologyDictionary(version=payload["version"], aliases=aliases)
