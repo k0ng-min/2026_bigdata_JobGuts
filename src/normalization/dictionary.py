@@ -20,7 +20,16 @@ class TechnologyDictionary:
     def from_json(cls, path: str | Path) -> "TechnologyDictionary":
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
         aliases: dict[str, str] = {}
-        for canonical, variants in payload["canonical_technologies"].items():
+        if "canonical_technologies" in payload:
+            entries = payload["canonical_technologies"].items()
+        elif "technologies" in payload:
+            entries = (
+                (entry["canonical"], [spelling["spelling"] for spelling in entry.get("spellings", [])])
+                for entry in payload["technologies"]
+            )
+        else:
+            raise ValueError("dictionary must contain canonical_technologies or technologies")
+        for canonical, variants in entries:
             for variant in [canonical, *variants]:
                 normalized_variant = _key(variant)
                 previous = aliases.get(normalized_variant)

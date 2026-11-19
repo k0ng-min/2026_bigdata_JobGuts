@@ -2,7 +2,7 @@
   "report_schema_version": "week10.v1",
   "input": {
     "file_name": "korean_it_recruit_postings.json",
-    "path": "data\\raw\\korean_it_recruit_postings.json",
+    "path": "data/raw/korean_it_recruit_postings.json",
     "sha256": "dc7cc15b1ee80dbf5f959095ee78aad0e8dd39d5156cf694e60591aa1bd9a58f",
     "bytes": 177980800,
     "data_scope_config_version": "week10.scope.v1"

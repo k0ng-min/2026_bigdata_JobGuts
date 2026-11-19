@@ -4,6 +4,7 @@ data/interim/
 data/processed/*
 *.log
 artifacts/week10_raw_text_samples.csv
+artifacts/agent_cache.json
 .env
 .venv/
 __pycache__/

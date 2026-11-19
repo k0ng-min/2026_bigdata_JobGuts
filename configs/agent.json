@@ -1,0 +1,18 @@
+{
+  "version": "agent.v1",
+  "note": "Thresholds and limits for the cleanup agent. Kept in configuration so a run can be tuned without editing code.",
+  "minimum_occurrences_for_llm": 89,
+  "minimum_occurrences_reason": "support 0.005 x 17,796 transactions = 89; a candidate below this cannot enter any rule, so asking a model about it buys nothing",
+  "confidence": {
+    "apply": 0.8,
+    "apply_with_flag": 0.5,
+    "note": "at or above apply the decision is used as is; between apply_with_flag and apply it is used but marked low_confidence; below apply_with_flag it becomes needs_review"
+  },
+  "context": {
+    "snippets_per_candidate": 3,
+    "snippet_window": 120,
+    "neighbours_per_candidate": 10
+  },
+  "max_llm_calls": 5000,
+  "max_relaxation_steps": 3
+}

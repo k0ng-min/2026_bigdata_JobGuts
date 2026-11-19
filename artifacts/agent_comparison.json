@@ -1,0 +1,396 @@
+{
+  "status": "complete",
+  "is_mock": true,
+  "mock_warning": "Decisions came from a deterministic rule table, not from a language model. These numbers show that the flow runs end to end; they are not model performance.",
+  "basis": {
+    "posting_count": 17796,
+    "minimum_support": 0.005,
+    "minimum_confidence": 0.2,
+    "vocabulary_size": 130
+  },
+  "experiments": {
+    "before_cleanup": {
+      "transaction_count": 17796,
+      "distinct_items": 27788,
+      "rule_count": 2699,
+      "distinct_antecedents": 435,
+      "top_rules": [
+        {
+          "antecedent": "GLORY",
+          "consequent": "KORNIC",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.993425
+        },
+        {
+          "antecedent": "KORNIC",
+          "consequent": "GLORY",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.993425
+        },
+        {
+          "antecedent": "Cytiva",
+          "consequent": "Y",
+          "support": 0.007024,
+          "confidence": 1.0,
+          "interest": 0.991571
+        },
+        {
+          "antecedent": "GLORY",
+          "consequent": "Ltd",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.983873
+        },
+        {
+          "antecedent": "KORNIC",
+          "consequent": "Ltd",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.983873
+        },
+        {
+          "antecedent": "Javasc",
+          "consequent": "ript",
+          "support": 0.005788,
+          "confidence": 1.0,
+          "interest": 0.983704
+        },
+        {
+          "antecedent": "Cytiva",
+          "consequent": "Software",
+          "support": 0.007024,
+          "confidence": 1.0,
+          "interest": 0.962969
+        },
+        {
+          "antecedent": "GLORY",
+          "consequent": "JSP",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.961733
+        },
+        {
+          "antecedent": "KORNIC",
+          "consequent": "JSP",
+          "support": 0.006575,
+          "confidence": 1.0,
+          "interest": 0.961733
+        },
+        {
+          "antecedent": "Hibernate",
+          "consequent": "JPA",
+          "support": 0.005675,
+          "confidence": 0.971154,
+          "interest": 0.950925
+        }
+      ]
+    },
+    "after_agent": {
+      "transaction_count": 17796,
+      "distinct_items": 27368,
+      "rule_count": 2191,
+      "distinct_antecedents": 390,
+      "top_rules": [
+        {
+          "antecedent": "Cytiva",
+          "consequent": "Y",
+          "support": 0.007024,
+          "confidence": 1.0,
+          "interest": 0.991571
+        },
+        {
+          "antecedent": "Javasc",
+          "consequent": "ript",
+          "support": 0.005788,
+          "confidence": 1.0,
+          "interest": 0.983704
+        },
+        {
+          "antecedent": "Cytiva",
+          "consequent": "Software",
+          "support": 0.007024,
+          "confidence": 1.0,
+          "interest": 0.962969
+        },
+        {
+          "antecedent": "LlamaIndex",
+          "consequent": "LangChain",
+          "support": 0.006855,
+          "confidence": 0.976,
+          "interest": 0.955602
+        },
+        {
+          "antecedent": "Hibernate",
+          "consequent": "JPA",
+          "support": 0.005675,
+          "confidence": 0.971154,
+          "interest": 0.950868
+        },
+        {
+          "antecedent": "ELT",
+          "consequent": "ETL",
+          "support": 0.005788,
+          "confidence": 0.953704,
+          "interest": 0.934149
+        },
+        {
+          "antecedent": "Actions",
+          "consequent": "GitHub",
+          "support": 0.019218,
+          "confidence": 0.988439,
+          "interest": 0.930055
+        },
+        {
+          "antecedent": "HRM",
+          "consequent": "HRD",
+          "support": 0.009159,
+          "confidence": 0.931429,
+          "interest": 0.92064
+        },
+        {
+          "antecedent": "Jr",
+          "consequent": "Sr",
+          "support": 0.005114,
+          "confidence": 0.91,
+          "interest": 0.903369
+        },
+        {
+          "antecedent": "Codex",
+          "consequent": "Claude",
+          "support": 0.013711,
+          "confidence": 0.964427,
+          "interest": 0.899693
+        }
+      ]
+    },
+    "final_techs": {
+      "transaction_count": 17796,
+      "distinct_items": 156,
+      "rule_count": 694,
+      "distinct_antecedents": 94,
+      "top_rules": [
+        {
+          "antecedent": "TensorFlow",
+          "consequent": "PyTorch",
+          "support": 0.030175,
+          "confidence": 0.948763,
+          "interest": 0.895942
+        },
+        {
+          "antecedent": "Prometheus",
+          "consequent": "Grafana",
+          "support": 0.010339,
+          "confidence": 0.893204,
+          "interest": 0.878819
+        },
+        {
+          "antecedent": "Redux",
+          "consequent": "React",
+          "support": 0.007474,
+          "confidence": 0.985185,
+          "interest": 0.855999
+        },
+        {
+          "antecedent": "Zustand",
+          "consequent": "React",
+          "support": 0.008935,
+          "confidence": 0.97546,
+          "interest": 0.846274
+        },
+        {
+          "antecedent": "Zustand",
+          "consequent": "TypeScript",
+          "support": 0.007923,
+          "confidence": 0.865031,
+          "interest": 0.772482
+        },
+        {
+          "antecedent": "Tailwind CSS",
+          "consequent": "React",
+          "support": 0.006799,
+          "confidence": 0.889706,
+          "interest": 0.76052
+        },
+        {
+          "antecedent": "Next.js",
+          "consequent": "React",
+          "support": 0.039391,
+          "confidence": 0.88622,
+          "interest": 0.757034
+        },
+        {
+          "antecedent": "Node.js",
+          "consequent": "JavaScript",
+          "support": 0.056586,
+          "confidence": 0.919635,
+          "interest": 0.756564
+        },
+        {
+          "antecedent": "Tailwind CSS",
+          "consequent": "CSS",
+          "support": 0.006237,
+          "confidence": 0.816176,
+          "interest": 0.755545
+        },
+        {
+          "antecedent": "MyBatis",
+          "consequent": "Spring",
+          "support": 0.009159,
+          "confidence": 0.876344,
+          "interest": 0.748563
+        }
+      ]
+    }
+  },
+  "rule_overlap": {
+    "before_cleanup__vs__after_agent": {
+      "shared": 1877,
+      "only_before_cleanup": 822,
+      "only_after_agent": 314,
+      "jaccard": 0.623,
+      "top50_shared": 34
+    },
+    "after_agent__vs__final_techs": {
+      "shared": 563,
+      "only_after_agent": 1628,
+      "only_final_techs": 131,
+      "jaccard": 0.2425,
+      "top50_shared": 6
+    },
+    "before_cleanup__vs__final_techs": {
+      "shared": 486,
+      "only_before_cleanup": 2213,
+      "only_final_techs": 208,
+      "jaccard": 0.1672,
+      "top50_shared": 4
+    }
+  },
+  "quality_against_final_techs": {
+    "before_cleanup": {
+      "overall": {
+        "precision": 0.1682,
+        "recall": 0.7464,
+        "f1": 0.2746,
+        "hit": 61654,
+        "predicted": 366478,
+        "expected": 82604
+      },
+      "inside_vocabulary": {
+        "precision": 0.7494,
+        "recall": 0.7487,
+        "f1": 0.7491,
+        "hit": 60813,
+        "predicted": 81149,
+        "expected": 81220
+      },
+      "outside_vocabulary": {
+        "precision": 0.0029,
+        "recall": 0.6077,
+        "f1": 0.0059,
+        "hit": 841,
+        "predicted": 285329,
+        "expected": 1384
+      }
+    },
+    "after_agent": {
+      "overall": {
+        "precision": 0.1934,
+        "recall": 0.7963,
+        "f1": 0.3112,
+        "hit": 65780,
+        "predicted": 340103,
+        "expected": 82604
+      },
+      "inside_vocabulary": {
+        "precision": 0.7298,
+        "recall": 0.7995,
+        "f1": 0.7631,
+        "hit": 64939,
+        "predicted": 88986,
+        "expected": 81220
+      },
+      "outside_vocabulary": {
+        "precision": 0.0033,
+        "recall": 0.6077,
+        "f1": 0.0067,
+        "hit": 841,
+        "predicted": 251117,
+        "expected": 1384
+      }
+    }
+  },
+  "in_vocabulary_error_breakdown": {
+    "new_in_vocabulary_errors": 3711,
+    "migrated_from_outside_bucket": 3711,
+    "newly_introduced": 0,
+    "migrated_share": 1.0,
+    "correct_names_lost": 0,
+    "migrated_top": [
+      {
+        "mapping": "generative ai <- 생성형 AI",
+        "count": 849
+      },
+      {
+        "mapping": "deep learning <- 딥러닝",
+        "count": 437
+      },
+      {
+        "mapping": "vue.js <- Vue3",
+        "count": 364
+      },
+      {
+        "mapping": "ml <- 머신러닝",
+        "count": 277
+      },
+      {
+        "mapping": "computer vision <- 컴퓨터 비전",
+        "count": 190
+      },
+      {
+        "mapping": "mssql <- MS-SQL",
+        "count": 138
+      },
+      {
+        "mapping": "rest api <- RESTful",
+        "count": 117
+      },
+      {
+        "mapping": "nlp <- 자연어 처리",
+        "count": 97
+      },
+      {
+        "mapping": "notion <- 노션",
+        "count": 75
+      },
+      {
+        "mapping": "vue.js <- Vue",
+        "count": 64
+      },
+      {
+        "mapping": "android <- 안드로이드",
+        "count": 64
+      },
+      {
+        "mapping": "rdbms <- 관계형 데이터베이스",
+        "count": 61
+      },
+      {
+        "mapping": "generative ai <- GenAI",
+        "count": 61
+      },
+      {
+        "mapping": "computer vision <- 컴퓨터비전",
+        "count": 60
+      },
+      {
+        "mapping": "linux <- 리눅스",
+        "count": 58
+      }
+    ],
+    "newly_introduced_top": [],
+    "note": "A migrated error was already counted in the outside_vocabulary bucket before cleanup, where its precision is structurally near zero, so it lowers inside_vocabulary precision without the cleanup having made a new mistake."
+  },
+  "evaluation_bias_note": "Standard names come from final_techs and final_techs is the ground truth here, so the inside_vocabulary figures are structurally favourable. Read outside_vocabulary and the human review sheet alongside them."
+}

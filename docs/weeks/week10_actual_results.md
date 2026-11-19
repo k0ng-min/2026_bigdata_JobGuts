@@ -38,3 +38,8 @@ python -m unittest discover -s tests -v
 
 - 입력: `artifacts/week10_data_quality_summary.json`, `artifacts/week10_raw_text_samples.csv`, 원본 JSON 파일
 - 주의: 중복 제거 확정은 원문 검토가 필요한 단계다. 현재 결과는 자동 집계이며 행을 삭제하지 않았다.
+
+## 수정 이력
+
+- 2026-11-18: 이 문서의 수치는 재실행 결과와 전 항목 일치했다(입력 파일 SHA-256 포함). 변경하지 않았다.
+- 2026-11-18: "`experience_level`이 비어 있거나 모호한 경우에는 임의로 신입으로 분류하지 않는다"는 기준이 11주차 코드에서 지켜지지 않고 있었다(`경력무관` 6,597건이 `entry`로 분류). `src/normalization/metadata.py`를 고쳐 원본 라벨을 그대로 유지하도록 했고, 신입 지원 가능 여부는 `entry_eligible` 필드로 분리했다. 자세한 내용은 [02_foundation_fixes.md](../gyeongseon/02_foundation_fixes.md)에 있다.

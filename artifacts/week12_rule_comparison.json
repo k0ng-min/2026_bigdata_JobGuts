@@ -9,23 +9,46 @@
     "minimum_support": 0.005,
     "minimum_confidence": 0.2,
     "maximum_itemset_size": 2,
-    "duplicate_policy": "keep first source + job_id occurrence; do not auto-drop same-body distinct IDs",
-    "segment": "all postings with non-empty final_techs after source + job_id de-duplication"
+    "duplicate_policy": "keep first source + job_id occurrence; also keep only the first posting per distinct raw_text body",
+    "segment": "all postings with a non-empty technology list after source + job_id and raw_text body de-duplication"
   },
+  "excluded_categories": [
+    "concept"
+  ],
+  "excluded_technologies": [
+    "AI",
+    "AI Agent",
+    "CI/CD",
+    "Computer Vision",
+    "Deep Learning",
+    "DevOps",
+    "Generative AI",
+    "LLM",
+    "ML",
+    "MLOps",
+    "NLP",
+    "NoSQL",
+    "OCR",
+    "RDBMS",
+    "Serverless",
+    "Vector DB"
+  ],
   "raw": {
-    "transaction_count": 17796,
-    "rule_count": 694,
+    "transaction_count": 15296,
+    "rule_count": 670,
     "excluded_source_job_id_duplicates": 777,
     "excluded_same_body_duplicates": 933,
-    "excluded_empty_transactions": 20842
+    "excluded_empty_transactions": 23342,
+    "excluded_category_item_count": 11775
   },
   "normalized": {
-    "transaction_count": 17796,
-    "rule_count": 694,
+    "transaction_count": 15296,
+    "rule_count": 670,
     "excluded_source_job_id_duplicates": 777,
     "excluded_same_body_duplicates": 933,
-    "excluded_empty_transactions": 20842
+    "excluded_empty_transactions": 23342,
+    "excluded_category_item_count": 11775
   },
-  "common_rule_count": 694,
+  "common_rule_count": 670,
   "interest_formula": "confidence(A -> B) - P(B), calculated in the same segment"
 }

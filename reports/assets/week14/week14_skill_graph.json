@@ -1,7 +1,16 @@
 {
+  "status": "complete",
+  "basis": {
+    "rules_artifact": "artifacts/week12_all_rules.json",
+    "rule_count": 670,
+    "transaction_count": 15296
+  },
   "nodes": [
     {
       "id": ".NET"
+    },
+    {
+      "id": "ASP.NET"
     },
     {
       "id": "AWS"
@@ -10,10 +19,16 @@
       "id": "Airflow"
     },
     {
+      "id": "Ajax"
+    },
+    {
       "id": "Android"
     },
     {
       "id": "Angular"
+    },
+    {
+      "id": "Apache"
     },
     {
       "id": "ArgoCD"
@@ -37,10 +52,19 @@
       "id": "CSS"
     },
     {
+      "id": "Claude Code"
+    },
+    {
       "id": "Datadog"
     },
     {
       "id": "Django"
+    },
+    {
+      "id": "Docker"
+    },
+    {
+      "id": "Elasticsearch"
     },
     {
       "id": "Express"
@@ -49,13 +73,34 @@
       "id": "FastAPI"
     },
     {
+      "id": "Figma"
+    },
+    {
       "id": "Flask"
+    },
+    {
+      "id": "Flutter"
     },
     {
       "id": "GCP"
     },
     {
+      "id": "Git"
+    },
+    {
+      "id": "GitHub"
+    },
+    {
+      "id": "GitLab"
+    },
+    {
+      "id": "Go"
+    },
+    {
       "id": "Grafana"
+    },
+    {
+      "id": "GraphQL"
     },
     {
       "id": "HTML"
@@ -70,7 +115,16 @@
       "id": "JavaScript"
     },
     {
+      "id": "Jenkins"
+    },
+    {
+      "id": "Jira"
+    },
+    {
       "id": "Kafka"
+    },
+    {
+      "id": "Kotlin"
     },
     {
       "id": "Kubernetes"
@@ -79,10 +133,28 @@
       "id": "LangChain"
     },
     {
+      "id": "Linux"
+    },
+    {
       "id": "LlamaIndex"
     },
     {
+      "id": "MLflow"
+    },
+    {
+      "id": "MSSQL"
+    },
+    {
+      "id": "MariaDB"
+    },
+    {
+      "id": "MongoDB"
+    },
+    {
       "id": "MyBatis"
+    },
+    {
+      "id": "MySQL"
     },
     {
       "id": "NestJS"
@@ -91,7 +163,31 @@
       "id": "Next.js"
     },
     {
+      "id": "Nginx"
+    },
+    {
       "id": "Node.js"
+    },
+    {
+      "id": "Notion"
+    },
+    {
+      "id": "NumPy"
+    },
+    {
+      "id": "OpenCV"
+    },
+    {
+      "id": "Oracle"
+    },
+    {
+      "id": "PHP"
+    },
+    {
+      "id": "Pandas"
+    },
+    {
+      "id": "PostgreSQL"
     },
     {
       "id": "Prometheus"
@@ -103,19 +199,49 @@
       "id": "Python"
     },
     {
+      "id": "R"
+    },
+    {
+      "id": "REST API"
+    },
+    {
       "id": "RabbitMQ"
     },
     {
       "id": "React"
     },
     {
+      "id": "React Query"
+    },
+    {
+      "id": "Redis"
+    },
+    {
       "id": "Redux"
+    },
+    {
+      "id": "SQL"
+    },
+    {
+      "id": "Scikit-Learn"
+    },
+    {
+      "id": "Shell"
+    },
+    {
+      "id": "Slack"
+    },
+    {
+      "id": "Spark"
     },
     {
       "id": "Spring"
     },
     {
       "id": "Spring Boot"
+    },
+    {
+      "id": "Swift"
     },
     {
       "id": "Tailwind CSS"
@@ -133,6 +259,12 @@
       "id": "Vite"
     },
     {
+      "id": "Vue.js"
+    },
+    {
+      "id": "WebSocket"
+    },
+    {
       "id": "Zustand"
     },
     {
@@ -143,352 +275,4692 @@
     {
       "source": "LlamaIndex",
       "target": "LangChain",
-      "support": 0.005120299509992842,
-      "confidence": 0.9789473684210527,
-      "interest": 0.9640269257629015
+      "support": 0.005753138075313808,
+      "confidence": 0.9777777777777777,
+      "interest": 0.960583740120874
     },
     {
       "source": "TensorFlow",
       "target": "PyTorch",
-      "support": 0.030997081979849146,
-      "confidence": 0.9494097807757167,
-      "interest": 0.895398879492889
+      "support": 0.03510721757322176,
+      "confidence": 0.9487632508833922,
+      "interest": 0.8873092759879947
     },
     {
       "source": "Prometheus",
       "target": "Grafana",
-      "support": 0.010460826955899356,
-      "confidence": 0.892018779342723,
-      "interest": 0.8774837355724208
+      "support": 0.01202928870292887,
+      "confidence": 0.8932038834951457,
+      "interest": 0.8764674818215055
     },
     {
       "source": "Redux",
       "target": "React",
-      "support": 0.007487749821064802,
-      "confidence": 0.9784172661870504,
-      "interest": 0.8495288666935746
+      "support": 0.008695083682008367,
+      "confidence": 0.9851851851851852,
+      "interest": 0.8348844529676119
     },
     {
       "source": "Zustand",
       "target": "React",
-      "support": 0.008974288388482079,
-      "confidence": 0.9702380952380952,
-      "interest": 0.8413496957446195
+      "support": 0.010394874476987448,
+      "confidence": 0.9754601226993865,
+      "interest": 0.8251593904818133
+    },
+    {
+      "source": "React Query",
+      "target": "TypeScript",
+      "support": 0.005295502092050209,
+      "confidence": 0.9310344827586207,
+      "interest": 0.8233592735535997
+    },
+    {
+      "source": "React Query",
+      "target": "React",
+      "support": 0.005426255230125523,
+      "confidence": 0.9540229885057471,
+      "interest": 0.8037222562881738
     },
     {
       "source": "Zustand",
       "target": "TypeScript",
-      "support": 0.008038319660848978,
-      "confidence": 0.8690476190476191,
-      "interest": 0.7762766010439853
-    },
-    {
-      "source": "Next.js",
-      "target": "React",
-      "support": 0.03947585751252546,
-      "confidence": 0.8873762376237624,
-      "interest": 0.7584878381302866
-    },
-    {
-      "source": "Node.js",
-      "target": "JavaScript",
-      "support": 0.05654352254583494,
-      "confidence": 0.9202508960573477,
-      "interest": 0.7576676223690804
-    },
-    {
-      "source": "Tailwind CSS",
-      "target": "React",
-      "support": 0.006772009029345372,
-      "confidence": 0.8848920863309353,
-      "interest": 0.7560036868374596
-    },
-    {
-      "source": "MyBatis",
-      "target": "Spring",
-      "support": 0.00919451632439575,
-      "confidence": 0.8789473684210526,
-      "interest": 0.7518207924148862
-    },
-    {
-      "source": "JPA",
-      "target": "Spring",
-      "support": 0.019930628200187192,
-      "confidence": 0.8765133171912833,
-      "interest": 0.749386741185117
+      "support": 0.009218096234309624,
+      "confidence": 0.8650306748466258,
+      "interest": 0.7573554656416048
     },
     {
       "source": "Tailwind CSS",
       "target": "CSS",
-      "support": 0.006166382205582778,
-      "confidence": 0.8057553956834532,
-      "interest": 0.7450825993392369
+      "support": 0.007256799163179916,
+      "confidence": 0.8161764705882353,
+      "interest": 0.7456351525966035
+    },
+    {
+      "source": "Tailwind CSS",
+      "target": "React",
+      "support": 0.007910564853556486,
+      "confidence": 0.8897058823529411,
+      "interest": 0.7394051501353679
+    },
+    {
+      "source": "Next.js",
+      "target": "React",
+      "support": 0.04582897489539749,
+      "confidence": 0.8862199747155499,
+      "interest": 0.7359192424979767
     },
     {
       "source": "iOS",
       "target": "Android",
-      "support": 0.01602158233771954,
-      "confidence": 0.773936170212766,
-      "interest": 0.7384794725306649
+      "support": 0.018436192468619248,
+      "confidence": 0.7726027397260274,
+      "interest": 0.7312193715251907
+    },
+    {
+      "source": "Node.js",
+      "target": "JavaScript",
+      "support": 0.06583420502092051,
+      "confidence": 0.919634703196347,
+      "interest": 0.7299118998490667
+    },
+    {
+      "source": "MyBatis",
+      "target": "Spring",
+      "support": 0.010656380753138074,
+      "confidence": 0.8763440860215054,
+      "interest": 0.7276777680298736
+    },
+    {
+      "source": "JPA",
+      "target": "Spring",
+      "support": 0.02294717573221757,
+      "confidence": 0.8731343283582089,
+      "interest": 0.7244680103665772
     },
     {
       "source": "Tailwind CSS",
       "target": "TypeScript",
-      "support": 0.006331553157518031,
-      "confidence": 0.8273381294964028,
-      "interest": 0.7345671114927691
+      "support": 0.00738755230125523,
+      "confidence": 0.8308823529411765,
+      "interest": 0.7232071437361556
     },
     {
       "source": "Redux",
       "target": "TypeScript",
-      "support": 0.006276496173539614,
-      "confidence": 0.8201438848920863,
-      "interest": 0.7273728668884526
-    },
-    {
-      "source": "MyBatis",
-      "target": "Java",
-      "support": 0.009745086164179927,
-      "confidence": 0.9315789473684211,
-      "interest": 0.7175724506443116
-    },
-    {
-      "source": "GCP",
-      "target": "AWS",
-      "support": 0.04195342179155426,
-      "confidence": 0.8819444444444444,
-      "interest": 0.7136352444224217
+      "support": 0.007191422594142259,
+      "confidence": 0.8148148148148148,
+      "interest": 0.7071396056097938
     },
     {
       "source": "Grafana",
       "target": "Prometheus",
-      "support": 0.010460826955899356,
-      "confidence": 0.7196969696969697,
-      "interest": 0.7079698321095668
+      "support": 0.01202928870292887,
+      "confidence": 0.71875,
+      "interest": 0.7052824267782427
     },
     {
       "source": "CSS",
       "target": "HTML",
-      "support": 0.04646809447778451,
-      "confidence": 0.7658802177858439,
-      "interest": 0.7047119085858219
+      "support": 0.053804916317991634,
+      "confidence": 0.76274328081557,
+      "interest": 0.6917443268406746
+    },
+    {
+      "source": "ASP.NET",
+      "target": "C#",
+      "support": 0.005164748953974895,
+      "confidence": 0.7669902912621359,
+      "interest": 0.688080772433684
     },
     {
       "source": "HTML",
       "target": "CSS",
-      "support": 0.04646809447778451,
-      "confidence": 0.7596759675967597,
-      "interest": 0.6990031712525434
+      "support": 0.053804916317991634,
+      "confidence": 0.7578268876611418,
+      "interest": 0.68728556966951
+    },
+    {
+      "source": "GCP",
+      "target": "AWS",
+      "support": 0.04877092050209205,
+      "confidence": 0.8807556080283353,
+      "interest": 0.6869794574007202
+    },
+    {
+      "source": "MyBatis",
+      "target": "Java",
+      "support": 0.011375523012552301,
+      "confidence": 0.9354838709677419,
+      "interest": 0.6856146241058172
     },
     {
       "source": "ArgoCD",
       "target": "Kubernetes",
-      "support": 0.0068270660133237905,
-      "confidence": 0.7701863354037267,
-      "interest": 0.6842423834134167
+      "support": 0.007975941422594142,
+      "confidence": 0.7672955974842768,
+      "interest": 0.6679232125470382
     },
     {
       "source": ".NET",
       "target": "C#",
-      "support": 0.015415955513956945,
-      "confidence": 0.7407407407407407,
-      "interest": 0.6728554794953517
+      "support": 0.01791317991631799,
+      "confidence": 0.738544474393531,
+      "interest": 0.6596349555650791
     },
     {
-      "source": "Flask",
+      "source": "NumPy",
       "target": "Python",
-      "support": 0.007432692837086384,
-      "confidence": 0.9183673469387755,
-      "interest": 0.6710513749077234
+      "support": 0.0054916317991631795,
+      "confidence": 0.9438202247191011,
+      "interest": 0.6579284883174275
     },
     {
       "source": "Tailwind CSS",
       "target": "Next.js",
-      "support": 0.005450641413863349,
-      "confidence": 0.7122302158273381,
-      "interest": 0.6677441727727766
-    },
-    {
-      "source": "Datadog",
-      "target": "AWS",
-      "support": 0.006772009029345372,
-      "confidence": 0.831081081081081,
-      "interest": 0.6627718810590583
-    },
-    {
-      "source": "Bash",
-      "target": "Python",
-      "support": 0.005946154269669108,
-      "confidence": 0.907563025210084,
-      "interest": 0.6602470531790319
+      "support": 0.006276150627615063,
+      "confidence": 0.7058823529411765,
+      "interest": 0.65416948683239
     },
     {
       "source": "Zustand",
       "target": "Next.js",
-      "support": 0.006496724109453284,
-      "confidence": 0.7023809523809523,
-      "interest": 0.6578949093263908
-    },
-    {
-      "source": "FastAPI",
-      "target": "Python",
-      "support": 0.030997081979849146,
-      "confidence": 0.9036918138041734,
-      "interest": 0.6563758417731212
+      "support": 0.00738755230125523,
+      "confidence": 0.6932515337423313,
+      "interest": 0.6415386676335447
     },
     {
       "source": "Prometheus",
       "target": "Kubernetes",
-      "support": 0.008643946484611573,
-      "confidence": 0.7370892018779343,
-      "interest": 0.6511452498876242
+      "support": 0.00993723849372385,
+      "confidence": 0.7378640776699029,
+      "interest": 0.6384916927326645
+    },
+    {
+      "source": "Flask",
+      "target": "Python",
+      "support": 0.008106694560669456,
+      "confidence": 0.9185185185185185,
+      "interest": 0.6326267821168449
+    },
+    {
+      "source": "Datadog",
+      "target": "AWS",
+      "support": 0.007779811715481172,
+      "confidence": 0.8263888888888888,
+      "interest": 0.6326127382612738
+    },
+    {
+      "source": "Bash",
+      "target": "Python",
+      "support": 0.006929916317991632,
+      "confidence": 0.905982905982906,
+      "interest": 0.6200911695812323
+    },
+    {
+      "source": "FastAPI",
+      "target": "Python",
+      "support": 0.03576098326359833,
+      "confidence": 0.9026402640264026,
+      "interest": 0.616748527624729
     },
     {
       "source": "JPA",
       "target": "Java",
-      "support": 0.019435115344381436,
-      "confidence": 0.8547215496368039,
-      "interest": 0.6407150529126945
+      "support": 0.02255491631799163,
+      "confidence": 0.8582089552238806,
+      "interest": 0.6083397083619559
     },
     {
       "source": "Spring Boot",
       "target": "Java",
-      "support": 0.005505698397841766,
-      "confidence": 0.8547008547008547,
-      "interest": 0.6406943579767452
-    },
-    {
-      "source": "Django",
-      "target": "Python",
-      "support": 0.014479986786323845,
-      "confidence": 0.8766666666666667,
-      "interest": 0.6293506946356145
-    },
-    {
-      "source": "Azure",
-      "target": "AWS",
-      "support": 0.034300501018554204,
-      "confidence": 0.78562421185372,
-      "interest": 0.6173150118316972
-    },
-    {
-      "source": "HTML",
-      "target": "JavaScript",
-      "support": 0.04762429114133128,
-      "confidence": 0.7785778577857786,
-      "interest": 0.6159945840975112
+      "support": 0.00634152719665272,
+      "confidence": 0.8508771929824561,
+      "interest": 0.6010079461205314
     },
     {
       "source": "RabbitMQ",
       "target": "Kafka",
-      "support": 0.006496724109453284,
-      "confidence": 0.644808743169399,
-      "interest": 0.6111689259585857
-    },
-    {
-      "source": "Express",
-      "target": "Node.js",
-      "support": 0.005505698397841766,
-      "confidence": 0.6666666666666666,
-      "interest": 0.6052230725467526
-    },
-    {
-      "source": "C",
-      "target": "C++",
-      "support": 0.06992236965259042,
-      "confidence": 0.7244723331431832,
-      "interest": 0.6020806577591606
-    },
-    {
-      "source": "Spring",
-      "target": "Java",
-      "support": 0.10356218686340363,
-      "confidence": 0.8146383715894326,
-      "interest": 0.6006318748653232
-    },
-    {
-      "source": "Terraform",
-      "target": "Kubernetes",
-      "support": 0.012828277266971316,
-      "confidence": 0.6773255813953488,
-      "interest": 0.5913816294050388
+      "support": 0.007322175732217573,
+      "confidence": 0.6363636363636364,
+      "interest": 0.5982490966146824
     },
     {
       "source": "Flask",
       "target": "FastAPI",
-      "support": 0.0050101855420360076,
-      "confidence": 0.6190476190476191,
-      "interest": 0.5847471180290649
+      "support": 0.005622384937238494,
+      "confidence": 0.6370370370370371,
+      "interest": 0.597418836200217
+    },
+    {
+      "source": "Django",
+      "target": "Python",
+      "support": 0.016932531380753138,
+      "confidence": 0.8809523809523809,
+      "interest": 0.5950606445507073
+    },
+    {
+      "source": "Azure",
+      "target": "AWS",
+      "support": 0.03968357740585774,
+      "confidence": 0.7862694300518135,
+      "interest": 0.5924932794241984
+    },
+    {
+      "source": "Express",
+      "target": "Node.js",
+      "support": 0.006406903765690377,
+      "confidence": 0.6621621621621622,
+      "interest": 0.5905748190659279
+    },
+    {
+      "source": "HTML",
+      "target": "JavaScript",
+      "support": 0.0553739539748954,
+      "confidence": 0.7799263351749539,
+      "interest": 0.5902035318276736
+    },
+    {
+      "source": "C",
+      "target": "C++",
+      "support": 0.08015167364016737,
+      "confidence": 0.722877358490566,
+      "interest": 0.5823177350596036
     },
     {
       "source": "Terraform",
-      "target": "AWS",
-      "support": 0.014259758850410174,
-      "confidence": 0.752906976744186,
-      "interest": 0.5845977767221633
+      "target": "Kubernetes",
+      "support": 0.014905857740585775,
+      "confidence": 0.6785714285714286,
+      "interest": 0.5791990436341901
     },
     {
-      "source": "Angular",
-      "target": "React",
-      "support": 0.005230413477949678,
-      "confidence": 0.7089552238805971,
-      "interest": 0.5800668243871213
+      "source": "Scikit-Learn",
+      "target": "Python",
+      "support": 0.005295502092050209,
+      "confidence": 0.8617021276595744,
+      "interest": 0.5758103912579008
+    },
+    {
+      "source": "Spring",
+      "target": "Java",
+      "support": 0.12114278242677824,
+      "confidence": 0.8148636763412489,
+      "interest": 0.5649944294793242
     },
     {
       "source": "Grafana",
       "target": "Kubernetes",
-      "support": 0.009579915212244673,
-      "confidence": 0.6590909090909091,
-      "interest": 0.573146957100599
+      "support": 0.010983263598326359,
+      "confidence": 0.65625,
+      "interest": 0.5568776150627615
+    },
+    {
+      "source": "Terraform",
+      "target": "AWS",
+      "support": 0.01647489539748954,
+      "confidence": 0.75,
+      "interest": 0.556223849372385
+    },
+    {
+      "source": "Angular",
+      "target": "React",
+      "support": 0.006080020920502092,
+      "confidence": 0.7045454545454546,
+      "interest": 0.5542447223278814
     },
     {
       "source": "Next.js",
       "target": "TypeScript",
-      "support": 0.029345372460496615,
-      "confidence": 0.6596534653465347,
-      "interest": 0.5668824473429009
-    },
-    {
-      "source": "PyTorch",
-      "target": "Python",
-      "support": 0.043715245278863626,
-      "confidence": 0.8093781855249745,
-      "interest": 0.5620622134939224
-    },
-    {
-      "source": "Vite",
-      "target": "TypeScript",
-      "support": 0.005505698397841766,
-      "confidence": 0.6535947712418301,
-      "interest": 0.5608237532381963
+      "support": 0.03399581589958159,
+      "confidence": 0.6573957016434893,
+      "interest": 0.5497204924384683
     },
     {
       "source": "NestJS",
       "target": "Node.js",
-      "support": 0.011727137587402962,
-      "confidence": 0.6209912536443148,
-      "interest": 0.5595476595244008
+      "support": 0.01372907949790795,
+      "confidence": 0.621301775147929,
+      "interest": 0.5497144320516947
+    },
+    {
+      "source": "Vite",
+      "target": "TypeScript",
+      "support": 0.00634152719665272,
+      "confidence": 0.6466666666666666,
+      "interest": 0.5389914574616457
+    },
+    {
+      "source": "PyTorch",
+      "target": "TensorFlow",
+      "support": 0.03510721757322176,
+      "confidence": 0.5712765957446808,
+      "interest": 0.534273457669367
     },
     {
       "source": "NestJS",
       "target": "TypeScript",
-      "support": 0.012167593459230304,
-      "confidence": 0.6443148688046647,
-      "interest": 0.551543850801031
+      "support": 0.014121338912133892,
+      "confidence": 0.6390532544378699,
+      "interest": 0.5313780452328489
     },
     {
-      "source": "Airflow",
+      "source": "PyTorch",
       "target": "Python",
-      "support": 0.014479986786323845,
-      "confidence": 0.796969696969697,
-      "interest": 0.5496537249386448
+      "support": 0.049947698744769876,
+      "confidence": 0.8127659574468085,
+      "interest": 0.5268742210451348
     },
     {
       "source": "TensorFlow",
       "target": "Python",
-      "support": 0.025766668501899466,
-      "confidence": 0.7892074198988196,
-      "interest": 0.5418914478677674
+      "support": 0.029484832635983265,
+      "confidence": 0.7968197879858657,
+      "interest": 0.5109280515841921
+    },
+    {
+      "source": "Vite",
+      "target": "React",
+      "support": 0.006472280334728034,
+      "confidence": 0.66,
+      "interest": 0.5096992677824268
+    },
+    {
+      "source": "CSS",
+      "target": "JavaScript",
+      "support": 0.04922855648535565,
+      "confidence": 0.6978683966635774,
+      "interest": 0.508145593316297
+    },
+    {
+      "source": "Slack",
+      "target": "Notion",
+      "support": 0.014317468619246862,
+      "confidence": 0.5367647058823529,
+      "interest": 0.5080643920748216
+    },
+    {
+      "source": "TypeScript",
+      "target": "React",
+      "support": 0.07086820083682008,
+      "confidence": 0.6581663630843959,
+      "interest": 0.5078656308668227
+    },
+    {
+      "source": "Django",
+      "target": "FastAPI",
+      "support": 0.010460251046025104,
+      "confidence": 0.54421768707483,
+      "interest": 0.5045994862380099
+    },
+    {
+      "source": "Airflow",
+      "target": "Python",
+      "support": 0.01647489539748954,
+      "confidence": 0.7899686520376176,
+      "interest": 0.5040769156359439
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Docker",
+      "support": 0.06256537656903766,
+      "confidence": 0.6296052631578948,
+      "interest": 0.5026439660867651
+    },
+    {
+      "source": "NestJS",
+      "target": "JavaScript",
+      "support": 0.01523274058577406,
+      "confidence": 0.6893491124260355,
+      "interest": 0.49962630907875516
+    },
+    {
+      "source": "Swift",
+      "target": "Kotlin",
+      "support": 0.008172071129707113,
+      "confidence": 0.5482456140350878,
+      "interest": 0.4976441495999413
+    },
+    {
+      "source": "Angular",
+      "target": "JavaScript",
+      "support": 0.005883891213389121,
+      "confidence": 0.6818181818181818,
+      "interest": 0.49209537847090146
+    },
+    {
+      "source": "Prometheus",
+      "target": "AWS",
+      "support": 0.009218096234309624,
+      "confidence": 0.6844660194174758,
+      "interest": 0.4906898687898607
+    },
+    {
+      "source": "Shell",
+      "target": "Python",
+      "support": 0.014055962343096234,
+      "confidence": 0.776173285198556,
+      "interest": 0.49028154879688235
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Redis",
+      "support": 0.006145397489539749,
+      "confidence": 0.5340909090909091,
+      "interest": 0.4833586915176873
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "AWS",
+      "support": 0.007779811715481172,
+      "confidence": 0.6761363636363636,
+      "interest": 0.4823602130087486
+    },
+    {
+      "source": "Grafana",
+      "target": "AWS",
+      "support": 0.011179393305439331,
+      "confidence": 0.66796875,
+      "interest": 0.47419259937238495
+    },
+    {
+      "source": "Spark",
+      "target": "Python",
+      "support": 0.011114016736401673,
+      "confidence": 0.7589285714285714,
+      "interest": 0.47303683502689775
+    },
+    {
+      "source": "ArgoCD",
+      "target": "AWS",
+      "support": 0.006929916317991632,
+      "confidence": 0.6666666666666666,
+      "interest": 0.4728905160390516
+    },
+    {
+      "source": "Notion",
+      "target": "Slack",
+      "support": 0.014317468619246862,
+      "confidence": 0.4988610478359909,
+      "interest": 0.4721874076686269
+    },
+    {
+      "source": "LangChain",
+      "target": "Python",
+      "support": 0.013009937238493724,
+      "confidence": 0.7566539923954373,
+      "interest": 0.47076225599376365
+    },
+    {
+      "source": "OpenCV",
+      "target": "C++",
+      "support": 0.014905857740585775,
+      "confidence": 0.6096256684491979,
+      "interest": 0.4690660450182355
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Kubernetes",
+      "support": 0.00653765690376569,
+      "confidence": 0.5681818181818182,
+      "interest": 0.46880943324457974
+    },
+    {
+      "source": "C++",
+      "target": "C",
+      "support": 0.08015167364016737,
+      "confidence": 0.5702325581395349,
+      "interest": 0.4593538970516688
+    },
+    {
+      "source": "Prometheus",
+      "target": "Docker",
+      "support": 0.007845188284518828,
+      "confidence": 0.5825242718446602,
+      "interest": 0.45556297477353047
+    },
+    {
+      "source": "Shell",
+      "target": "Linux",
+      "support": 0.011244769874476987,
+      "confidence": 0.6209386281588448,
+      "interest": 0.4493905110040331
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Docker",
+      "support": 0.006603033472803347,
+      "confidence": 0.5738636363636364,
+      "interest": 0.44690233929250667
+    },
+    {
+      "source": "Kotlin",
+      "target": "Java",
+      "support": 0.03510721757322176,
+      "confidence": 0.6937984496124031,
+      "interest": 0.4439292027504784
+    },
+    {
+      "source": "Datadog",
+      "target": "Kubernetes",
+      "support": 0.005099372384937239,
+      "confidence": 0.5416666666666666,
+      "interest": 0.44229428172942814
+    },
+    {
+      "source": "Azure",
+      "target": "GCP",
+      "support": 0.02510460251046025,
+      "confidence": 0.49740932642487046,
+      "interest": 0.44203537244997504
+    },
+    {
+      "source": "Ajax",
+      "target": "JavaScript",
+      "support": 0.005033995815899582,
+      "confidence": 0.6311475409836066,
+      "interest": 0.4414247376363263
+    },
+    {
+      "source": "GraphQL",
+      "target": "TypeScript",
+      "support": 0.00634152719665272,
+      "confidence": 0.5480225988700564,
+      "interest": 0.4403473896650355
+    },
+    {
+      "source": "ArgoCD",
+      "target": "GitHub",
+      "support": 0.005099372384937239,
+      "confidence": 0.49056603773584906,
+      "interest": 0.43944156074840135
+    },
+    {
+      "source": "Zustand",
+      "target": "CSS",
+      "support": 0.005426255230125523,
+      "confidence": 0.50920245398773,
+      "interest": 0.43866113599609824
+    },
+    {
+      "source": "Express",
+      "target": "JavaScript",
+      "support": 0.006080020920502092,
+      "confidence": 0.6283783783783784,
+      "interest": 0.4386555750310981
+    },
+    {
+      "source": "NestJS",
+      "target": "AWS",
+      "support": 0.013859832635983263,
+      "confidence": 0.6272189349112426,
+      "interest": 0.43344278428362754
+    },
+    {
+      "source": "MongoDB",
+      "target": "Redis",
+      "support": 0.013925209205020921,
+      "confidence": 0.4819004524886878,
+      "interest": 0.431168234915466
+    },
+    {
+      "source": "MongoDB",
+      "target": "AWS",
+      "support": 0.018043933054393304,
+      "confidence": 0.6244343891402715,
+      "interest": 0.43065823851265644
+    },
+    {
+      "source": "MyBatis",
+      "target": "JPA",
+      "support": 0.0054916317991631795,
+      "confidence": 0.45161290322580644,
+      "interest": 0.42533152247266837
+    },
+    {
+      "source": "Nginx",
+      "target": "Docker",
+      "support": 0.006864539748953975,
+      "confidence": 0.5497382198952879,
+      "interest": 0.42277692282415824
+    },
+    {
+      "source": "Android",
+      "target": "iOS",
+      "support": 0.018436192468619248,
+      "confidence": 0.44549763033175355,
+      "interest": 0.42163518263300875
+    },
+    {
+      "source": "FastAPI",
+      "target": "Docker",
+      "support": 0.021639644351464433,
+      "confidence": 0.5462046204620462,
+      "interest": 0.4192433233909165
+    },
+    {
+      "source": "OpenCV",
+      "target": "Python",
+      "support": 0.017194037656903766,
+      "confidence": 0.7032085561497327,
+      "interest": 0.417316819748059
+    },
+    {
+      "source": "Redis",
+      "target": "AWS",
+      "support": 0.03098849372384937,
+      "confidence": 0.6108247422680413,
+      "interest": 0.41704859164042624
+    },
+    {
+      "source": "Django",
+      "target": "AWS",
+      "support": 0.011702405857740586,
+      "confidence": 0.608843537414966,
+      "interest": 0.41506738678735094
+    },
+    {
+      "source": "Swift",
+      "target": "iOS",
+      "support": 0.00653765690376569,
+      "confidence": 0.43859649122807015,
+      "interest": 0.41473404352932536
+    },
+    {
+      "source": "Kotlin",
+      "target": "Spring",
+      "support": 0.02850418410041841,
+      "confidence": 0.5633074935400517,
+      "interest": 0.41464117554841995
+    },
+    {
+      "source": "Kafka",
+      "target": "Redis",
+      "support": 0.01752092050209205,
+      "confidence": 0.45969125214408235,
+      "interest": 0.4089590345708606
+    },
+    {
+      "source": "MongoDB",
+      "target": "Docker",
+      "support": 0.01542887029288703,
+      "confidence": 0.5339366515837104,
+      "interest": 0.4069753545125807
+    },
+    {
+      "source": "MariaDB",
+      "target": "MySQL",
+      "support": 0.01287918410041841,
+      "confidence": 0.5038363171355499,
+      "interest": 0.4060983464242528
+    },
+    {
+      "source": "GCP",
+      "target": "Azure",
+      "support": 0.02510460251046025,
+      "confidence": 0.45336481700118064,
+      "interest": 0.4028941057041095
+    },
+    {
+      "source": "Redux",
+      "target": "JavaScript",
+      "support": 0.005230125523012552,
+      "confidence": 0.5925925925925926,
+      "interest": 0.40286978924531225
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Spring",
+      "support": 0.00634152719665272,
+      "confidence": 0.5511363636363636,
+      "interest": 0.4024700456447319
+    },
+    {
+      "source": "PHP",
+      "target": "MySQL",
+      "support": 0.01268305439330544,
+      "confidence": 0.5,
+      "interest": 0.4022620292887029
+    },
+    {
+      "source": "Oracle",
+      "target": "Java",
+      "support": 0.04386767782426778,
+      "confidence": 0.648936170212766,
+      "interest": 0.39906692335084126
+    },
+    {
+      "source": "Spark",
+      "target": "Airflow",
+      "support": 0.006145397489539749,
+      "confidence": 0.41964285714285715,
+      "interest": 0.3987877316198446
+    },
+    {
+      "source": "Slack",
+      "target": "Jira",
+      "support": 0.011898535564853556,
+      "confidence": 0.44607843137254904,
+      "interest": 0.3979612765608336
+    },
+    {
+      "source": "Docker",
+      "target": "Kubernetes",
+      "support": 0.06256537656903766,
+      "confidence": 0.49279093717816685,
+      "interest": 0.39341855224092837
+    },
+    {
+      "source": "Express",
+      "target": "AWS",
+      "support": 0.005622384937238494,
+      "confidence": 0.581081081081081,
+      "interest": 0.387304930453466
+    },
+    {
+      "source": "MongoDB",
+      "target": "PostgreSQL",
+      "support": 0.013271443514644352,
+      "confidence": 0.4592760180995475,
+      "interest": 0.38474672939661864
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Redis",
+      "support": 0.00993723849372385,
+      "confidence": 0.4342857142857143,
+      "interest": 0.3835534967124925
+    },
+    {
+      "source": "GitLab",
+      "target": "Jenkins",
+      "support": 0.006472280334728034,
+      "confidence": 0.4107883817427386,
+      "interest": 0.38306871647077206
+    },
+    {
+      "source": "PHP",
+      "target": "JavaScript",
+      "support": 0.014513598326359832,
+      "confidence": 0.5721649484536082,
+      "interest": 0.3824421451063279
+    },
+    {
+      "source": "GraphQL",
+      "target": "React",
+      "support": 0.006080020920502092,
+      "confidence": 0.5254237288135594,
+      "interest": 0.37512299659598614
+    },
+    {
+      "source": "GraphQL",
+      "target": "AWS",
+      "support": 0.00653765690376569,
+      "confidence": 0.5649717514124294,
+      "interest": 0.37119560078481434
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Kubernetes",
+      "support": 0.010721757322175732,
+      "confidence": 0.4685714285714286,
+      "interest": 0.3691990436341901
+    },
+    {
+      "source": "Grafana",
+      "target": "Docker",
+      "support": 0.008302824267782427,
+      "confidence": 0.49609375,
+      "interest": 0.3691324529288703
+    },
+    {
+      "source": "MariaDB",
+      "target": "Java",
+      "support": 0.015821129707112972,
+      "confidence": 0.618925831202046,
+      "interest": 0.36905658434012134
+    },
+    {
+      "source": "WebSocket",
+      "target": "REST API",
+      "support": 0.006603033472803347,
+      "confidence": 0.4697674418604651,
+      "interest": 0.3690221489734358
+    },
+    {
+      "source": "Redis",
+      "target": "Docker",
+      "support": 0.02510460251046025,
+      "confidence": 0.4948453608247423,
+      "interest": 0.3678840637536126
+    },
+    {
+      "source": "Prometheus",
+      "target": "Terraform",
+      "support": 0.005230125523012552,
+      "confidence": 0.3883495145631068,
+      "interest": 0.3663829873664541
+    },
+    {
+      "source": "Django",
+      "target": "Docker",
+      "support": 0.00947960251046025,
+      "confidence": 0.4931972789115646,
+      "interest": 0.36623598184043493
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Docker",
+      "support": 0.011244769874476987,
+      "confidence": 0.49142857142857144,
+      "interest": 0.36446727435744175
+    },
+    {
+      "source": "React",
+      "target": "TypeScript",
+      "support": 0.07086820083682008,
+      "confidence": 0.471509351892127,
+      "interest": 0.36383414268710607
+    },
+    {
+      "source": "Kafka",
+      "target": "Kubernetes",
+      "support": 0.017651673640167363,
+      "confidence": 0.4631217838765009,
+      "interest": 0.3637493989392624
+    },
+    {
+      "source": "Node.js",
+      "target": "React",
+      "support": 0.03674163179916318,
+      "confidence": 0.5132420091324201,
+      "interest": 0.3629412769148469
+    },
+    {
+      "source": "Spark",
+      "target": "SQL",
+      "support": 0.007191422594142259,
+      "confidence": 0.49107142857142855,
+      "interest": 0.36247571727435746
+    },
+    {
+      "source": "Go",
+      "target": "Python",
+      "support": 0.022620292887029287,
+      "confidence": 0.6467289719626168,
+      "interest": 0.36083723556094316
+    },
+    {
+      "source": "TypeScript",
+      "target": "JavaScript",
+      "support": 0.059231171548117155,
+      "confidence": 0.5500910746812386,
+      "interest": 0.3603682713339583
+    },
+    {
+      "source": "GitHub",
+      "target": "AWS",
+      "support": 0.028177301255230127,
+      "confidence": 0.551150895140665,
+      "interest": 0.3573747445130499
+    },
+    {
+      "source": "React",
+      "target": "JavaScript",
+      "support": 0.08217834728033473,
+      "confidence": 0.5467594606350588,
+      "interest": 0.35703665728777845
+    },
+    {
+      "source": "Terraform",
+      "target": "Docker",
+      "support": 0.010591004184100418,
+      "confidence": 0.48214285714285715,
+      "interest": 0.3551815600717274
+    },
+    {
+      "source": "CSS",
+      "target": "React",
+      "support": 0.03543410041841004,
+      "confidence": 0.5023169601482854,
+      "interest": 0.3520162279307122
+    },
+    {
+      "source": "Kafka",
+      "target": "AWS",
+      "support": 0.020789748953974896,
+      "confidence": 0.5454545454545454,
+      "interest": 0.35167839482693036
+    },
+    {
+      "source": "JPA",
+      "target": "AWS",
+      "support": 0.014252092050209206,
+      "confidence": 0.5422885572139303,
+      "interest": 0.34851240658631527
+    },
+    {
+      "source": "GraphQL",
+      "target": "REST API",
+      "support": 0.005164748953974895,
+      "confidence": 0.4463276836158192,
+      "interest": 0.34558239072878993
+    },
+    {
+      "source": "Redis",
+      "target": "PostgreSQL",
+      "support": 0.02131276150627615,
+      "confidence": 0.42010309278350516,
+      "interest": 0.3455738040805763
+    },
+    {
+      "source": "Kafka",
+      "target": "Spring",
+      "support": 0.01882845188284519,
+      "confidence": 0.4939965694682676,
+      "interest": 0.34533025147663576
+    },
+    {
+      "source": "Zustand",
+      "target": "Git",
+      "support": 0.005230125523012552,
+      "confidence": 0.49079754601226994,
+      "interest": 0.3449424204892574
+    },
+    {
+      "source": "Jenkins",
+      "target": "Docker",
+      "support": 0.01307531380753138,
+      "confidence": 0.4716981132075472,
+      "interest": 0.3447368161364175
+    },
+    {
+      "source": "NestJS",
+      "target": "Redis",
+      "support": 0.008695083682008367,
+      "confidence": 0.39349112426035504,
+      "interest": 0.34275890668713327
+    },
+    {
+      "source": "Go",
+      "target": "Kubernetes",
+      "support": 0.01542887029288703,
+      "confidence": 0.4411214953271028,
+      "interest": 0.34174911038986433
+    },
+    {
+      "source": "Kubernetes",
+      "target": "AWS",
+      "support": 0.053151150627615065,
+      "confidence": 0.5348684210526315,
+      "interest": 0.3410922704250165
+    },
+    {
+      "source": "Redis",
+      "target": "MySQL",
+      "support": 0.022228033472803346,
+      "confidence": 0.4381443298969072,
+      "interest": 0.34040635918561013
+    },
+    {
+      "source": "MariaDB",
+      "target": "Spring",
+      "support": 0.012486924686192469,
+      "confidence": 0.4884910485933504,
+      "interest": 0.3398247306017186
+    },
+    {
+      "source": "Airflow",
+      "target": "Kubernetes",
+      "support": 0.009152719665271966,
+      "confidence": 0.438871473354232,
+      "interest": 0.3394990884169935
+    },
+    {
+      "source": "Spark",
+      "target": "Kubernetes",
+      "support": 0.006406903765690377,
+      "confidence": 0.4375,
+      "interest": 0.3381276150627615
+    },
+    {
+      "source": "Zustand",
+      "target": "JavaScript",
+      "support": 0.005622384937238494,
+      "confidence": 0.5276073619631901,
+      "interest": 0.3378845586159098
+    },
+    {
+      "source": "Kotlin",
+      "target": "AWS",
+      "support": 0.02686976987447699,
+      "confidence": 0.5310077519379846,
+      "interest": 0.3372316013103695
+    },
+    {
+      "source": "Django",
+      "target": "PostgreSQL",
+      "support": 0.007910564853556486,
+      "confidence": 0.41156462585034015,
+      "interest": 0.3370353371474113
+    },
+    {
+      "source": "Java",
+      "target": "Spring",
+      "support": 0.12114278242677824,
+      "confidence": 0.48482469911041337,
+      "interest": 0.3361583811187816
+    },
+    {
+      "source": "Go",
+      "target": "AWS",
+      "support": 0.018501569037656904,
+      "confidence": 0.5289719626168224,
+      "interest": 0.3351958119892074
+    },
+    {
+      "source": "Nginx",
+      "target": "AWS",
+      "support": 0.006603033472803347,
+      "confidence": 0.5287958115183246,
+      "interest": 0.3350196608907095
+    },
+    {
+      "source": "GitLab",
+      "target": "Docker",
+      "support": 0.007256799163179916,
+      "confidence": 0.4605809128630705,
+      "interest": 0.33361961579194077
+    },
+    {
+      "source": "Node.js",
+      "target": "TypeScript",
+      "support": 0.03144612970711297,
+      "confidence": 0.4392694063926941,
+      "interest": 0.33159419718767313
+    },
+    {
+      "source": "NestJS",
+      "target": "PostgreSQL",
+      "support": 0.008956589958158996,
+      "confidence": 0.40532544378698226,
+      "interest": 0.3307961550840534
+    },
+    {
+      "source": "LangChain",
+      "target": "LlamaIndex",
+      "support": 0.005753138075313808,
+      "confidence": 0.33460076045627374,
+      "interest": 0.3287168692428846
+    },
+    {
+      "source": "Next.js",
+      "target": "JavaScript",
+      "support": 0.026673640167364017,
+      "confidence": 0.515802781289507,
+      "interest": 0.32607997794222665
+    },
+    {
+      "source": "Grafana",
+      "target": "Terraform",
+      "support": 0.005818514644351464,
+      "confidence": 0.34765625,
+      "interest": 0.3256897228033473
+    },
+    {
+      "source": "MongoDB",
+      "target": "MySQL",
+      "support": 0.01222541841004184,
+      "confidence": 0.4230769230769231,
+      "interest": 0.325338952365626
+    },
+    {
+      "source": "Spark",
+      "target": "Kafka",
+      "support": 0.005295502092050209,
+      "confidence": 0.36160714285714285,
+      "interest": 0.3234926031081889
+    },
+    {
+      "source": "Flutter",
+      "target": "React",
+      "support": 0.00889121338912134,
+      "confidence": 0.4722222222222222,
+      "interest": 0.321921490004649
+    },
+    {
+      "source": "Docker",
+      "target": "AWS",
+      "support": 0.06544194560669456,
+      "confidence": 0.515447991761071,
+      "interest": 0.321671841133456
+    },
+    {
+      "source": "FastAPI",
+      "target": "PostgreSQL",
+      "support": 0.015690376569037656,
+      "confidence": 0.39603960396039606,
+      "interest": 0.3215103152574672
+    },
+    {
+      "source": "HTML",
+      "target": "React",
+      "support": 0.033080543933054395,
+      "confidence": 0.46593001841620624,
+      "interest": 0.315629286198633
+    },
+    {
+      "source": "MySQL",
+      "target": "Spring",
+      "support": 0.04537133891213389,
+      "confidence": 0.4642140468227425,
+      "interest": 0.3155477288311107
+    },
+    {
+      "source": "Kafka",
+      "target": "Java",
+      "support": 0.02150889121338912,
+      "confidence": 0.5643224699828473,
+      "interest": 0.3144532231209226
+    },
+    {
+      "source": "Jenkins",
+      "target": "Git",
+      "support": 0.01268305439330544,
+      "confidence": 0.45754716981132076,
+      "interest": 0.3116920442883082
+    },
+    {
+      "source": "Redis",
+      "target": "Kafka",
+      "support": 0.01752092050209205,
+      "confidence": 0.34536082474226804,
+      "interest": 0.3072462849933141
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Java",
+      "support": 0.006406903765690377,
+      "confidence": 0.5568181818181818,
+      "interest": 0.3069489349562571
+    },
+    {
+      "source": "Node.js",
+      "target": "AWS",
+      "support": 0.03582635983263598,
+      "confidence": 0.5004566210045662,
+      "interest": 0.3066804703769512
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Docker",
+      "support": 0.03229602510460251,
+      "confidence": 0.43333333333333335,
+      "interest": 0.30637203626220366
+    },
+    {
+      "source": "JPA",
+      "target": "MySQL",
+      "support": 0.010591004184100418,
+      "confidence": 0.40298507462686567,
+      "interest": 0.3052471039155686
+    },
+    {
+      "source": "Airflow",
+      "target": "AWS",
+      "support": 0.010394874476987448,
+      "confidence": 0.49843260188087773,
+      "interest": 0.3046564512532627
+    },
+    {
+      "source": "MongoDB",
+      "target": "Kubernetes",
+      "support": 0.011637029288702928,
+      "confidence": 0.40271493212669685,
+      "interest": 0.30334254718945836
+    },
+    {
+      "source": "GraphQL",
+      "target": "JavaScript",
+      "support": 0.005687761506276151,
+      "confidence": 0.4915254237288136,
+      "interest": 0.30180262038153327
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Python",
+      "support": 0.013402196652719665,
+      "confidence": 0.5857142857142857,
+      "interest": 0.2998225493126121
+    },
+    {
+      "source": "Redis",
+      "target": "Spring",
+      "support": 0.022751046025104603,
+      "confidence": 0.4484536082474227,
+      "interest": 0.2997872902557909
+    },
+    {
+      "source": "MongoDB",
+      "target": "Node.js",
+      "support": 0.010721757322175732,
+      "confidence": 0.37104072398190047,
+      "interest": 0.29945338088566614
+    },
+    {
+      "source": "MLflow",
+      "target": "Python",
+      "support": 0.005033995815899582,
+      "confidence": 0.5833333333333334,
+      "interest": 0.2974415969316597
+    },
+    {
+      "source": "Swift",
+      "target": "Android",
+      "support": 0.005033995815899582,
+      "confidence": 0.33771929824561403,
+      "interest": 0.2963359300447772
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "MySQL",
+      "support": 0.029288702928870293,
+      "confidence": 0.3929824561403509,
+      "interest": 0.2952444854290538
+    },
+    {
+      "source": "OpenCV",
+      "target": "PyTorch",
+      "support": 0.008629707112970711,
+      "confidence": 0.35294117647058826,
+      "interest": 0.29148720157519076
+    },
+    {
+      "source": "LangChain",
+      "target": "FastAPI",
+      "support": 0.005687761506276151,
+      "confidence": 0.33079847908745247,
+      "interest": 0.29118027825063236
+    },
+    {
+      "source": "Claude Code",
+      "target": "TypeScript",
+      "support": 0.005622384937238494,
+      "confidence": 0.39814814814814814,
+      "interest": 0.2904729389431272
+    },
+    {
+      "source": "NestJS",
+      "target": "MySQL",
+      "support": 0.008564330543933055,
+      "confidence": 0.3875739644970414,
+      "interest": 0.2898359937857443
+    },
+    {
+      "source": "Oracle",
+      "target": "Spring",
+      "support": 0.029615585774058577,
+      "confidence": 0.4381044487427466,
+      "interest": 0.2894381307511148
+    },
+    {
+      "source": "C#",
+      "target": "C++",
+      "support": 0.03393043933054393,
+      "confidence": 0.4299917149958575,
+      "interest": 0.28943209156489513
+    },
+    {
+      "source": "NestJS",
+      "target": "React",
+      "support": 0.009675732217573221,
+      "confidence": 0.4378698224852071,
+      "interest": 0.2875690902676339
+    },
+    {
+      "source": "Redis",
+      "target": "Kubernetes",
+      "support": 0.019547594142259414,
+      "confidence": 0.3853092783505155,
+      "interest": 0.285936893413277
+    },
+    {
+      "source": "JavaScript",
+      "target": "React",
+      "support": 0.08217834728033473,
+      "confidence": 0.43314955203308064,
+      "interest": 0.2828488198155074
+    },
+    {
+      "source": "Airflow",
+      "target": "SQL",
+      "support": 0.008564330543933055,
+      "confidence": 0.4106583072100313,
+      "interest": 0.28206259591296023
+    },
+    {
+      "source": "Airflow",
+      "target": "Spark",
+      "support": 0.006145397489539749,
+      "confidence": 0.2946708463949843,
+      "interest": 0.28002649493054915
+    },
+    {
+      "source": "MySQL",
+      "target": "AWS",
+      "support": 0.046155857740585775,
+      "confidence": 0.47224080267558527,
+      "interest": 0.2784646520479702
+    },
+    {
+      "source": "WebSocket",
+      "target": "TypeScript",
+      "support": 0.005426255230125523,
+      "confidence": 0.386046511627907,
+      "interest": 0.27837130242288605
+    },
+    {
+      "source": "NestJS",
+      "target": "Docker",
+      "support": 0.008956589958158996,
+      "confidence": 0.40532544378698226,
+      "interest": 0.2783641467158525
+    },
+    {
+      "source": "MyBatis",
+      "target": "JavaScript",
+      "support": 0.005687761506276151,
+      "confidence": 0.46774193548387094,
+      "interest": 0.2780191321365906
+    },
+    {
+      "source": "Jenkins",
+      "target": "AWS",
+      "support": 0.013009937238493724,
+      "confidence": 0.4693396226415094,
+      "interest": 0.27556347201389436
+    },
+    {
+      "source": "JavaScript",
+      "target": "Node.js",
+      "support": 0.06583420502092051,
+      "confidence": 0.34700206753962787,
+      "interest": 0.27541472444339354
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "AWS",
+      "support": 0.010721757322175732,
+      "confidence": 0.4685714285714286,
+      "interest": 0.27479527794381353
+    },
+    {
+      "source": "MongoDB",
+      "target": "JavaScript",
+      "support": 0.013402196652719665,
+      "confidence": 0.4638009049773756,
+      "interest": 0.27407810163009527
+    },
+    {
+      "source": "WebSocket",
+      "target": "React",
+      "support": 0.005949267782426778,
+      "confidence": 0.4232558139534884,
+      "interest": 0.27295508173591515
+    },
+    {
+      "source": "JPA",
+      "target": "Git",
+      "support": 0.010983263598326359,
+      "confidence": 0.417910447761194,
+      "interest": 0.27205532223818146
+    },
+    {
+      "source": "MSSQL",
+      "target": "Oracle",
+      "support": 0.009610355648535565,
+      "confidence": 0.3394919168591224,
+      "interest": 0.27189254447418515
+    },
+    {
+      "source": "GitHub",
+      "target": "React",
+      "support": 0.021443514644351465,
+      "confidence": 0.4194373401534527,
+      "interest": 0.26913660793587946
+    },
+    {
+      "source": "Nginx",
+      "target": "Linux",
+      "support": 0.0054916317991631795,
+      "confidence": 0.4397905759162304,
+      "interest": 0.26824245876141867
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "AWS",
+      "support": 0.034322698744769876,
+      "confidence": 0.4605263157894737,
+      "interest": 0.2667501651618586
+    },
+    {
+      "source": "JPA",
+      "target": "Docker",
+      "support": 0.01032949790794979,
+      "confidence": 0.39303482587064675,
+      "interest": 0.26607352879951707
+    },
+    {
+      "source": "Docker",
+      "target": "Python",
+      "support": 0.07001830543933055,
+      "confidence": 0.5514933058702368,
+      "interest": 0.26560156946856317
+    },
+    {
+      "source": "TypeScript",
+      "target": "Next.js",
+      "support": 0.03399581589958159,
+      "confidence": 0.31572556162720095,
+      "interest": 0.26401269551841433
+    },
+    {
+      "source": "MySQL",
+      "target": "Java",
+      "support": 0.05007845188284519,
+      "confidence": 0.5123745819397993,
+      "interest": 0.26250533507787466
+    },
+    {
+      "source": "Jenkins",
+      "target": "Spring",
+      "support": 0.011375523012552301,
+      "confidence": 0.41037735849056606,
+      "interest": 0.26171104049893423
+    },
+    {
+      "source": "FastAPI",
+      "target": "AWS",
+      "support": 0.017978556485355648,
+      "confidence": 0.4537953795379538,
+      "interest": 0.26001922891033874
+    },
+    {
+      "source": "RabbitMQ",
+      "target": "Python",
+      "support": 0.006276150627615063,
+      "confidence": 0.5454545454545454,
+      "interest": 0.25956280905287177
+    },
+    {
+      "source": "GCP",
+      "target": "Kubernetes",
+      "support": 0.0198744769874477,
+      "confidence": 0.358913813459268,
+      "interest": 0.2595414285220295
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "MySQL",
+      "support": 0.008172071129707113,
+      "confidence": 0.35714285714285715,
+      "interest": 0.25940488643156007
+    },
+    {
+      "source": "iOS",
+      "target": "Swift",
+      "support": 0.00653765690376569,
+      "confidence": 0.273972602739726,
+      "interest": 0.25906674499914023
+    },
+    {
+      "source": "Android",
+      "target": "Kotlin",
+      "support": 0.012813807531380754,
+      "confidence": 0.30963665086887837,
+      "interest": 0.2590351864337319
+    },
+    {
+      "source": "Django",
+      "target": "React",
+      "support": 0.007845188284518828,
+      "confidence": 0.40816326530612246,
+      "interest": 0.25786253308854923
+    },
+    {
+      "source": "Kafka",
+      "target": "Docker",
+      "support": 0.014644351464435146,
+      "confidence": 0.38421955403087477,
+      "interest": 0.257258256959745
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Kafka",
+      "support": 0.006733786610878661,
+      "confidence": 0.29428571428571426,
+      "interest": 0.2561711745367603
+    },
+    {
+      "source": "JPA",
+      "target": "Kotlin",
+      "support": 0.008041317991631798,
+      "confidence": 0.30597014925373134,
+      "interest": 0.2553686848185849
+    },
+    {
+      "source": "Claude Code",
+      "target": "AWS",
+      "support": 0.00634152719665272,
+      "confidence": 0.44907407407407407,
+      "interest": 0.255297923446459
+    },
+    {
+      "source": "GitLab",
+      "target": "Kubernetes",
+      "support": 0.005557008368200837,
+      "confidence": 0.35269709543568467,
+      "interest": 0.2533247104984462
+    },
+    {
+      "source": "React",
+      "target": "Next.js",
+      "support": 0.04582897489539749,
+      "confidence": 0.30491518051326666,
+      "interest": 0.25320231440448004
+    },
+    {
+      "source": "Vue.js",
+      "target": "React",
+      "support": 0.030007845188284518,
+      "confidence": 0.4026315789473684,
+      "interest": 0.25233084672979517
+    },
+    {
+      "source": "CSS",
+      "target": "TypeScript",
+      "support": 0.02536610878661088,
+      "confidence": 0.35959221501390176,
+      "interest": 0.2519170058088808
+    },
+    {
+      "source": "GitHub",
+      "target": "Docker",
+      "support": 0.019351464435146442,
+      "confidence": 0.37851662404092073,
+      "interest": 0.251555326969791
+    },
+    {
+      "source": "MySQL",
+      "target": "JavaScript",
+      "support": 0.0430831589958159,
+      "confidence": 0.4408026755852843,
+      "interest": 0.251079872238004
+    },
+    {
+      "source": "Nginx",
+      "target": "JavaScript",
+      "support": 0.0054916317991631795,
+      "confidence": 0.4397905759162304,
+      "interest": 0.2500677725689501
+    },
+    {
+      "source": "Grafana",
+      "target": "Python",
+      "support": 0.008956589958158996,
+      "confidence": 0.53515625,
+      "interest": 0.24926451359832635
+    },
+    {
+      "source": "Terraform",
+      "target": "Grafana",
+      "support": 0.005818514644351464,
+      "confidence": 0.2648809523809524,
+      "interest": 0.24814455070731223
+    },
+    {
+      "source": "Claude Code",
+      "target": "React",
+      "support": 0.005622384937238494,
+      "confidence": 0.39814814814814814,
+      "interest": 0.2478474159305749
+    },
+    {
+      "source": "Redis",
+      "target": "MongoDB",
+      "support": 0.013925209205020921,
+      "confidence": 0.27448453608247425,
+      "interest": 0.2455880925678299
+    },
+    {
+      "source": "Django",
+      "target": "Git",
+      "support": 0.007518305439330544,
+      "confidence": 0.391156462585034,
+      "interest": 0.24530133706202145
+    },
+    {
+      "source": "FastAPI",
+      "target": "Django",
+      "support": 0.010460251046025104,
+      "confidence": 0.264026402640264,
+      "interest": 0.24480569134319288
+    },
+    {
+      "source": "Notion",
+      "target": "Jira",
+      "support": 0.008368200836820083,
+      "confidence": 0.29157175398633256,
+      "interest": 0.2434545991746171
+    },
+    {
+      "source": "REST API",
+      "target": "Git",
+      "support": 0.03909518828451883,
+      "confidence": 0.3880597014925373,
+      "interest": 0.24220457596952477
+    },
+    {
+      "source": "Terraform",
+      "target": "Python",
+      "support": 0.011571652719665272,
+      "confidence": 0.5267857142857143,
+      "interest": 0.24089397788404066
+    },
+    {
+      "source": "Flutter",
+      "target": "Android",
+      "support": 0.005295502092050209,
+      "confidence": 0.28125,
+      "interest": 0.23986663179916318
+    },
+    {
+      "source": "Airflow",
+      "target": "Docker",
+      "support": 0.007649058577405858,
+      "confidence": 0.3667711598746082,
+      "interest": 0.23980986280347846
+    },
+    {
+      "source": "Next.js",
+      "target": "CSS",
+      "support": 0.01601725941422594,
+      "confidence": 0.30973451327433627,
+      "interest": 0.23919319528270447
+    },
+    {
+      "source": "GitHub",
+      "target": "TypeScript",
+      "support": 0.01771705020920502,
+      "confidence": 0.34654731457800514,
+      "interest": 0.2388721053729842
+    },
+    {
+      "source": "MongoDB",
+      "target": "Git",
+      "support": 0.011114016736401673,
+      "confidence": 0.38461538461538464,
+      "interest": 0.23876025909237208
+    },
+    {
+      "source": "JPA",
+      "target": "Redis",
+      "support": 0.007583682008368201,
+      "confidence": 0.2885572139303483,
+      "interest": 0.2378249963571265
+    },
+    {
+      "source": "Airflow",
+      "target": "Kafka",
+      "support": 0.005753138075313808,
+      "confidence": 0.27586206896551724,
+      "interest": 0.23774752921656325
+    },
+    {
+      "source": "Terraform",
+      "target": "GitHub",
+      "support": 0.00634152719665272,
+      "confidence": 0.28869047619047616,
+      "interest": 0.23756599920302846
+    },
+    {
+      "source": "JPA",
+      "target": "REST API",
+      "support": 0.00889121338912134,
+      "confidence": 0.3383084577114428,
+      "interest": 0.23756316482441353
+    },
+    {
+      "source": "Go",
+      "target": "Docker",
+      "support": 0.012748430962343096,
+      "confidence": 0.3644859813084112,
+      "interest": 0.23752468423728149
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Redis",
+      "support": 0.02131276150627615,
+      "confidence": 0.28596491228070176,
+      "interest": 0.23523269470747998
+    },
+    {
+      "source": "Kafka",
+      "target": "MySQL",
+      "support": 0.01268305439330544,
+      "confidence": 0.33276157804459694,
+      "interest": 0.23502360733329986
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "MongoDB",
+      "support": 0.006014644351464435,
+      "confidence": 0.26285714285714284,
+      "interest": 0.2339606993424985
+    },
+    {
+      "source": "WebSocket",
+      "target": "JavaScript",
+      "support": 0.005949267782426778,
+      "confidence": 0.4232558139534884,
+      "interest": 0.23353301060620804
+    },
+    {
+      "source": "GCP",
+      "target": "Python",
+      "support": 0.02870031380753138,
+      "confidence": 0.5182998819362455,
+      "interest": 0.2324081455345719
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Spring",
+      "support": 0.008695083682008367,
+      "confidence": 0.38,
+      "interest": 0.2313336820083682
+    },
+    {
+      "source": "FastAPI",
+      "target": "Kubernetes",
+      "support": 0.01307531380753138,
+      "confidence": 0.33003300330033003,
+      "interest": 0.23066061836309154
+    },
+    {
+      "source": "REST API",
+      "target": "JavaScript",
+      "support": 0.04229864016736402,
+      "confidence": 0.4198572355613238,
+      "interest": 0.23013443221404348
+    },
+    {
+      "source": "Shell",
+      "target": "Kubernetes",
+      "support": 0.005949267782426778,
+      "confidence": 0.3285198555956679,
+      "interest": 0.2291474706584294
+    },
+    {
+      "source": "Jira",
+      "target": "Git",
+      "support": 0.018043933054393304,
+      "confidence": 0.375,
+      "interest": 0.22914487447698745
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Python",
+      "support": 0.05105910041841004,
+      "confidence": 0.5138157894736842,
+      "interest": 0.22792405307201058
+    },
+    {
+      "source": "GCP",
+      "target": "Docker",
+      "support": 0.01961297071129707,
+      "confidence": 0.3541912632821724,
+      "interest": 0.22722996621104266
+    },
+    {
+      "source": "Next.js",
+      "target": "AWS",
+      "support": 0.02177039748953975,
+      "confidence": 0.42098609355246525,
+      "interest": 0.2272099429248502
+    },
+    {
+      "source": "MySQL",
+      "target": "PostgreSQL",
+      "support": 0.029288702928870293,
+      "confidence": 0.29966555183946486,
+      "interest": 0.225136263136536
+    },
+    {
+      "source": "Terraform",
+      "target": "Prometheus",
+      "support": 0.005230125523012552,
+      "confidence": 0.23809523809523808,
+      "interest": 0.22462766487348076
+    },
+    {
+      "source": "Jenkins",
+      "target": "Java",
+      "support": 0.013140690376569038,
+      "confidence": 0.4740566037735849,
+      "interest": 0.2241873569116602
+    },
+    {
+      "source": "Kafka",
+      "target": "Kotlin",
+      "support": 0.010460251046025104,
+      "confidence": 0.274442538593482,
+      "interest": 0.22384107415833554
+    },
+    {
+      "source": "Prometheus",
+      "target": "Python",
+      "support": 0.006864539748953975,
+      "confidence": 0.5097087378640777,
+      "interest": 0.22381700146240402
+    },
+    {
+      "source": "MSSQL",
+      "target": "MySQL",
+      "support": 0.00908734309623431,
+      "confidence": 0.3210161662817552,
+      "interest": 0.22327819557045814
+    },
+    {
+      "source": "Jenkins",
+      "target": "GitHub",
+      "support": 0.007583682008368201,
+      "confidence": 0.27358490566037735,
+      "interest": 0.22246042867292964
+    },
+    {
+      "source": "Spark",
+      "target": "AWS",
+      "support": 0.006080020920502092,
+      "confidence": 0.41517857142857145,
+      "interest": 0.2214024208009564
+    },
+    {
+      "source": "JavaScript",
+      "target": "HTML",
+      "support": 0.0553739539748954,
+      "confidence": 0.29186767746381803,
+      "interest": 0.2208687234889226
+    },
+    {
+      "source": "iOS",
+      "target": "Kotlin",
+      "support": 0.006472280334728034,
+      "confidence": 0.27123287671232876,
+      "interest": 0.2206314122771823
+    },
+    {
+      "source": "Jira",
+      "target": "Slack",
+      "support": 0.011898535564853556,
+      "confidence": 0.24728260869565216,
+      "interest": 0.22060896852828815
+    },
+    {
+      "source": "TypeScript",
+      "target": "Node.js",
+      "support": 0.03144612970711297,
+      "confidence": 0.2920461445051609,
+      "interest": 0.2204588014089266
+    },
+    {
+      "source": "GitHub",
+      "target": "Git",
+      "support": 0.018697698744769873,
+      "confidence": 0.3657289002557545,
+      "interest": 0.21987377473274194
+    },
+    {
+      "source": "Terraform",
+      "target": "GCP",
+      "support": 0.006014644351464435,
+      "confidence": 0.27380952380952384,
+      "interest": 0.21843556983462845
+    },
+    {
+      "source": "REST API",
+      "target": "Spring",
+      "support": 0.03693776150627615,
+      "confidence": 0.3666450356911097,
+      "interest": 0.21797871769947788
+    },
+    {
+      "source": "Jenkins",
+      "target": "GitLab",
+      "support": 0.006472280334728034,
+      "confidence": 0.23349056603773585,
+      "interest": 0.21773481289966054
+    },
+    {
+      "source": "Prometheus",
+      "target": "Linux",
+      "support": 0.005230125523012552,
+      "confidence": 0.3883495145631068,
+      "interest": 0.21680139740829507
+    },
+    {
+      "source": "Jenkins",
+      "target": "Kubernetes",
+      "support": 0.008760460251046025,
+      "confidence": 0.3160377358490566,
+      "interest": 0.2166653509118181
+    },
+    {
+      "source": "Node.js",
+      "target": "MySQL",
+      "support": 0.022489539748953975,
+      "confidence": 0.3141552511415525,
+      "interest": 0.21641728043025543
+    },
+    {
+      "source": "LangChain",
+      "target": "Docker",
+      "support": 0.005883891213389121,
+      "confidence": 0.34220532319391633,
+      "interest": 0.21524402612278662
+    },
+    {
+      "source": "Django",
+      "target": "MySQL",
+      "support": 0.006014644351464435,
+      "confidence": 0.3129251700680272,
+      "interest": 0.21518719935673014
+    },
+    {
+      "source": "NestJS",
+      "target": "Next.js",
+      "support": 0.005883891213389121,
+      "confidence": 0.26627218934911245,
+      "interest": 0.21455932324032584
+    },
+    {
+      "source": "MSSQL",
+      "target": "C#",
+      "support": 0.008302824267782427,
+      "confidence": 0.29330254041570436,
+      "interest": 0.21439302158725249
+    },
+    {
+      "source": "MongoDB",
+      "target": "Python",
+      "support": 0.014448221757322176,
+      "confidence": 0.5,
+      "interest": 0.21410826359832635
+    },
+    {
+      "source": "Redis",
+      "target": "Java",
+      "support": 0.023535564853556484,
+      "confidence": 0.4639175257731959,
+      "interest": 0.2140482789112712
+    },
+    {
+      "source": "MongoDB",
+      "target": "TypeScript",
+      "support": 0.00928347280334728,
+      "confidence": 0.3212669683257919,
+      "interest": 0.21359175912077094
+    },
+    {
+      "source": "MongoDB",
+      "target": "Spring",
+      "support": 0.010460251046025104,
+      "confidence": 0.36199095022624433,
+      "interest": 0.21332463223461254
+    },
+    {
+      "source": "REST API",
+      "target": "React",
+      "support": 0.036610878661087864,
+      "confidence": 0.36340038935756,
+      "interest": 0.2130996571399868
+    },
+    {
+      "source": "Kotlin",
+      "target": "Android",
+      "support": 0.012813807531380754,
+      "confidence": 0.2532299741602067,
+      "interest": 0.21184660595936988
+    },
+    {
+      "source": "Grafana",
+      "target": "MySQL",
+      "support": 0.005164748953974895,
+      "confidence": 0.30859375,
+      "interest": 0.21085577928870292
+    },
+    {
+      "source": "AWS",
+      "target": "Docker",
+      "support": 0.06544194560669456,
+      "confidence": 0.33771929824561403,
+      "interest": 0.21075800117448432
+    },
+    {
+      "source": "Redis",
+      "target": "TypeScript",
+      "support": 0.016148012552301257,
+      "confidence": 0.31829896907216493,
+      "interest": 0.210623759867144
+    },
+    {
+      "source": "Git",
+      "target": "JavaScript",
+      "support": 0.05831589958158996,
+      "confidence": 0.39982070820259974,
+      "interest": 0.2100979048553194
+    },
+    {
+      "source": "Docker",
+      "target": "Git",
+      "support": 0.04517520920502092,
+      "confidence": 0.35581874356333676,
+      "interest": 0.2099636180403242
+    },
+    {
+      "source": "Notion",
+      "target": "Figma",
+      "support": 0.007583682008368201,
+      "confidence": 0.2642369020501139,
+      "interest": 0.2093205840584821
+    },
+    {
+      "source": "GitHub",
+      "target": "JavaScript",
+      "support": 0.020397489539748955,
+      "confidence": 0.3989769820971867,
+      "interest": 0.20925417874990634
+    },
+    {
+      "source": "JavaScript",
+      "target": "Java",
+      "support": 0.087081589958159,
+      "confidence": 0.45899379738111645,
+      "interest": 0.20912455051919177
+    },
+    {
+      "source": "Django",
+      "target": "JavaScript",
+      "support": 0.007649058577405858,
+      "confidence": 0.3979591836734694,
+      "interest": 0.20823638032618905
+    },
+    {
+      "source": "Apache",
+      "target": "Linux",
+      "support": 0.005230125523012552,
+      "confidence": 0.3791469194312796,
+      "interest": 0.20759880227646788
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Spring",
+      "support": 0.026542887029288705,
+      "confidence": 0.356140350877193,
+      "interest": 0.20747403288556118
+    },
+    {
+      "source": "Spring",
+      "target": "MySQL",
+      "support": 0.04537133891213389,
+      "confidence": 0.3051890941072999,
+      "interest": 0.2074511233960028
+    },
+    {
+      "source": "PHP",
+      "target": "HTML",
+      "support": 0.007060669456066946,
+      "confidence": 0.27835051546391754,
+      "interest": 0.20735156148902212
+    },
+    {
+      "source": "Azure",
+      "target": "Kubernetes",
+      "support": 0.01542887029288703,
+      "confidence": 0.30569948186528495,
+      "interest": 0.20632709692804646
+    },
+    {
+      "source": "Kotlin",
+      "target": "MySQL",
+      "support": 0.015363493723849372,
+      "confidence": 0.30361757105943155,
+      "interest": 0.20587960034813446
+    },
+    {
+      "source": "Swift",
+      "target": "Git",
+      "support": 0.005230125523012552,
+      "confidence": 0.3508771929824561,
+      "interest": 0.20502206745944357
+    },
+    {
+      "source": "Vue.js",
+      "target": "JavaScript",
+      "support": 0.029419456066945605,
+      "confidence": 0.39473684210526316,
+      "interest": 0.20501403875798282
+    },
+    {
+      "source": "MongoDB",
+      "target": "React",
+      "support": 0.010264121338912134,
+      "confidence": 0.3552036199095023,
+      "interest": 0.20490288769192905
+    },
+    {
+      "source": "ArgoCD",
+      "target": "Python",
+      "support": 0.005099372384937239,
+      "confidence": 0.49056603773584906,
+      "interest": 0.2046743013341754
+    },
+    {
+      "source": "JavaScript",
+      "target": "TypeScript",
+      "support": 0.059231171548117155,
+      "confidence": 0.3121984838042729,
+      "interest": 0.20452327459925196
+    },
+    {
+      "source": "REST API",
+      "target": "Java",
+      "support": 0.04576359832635983,
+      "confidence": 0.45425048669695,
+      "interest": 0.20438123983502532
+    },
+    {
+      "source": "HTML",
+      "target": "Git",
+      "support": 0.024777719665271966,
+      "confidence": 0.34898710865561694,
+      "interest": 0.2031319831326044
+    },
+    {
+      "source": "PyTorch",
+      "target": "Docker",
+      "support": 0.02026673640167364,
+      "confidence": 0.32978723404255317,
+      "interest": 0.20282593697142345
+    },
+    {
+      "source": "MSSQL",
+      "target": "Java",
+      "support": 0.012813807531380754,
+      "confidence": 0.45265588914549654,
+      "interest": 0.20278664228357185
+    },
+    {
+      "source": "C#",
+      "target": ".NET",
+      "support": 0.01791317991631799,
+      "confidence": 0.22700911350455674,
+      "interest": 0.20275440639158604
+    },
+    {
+      "source": "CSS",
+      "target": "Git",
+      "support": 0.024516213389121338,
+      "confidence": 0.34754402224281744,
+      "interest": 0.2016888967198049
+    },
+    {
+      "source": "C++",
+      "target": "Python",
+      "support": 0.06851464435146444,
+      "confidence": 0.4874418604651163,
+      "interest": 0.20155012406344264
+    },
+    {
+      "source": "MariaDB",
+      "target": "Oracle",
+      "support": 0.006864539748953975,
+      "confidence": 0.26854219948849106,
+      "interest": 0.20094282710355382
+    },
+    {
+      "source": "Django",
+      "target": "Kubernetes",
+      "support": 0.005753138075313808,
+      "confidence": 0.29931972789115646,
+      "interest": 0.19994734295391797
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "PostgreSQL",
+      "support": 0.006276150627615063,
+      "confidence": 0.2742857142857143,
+      "interest": 0.19975642558278545
+    },
+    {
+      "source": "Redis",
+      "target": "Node.js",
+      "support": 0.01372907949790795,
+      "confidence": 0.2706185567010309,
+      "interest": 0.1990312136047966
+    },
+    {
+      "source": "OpenCV",
+      "target": "TensorFlow",
+      "support": 0.005753138075313808,
+      "confidence": 0.23529411764705882,
+      "interest": 0.19829097957174502
+    },
+    {
+      "source": "Spring",
+      "target": "AWS",
+      "support": 0.05818514644351464,
+      "confidence": 0.3913808267370273,
+      "interest": 0.19760467610941224
+    },
+    {
+      "source": "Swift",
+      "target": "Java",
+      "support": 0.006668410041841004,
+      "confidence": 0.4473684210526316,
+      "interest": 0.1974991741907069
+    },
+    {
+      "source": "Jenkins",
+      "target": "MySQL",
+      "support": 0.008172071129707113,
+      "confidence": 0.294811320754717,
+      "interest": 0.19707335004341991
+    },
+    {
+      "source": "JPA",
+      "target": "MyBatis",
+      "support": 0.0054916317991631795,
+      "confidence": 0.208955223880597,
+      "interest": 0.19679518203959281
+    },
+    {
+      "source": "AWS",
+      "target": "GCP",
+      "support": 0.04877092050209205,
+      "confidence": 0.2516869095816464,
+      "interest": 0.19631295560675102
+    },
+    {
+      "source": "Kotlin",
+      "target": "Git",
+      "support": 0.017259414225941423,
+      "confidence": 0.34108527131782945,
+      "interest": 0.1952301457948169
+    },
+    {
+      "source": "Go",
+      "target": "Java",
+      "support": 0.015559623430962344,
+      "confidence": 0.44485981308411215,
+      "interest": 0.19499056622218747
+    },
+    {
+      "source": "Slack",
+      "target": "GitHub",
+      "support": 0.00653765690376569,
+      "confidence": 0.24509803921568626,
+      "interest": 0.19397356222823856
+    },
+    {
+      "source": "OpenCV",
+      "target": "C",
+      "support": 0.007452928870292887,
+      "confidence": 0.3048128342245989,
+      "interest": 0.19393417313673283
+    },
+    {
+      "source": "Kotlin",
+      "target": "Redis",
+      "support": 0.012356171548117155,
+      "confidence": 0.2441860465116279,
+      "interest": 0.19345382893840612
+    },
+    {
+      "source": "Redis",
+      "target": "Kotlin",
+      "support": 0.012356171548117155,
+      "confidence": 0.24355670103092783,
+      "interest": 0.1929552365957814
+    },
+    {
+      "source": "TypeScript",
+      "target": "AWS",
+      "support": 0.04138336820083682,
+      "confidence": 0.3843351548269581,
+      "interest": 0.19055900419934307
+    },
+    {
+      "source": "TensorFlow",
+      "target": "Docker",
+      "support": 0.011702405857740586,
+      "confidence": 0.31625441696113077,
+      "interest": 0.18929311989000105
+    },
+    {
+      "source": "JavaScript",
+      "target": "CSS",
+      "support": 0.04922855648535565,
+      "confidence": 0.25947622329427983,
+      "interest": 0.18893490530264803
+    },
+    {
+      "source": "MariaDB",
+      "target": "JavaScript",
+      "support": 0.009675732217573221,
+      "confidence": 0.37851662404092073,
+      "interest": 0.1887938206936404
+    },
+    {
+      "source": "JPA",
+      "target": "Kafka",
+      "support": 0.005949267782426778,
+      "confidence": 0.2263681592039801,
+      "interest": 0.1882536194550261
+    },
+    {
+      "source": "JPA",
+      "target": "React",
+      "support": 0.00889121338912134,
+      "confidence": 0.3383084577114428,
+      "interest": 0.18800772549386957
+    },
+    {
+      "source": "Redis",
+      "target": "JavaScript",
+      "support": 0.019155334728033473,
+      "confidence": 0.37757731958762886,
+      "interest": 0.18785451624034852
+    },
+    {
+      "source": "PHP",
+      "target": "AWS",
+      "support": 0.009675732217573221,
+      "confidence": 0.38144329896907214,
+      "interest": 0.1876671483414571
+    },
+    {
+      "source": "Swift",
+      "target": "React",
+      "support": 0.005033995815899582,
+      "confidence": 0.33771929824561403,
+      "interest": 0.1874185660280408
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Git",
+      "support": 0.024777719665271966,
+      "confidence": 0.33245614035087717,
+      "interest": 0.18660101482786462
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "JavaScript",
+      "support": 0.02804654811715481,
+      "confidence": 0.3763157894736842,
+      "interest": 0.18659298612640388
+    },
+    {
+      "source": "MariaDB",
+      "target": "Linux",
+      "support": 0.009152719665271966,
+      "confidence": 0.35805626598465473,
+      "interest": 0.186508148829843
+    },
+    {
+      "source": "Node.js",
+      "target": "Docker",
+      "support": 0.02242416317991632,
+      "confidence": 0.3132420091324201,
+      "interest": 0.1862807120612904
+    },
+    {
+      "source": "TypeScript",
+      "target": "Git",
+      "support": 0.03576098326359833,
+      "confidence": 0.3321190042501518,
+      "interest": 0.18626387872713923
+    },
+    {
+      "source": "Next.js",
+      "target": "Git",
+      "support": 0.01712866108786611,
+      "confidence": 0.33122629582806573,
+      "interest": 0.18537117030505318
+    },
+    {
+      "source": "MongoDB",
+      "target": "Elasticsearch",
+      "support": 0.006014644351464435,
+      "confidence": 0.2081447963800905,
+      "interest": 0.18526299721691059
+    },
+    {
+      "source": "Oracle",
+      "target": "MySQL",
+      "support": 0.019089958158995817,
+      "confidence": 0.28239845261121854,
+      "interest": 0.18466048189992146
+    },
+    {
+      "source": "Git",
+      "target": "Docker",
+      "support": 0.04517520920502092,
+      "confidence": 0.3097265800089646,
+      "interest": 0.18276528293783487
+    },
+    {
+      "source": "Git",
+      "target": "React",
+      "support": 0.048509414225941426,
+      "confidence": 0.33258628417749886,
+      "interest": 0.18228555195992563
+    },
+    {
+      "source": "Flutter",
+      "target": "JavaScript",
+      "support": 0.006995292887029289,
+      "confidence": 0.3715277777777778,
+      "interest": 0.18180497443049745
+    },
+    {
+      "source": "REST API",
+      "target": "AWS",
+      "support": 0.03778765690376569,
+      "confidence": 0.3750811161583387,
+      "interest": 0.18130496553072367
+    },
+    {
+      "source": "Flutter",
+      "target": "TypeScript",
+      "support": 0.005426255230125523,
+      "confidence": 0.2881944444444444,
+      "interest": 0.18051923523942348
+    },
+    {
+      "source": "Docker",
+      "target": "PostgreSQL",
+      "support": 0.03229602510460251,
+      "confidence": 0.25437693099897013,
+      "interest": 0.17984764229604128
+    },
+    {
+      "source": "GitLab",
+      "target": "AWS",
+      "support": 0.005883891213389121,
+      "confidence": 0.37344398340248963,
+      "interest": 0.17966783277487458
+    },
+    {
+      "source": "HTML",
+      "target": "TypeScript",
+      "support": 0.020397489539748955,
+      "confidence": 0.287292817679558,
+      "interest": 0.17961760847453706
+    },
+    {
+      "source": "Node.js",
+      "target": "Git",
+      "support": 0.023274058577405856,
+      "confidence": 0.32511415525114157,
+      "interest": 0.17925902972812902
+    },
+    {
+      "source": ".NET",
+      "target": "MSSQL",
+      "support": 0.005033995815899582,
+      "confidence": 0.20754716981132076,
+      "interest": 0.17923911541801532
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Python",
+      "support": 0.0345842050209205,
+      "confidence": 0.46403508771929824,
+      "interest": 0.1781433513176246
+    },
+    {
+      "source": "GitHub",
+      "target": "Kubernetes",
+      "support": 0.014186715481171548,
+      "confidence": 0.2774936061381074,
+      "interest": 0.17812122120086893
+    },
+    {
+      "source": "Django",
+      "target": "TypeScript",
+      "support": 0.0054916317991631795,
+      "confidence": 0.2857142857142857,
+      "interest": 0.17803907650926476
+    },
+    {
+      "source": "Spring",
+      "target": "JavaScript",
+      "support": 0.05465481171548117,
+      "confidence": 0.3676341248900616,
+      "interest": 0.17791132154278125
+    },
+    {
+      "source": "FastAPI",
+      "target": "PyTorch",
+      "support": 0.00947960251046025,
+      "confidence": 0.23927392739273928,
+      "interest": 0.17781995249734178
+    },
+    {
+      "source": "Git",
+      "target": "AWS",
+      "support": 0.05419717573221757,
+      "confidence": 0.37158225011205737,
+      "interest": 0.17780609948444231
+    },
+    {
+      "source": "Flutter",
+      "target": "AWS",
+      "support": 0.006995292887029289,
+      "confidence": 0.3715277777777778,
+      "interest": 0.17775162715016274
+    },
+    {
+      "source": "Kafka",
+      "target": "PostgreSQL",
+      "support": 0.009610355648535565,
+      "confidence": 0.2521440823327616,
+      "interest": 0.17761479362983273
+    },
+    {
+      "source": "Redis",
+      "target": "Git",
+      "support": 0.01640951882845188,
+      "confidence": 0.3234536082474227,
+      "interest": 0.17759848272441014
+    },
+    {
+      "source": "Node.js",
+      "target": "PostgreSQL",
+      "support": 0.018043933054393304,
+      "confidence": 0.25205479452054796,
+      "interest": 0.1775255058176191
+    },
+    {
+      "source": "React",
+      "target": "Git",
+      "support": 0.048509414225941426,
+      "confidence": 0.3227490213136146,
+      "interest": 0.17689389579060205
+    },
+    {
+      "source": "PHP",
+      "target": "CSS",
+      "support": 0.006276150627615063,
+      "confidence": 0.24742268041237114,
+      "interest": 0.17688136242073935
+    },
+    {
+      "source": "MySQL",
+      "target": "Redis",
+      "support": 0.022228033472803346,
+      "confidence": 0.22742474916387959,
+      "interest": 0.17669253159065784
+    },
+    {
+      "source": "NestJS",
+      "target": "Git",
+      "support": 0.007126046025104603,
+      "confidence": 0.3224852071005917,
+      "interest": 0.17663008157757915
+    },
+    {
+      "source": "CSS",
+      "target": "Next.js",
+      "support": 0.01601725941422594,
+      "confidence": 0.22706209453197404,
+      "interest": 0.17534922842318743
+    },
+    {
+      "source": "AWS",
+      "target": "Kubernetes",
+      "support": 0.053151150627615065,
+      "confidence": 0.2742914979757085,
+      "interest": 0.17491911303847002
+    },
+    {
+      "source": "Django",
+      "target": "REST API",
+      "support": 0.005295502092050209,
+      "confidence": 0.2755102040816326,
+      "interest": 0.17476491119460336
+    },
+    {
+      "source": "Swift",
+      "target": "AWS",
+      "support": 0.0054916317991631795,
+      "confidence": 0.3684210526315789,
+      "interest": 0.17464490200396388
+    },
+    {
+      "source": "MySQL",
+      "target": "Git",
+      "support": 0.03125,
+      "confidence": 0.3197324414715719,
+      "interest": 0.17387731594855937
+    },
+    {
+      "source": "FastAPI",
+      "target": "React",
+      "support": 0.012813807531380754,
+      "confidence": 0.3234323432343234,
+      "interest": 0.17313161101675018
+    },
+    {
+      "source": "MongoDB",
+      "target": "FastAPI",
+      "support": 0.006145397489539749,
+      "confidence": 0.21266968325791855,
+      "interest": 0.17305148242109847
+    },
+    {
+      "source": "React",
+      "target": "Node.js",
+      "support": 0.03674163179916318,
+      "confidence": 0.24445411048281862,
+      "interest": 0.1728667673865843
+    },
+    {
+      "source": "Next.js",
+      "target": "Node.js",
+      "support": 0.012617677824267783,
+      "confidence": 0.24399494310998734,
+      "interest": 0.17240760001375305
+    },
+    {
+      "source": "MongoDB",
+      "target": "Kafka",
+      "support": 0.006080020920502092,
+      "confidence": 0.21040723981900453,
+      "interest": 0.17229270007005054
+    },
+    {
+      "source": "FastAPI",
+      "target": "Redis",
+      "support": 0.008825836820083682,
+      "confidence": 0.22277227722772278,
+      "interest": 0.17204005965450103
+    },
+    {
+      "source": "iOS",
+      "target": "Git",
+      "support": 0.007583682008368201,
+      "confidence": 0.3178082191780822,
+      "interest": 0.17195309365506967
+    },
+    {
+      "source": "Next.js",
+      "target": "HTML",
+      "support": 0.012552301255230125,
+      "confidence": 0.2427307206068268,
+      "interest": 0.1717317666319314
+    },
+    {
+      "source": "Apache",
+      "target": "AWS",
+      "support": 0.005033995815899582,
+      "confidence": 0.36492890995260663,
+      "interest": 0.17115275932499158
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "FastAPI",
+      "support": 0.015690376569037656,
+      "confidence": 0.21052631578947367,
+      "interest": 0.1709081149526536
+    },
+    {
+      "source": "MongoDB",
+      "target": "GitHub",
+      "support": 0.006406903765690377,
+      "confidence": 0.22171945701357465,
+      "interest": 0.17059498002612694
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Node.js",
+      "support": 0.018043933054393304,
+      "confidence": 0.24210526315789474,
+      "interest": 0.17051792006166044
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Java",
+      "support": 0.009610355648535565,
+      "confidence": 0.42,
+      "interest": 0.1701307531380753
+    },
+    {
+      "source": "Next.js",
+      "target": "REST API",
+      "support": 0.013990585774058577,
+      "confidence": 0.27054361567635904,
+      "interest": 0.16979832278932977
+    },
+    {
+      "source": "MySQL",
+      "target": "Docker",
+      "support": 0.02896182008368201,
+      "confidence": 0.2963210702341137,
+      "interest": 0.16935977316298398
+    },
+    {
+      "source": "FastAPI",
+      "target": "Git",
+      "support": 0.012486924686192469,
+      "confidence": 0.31518151815181517,
+      "interest": 0.1693263926288026
+    },
+    {
+      "source": "Apache",
+      "target": "Python",
+      "support": 0.006276150627615063,
+      "confidence": 0.4549763033175355,
+      "interest": 0.16908456691586188
+    },
+    {
+      "source": "Kotlin",
+      "target": "Kafka",
+      "support": 0.010460251046025104,
+      "confidence": 0.20671834625322996,
+      "interest": 0.16860380650427598
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Kubernetes",
+      "support": 0.019939853556485355,
+      "confidence": 0.2675438596491228,
+      "interest": 0.16817147471188432
+    },
+    {
+      "source": "Git",
+      "target": "REST API",
+      "support": 0.03909518828451883,
+      "confidence": 0.26804123711340205,
+      "interest": 0.16729594422637278
+    },
+    {
+      "source": "Oracle",
+      "target": "JavaScript",
+      "support": 0.024123953974895397,
+      "confidence": 0.3568665377176016,
+      "interest": 0.16714373437032123
+    },
+    {
+      "source": "Node.js",
+      "target": "REST API",
+      "support": 0.019155334728033473,
+      "confidence": 0.26757990867579906,
+      "interest": 0.1668346157887698
+    },
+    {
+      "source": "REST API",
+      "target": "Docker",
+      "support": 0.02955020920502092,
+      "confidence": 0.29331602855288774,
+      "interest": 0.16635473148175803
+    },
+    {
+      "source": "C",
+      "target": "Linux",
+      "support": 0.03746077405857741,
+      "confidence": 0.33785377358490565,
+      "interest": 0.16630565643009393
+    },
+    {
+      "source": "Redis",
+      "target": "REST API",
+      "support": 0.013532949790794979,
+      "confidence": 0.2667525773195876,
+      "interest": 0.16600728443255836
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "React",
+      "support": 0.023535564853556484,
+      "confidence": 0.3157894736842105,
+      "interest": 0.16548874146663728
+    },
+    {
+      "source": "Shell",
+      "target": "Docker",
+      "support": 0.005295502092050209,
+      "confidence": 0.2924187725631769,
+      "interest": 0.16545747549204717
+    },
+    {
+      "source": "React",
+      "target": "CSS",
+      "support": 0.03543410041841004,
+      "confidence": 0.2357546759460635,
+      "interest": 0.1652133579544317
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "REST API",
+      "support": 0.019809100418410042,
+      "confidence": 0.2657894736842105,
+      "interest": 0.16504418079718125
+    },
+    {
+      "source": "TypeScript",
+      "target": "CSS",
+      "support": 0.02536610878661088,
+      "confidence": 0.2355798421372192,
+      "interest": 0.1650385241455874
+    },
+    {
+      "source": "OpenCV",
+      "target": "C#",
+      "support": 0.005949267782426778,
+      "confidence": 0.24331550802139038,
+      "interest": 0.16440598919293847
+    },
+    {
+      "source": "Grafana",
+      "target": "Linux",
+      "support": 0.005622384937238494,
+      "confidence": 0.3359375,
+      "interest": 0.16438938284518828
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Java",
+      "support": 0.03085774058577406,
+      "confidence": 0.41403508771929826,
+      "interest": 0.16416584085737357
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Git",
+      "support": 0.007060669456066946,
+      "confidence": 0.30857142857142855,
+      "interest": 0.162716303048416
+    },
+    {
+      "source": "NestJS",
+      "target": "REST API",
+      "support": 0.005818514644351464,
+      "confidence": 0.26331360946745563,
+      "interest": 0.16256831658042636
+    },
+    {
+      "source": "C++",
+      "target": "C#",
+      "support": 0.03393043933054393,
+      "confidence": 0.2413953488372093,
+      "interest": 0.16248583000875744
+    },
+    {
+      "source": "Pandas",
+      "target": "Python",
+      "support": 0.007518305439330544,
+      "confidence": 0.4474708171206226,
+      "interest": 0.16157908071894894
+    },
+    {
+      "source": "JavaScript",
+      "target": "Git",
+      "support": 0.05831589958158996,
+      "confidence": 0.3073742246726396,
+      "interest": 0.16151909914962703
+    },
+    {
+      "source": "NestJS",
+      "target": "Kubernetes",
+      "support": 0.005753138075313808,
+      "confidence": 0.2603550295857988,
+      "interest": 0.16098264464856032
+    },
+    {
+      "source": "Redis",
+      "target": "GitHub",
+      "support": 0.010721757322175732,
+      "confidence": 0.211340206185567,
+      "interest": 0.1602157291981193
+    },
+    {
+      "source": "Shell",
+      "target": "AWS",
+      "support": 0.006406903765690377,
+      "confidence": 0.35379061371841153,
+      "interest": 0.16001446309079648
+    },
+    {
+      "source": "GitHub",
+      "target": "Redis",
+      "support": 0.010721757322175732,
+      "confidence": 0.20971867007672634,
+      "interest": 0.15898645250350457
+    },
+    {
+      "source": "Java",
+      "target": "JavaScript",
+      "support": 0.087081589958159,
+      "confidence": 0.34850863422291994,
+      "interest": 0.1587858308756396
+    },
+    {
+      "source": "MySQL",
+      "target": "Node.js",
+      "support": 0.022489539748953975,
+      "confidence": 0.23010033444816053,
+      "interest": 0.1585129913519262
+    },
+    {
+      "source": "FastAPI",
+      "target": "REST API",
+      "support": 0.010264121338912134,
+      "confidence": 0.2590759075907591,
+      "interest": 0.15833061470372983
+    },
+    {
+      "source": "Slack",
+      "target": "Figma",
+      "support": 0.005687761506276151,
+      "confidence": 0.21323529411764705,
+      "interest": 0.15831897612601525
+    },
+    {
+      "source": "TensorFlow",
+      "target": "C++",
+      "support": 0.011048640167364017,
+      "confidence": 0.29858657243816256,
+      "interest": 0.1580269490072002
+    },
+    {
+      "source": "Kotlin",
+      "target": "Kubernetes",
+      "support": 0.013009937238493724,
+      "confidence": 0.2571059431524548,
+      "interest": 0.15773355821521629
+    },
+    {
+      "source": "MongoDB",
+      "target": "Kotlin",
+      "support": 0.006014644351464435,
+      "confidence": 0.2081447963800905,
+      "interest": 0.15754333194494408
+    },
+    {
+      "source": ".NET",
+      "target": "SQL",
+      "support": 0.006929916317991632,
+      "confidence": 0.2857142857142857,
+      "interest": 0.15711857441721458
+    },
+    {
+      "source": "Oracle",
+      "target": "SQL",
+      "support": 0.01922071129707113,
+      "confidence": 0.28433268858800775,
+      "interest": 0.15573697729093663
+    },
+    {
+      "source": "PHP",
+      "target": "Git",
+      "support": 0.007649058577405858,
+      "confidence": 0.3015463917525773,
+      "interest": 0.15569126622956475
+    },
+    {
+      "source": "Kotlin",
+      "target": "Docker",
+      "support": 0.014252092050209206,
+      "confidence": 0.28165374677002586,
+      "interest": 0.15469244969889615
+    },
+    {
+      "source": "AWS",
+      "target": "Azure",
+      "support": 0.03968357740585774,
+      "confidence": 0.20479082321187583,
+      "interest": 0.15432011191480471
+    },
+    {
+      "source": "iOS",
+      "target": "React",
+      "support": 0.007256799163179916,
+      "confidence": 0.3041095890410959,
+      "interest": 0.1538088568235227
+    },
+    {
+      "source": "MySQL",
+      "target": "REST API",
+      "support": 0.024843096234309622,
+      "confidence": 0.25418060200668896,
+      "interest": 0.1534353091196597
+    },
+    {
+      "source": "Terraform",
+      "target": "Linux",
+      "support": 0.007126046025104603,
+      "confidence": 0.3244047619047619,
+      "interest": 0.1528566447499502
+    },
+    {
+      "source": "GitLab",
+      "target": "Linux",
+      "support": 0.005099372384937239,
+      "confidence": 0.3236514522821577,
+      "interest": 0.15210333512734597
+    },
+    {
+      "source": "Jenkins",
+      "target": "Redis",
+      "support": 0.005622384937238494,
+      "confidence": 0.2028301886792453,
+      "interest": 0.15209797110602352
+    },
+    {
+      "source": "AWS",
+      "target": "Spring",
+      "support": 0.05818514644351464,
+      "confidence": 0.30026990553306343,
+      "interest": 0.15160358754143163
+    },
+    {
+      "source": "GitHub",
+      "target": "Next.js",
+      "support": 0.01032949790794979,
+      "confidence": 0.2020460358056266,
+      "interest": 0.15033316969684
+    },
+    {
+      "source": "React",
+      "target": "HTML",
+      "support": 0.033080543933054395,
+      "confidence": 0.22009569377990432,
+      "interest": 0.14909673980500893
+    },
+    {
+      "source": "REST API",
+      "target": "MySQL",
+      "support": 0.024843096234309622,
+      "confidence": 0.24659312134977288,
+      "interest": 0.14885515063847582
+    },
+    {
+      "source": "Spring",
+      "target": "REST API",
+      "support": 0.03693776150627615,
+      "confidence": 0.2484608619173263,
+      "interest": 0.14771556903029703
+    },
+    {
+      "source": "Git",
+      "target": "Spring",
+      "support": 0.04321391213389121,
+      "confidence": 0.2962796952039444,
+      "interest": 0.14761337721231263
+    },
+    {
+      "source": "Spring",
+      "target": "React",
+      "support": 0.04419456066945607,
+      "confidence": 0.297273526824978,
+      "interest": 0.14697279460740476
+    },
+    {
+      "source": "JPA",
+      "target": "Kubernetes",
+      "support": 0.006472280334728034,
+      "confidence": 0.2462686567164179,
+      "interest": 0.1468962717791794
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "TypeScript",
+      "support": 0.0189592050209205,
+      "confidence": 0.2543859649122807,
+      "interest": 0.14671075570725978
+    },
+    {
+      "source": "GitHub",
+      "target": "Python",
+      "support": 0.022097280334728034,
+      "confidence": 0.4322250639386189,
+      "interest": 0.14633332753694528
+    },
+    {
+      "source": "Kotlin",
+      "target": "React",
+      "support": 0.014971234309623431,
+      "confidence": 0.2958656330749354,
+      "interest": 0.14556490085736218
+    },
+    {
+      "source": "React",
+      "target": "Spring",
+      "support": 0.04419456066945607,
+      "confidence": 0.29404088734232275,
+      "interest": 0.14537456935069096
+    },
+    {
+      "source": "Azure",
+      "target": "Docker",
+      "support": 0.01372907949790795,
+      "confidence": 0.27202072538860106,
+      "interest": 0.14505942831747135
+    },
+    {
+      "source": "Spring",
+      "target": "Git",
+      "support": 0.04321391213389121,
+      "confidence": 0.2906772207563764,
+      "interest": 0.14482209523336387
+    },
+    {
+      "source": "FastAPI",
+      "target": "TypeScript",
+      "support": 0.010002615062761505,
+      "confidence": 0.2524752475247525,
+      "interest": 0.14480003831973154
+    },
+    {
+      "source": "Kubernetes",
+      "target": "GCP",
+      "support": 0.0198744769874477,
+      "confidence": 0.2,
+      "interest": 0.14462604602510462
+    },
+    {
+      "source": "iOS",
+      "target": "JavaScript",
+      "support": 0.007975941422594142,
+      "confidence": 0.33424657534246577,
+      "interest": 0.14452377199518543
+    },
+    {
+      "source": "CSS",
+      "target": "REST API",
+      "support": 0.017259414225941423,
+      "confidence": 0.24467099165894346,
+      "interest": 0.1439256987719142
+    },
+    {
+      "source": "React",
+      "target": "AWS",
+      "support": 0.05073221757322176,
+      "confidence": 0.3375380600260983,
+      "interest": 0.14376190939848327
+    },
+    {
+      "source": "Redis",
+      "target": "React",
+      "support": 0.014905857740585775,
+      "confidence": 0.29381443298969073,
+      "interest": 0.1435137007721175
+    },
+    {
+      "source": "React",
+      "target": "REST API",
+      "support": 0.036610878661087864,
+      "confidence": 0.2435841670291431,
+      "interest": 0.14283887414211383
+    },
+    {
+      "source": "GitHub",
+      "target": "MySQL",
+      "support": 0.012290794979079499,
+      "confidence": 0.24040920716112532,
+      "interest": 0.14267123644982826
+    },
+    {
+      "source": "Docker",
+      "target": "Linux",
+      "support": 0.03981433054393305,
+      "confidence": 0.3135942327497425,
+      "interest": 0.1420461155949308
+    },
+    {
+      "source": "JPA",
+      "target": "PostgreSQL",
+      "support": 0.005687761506276151,
+      "confidence": 0.21641791044776118,
+      "interest": 0.1418886217448323
+    },
+    {
+      "source": "Kafka",
+      "target": "Python",
+      "support": 0.01627876569037657,
+      "confidence": 0.42710120068610635,
+      "interest": 0.1412094642844327
+    },
+    {
+      "source": "JPA",
+      "target": "JavaScript",
+      "support": 0.008695083682008367,
+      "confidence": 0.3308457711442786,
+      "interest": 0.14112296779699826
+    },
+    {
+      "source": "AWS",
+      "target": "MySQL",
+      "support": 0.046155857740585775,
+      "confidence": 0.23819163292847503,
+      "interest": 0.14045366221717798
+    },
+    {
+      "source": "JavaScript",
+      "target": "Spring",
+      "support": 0.05465481171548117,
+      "confidence": 0.2880771881461061,
+      "interest": 0.13941087015447431
+    },
+    {
+      "source": "REST API",
+      "target": "TypeScript",
+      "support": 0.024843096234309622,
+      "confidence": 0.24659312134977288,
+      "interest": 0.13891791214475196
+    },
+    {
+      "source": "TypeScript",
+      "target": "Docker",
+      "support": 0.028569560669456068,
+      "confidence": 0.26533090467516696,
+      "interest": 0.13836960760403724
+    },
+    {
+      "source": "Git",
+      "target": "TypeScript",
+      "support": 0.03576098326359833,
+      "confidence": 0.24518153294486777,
+      "interest": 0.13750632373984684
+    },
+    {
+      "source": "Kotlin",
+      "target": "REST API",
+      "support": 0.011963912133891214,
+      "confidence": 0.2364341085271318,
+      "interest": 0.1356888156401025
+    },
+    {
+      "source": "MariaDB",
+      "target": "PostgreSQL",
+      "support": 0.005360878661087866,
+      "confidence": 0.20971867007672634,
+      "interest": 0.1351893813737975
+    },
+    {
+      "source": "GitHub",
+      "target": "Node.js",
+      "support": 0.010525627615062762,
+      "confidence": 0.20588235294117646,
+      "interest": 0.13429500984494214
+    },
+    {
+      "source": "Next.js",
+      "target": "PostgreSQL",
+      "support": 0.010787133891213389,
+      "confidence": 0.20859671302149177,
+      "interest": 0.1340674243185629
+    },
+    {
+      "source": "MariaDB",
+      "target": "Docker",
+      "support": 0.006668410041841004,
+      "confidence": 0.2608695652173913,
+      "interest": 0.13390826814626158
+    },
+    {
+      "source": "AWS",
+      "target": "Git",
+      "support": 0.05419717573221757,
+      "confidence": 0.27968960863697706,
+      "interest": 0.1338344831139645
+    },
+    {
+      "source": "iOS",
+      "target": "Java",
+      "support": 0.009152719665271966,
+      "confidence": 0.3835616438356164,
+      "interest": 0.13369239697369173
+    },
+    {
+      "source": "C++",
+      "target": "Linux",
+      "support": 0.04288702928870293,
+      "confidence": 0.30511627906976746,
+      "interest": 0.13356816191495574
+    },
+    {
+      "source": "Docker",
+      "target": "REST API",
+      "support": 0.02955020920502092,
+      "confidence": 0.23274974253347064,
+      "interest": 0.13200444964644137
+    },
+    {
+      "source": "MySQL",
+      "target": "React",
+      "support": 0.027588912133891214,
+      "confidence": 0.2822742474916388,
+      "interest": 0.1319735152740656
+    },
+    {
+      "source": "Flutter",
+      "target": "Git",
+      "support": 0.005230125523012552,
+      "confidence": 0.2777777777777778,
+      "interest": 0.13192265225476524
+    },
+    {
+      "source": "Jenkins",
+      "target": "PostgreSQL",
+      "support": 0.005687761506276151,
+      "confidence": 0.20518867924528303,
+      "interest": 0.13065939054235415
+    },
+    {
+      "source": "Docker",
+      "target": "MySQL",
+      "support": 0.02896182008368201,
+      "confidence": 0.22811534500514932,
+      "interest": 0.13037737429385227
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "JavaScript",
+      "support": 0.007322175732217573,
+      "confidence": 0.32,
+      "interest": 0.13027719665271967
+    },
+    {
+      "source": "TypeScript",
+      "target": "REST API",
+      "support": 0.024843096234309622,
+      "confidence": 0.230722525804493,
+      "interest": 0.12997723291746371
+    },
+    {
+      "source": "HTML",
+      "target": "REST API",
+      "support": 0.016344142259414225,
+      "confidence": 0.2302025782688766,
+      "interest": 0.1294572853818473
+    },
+    {
+      "source": "SQL",
+      "target": "Java",
+      "support": 0.04877092050209205,
+      "confidence": 0.3792577529232333,
+      "interest": 0.12938850606130864
+    },
+    {
+      "source": "JavaScript",
+      "target": "MySQL",
+      "support": 0.0430831589958159,
+      "confidence": 0.22708476912474157,
+      "interest": 0.12934679841344449
+    },
+    {
+      "source": "Docker",
+      "target": "Spring",
+      "support": 0.035172594142259414,
+      "confidence": 0.27703398558187436,
+      "interest": 0.12836766759024257
+    },
+    {
+      "source": "GitLab",
+      "target": "Java",
+      "support": 0.005949267782426778,
+      "confidence": 0.3775933609958506,
+      "interest": 0.12772411413392593
+    },
+    {
+      "source": "Kubernetes",
+      "target": "PostgreSQL",
+      "support": 0.019939853556485355,
+      "confidence": 0.20065789473684212,
+      "interest": 0.12612860603391324
+    },
+    {
+      "source": "Kafka",
+      "target": "REST API",
+      "support": 0.008629707112970711,
+      "confidence": 0.22641509433962265,
+      "interest": 0.12566980145259338
+    },
+    {
+      "source": "LangChain",
+      "target": "AWS",
+      "support": 0.0054916317991631795,
+      "confidence": 0.3193916349809886,
+      "interest": 0.12561548435337355
+    },
+    {
+      "source": "React",
+      "target": "Java",
+      "support": 0.05641997907949791,
+      "confidence": 0.375380600260983,
+      "interest": 0.12551135339905833
+    },
+    {
+      "source": "Git",
+      "target": "Java",
+      "support": 0.05472018828451883,
+      "confidence": 0.37516808606006274,
+      "interest": 0.12529883919813806
+    },
+    {
+      "source": "PHP",
+      "target": "Spring",
+      "support": 0.006929916317991632,
+      "confidence": 0.27319587628865977,
+      "interest": 0.12452955829702797
+    },
+    {
+      "source": "OpenCV",
+      "target": "Docker",
+      "support": 0.006145397489539749,
+      "confidence": 0.25133689839572193,
+      "interest": 0.12437560132459222
+    },
+    {
+      "source": "MSSQL",
+      "target": "JavaScript",
+      "support": 0.00889121338912134,
+      "confidence": 0.3140877598152425,
+      "interest": 0.12436495646796217
+    },
+    {
+      "source": "Django",
+      "target": "Spring",
+      "support": 0.005230125523012552,
+      "confidence": 0.272108843537415,
+      "interest": 0.1234425255457832
+    },
+    {
+      "source": "MongoDB",
+      "target": "Java",
+      "support": 0.010787133891213389,
+      "confidence": 0.3733031674208145,
+      "interest": 0.1234339205588898
+    },
+    {
+      "source": "SQL",
+      "target": "Python",
+      "support": 0.05262813807531381,
+      "confidence": 0.4092526690391459,
+      "interest": 0.12336093263747228
+    },
+    {
+      "source": "MariaDB",
+      "target": "Git",
+      "support": 0.006864539748953975,
+      "confidence": 0.26854219948849106,
+      "interest": 0.12268707396547851
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Spring",
+      "support": 0.026935146443514645,
+      "confidence": 0.2710526315789474,
+      "interest": 0.12238631358731558
+    },
+    {
+      "source": "Go",
+      "target": "TypeScript",
+      "support": 0.008041317991631798,
+      "confidence": 0.22990654205607478,
+      "interest": 0.12223133285105385
+    },
+    {
+      "source": "JavaScript",
+      "target": "REST API",
+      "support": 0.04229864016736402,
+      "confidence": 0.22294968986905583,
+      "interest": 0.12220439698202655
+    },
+    {
+      "source": "JavaScript",
+      "target": "AWS",
+      "support": 0.059884937238493724,
+      "confidence": 0.315644383184011,
+      "interest": 0.12186823255639595
+    },
+    {
+      "source": "MariaDB",
+      "target": "REST API",
+      "support": 0.005687761506276151,
+      "confidence": 0.22250639386189258,
+      "interest": 0.1217611009748633
+    },
+    {
+      "source": "Kotlin",
+      "target": "TypeScript",
+      "support": 0.011571652719665272,
+      "confidence": 0.22868217054263565,
+      "interest": 0.12100696133761472
+    },
+    {
+      "source": "AWS",
+      "target": "Python",
+      "support": 0.07884414225941423,
+      "confidence": 0.4068825910931174,
+      "interest": 0.12099085469144377
+    },
+    {
+      "source": "Apache",
+      "target": "Java",
+      "support": 0.005099372384937239,
+      "confidence": 0.3696682464454976,
+      "interest": 0.11979899958357293
+    },
+    {
+      "source": "Node.js",
+      "target": "Python",
+      "support": 0.029027196652719665,
+      "confidence": 0.4054794520547945,
+      "interest": 0.11958771565312087
+    },
+    {
+      "source": "AWS",
+      "target": "JavaScript",
+      "support": 0.059884937238493724,
+      "confidence": 0.3090418353576248,
+      "interest": 0.11931903201034447
+    },
+    {
+      "source": "FastAPI",
+      "target": "MySQL",
+      "support": 0.008564330543933055,
+      "confidence": 0.21617161716171618,
+      "interest": 0.11843364645041911
+    },
+    {
+      "source": "MariaDB",
+      "target": "AWS",
+      "support": 0.007975941422594142,
+      "confidence": 0.31202046035805625,
+      "interest": 0.1182443097304412
+    },
+    {
+      "source": "Android",
+      "target": "Java",
+      "support": 0.01523274058577406,
+      "confidence": 0.36808846761453395,
+      "interest": 0.11821922075260927
+    },
+    {
+      "source": "Python",
+      "target": "Docker",
+      "support": 0.07001830543933055,
+      "confidence": 0.24491195975302996,
+      "interest": 0.11795066268190024
+    },
+    {
+      "source": "Docker",
+      "target": "TypeScript",
+      "support": 0.028569560669456068,
+      "confidence": 0.22502574665293512,
+      "interest": 0.1173505374479142
+    },
+    {
+      "source": "Jenkins",
+      "target": "JavaScript",
+      "support": 0.008498953974895397,
+      "confidence": 0.30660377358490565,
+      "interest": 0.11688097023762531
+    },
+    {
+      "source": "Git",
+      "target": "MySQL",
+      "support": 0.03125,
+      "confidence": 0.21425369789332138,
+      "interest": 0.11651572718202431
+    },
+    {
+      "source": "Android",
+      "target": "Git",
+      "support": 0.010852510460251047,
+      "confidence": 0.26224328593996843,
+      "interest": 0.11638816041695588
+    },
+    {
+      "source": "iOS",
+      "target": "REST API",
+      "support": 0.005164748953974895,
+      "confidence": 0.21643835616438356,
+      "interest": 0.11569306327735428
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Linux",
+      "support": 0.028438807531380752,
+      "confidence": 0.28618421052631576,
+      "interest": 0.11463609337150404
+    },
+    {
+      "source": "MongoDB",
+      "target": "REST API",
+      "support": 0.006210774058577406,
+      "confidence": 0.2149321266968326,
+      "interest": 0.11418683380980331
+    },
+    {
+      "source": "C",
+      "target": "Python",
+      "support": 0.04432531380753138,
+      "confidence": 0.39976415094339623,
+      "interest": 0.11387241454172259
+    },
+    {
+      "source": "GitHub",
+      "target": "Spring",
+      "support": 0.013402196652719665,
+      "confidence": 0.26214833759590794,
+      "interest": 0.11348201960427615
+    },
+    {
+      "source": "Node.js",
+      "target": "Spring",
+      "support": 0.018763075313807533,
+      "confidence": 0.26210045662100456,
+      "interest": 0.11343413862937277
+    },
+    {
+      "source": "PyTorch",
+      "target": "Kubernetes",
+      "support": 0.01307531380753138,
+      "confidence": 0.2127659574468085,
+      "interest": 0.11339357250957002
+    },
+    {
+      "source": "Node.js",
+      "target": "Java",
+      "support": 0.02595449790794979,
+      "confidence": 0.36255707762557077,
+      "interest": 0.11268783076364608
+    },
+    {
+      "source": "Docker",
+      "target": "React",
+      "support": 0.03334205020920502,
+      "confidence": 0.262615859938208,
+      "interest": 0.11231512772063479
+    },
+    {
+      "source": "AWS",
+      "target": "React",
+      "support": 0.05073221757322176,
+      "confidence": 0.26180836707152494,
+      "interest": 0.11150763485395171
+    },
+    {
+      "source": "Docker",
+      "target": "JavaScript",
+      "support": 0.038179916317991634,
+      "confidence": 0.30072090628218334,
+      "interest": 0.110998102934903
+    },
+    {
+      "source": "PHP",
+      "target": "Java",
+      "support": 0.009152719665271966,
+      "confidence": 0.36082474226804123,
+      "interest": 0.11095549540611654
+    },
+    {
+      "source": "Jenkins",
+      "target": "Python",
+      "support": 0.010983263598326359,
+      "confidence": 0.39622641509433965,
+      "interest": 0.110334678692666
+    },
+    {
+      "source": "Spring",
+      "target": "Docker",
+      "support": 0.035172594142259414,
+      "confidence": 0.23658751099384345,
+      "interest": 0.10962621392271374
+    },
+    {
+      "source": "Linux",
+      "target": "C++",
+      "support": 0.04288702928870293,
+      "confidence": 0.25,
+      "interest": 0.10944037656903766
+    },
+    {
+      "source": "Redis",
+      "target": "Python",
+      "support": 0.02000523012552301,
+      "confidence": 0.3943298969072165,
+      "interest": 0.10843816050554284
+    },
+    {
+      "source": "Linux",
+      "target": "C",
+      "support": 0.03746077405857741,
+      "confidence": 0.2183689024390244,
+      "interest": 0.1074902413511583
+    },
+    {
+      "source": "AWS",
+      "target": "TypeScript",
+      "support": 0.04138336820083682,
+      "confidence": 0.21356275303643724,
+      "interest": 0.10588754383141631
+    },
+    {
+      "source": "MSSQL",
+      "target": "Spring",
+      "support": 0.007191422594142259,
+      "confidence": 0.2540415704387991,
+      "interest": 0.1053752524471673
+    },
+    {
+      "source": "Linux",
+      "target": "Docker",
+      "support": 0.03981433054393305,
+      "confidence": 0.23208841463414634,
+      "interest": 0.10512711756301663
+    },
+    {
+      "source": "AWS",
+      "target": "Java",
+      "support": 0.06838389121338913,
+      "confidence": 0.35290148448043185,
+      "interest": 0.10303223761850716
+    },
+    {
+      "source": "JPA",
+      "target": "SQL",
+      "support": 0.006080020920502092,
+      "confidence": 0.23134328358208955,
+      "interest": 0.10274757228501843
+    },
+    {
+      "source": "Azure",
+      "target": "Python",
+      "support": 0.01961297071129707,
+      "confidence": 0.38860103626943004,
+      "interest": 0.1027092998677564
+    },
+    {
+      "source": "Java",
+      "target": "MySQL",
+      "support": 0.05007845188284519,
+      "confidence": 0.20041862899005755,
+      "interest": 0.10268065827876048
+    },
+    {
+      "source": "Grafana",
+      "target": "Java",
+      "support": 0.005883891213389121,
+      "confidence": 0.3515625,
+      "interest": 0.10169325313807531
+    },
+    {
+      "source": "Vue.js",
+      "target": "Spring",
+      "support": 0.018632322175732217,
+      "confidence": 0.25,
+      "interest": 0.1013336820083682
+    },
+    {
+      "source": "PyTorch",
+      "target": "C++",
+      "support": 0.014840481171548117,
+      "confidence": 0.24148936170212765,
+      "interest": 0.1009297382711653
+    },
+    {
+      "source": "PHP",
+      "target": "REST API",
+      "support": 0.005099372384937239,
+      "confidence": 0.20103092783505155,
+      "interest": 0.10028563494802227
+    },
+    {
+      "source": "SQL",
+      "target": "Spring",
+      "support": 0.031969142259414225,
+      "confidence": 0.24860193187595322,
+      "interest": 0.09993561388432143
+    },
+    {
+      "source": "PHP",
+      "target": "React",
+      "support": 0.00634152719665272,
+      "confidence": 0.25,
+      "interest": 0.09969926778242677
+    },
+    {
+      "source": "Jenkins",
+      "target": "Linux",
+      "support": 0.007518305439330544,
+      "confidence": 0.27122641509433965,
+      "interest": 0.09967829793952793
+    },
+    {
+      "source": "Python",
+      "target": "C++",
+      "support": 0.06851464435146444,
+      "confidence": 0.23965241253144295,
+      "interest": 0.09909278910048061
+    },
+    {
+      "source": "Git",
+      "target": "Python",
+      "support": 0.05609309623430962,
+      "confidence": 0.38458090542357687,
+      "interest": 0.09868916902190322
+    },
+    {
+      "source": "C#",
+      "target": "C",
+      "support": 0.01640951882845188,
+      "confidence": 0.207953603976802,
+      "interest": 0.09707494288893588
+    },
+    {
+      "source": "Vue.js",
+      "target": "Java",
+      "support": 0.025823744769874476,
+      "confidence": 0.34649122807017546,
+      "interest": 0.09662198120825077
+    },
+    {
+      "source": "OpenCV",
+      "target": "Linux",
+      "support": 0.00653765690376569,
+      "confidence": 0.26737967914438504,
+      "interest": 0.09583156198957332
+    },
+    {
+      "source": "Kotlin",
+      "target": "JavaScript",
+      "support": 0.014448221757322176,
+      "confidence": 0.28552971576227393,
+      "interest": 0.09580691241499359
+    },
+    {
+      "source": "Docker",
+      "target": "Java",
+      "support": 0.043802301255230124,
+      "confidence": 0.345005149330587,
+      "interest": 0.09513590246866233
+    },
+    {
+      "source": "React",
+      "target": "Docker",
+      "support": 0.03334205020920502,
+      "confidence": 0.22183558068725534,
+      "interest": 0.09487428361612563
+    },
+    {
+      "source": "Next.js",
+      "target": "Spring",
+      "support": 0.012552301255230125,
+      "confidence": 0.2427307206068268,
+      "interest": 0.094064402615195
+    },
+    {
+      "source": "Slack",
+      "target": "TypeScript",
+      "support": 0.005360878661087866,
+      "confidence": 0.20098039215686275,
+      "interest": 0.09330518295184183
+    },
+    {
+      "source": "Next.js",
+      "target": "Docker",
+      "support": 0.011375523012552301,
+      "confidence": 0.21997471554993678,
+      "interest": 0.09301341847880706
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Java",
+      "support": 0.03393043933054393,
+      "confidence": 0.3414473684210526,
+      "interest": 0.09157812155912792
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "React",
+      "support": 0.0054916317991631795,
+      "confidence": 0.24,
+      "interest": 0.08969926778242676
+    },
+    {
+      "source": ".NET",
+      "target": "C++",
+      "support": 0.005557008368200837,
+      "confidence": 0.22911051212938005,
+      "interest": 0.0885508886984177
+    },
+    {
+      "source": "Kubernetes",
+      "target": "Git",
+      "support": 0.023143305439330544,
+      "confidence": 0.23289473684210527,
+      "interest": 0.08703961131909271
+    },
+    {
+      "source": "Spring",
+      "target": "SQL",
+      "support": 0.031969142259414225,
+      "confidence": 0.21503957783641162,
+      "interest": 0.0864438665393405
+    },
+    {
+      "source": "Kafka",
+      "target": "JavaScript",
+      "support": 0.010525627615062762,
+      "confidence": 0.27615780445969124,
+      "interest": 0.0864350011124109
+    },
+    {
+      "source": "MariaDB",
+      "target": "SQL",
+      "support": 0.0054916317991631795,
+      "confidence": 0.21483375959079284,
+      "interest": 0.08623804829372173
+    },
+    {
+      "source": "Kafka",
+      "target": "SQL",
+      "support": 0.008172071129707113,
+      "confidence": 0.2144082332761578,
+      "interest": 0.08581252197908668
+    },
+    {
+      "source": "Jenkins",
+      "target": "React",
+      "support": 0.00653765690376569,
+      "confidence": 0.2358490566037736,
+      "interest": 0.08554832438620036
+    },
+    {
+      "source": "iOS",
+      "target": "Spring",
+      "support": 0.005557008368200837,
+      "confidence": 0.2328767123287671,
+      "interest": 0.08421039433713531
+    },
+    {
+      "source": "OpenCV",
+      "target": "Git",
+      "support": 0.005622384937238494,
+      "confidence": 0.22994652406417113,
+      "interest": 0.08409139854115857
+    },
+    {
+      "source": "Python",
+      "target": "AWS",
+      "support": 0.07884414225941423,
+      "confidence": 0.27578321518408416,
+      "interest": 0.08200706455646911
+    },
+    {
+      "source": "PyTorch",
+      "target": "Git",
+      "support": 0.013925209205020921,
+      "confidence": 0.22659574468085106,
+      "interest": 0.0807406191578385
+    },
+    {
+      "source": "C#",
+      "target": "SQL",
+      "support": 0.01647489539748954,
+      "confidence": 0.2087821043910522,
+      "interest": 0.08018639309398107
+    },
+    {
+      "source": "Java",
+      "target": "AWS",
+      "support": 0.06838389121338913,
+      "confidence": 0.2736787022501308,
+      "interest": 0.07990255162251575
+    },
+    {
+      "source": "Go",
+      "target": "Spring",
+      "support": 0.007975941422594142,
+      "confidence": 0.22803738317757008,
+      "interest": 0.07937106518593828
+    },
+    {
+      "source": "Kafka",
+      "target": "Git",
+      "support": 0.008564330543933055,
+      "confidence": 0.22469982847341338,
+      "interest": 0.07884470295040083
+    },
+    {
+      "source": "Android",
+      "target": "React",
+      "support": 0.00947960251046025,
+      "confidence": 0.22906793048973143,
+      "interest": 0.0787671982721582
+    },
+    {
+      "source": "Git",
+      "target": "Linux",
+      "support": 0.036414748953974896,
+      "confidence": 0.24966382787987448,
+      "interest": 0.07811571072506276
+    },
+    {
+      "source": "GCP",
+      "target": "React",
+      "support": 0.012617677824267783,
+      "confidence": 0.22786304604486424,
+      "interest": 0.07756231382729101
+    },
+    {
+      "source": "FastAPI",
+      "target": "Spring",
+      "support": 0.008956589958158996,
+      "confidence": 0.22607260726072606,
+      "interest": 0.07740628926909426
+    },
+    {
+      "source": "Slack",
+      "target": "Git",
+      "support": 0.005949267782426778,
+      "confidence": 0.22303921568627452,
+      "interest": 0.07718409016326197
+    },
+    {
+      "source": "MSSQL",
+      "target": "SQL",
+      "support": 0.005818514644351464,
+      "confidence": 0.20554272517321015,
+      "interest": 0.07694701387613903
+    },
+    {
+      "source": "PHP",
+      "target": "Docker",
+      "support": 0.005164748953974895,
+      "confidence": 0.2036082474226804,
+      "interest": 0.0766469503515507
+    },
+    {
+      "source": "Jira",
+      "target": "AWS",
+      "support": 0.013009937238493724,
+      "confidence": 0.2703804347826087,
+      "interest": 0.07660428415499365
+    },
+    {
+      "source": "Java",
+      "target": "React",
+      "support": 0.05641997907949791,
+      "confidence": 0.22579801151229723,
+      "interest": 0.075497279294724
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "SQL",
+      "support": 0.015167364016736401,
+      "confidence": 0.20350877192982456,
+      "interest": 0.07491306063275344
+    },
+    {
+      "source": "MariaDB",
+      "target": "React",
+      "support": 0.005753138075313808,
+      "confidence": 0.22506393861892582,
+      "interest": 0.07476320640135259
+    },
+    {
+      "source": "Kafka",
+      "target": "React",
+      "support": 0.008564330543933055,
+      "confidence": 0.22469982847341338,
+      "interest": 0.07439909625584015
+    },
+    {
+      "source": "JavaScript",
+      "target": "Docker",
+      "support": 0.038179916317991634,
+      "confidence": 0.20124052377670573,
+      "interest": 0.07427922670557602
+    },
+    {
+      "source": "Java",
+      "target": "Git",
+      "support": 0.05472018828451883,
+      "confidence": 0.21899529042386184,
+      "interest": 0.07314016490084929
+    },
+    {
+      "source": "TensorFlow",
+      "target": "Git",
+      "support": 0.007975941422594142,
+      "confidence": 0.21554770318021202,
+      "interest": 0.06969257765719947
+    },
+    {
+      "source": "HTML",
+      "target": "Java",
+      "support": 0.022620292887029287,
+      "confidence": 0.31860036832412525,
+      "interest": 0.06873112146220056
+    },
+    {
+      "source": "Slack",
+      "target": "AWS",
+      "support": 0.006995292887029289,
+      "confidence": 0.2622549019607843,
+      "interest": 0.06847875133316927
+    },
+    {
+      "source": "Vue.js",
+      "target": "Git",
+      "support": 0.015951882845188285,
+      "confidence": 0.21403508771929824,
+      "interest": 0.06817996219628569
+    },
+    {
+      "source": "Android",
+      "target": "C++",
+      "support": 0.008629707112970711,
+      "confidence": 0.20853080568720378,
+      "interest": 0.06797118225624144
+    },
+    {
+      "source": "MySQL",
+      "target": "Linux",
+      "support": 0.023404811715481172,
+      "confidence": 0.2394648829431438,
+      "interest": 0.06791676578833208
+    },
+    {
+      "source": "Linux",
+      "target": "Git",
+      "support": 0.036414748953974896,
+      "confidence": 0.21227134146341464,
+      "interest": 0.06641621594040209
+    },
+    {
+      "source": "HTML",
+      "target": "Spring",
+      "support": 0.01523274058577406,
+      "confidence": 0.214548802946593,
+      "interest": 0.06588248495496121
+    },
+    {
+      "source": "Go",
+      "target": "Git",
+      "support": 0.00738755230125523,
+      "confidence": 0.21121495327102804,
+      "interest": 0.06535982774801549
+    },
+    {
+      "source": "JPA",
+      "target": "Linux",
+      "support": 0.006210774058577406,
+      "confidence": 0.236318407960199,
+      "interest": 0.06477029080538729
+    },
+    {
+      "source": "Linux",
+      "target": "Python",
+      "support": 0.06014644351464435,
+      "confidence": 0.35060975609756095,
+      "interest": 0.06471801969588731
+    },
+    {
+      "source": "Android",
+      "target": "JavaScript",
+      "support": 0.010460251046025104,
+      "confidence": 0.2527646129541864,
+      "interest": 0.06304180960690606
+    },
+    {
+      "source": "FastAPI",
+      "target": "JavaScript",
+      "support": 0.009871861924686193,
+      "confidence": 0.24917491749174916,
+      "interest": 0.059452114144468826
+    },
+    {
+      "source": "SQL",
+      "target": "JavaScript",
+      "support": 0.03203451882845188,
+      "confidence": 0.2491103202846975,
+      "interest": 0.05938751693741717
+    },
+    {
+      "source": "Elasticsearch",
+      "target": "Linux",
+      "support": 0.005230125523012552,
+      "confidence": 0.22857142857142856,
+      "interest": 0.057023311416616845
+    },
+    {
+      "source": "Azure",
+      "target": "Linux",
+      "support": 0.011506276150627616,
+      "confidence": 0.22797927461139897,
+      "interest": 0.05643115745658725
+    },
+    {
+      "source": "Flutter",
+      "target": "Java",
+      "support": 0.005753138075313808,
+      "confidence": 0.3055555555555556,
+      "interest": 0.05568630869363089
+    },
+    {
+      "source": "Go",
+      "target": "JavaScript",
+      "support": 0.008564330543933055,
+      "confidence": 0.24485981308411214,
+      "interest": 0.055137009736831805
+    },
+    {
+      "source": "TypeScript",
+      "target": "Spring",
+      "support": 0.021901150627615062,
+      "confidence": 0.2034001214329083,
+      "interest": 0.05473380344127651
+    },
+    {
+      "source": ".NET",
+      "target": "Java",
+      "support": 0.00738755230125523,
+      "confidence": 0.3045822102425876,
+      "interest": 0.05471296338066289
+    },
+    {
+      "source": "Slack",
+      "target": "React",
+      "support": 0.005426255230125523,
+      "confidence": 0.2034313725490196,
+      "interest": 0.05313064033144638
+    },
+    {
+      "source": "PHP",
+      "target": "Linux",
+      "support": 0.005687761506276151,
+      "confidence": 0.22422680412371135,
+      "interest": 0.05267868696889963
+    },
+    {
+      "source": "SQL",
+      "target": "AWS",
+      "support": 0.031511506276150625,
+      "confidence": 0.24504321301474327,
+      "interest": 0.05126706238712822
+    },
+    {
+      "source": "GitLab",
+      "target": "Python",
+      "support": 0.005295502092050209,
+      "confidence": 0.3360995850622407,
+      "interest": 0.050207848660567045
+    },
+    {
+      "source": "MySQL",
+      "target": "Python",
+      "support": 0.032622907949790794,
+      "confidence": 0.3337792642140468,
+      "interest": 0.047887527812373154
+    },
+    {
+      "source": "GCP",
+      "target": "JavaScript",
+      "support": 0.013009937238493724,
+      "confidence": 0.23494687131050768,
+      "interest": 0.04522406796322734
+    },
+    {
+      "source": "Android",
+      "target": "Linux",
+      "support": 0.008956589958158996,
+      "confidence": 0.21642969984202212,
+      "interest": 0.0448815826872104
+    },
+    {
+      "source": "iOS",
+      "target": "AWS",
+      "support": 0.005687761506276151,
+      "confidence": 0.23835616438356164,
+      "interest": 0.044580013755946585
+    },
+    {
+      "source": "PostgreSQL",
+      "target": "Linux",
+      "support": 0.016082635983263597,
+      "confidence": 0.21578947368421053,
+      "interest": 0.04424135652939881
+    },
+    {
+      "source": "PHP",
+      "target": "Python",
+      "support": 0.008368200836820083,
+      "confidence": 0.32989690721649484,
+      "interest": 0.04400517081482119
+    },
+    {
+      "source": "Go",
+      "target": "Linux",
+      "support": 0.007518305439330544,
+      "confidence": 0.21495327102803738,
+      "interest": 0.04340515387322566
+    },
+    {
+      "source": "Python",
+      "target": "Linux",
+      "support": 0.06014644351464435,
+      "confidence": 0.21038188886348044,
+      "interest": 0.038833771708668724
+    },
+    {
+      "source": "REST API",
+      "target": "Python",
+      "support": 0.03249215481171548,
+      "confidence": 0.32251784555483454,
+      "interest": 0.03662610915316089
+    },
+    {
+      "source": "Jira",
+      "target": "JavaScript",
+      "support": 0.010656380753138074,
+      "confidence": 0.22146739130434784,
+      "interest": 0.0317445879570675
+    },
+    {
+      "source": "Kotlin",
+      "target": "Python",
+      "support": 0.01601725941422594,
+      "confidence": 0.3165374677002584,
+      "interest": 0.030645731298584777
+    },
+    {
+      "source": "Oracle",
+      "target": "Linux",
+      "support": 0.013663702928870293,
+      "confidence": 0.20212765957446807,
+      "interest": 0.030579542419656353
+    },
+    {
+      "source": "Kubernetes",
+      "target": "JavaScript",
+      "support": 0.021705020920502093,
+      "confidence": 0.21842105263157896,
+      "interest": 0.02869824928429862
+    },
+    {
+      "source": "PyTorch",
+      "target": "Linux",
+      "support": 0.012290794979079499,
+      "confidence": 0.2,
+      "interest": 0.028451882845188292
+    },
+    {
+      "source": "JavaScript",
+      "target": "Python",
+      "support": 0.059427301255230124,
+      "confidence": 0.31323225361819435,
+      "interest": 0.0273405172165207
+    },
+    {
+      "source": "TypeScript",
+      "target": "Python",
+      "support": 0.03366893305439331,
+      "confidence": 0.3126897389192471,
+      "interest": 0.02679800251757347
+    },
+    {
+      "source": "C#",
+      "target": "Java",
+      "support": 0.02177039748953975,
+      "confidence": 0.275890637945319,
+      "interest": 0.026021391083394296
+    },
+    {
+      "source": "GitHub",
+      "target": "Java",
+      "support": 0.014055962343096234,
+      "confidence": 0.2749360613810742,
+      "interest": 0.025066814519149494
+    },
+    {
+      "source": "Slack",
+      "target": "JavaScript",
+      "support": 0.005687761506276151,
+      "confidence": 0.21323529411764705,
+      "interest": 0.023512490770366712
+    },
+    {
+      "source": "TensorFlow",
+      "target": "AWS",
+      "support": 0.007975941422594142,
+      "confidence": 0.21554770318021202,
+      "interest": 0.021771552552596968
+    },
+    {
+      "source": "GCP",
+      "target": "Java",
+      "support": 0.015036610878661087,
+      "confidence": 0.2715466351829988,
+      "interest": 0.02167738832107413
+    },
+    {
+      "source": "HTML",
+      "target": "AWS",
+      "support": 0.01523274058577406,
+      "confidence": 0.214548802946593,
+      "interest": 0.020772652318977958
+    },
+    {
+      "source": "PyTorch",
+      "target": "AWS",
+      "support": 0.01307531380753138,
+      "confidence": 0.2127659574468085,
+      "interest": 0.01898980681919346
+    },
+    {
+      "source": "CSS",
+      "target": "AWS",
+      "support": 0.014971234309623431,
+      "confidence": 0.21223354958294718,
+      "interest": 0.018457398955332133
+    },
+    {
+      "source": "Python",
+      "target": "JavaScript",
+      "support": 0.059427301255230124,
+      "confidence": 0.20786645323576491,
+      "interest": 0.018143649888484575
+    },
+    {
+      "source": ".NET",
+      "target": "JavaScript",
+      "support": 0.005033995815899582,
+      "confidence": 0.20754716981132076,
+      "interest": 0.017824366464040425
+    },
+    {
+      "source": "R",
+      "target": "Python",
+      "support": 0.011506276150627616,
+      "confidence": 0.2983050847457627,
+      "interest": 0.012413348344089081
+    },
+    {
+      "source": "Figma",
+      "target": "JavaScript",
+      "support": 0.011048640167364017,
+      "confidence": 0.2011904761904762,
+      "interest": 0.011467672843195859
+    },
+    {
+      "source": "React",
+      "target": "Python",
+      "support": 0.044259937238493724,
+      "confidence": 0.2944758590691605,
+      "interest": 0.008584122667486871
+    },
+    {
+      "source": "CSS",
+      "target": "Java",
+      "support": 0.01817468619246862,
+      "confidence": 0.25764596848934196,
+      "interest": 0.007776721627417271
+    },
+    {
+      "source": "Next.js",
+      "target": "Java",
+      "support": 0.01287918410041841,
+      "confidence": 0.24905183312262957,
+      "interest": -0.0008174137392951142
+    },
+    {
+      "source": "TypeScript",
+      "target": "Java",
+      "support": 0.026739016736401673,
+      "confidence": 0.24833029751062538,
+      "interest": -0.0015389493512993069
+    },
+    {
+      "source": "NestJS",
+      "target": "Python",
+      "support": 0.006210774058577406,
+      "confidence": 0.28106508875739644,
+      "interest": -0.004826647644277204
+    },
+    {
+      "source": "Python",
+      "target": "Java",
+      "support": 0.0685800209205021,
+      "confidence": 0.2398810884975989,
+      "interest": -0.009988158364325789
+    },
+    {
+      "source": "Java",
+      "target": "Python",
+      "support": 0.0685800209205021,
+      "confidence": 0.27446363160648873,
+      "interest": -0.011428104795184912
+    },
+    {
+      "source": "Next.js",
+      "target": "Python",
+      "support": 0.014186715481171548,
+      "confidence": 0.2743362831858407,
+      "interest": -0.011555453215832956
+    },
+    {
+      "source": "Linux",
+      "target": "Java",
+      "support": 0.040206589958159,
+      "confidence": 0.234375,
+      "interest": -0.015494246861924688
+    },
+    {
+      "source": "Jira",
+      "target": "Java",
+      "support": 0.011048640167364017,
+      "confidence": 0.2296195652173913,
+      "interest": -0.02024968164453339
+    },
+    {
+      "source": "Terraform",
+      "target": "Java",
+      "support": 0.005033995815899582,
+      "confidence": 0.22916666666666666,
+      "interest": -0.02070258019525803
+    },
+    {
+      "source": "Jira",
+      "target": "Python",
+      "support": 0.01268305439330544,
+      "confidence": 0.26358695652173914,
+      "interest": -0.02230477987993451
+    },
+    {
+      "source": "C#",
+      "target": "Python",
+      "support": 0.020528242677824268,
+      "confidence": 0.260149130074565,
+      "interest": -0.02574260632710862
+    },
+    {
+      "source": "HTML",
+      "target": "Python",
+      "support": 0.01771705020920502,
+      "confidence": 0.24953959484346225,
+      "interest": -0.0363521415582114
+    },
+    {
+      "source": "FastAPI",
+      "target": "Java",
+      "support": 0.008368200836820083,
+      "confidence": 0.21122112211221122,
+      "interest": -0.038648124749713464
+    },
+    {
+      "source": "Azure",
+      "target": "Java",
+      "support": 0.010656380753138074,
+      "confidence": 0.211139896373057,
+      "interest": -0.03872935048886769
+    },
+    {
+      "source": "CSS",
+      "target": "Python",
+      "support": 0.016605648535564854,
+      "confidence": 0.23540315106580167,
+      "interest": -0.05048858533587197
+    },
+    {
+      "source": "Slack",
+      "target": "Python",
+      "support": 0.006276150627615063,
+      "confidence": 0.23529411764705882,
+      "interest": -0.050597618754614826
+    },
+    {
+      "source": "Spring",
+      "target": "Python",
+      "support": 0.034518828451882845,
+      "confidence": 0.23218997361477572,
+      "interest": -0.05370176278689792
+    },
+    {
+      "source": "JPA",
+      "target": "Python",
+      "support": 0.005687761506276151,
+      "confidence": 0.21641791044776118,
+      "interest": -0.06947382595391247
+    },
+    {
+      "source": "iOS",
+      "target": "Python",
+      "support": 0.005099372384937239,
+      "confidence": 0.2136986301369863,
+      "interest": -0.07219310626468733
+    },
+    {
+      "source": "MariaDB",
+      "target": "Python",
+      "support": 0.005230125523012552,
+      "confidence": 0.20460358056265984,
+      "interest": -0.0812881558390138
     }
   ]
 }

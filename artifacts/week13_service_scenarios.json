@@ -1,47 +1,495 @@
 {
-  "normal": {
-    "status": "ok",
-    "recommendations": [
-      {
-        "antecedent": [
-          "LlamaIndex"
+  "status": "complete",
+  "rules_artifact": "artifacts/week12_all_rules.json",
+  "rule_count": 670,
+  "dictionary_version": "tech-dictionary.v2",
+  "scenarios": {
+    "normal": {
+      "query": {
+        "skills": [
+          "TensorFlow"
         ],
-        "consequent": [
-          "LangChain"
+        "normalized_skills": [
+          "TensorFlow"
+        ]
+      },
+      "response": {
+        "status": "ok",
+        "recommendations": [
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "PyTorch"
+            ],
+            "support": 0.03510721757322176,
+            "support_count": 537,
+            "confidence": 0.9487632508833922,
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Python"
+            ],
+            "support": 0.029484832635983265,
+            "support_count": 451,
+            "confidence": 0.7968197879858657,
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Docker"
+            ],
+            "support": 0.011702405857740586,
+            "support_count": 179,
+            "confidence": 0.31625441696113077,
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "C++"
+            ],
+            "support": 0.011048640167364017,
+            "support_count": 169,
+            "confidence": 0.29858657243816256,
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Git"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "AWS"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
+          }
         ],
-        "support": 0.005120299509992842,
-        "support_count": 93,
-        "confidence": 0.9789473684210527,
-        "consequent_probability": 0.014920442658151187,
-        "interest": 0.9640269257629015,
-        "transaction_count": 18163
+        "evidence_postings": [
+          {
+            "source": "wanted",
+            "job_id": "318370",
+            "title": "[인턴] BE Engineer (전환형)"
+          },
+          {
+            "source": "wanted",
+            "job_id": "315880",
+            "title": "[인턴] FE Engineer (전환형)"
+          },
+          {
+            "source": "wanted",
+            "job_id": "89329",
+            "title": "소프트웨어 개발"
+          }
+        ],
+        "applied_filters": {
+          "job_role": "all",
+          "experience_segment": "all",
+          "entry_eligible_only": false
+        }
       }
-    ],
-    "evidence_postings": [
-      {
-        "source": "wanted",
-        "job_id": "354958",
-        "title": "생성형 AI(Gen AI) Engineer"
+    },
+    "no_rules": {
+      "query": {
+        "skills": [
+          "NotARealSkill"
+        ],
+        "normalized_skills": [
+          "NotARealSkill"
+        ]
       },
-      {
-        "source": "wanted",
-        "job_id": "360822",
-        "title": "AI Agent 개발"
-      },
-      {
-        "source": "wanted",
-        "job_id": "359267",
-        "title": "Full-Time Backend Engineer"
+      "response": {
+        "status": "no_rules",
+        "recommendations": [],
+        "next_action": "Add a known skill or broaden filters."
       }
-    ],
-    "applied_filters": {
-      "job_role": "all",
-      "experience_segment": "all"
+    },
+    "role_filtered": {
+      "query": {
+        "skills": [
+          "TensorFlow"
+        ],
+        "job_role": "frontend",
+        "normalized_skills": [
+          "TensorFlow"
+        ]
+      },
+      "response": {
+        "status": "ok",
+        "recommendations": [
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "PyTorch"
+            ],
+            "support": 0.03510721757322176,
+            "support_count": 537,
+            "confidence": 0.9487632508833922,
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Python"
+            ],
+            "support": 0.029484832635983265,
+            "support_count": 451,
+            "confidence": 0.7968197879858657,
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Docker"
+            ],
+            "support": 0.011702405857740586,
+            "support_count": 179,
+            "confidence": 0.31625441696113077,
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "C++"
+            ],
+            "support": 0.011048640167364017,
+            "support_count": 169,
+            "confidence": 0.29858657243816256,
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Git"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "AWS"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
+          }
+        ],
+        "evidence_postings": [
+          {
+            "source": "wanted",
+            "job_id": "262946",
+            "title": "Frontend Engineer"
+          },
+          {
+            "source": "wanted",
+            "job_id": "206124",
+            "title": "프론트엔드 개발자"
+          },
+          {
+            "source": "wanted",
+            "job_id": "333190",
+            "title": "프론트엔드 개발자 Lead"
+          }
+        ],
+        "applied_filters": {
+          "job_role": "frontend",
+          "experience_segment": "all",
+          "entry_eligible_only": false
+        }
+      }
+    },
+    "entry_eligible": {
+      "query": {
+        "skills": [
+          "TensorFlow"
+        ],
+        "entry_eligible": true,
+        "normalized_skills": [
+          "TensorFlow"
+        ]
+      },
+      "response": {
+        "status": "ok",
+        "recommendations": [
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "PyTorch"
+            ],
+            "support": 0.03510721757322176,
+            "support_count": 537,
+            "confidence": 0.9487632508833922,
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Python"
+            ],
+            "support": 0.029484832635983265,
+            "support_count": 451,
+            "confidence": 0.7968197879858657,
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Docker"
+            ],
+            "support": 0.011702405857740586,
+            "support_count": 179,
+            "confidence": 0.31625441696113077,
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "C++"
+            ],
+            "support": 0.011048640167364017,
+            "support_count": 169,
+            "confidence": 0.29858657243816256,
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "Git"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              "TensorFlow"
+            ],
+            "consequent": [
+              "AWS"
+            ],
+            "support": 0.007975941422594142,
+            "support_count": 122,
+            "confidence": 0.21554770318021202,
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
+          }
+        ],
+        "evidence_postings": [
+          {
+            "source": "wanted",
+            "job_id": "318370",
+            "title": "[인턴] BE Engineer (전환형)"
+          },
+          {
+            "source": "wanted",
+            "job_id": "315880",
+            "title": "[인턴] FE Engineer (전환형)"
+          },
+          {
+            "source": "wanted",
+            "job_id": "333481",
+            "title": "AI 개발자/ML 엔지니어"
+          }
+        ],
+        "applied_filters": {
+          "job_role": "all",
+          "experience_segment": "all",
+          "entry_eligible_only": true
+        }
+      }
+    },
+    "insufficient_sample": {
+      "query": {
+        "skills": [
+          ".NET"
+        ],
+        "job_role": "frontend",
+        "experience_segment": "1~3년차",
+        "normalized_skills": [
+          ".NET"
+        ]
+      },
+      "response": {
+        "status": "insufficient_sample",
+        "recommendations": [
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "C#"
+            ],
+            "support": 0.01791317991631799,
+            "support_count": 274,
+            "confidence": 0.738544474393531,
+            "consequent_probability": 0.07890951882845189,
+            "interest": 0.6596349555650791,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "MSSQL"
+            ],
+            "support": 0.005033995815899582,
+            "support_count": 77,
+            "confidence": 0.20754716981132076,
+            "consequent_probability": 0.02830805439330544,
+            "interest": 0.17923911541801532,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "SQL"
+            ],
+            "support": 0.006929916317991632,
+            "support_count": 106,
+            "confidence": 0.2857142857142857,
+            "consequent_probability": 0.12859571129707112,
+            "interest": 0.15711857441721458,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "C++"
+            ],
+            "support": 0.005557008368200837,
+            "support_count": 85,
+            "confidence": 0.22911051212938005,
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.0885508886984177,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "Java"
+            ],
+            "support": 0.00738755230125523,
+            "support_count": 113,
+            "confidence": 0.3045822102425876,
+            "consequent_probability": 0.2498692468619247,
+            "interest": 0.05471296338066289,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "JavaScript"
+            ],
+            "support": 0.005033995815899582,
+            "support_count": 77,
+            "confidence": 0.20754716981132076,
+            "consequent_probability": 0.18972280334728034,
+            "interest": 0.017824366464040425,
+            "transaction_count": 15296
+          }
+        ],
+        "evidence_postings": [],
+        "applied_filters": {
+          "job_role": "frontend",
+          "experience_segment": "1~3년차",
+          "entry_eligible_only": false
+        }
+      }
     }
-  },
-  "no_rules": {
-    "status": "no_rules",
-    "recommendations": [],
-    "next_action": "Add a known skill or broaden filters."
   }
 }
