@@ -10,6 +10,8 @@
 
 **바로가기:** [요약](#요약) · [기능](#기능과-사용자-흐름) · [결과](#실행-결과) · [재현](#재현-방법) · [저장소-지도](#저장소-지도) · [주차별-기록](#주차별-기록) · [한계와-향후-작업](#한계와-향후-작업)
 
+> **브랜치 작업 요약:** `gyeongseon` 브랜치의 변경 사항과 재현 명령은 [docs/gyeongseon/00_summary.md](docs/gyeongseon/00_summary.md)에 정리되어 있습니다. 고친 문제의 전후 수치, 과제 조건 충족 상태, WSL·PowerShell 재현 명령, GLM 연결 절차, 남은 한계를 한 문서에서 볼 수 있습니다.
+
 ---
 
 ## 요약
@@ -138,6 +140,8 @@ flowchart LR
 | 14주차 | 세그먼트 요약·그래프·통합 검증 | CLI 시나리오와 20개 테스트 통과 |
 
 자세한 실제 기록: [10주차](docs/weeks/week10_actual_results.md) · [11주차](docs/weeks/week11_actual_results.md) · [12주차](docs/weeks/week12_actual_results.md) · [13주차](docs/weeks/week13_actual_results.md) · [14주차](docs/weeks/week14_actual_results.md)
+
+브랜치 작업 기록: [요약](docs/gyeongseon/00_summary.md) · [점검](docs/gyeongseon/01_baseline_check.md) · [기반 수정](docs/gyeongseon/02_foundation_fixes.md) · [에이전트 설계](docs/gyeongseon/03_agent_design.md) · [사전 v2](docs/gyeongseon/04_dictionary_v2.md) · [에이전트 구현](docs/gyeongseon/05_agent_implementation.md)
 
 ## 역할
 
