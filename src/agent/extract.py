@@ -80,6 +80,7 @@ _HANGUL = r"[\uac00-\ud7a3]"
 
 DEFAULT_STOPWORDS_PATH = Path("configs/extract_stopwords.json")
 DEFAULT_KOREAN_PATH = Path("configs/tech_dictionary_korean.json")
+DEFAULT_DICTIONARY_V2_PATH = Path("configs/tech_dictionary_v2.json")
 
 
 @dataclass(frozen=True)
@@ -108,6 +109,22 @@ def load_korean_spellings(path: str | Path = DEFAULT_KOREAN_PATH) -> tuple[tuple
         (spelling, re.compile(rf"(?<!{_HANGUL}){re.escape(spelling)}(?!{_HANGUL})"))
         for spelling in ordered
     )
+
+
+def load_compound_spellings(path: str | Path = DEFAULT_DICTIONARY_V2_PATH) -> tuple[str, ...]:
+    """Return registered multi-word spellings, longest first.
+
+    The list is closed: a space is joined only when it is an existing spelling
+    in the project dictionary, never by a heuristic over ordinary prose.
+    """
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    spellings = {
+        spelling
+        for technology in payload.get("technologies", [])
+        for spelling in [technology["canonical"], *(item["spelling"] for item in technology.get("spellings", []))]
+        if " " in spelling
+    }
+    return tuple(sorted(spellings, key=lambda value: (-len(value), value.casefold())))
 
 
 def section_spans(text: str) -> tuple[tuple[int, int], ...]:
@@ -167,6 +184,7 @@ def extract_candidates(
     text: str,
     stopwords: frozenset[str],
     korean: tuple[tuple[str, re.Pattern[str]], ...] = (),
+    compound_spellings: tuple[str, ...] = (),
 ) -> tuple[Candidate, ...]:
     """Return the ordered, de-duplicated candidate strings found in one posting."""
     if not text:
@@ -182,10 +200,20 @@ def extract_candidates(
         if name not in found or (source == "section" and found[name] == "body"):
             found[name] = source
 
+    # Registered space-separated names are joined before tokenising.  Their
+    # spans are masked afterwards so Spring Boot never also emits Boot.
+    masked = list(text)
+    for spelling in compound_spellings:
+        pattern = re.compile(rf"(?<![A-Za-z0-9]){re.escape(spelling)}(?![A-Za-z0-9])", re.IGNORECASE)
+        for match in pattern.finditer(text):
+            remember(spelling, match.start())
+            for index in range(match.start(), match.end()):
+                masked[index] = " "
+
     # Slash compounds first, then blank them out so the token pass does not also
     # emit their fragments and recreate the compound-plus-part pairing.
-    masked = list(text)
-    for match in _SLASH_RE.finditer(text):
+    masked_text = "".join(masked)
+    for match in _SLASH_RE.finditer(masked_text):
         for name in split_compound(match.group(0)):
             remember(name, match.start())
         for index in range(match.start(), match.end()):
@@ -212,6 +240,7 @@ def candidate_names(
     text: str,
     stopwords: frozenset[str],
     korean: tuple[tuple[str, re.Pattern[str]], ...] = (),
+    compound_spellings: tuple[str, ...] = (),
 ) -> tuple[str, ...]:
     """Candidate strings only, for callers that do not need the source label."""
-    return tuple(candidate.name for candidate in extract_candidates(text, stopwords, korean))
+    return tuple(candidate.name for candidate in extract_candidates(text, stopwords, korean, compound_spellings))

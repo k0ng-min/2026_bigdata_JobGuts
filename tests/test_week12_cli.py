@@ -47,3 +47,26 @@ class Week12CliTests(unittest.TestCase):
             {"Java", "Spring", "Python", "Django"},
         )
         self.assertEqual({rule["antecedent"][0] for rule in top_rules["normalized"]}, {"Django"})
+
+    def test_categories_can_be_excluded_from_itemsets(self):
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        root = Path(temp_dir.name)
+        postings = root / "postings.jsonl"
+        postings.write_text("".join(json.dumps({
+            "source": "s", "job_id": str(index), "raw_text": f"body {index}",
+            "final_techs": ["AI", "Python"], "normalized_techs": ["AI", "Python"],
+        }) + "\n" for index in range(10)), encoding="utf-8")
+        config = root / "experiments.json"
+        config.write_text(json.dumps({"week12_parameters": {"minimum_support": 0.1, "minimum_confidence": 0.1}}), encoding="utf-8")
+        categories = root / "categories.json"
+        categories.write_text(json.dumps({"categories": {"AI": "concept", "Python": "language"}}), encoding="utf-8")
+        artifacts = root / "artifacts"
+        with patch.object(sys, "argv", ["run_week12", "--input", str(postings), "--config", str(config), "--categories", str(categories), "--artifact-dir", str(artifacts)]):
+            self.assertEqual(main(), 0)
+
+        result = json.loads((artifacts / "week12_all_rules.json").read_text(encoding="utf-8"))
+        comparison = json.loads((artifacts / "week12_rule_comparison.json").read_text(encoding="utf-8"))
+        self.assertEqual(result["normalized"], [])
+        self.assertEqual(comparison["excluded_categories"], ["concept"])
+        self.assertEqual(comparison["normalized"]["excluded_category_item_count"], 10)

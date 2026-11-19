@@ -1,8 +1,8 @@
 {
   "status": "complete",
   "rules_artifact": "artifacts/week12_all_rules.json",
-  "rule_count": 694,
-  "dictionary_version": "tech-dictionary.v1",
+  "rule_count": 670,
+  "dictionary_version": "tech-dictionary.v2",
   "scenarios": {
     "normal": {
       "query": {
@@ -23,12 +23,12 @@
             "consequent": [
               "PyTorch"
             ],
-            "support": 0.030175320296695885,
+            "support": 0.03510721757322176,
             "support_count": 537,
             "confidence": 0.9487632508833922,
-            "consequent_probability": 0.05282085861991459,
-            "interest": 0.8959423922634776,
-            "transaction_count": 17796
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -37,26 +37,12 @@
             "consequent": [
               "Python"
             ],
-            "support": 0.025342773657001574,
+            "support": 0.029484832635983265,
             "support_count": 451,
             "confidence": 0.7968197879858657,
-            "consequent_probability": 0.24572937738817713,
-            "interest": 0.5510904105976886,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "ML"
-            ],
-            "support": 0.008709822432007193,
-            "support_count": 155,
-            "confidence": 0.27385159010600707,
-            "consequent_probability": 0.050067430883344574,
-            "interest": 0.22378415922266248,
-            "transaction_count": 17796
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -65,12 +51,12 @@
             "consequent": [
               "Docker"
             ],
-            "support": 0.010058440098898629,
+            "support": 0.011702405857740586,
             "support_count": 179,
             "confidence": 0.31625441696113077,
-            "consequent_probability": 0.10912564621263206,
-            "interest": 0.20712877074849873,
-            "transaction_count": 17796
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -79,26 +65,12 @@
             "consequent": [
               "C++"
             ],
-            "support": 0.009496516071027196,
+            "support": 0.011048640167364017,
             "support_count": 169,
             "confidence": 0.29858657243816256,
-            "consequent_probability": 0.12081366599235784,
-            "interest": 0.17777290644580473,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "Deep Learning"
-            ],
-            "support": 0.006799280737244324,
-            "support_count": 121,
-            "confidence": 0.2137809187279152,
-            "consequent_probability": 0.05029220049449314,
-            "interest": 0.16348871823342204,
-            "transaction_count": 17796
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -107,26 +79,12 @@
             "consequent": [
               "Git"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.12536525061811643,
-            "interest": 0.09018245256209559,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "AI"
-            ],
-            "support": 0.011912789390874354,
-            "support_count": 212,
-            "confidence": 0.3745583038869258,
-            "consequent_probability": 0.3012474713418746,
-            "interest": 0.07331083254505122,
-            "transaction_count": 17796
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -135,12 +93,12 @@
             "consequent": [
               "AWS"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.1665542818610924,
-            "interest": 0.04899342131911963,
-            "transaction_count": 17796
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
           }
         ],
         "evidence_postings": [
@@ -202,12 +160,12 @@
             "consequent": [
               "PyTorch"
             ],
-            "support": 0.030175320296695885,
+            "support": 0.03510721757322176,
             "support_count": 537,
             "confidence": 0.9487632508833922,
-            "consequent_probability": 0.05282085861991459,
-            "interest": 0.8959423922634776,
-            "transaction_count": 17796
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -216,26 +174,12 @@
             "consequent": [
               "Python"
             ],
-            "support": 0.025342773657001574,
+            "support": 0.029484832635983265,
             "support_count": 451,
             "confidence": 0.7968197879858657,
-            "consequent_probability": 0.24572937738817713,
-            "interest": 0.5510904105976886,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "ML"
-            ],
-            "support": 0.008709822432007193,
-            "support_count": 155,
-            "confidence": 0.27385159010600707,
-            "consequent_probability": 0.050067430883344574,
-            "interest": 0.22378415922266248,
-            "transaction_count": 17796
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -244,12 +188,12 @@
             "consequent": [
               "Docker"
             ],
-            "support": 0.010058440098898629,
+            "support": 0.011702405857740586,
             "support_count": 179,
             "confidence": 0.31625441696113077,
-            "consequent_probability": 0.10912564621263206,
-            "interest": 0.20712877074849873,
-            "transaction_count": 17796
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -258,26 +202,12 @@
             "consequent": [
               "C++"
             ],
-            "support": 0.009496516071027196,
+            "support": 0.011048640167364017,
             "support_count": 169,
             "confidence": 0.29858657243816256,
-            "consequent_probability": 0.12081366599235784,
-            "interest": 0.17777290644580473,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "Deep Learning"
-            ],
-            "support": 0.006799280737244324,
-            "support_count": 121,
-            "confidence": 0.2137809187279152,
-            "consequent_probability": 0.05029220049449314,
-            "interest": 0.16348871823342204,
-            "transaction_count": 17796
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -286,26 +216,12 @@
             "consequent": [
               "Git"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.12536525061811643,
-            "interest": 0.09018245256209559,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "AI"
-            ],
-            "support": 0.011912789390874354,
-            "support_count": 212,
-            "confidence": 0.3745583038869258,
-            "consequent_probability": 0.3012474713418746,
-            "interest": 0.07331083254505122,
-            "transaction_count": 17796
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -314,12 +230,12 @@
             "consequent": [
               "AWS"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.1665542818610924,
-            "interest": 0.04899342131911963,
-            "transaction_count": 17796
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
           }
         ],
         "evidence_postings": [
@@ -366,12 +282,12 @@
             "consequent": [
               "PyTorch"
             ],
-            "support": 0.030175320296695885,
+            "support": 0.03510721757322176,
             "support_count": 537,
             "confidence": 0.9487632508833922,
-            "consequent_probability": 0.05282085861991459,
-            "interest": 0.8959423922634776,
-            "transaction_count": 17796
+            "consequent_probability": 0.06145397489539749,
+            "interest": 0.8873092759879947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -380,26 +296,12 @@
             "consequent": [
               "Python"
             ],
-            "support": 0.025342773657001574,
+            "support": 0.029484832635983265,
             "support_count": 451,
             "confidence": 0.7968197879858657,
-            "consequent_probability": 0.24572937738817713,
-            "interest": 0.5510904105976886,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "ML"
-            ],
-            "support": 0.008709822432007193,
-            "support_count": 155,
-            "confidence": 0.27385159010600707,
-            "consequent_probability": 0.050067430883344574,
-            "interest": 0.22378415922266248,
-            "transaction_count": 17796
+            "consequent_probability": 0.28589173640167365,
+            "interest": 0.5109280515841921,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -408,12 +310,12 @@
             "consequent": [
               "Docker"
             ],
-            "support": 0.010058440098898629,
+            "support": 0.011702405857740586,
             "support_count": 179,
             "confidence": 0.31625441696113077,
-            "consequent_probability": 0.10912564621263206,
-            "interest": 0.20712877074849873,
-            "transaction_count": 17796
+            "consequent_probability": 0.12696129707112971,
+            "interest": 0.18929311989000105,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -422,26 +324,12 @@
             "consequent": [
               "C++"
             ],
-            "support": 0.009496516071027196,
+            "support": 0.011048640167364017,
             "support_count": 169,
             "confidence": 0.29858657243816256,
-            "consequent_probability": 0.12081366599235784,
-            "interest": 0.17777290644580473,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "Deep Learning"
-            ],
-            "support": 0.006799280737244324,
-            "support_count": 121,
-            "confidence": 0.2137809187279152,
-            "consequent_probability": 0.05029220049449314,
-            "interest": 0.16348871823342204,
-            "transaction_count": 17796
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.1580269490072002,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -450,26 +338,12 @@
             "consequent": [
               "Git"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.12536525061811643,
-            "interest": 0.09018245256209559,
-            "transaction_count": 17796
-          },
-          {
-            "antecedent": [
-              "TensorFlow"
-            ],
-            "consequent": [
-              "AI"
-            ],
-            "support": 0.011912789390874354,
-            "support_count": 212,
-            "confidence": 0.3745583038869258,
-            "consequent_probability": 0.3012474713418746,
-            "interest": 0.07331083254505122,
-            "transaction_count": 17796
+            "consequent_probability": 0.14585512552301255,
+            "interest": 0.06969257765719947,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -478,12 +352,12 @@
             "consequent": [
               "AWS"
             ],
-            "support": 0.006855473140031468,
+            "support": 0.007975941422594142,
             "support_count": 122,
             "confidence": 0.21554770318021202,
-            "consequent_probability": 0.1665542818610924,
-            "interest": 0.04899342131911963,
-            "transaction_count": 17796
+            "consequent_probability": 0.19377615062761505,
+            "interest": 0.021771552552596968,
+            "transaction_count": 15296
           }
         ],
         "evidence_postings": [
@@ -531,12 +405,26 @@
             "consequent": [
               "C#"
             ],
-            "support": 0.015396718363677231,
+            "support": 0.01791317991631799,
             "support_count": 274,
             "confidence": 0.738544474393531,
-            "consequent_probability": 0.06782423016408182,
-            "interest": 0.6707202442294492,
-            "transaction_count": 17796
+            "consequent_probability": 0.07890951882845189,
+            "interest": 0.6596349555650791,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "MSSQL"
+            ],
+            "support": 0.005033995815899582,
+            "support_count": 77,
+            "confidence": 0.20754716981132076,
+            "consequent_probability": 0.02830805439330544,
+            "interest": 0.17923911541801532,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -545,12 +433,26 @@
             "consequent": [
               "SQL"
             ],
-            "support": 0.005956394695437177,
+            "support": 0.006929916317991632,
             "support_count": 106,
             "confidence": 0.2857142857142857,
-            "consequent_probability": 0.11053045628231063,
-            "interest": 0.17518382943197508,
-            "transaction_count": 17796
+            "consequent_probability": 0.12859571129707112,
+            "interest": 0.15711857441721458,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "C++"
+            ],
+            "support": 0.005557008368200837,
+            "support_count": 85,
+            "confidence": 0.22911051212938005,
+            "consequent_probability": 0.14055962343096234,
+            "interest": 0.0885508886984177,
+            "transaction_count": 15296
           },
           {
             "antecedent": [
@@ -559,12 +461,26 @@
             "consequent": [
               "Java"
             ],
-            "support": 0.006349741514947179,
+            "support": 0.00738755230125523,
             "support_count": 113,
             "confidence": 0.3045822102425876,
-            "consequent_probability": 0.21476736345246122,
-            "interest": 0.08981484679012636,
-            "transaction_count": 17796
+            "consequent_probability": 0.2498692468619247,
+            "interest": 0.05471296338066289,
+            "transaction_count": 15296
+          },
+          {
+            "antecedent": [
+              ".NET"
+            ],
+            "consequent": [
+              "JavaScript"
+            ],
+            "support": 0.005033995815899582,
+            "support_count": 77,
+            "confidence": 0.20754716981132076,
+            "consequent_probability": 0.18972280334728034,
+            "interest": 0.017824366464040425,
+            "transaction_count": 15296
           }
         ],
         "evidence_postings": [],

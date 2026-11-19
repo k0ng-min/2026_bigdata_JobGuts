@@ -6,6 +6,7 @@ from pathlib import Path
 from src.agent.extract import (
     candidate_names,
     extract_candidates,
+    load_compound_spellings,
     load_korean_spellings,
     load_stopwords,
     split_compound,
@@ -212,3 +213,19 @@ class KoreanSpellingTests(unittest.TestCase):
 
     def test_korean_extraction_is_off_unless_spellings_are_passed(self):
         self.assertEqual(set(candidate_names("파이썬", self.stopwords)), set())
+
+
+class SpaceCompoundTests(unittest.TestCase):
+    def setUp(self):
+        temp_dir, self.stopwords = _stopwords()
+        self.addCleanup(temp_dir.cleanup)
+
+    def test_registered_space_compound_is_joined_without_fragments(self):
+        names = set(candidate_names("Spring Boot와 Fine tuning 경험", self.stopwords, compound_spellings=("Spring Boot", "Fine tuning")))
+
+        self.assertEqual(names, {"Spring Boot", "Fine tuning"})
+
+    def test_dictionary_compounds_include_spring_boot(self):
+        compounds = load_compound_spellings(Path(__file__).resolve().parents[1] / "configs" / "tech_dictionary_v2.json")
+
+        self.assertIn("Spring Boot", compounds)

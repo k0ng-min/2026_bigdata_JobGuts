@@ -16,7 +16,7 @@ from .metadata import classify_experience, classify_role, is_entry_eligible
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, default=Path("data/raw/korean_it_recruit_postings.json"))
-    parser.add_argument("--dictionary", type=Path, default=Path("configs/tech_dictionary.json"))
+    parser.add_argument("--dictionary", type=Path, default=Path("configs/tech_dictionary_v2.json"))
     parser.add_argument("--output", type=Path, default=Path("data/processed/postings_normalized.jsonl"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     args = parser.parse_args()

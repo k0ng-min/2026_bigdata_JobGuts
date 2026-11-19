@@ -15,11 +15,14 @@ def _records(path: Path) -> list[dict]:
         return [json.loads(line) for line in handle if line.strip()]
 
 
-def _deduplicated_transactions(records: list[dict], field: str) -> tuple[list[set[str]], dict]:
+def _deduplicated_transactions(
+    records: list[dict], field: str, excluded_technologies: set[str] | None = None
+) -> tuple[list[set[str]], dict]:
     seen_ids: set[tuple[str, str]] = set()
     seen_bodies: set[str] = set()
     transactions: list[set[str]] = []
-    excluded_empty = excluded_duplicate = excluded_same_body = 0
+    excluded_empty = excluded_duplicate = excluded_same_body = excluded_category_items = 0
+    excluded_technologies = excluded_technologies or set()
     for row in records:
         key = (str(row.get("source", "")), str(row.get("job_id", "")))
         if key in seen_ids:
@@ -33,12 +36,27 @@ def _deduplicated_transactions(records: list[dict], field: str) -> tuple[list[se
             continue
         if body_hash:
             seen_bodies.add(body_hash)
-        transaction = {str(item).strip() for item in row.get(field, []) if str(item).strip()}
+        original = {str(item).strip() for item in row.get(field, []) if str(item).strip()}
+        transaction = original - excluded_technologies
+        excluded_category_items += len(original - transaction)
         if not transaction:
             excluded_empty += 1
             continue
         transactions.append(transaction)
-    return transactions, {"excluded_source_job_id_duplicates": excluded_duplicate, "excluded_same_body_duplicates": excluded_same_body, "excluded_empty_transactions": excluded_empty}
+    return transactions, {
+        "excluded_source_job_id_duplicates": excluded_duplicate,
+        "excluded_same_body_duplicates": excluded_same_body,
+        "excluded_empty_transactions": excluded_empty,
+        "excluded_category_item_count": excluded_category_items,
+    }
+
+
+def _excluded_technologies(path: Path, excluded_categories: list[str]) -> set[str]:
+    if not excluded_categories:
+        return set()
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    categories = payload.get("categories", {})
+    return {name for name, category in categories.items() if category in set(excluded_categories)}
 
 
 def main() -> int:
@@ -47,6 +65,8 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=Path("configs/experiments.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     parser.add_argument("--top-n", type=int, default=50, help="How many rules to keep in the display-only top-N artifact.")
+    parser.add_argument("--categories", type=Path, default=Path("configs/tech_categories.json"))
+    parser.add_argument("--exclude-category", action="append", default=["concept"], help="Category label to omit from Apriori itemsets; repeat to omit more categories.")
     args = parser.parse_args()
     config = json.loads(args.config.read_text(encoding="utf-8"))
     args.artifact_dir.mkdir(parents=True, exist_ok=True)
@@ -61,8 +81,9 @@ def main() -> int:
         return 0
     records = _records(args.input)
     parameters = config["week12_parameters"]
-    raw_transactions, raw_exclusions = _deduplicated_transactions(records, "final_techs")
-    normalized_transactions, normalized_exclusions = _deduplicated_transactions(records, "normalized_techs")
+    excluded_technologies = _excluded_technologies(args.categories, args.exclude_category)
+    raw_transactions, raw_exclusions = _deduplicated_transactions(records, "final_techs", excluded_technologies)
+    normalized_transactions, normalized_exclusions = _deduplicated_transactions(records, "normalized_techs", excluded_technologies)
     if len(raw_transactions) != len(normalized_transactions):
         raise ValueError("raw and normalized experiments must use the same eligible posting set")
     raw_rules = mine_pair_rules(raw_transactions, parameters["minimum_support"], parameters["minimum_confidence"])
@@ -73,6 +94,8 @@ def main() -> int:
         "input_row_count": len(records),
         "segment": {"job_role": "all", "experience_level": "all"},
         "parameters": parameters,
+        "excluded_categories": args.exclude_category,
+        "excluded_technologies": sorted(excluded_technologies),
         "raw": {"transaction_count": len(raw_transactions), "rule_count": len(raw_rules), **raw_exclusions},
         "normalized": {"transaction_count": len(normalized_transactions), "rule_count": len(normalized_rules), **normalized_exclusions},
         "common_rule_count": len(common),

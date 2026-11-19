@@ -23,13 +23,13 @@ This project analyzes the technology combinations that frequently appear togethe
 
 ## GitHub Repository URL
 
-- **URL:**
+- **URL:** https://github.com/k0ng-min/2026_bigdata_JobGuts
 
 ## Team Roles
 
 | Member | Student ID | Role | Responsibilities |
 | --- | --- | --- | --- |
-| 서동균 | 2021270664 | Team Leader | |
-| 김경선 | 2022270656 | | |
-| 정비호 | 2022270622 | | |
-| 설경민 | 2022270643 | | |
+| 서동균 | 2021270664 | Team Leader | 일정 조율, 통합 검토, 발표 자료 정리 |
+| 김경선 | 2022270656 | 데이터·정규화 | 데이터 품질 점검, 기술명 사전 및 정규화 검증 |
+| 정비호 | 2022270622 | 연관규칙 분석 | Apriori 실험, 지표 비교, 세그먼트 분석 |
+| 설경민 | 2022270643 | 서비스·시각화 | 근거 공고 조회, CLI·화면, 결과 시각화 |

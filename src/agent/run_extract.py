@@ -17,7 +17,7 @@ from pathlib import Path
 # Reused so the eligible posting set has one definition in the repository.
 from src.analysis.run_week14 import _eligible_rows
 
-from .extract import extract_candidates, load_korean_spellings, load_stopwords
+from .extract import extract_candidates, load_compound_spellings, load_korean_spellings, load_stopwords
 
 
 def main() -> int:
@@ -25,6 +25,8 @@ def main() -> int:
     parser.add_argument("--input", type=Path, default=Path("data/processed/postings_normalized.jsonl"))
     parser.add_argument("--stopwords", type=Path, default=Path("configs/extract_stopwords.json"))
     parser.add_argument("--korean", type=Path, default=Path("configs/tech_dictionary_korean.json"))
+    parser.add_argument("--dictionary", type=Path, default=Path("configs/tech_dictionary_v2.json"))
+    parser.add_argument("--categories", type=Path, default=Path("configs/tech_categories.json"))
     parser.add_argument("--comparison", type=Path, default=Path("artifacts/week12_rule_comparison.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     parser.add_argument("--field", default="normalized_techs")
@@ -43,9 +45,12 @@ def main() -> int:
 
     stopwords = load_stopwords(args.stopwords)
     korean = load_korean_spellings(args.korean)
+    compounds = load_compound_spellings(args.dictionary)
+    categories = json.loads(args.categories.read_text(encoding="utf-8")).get("categories", {})
+    excluded = {name for name, category in categories.items() if category == "concept"}
     with args.input.open(encoding="utf-8") as handle:
         records = [json.loads(line) for line in handle if line.strip()]
-    rows = _eligible_rows(records, args.field)
+    rows = _eligible_rows(records, args.field, excluded)
     if not args.limit:
         expected = json.loads(args.comparison.read_text(encoding="utf-8"))["normalized"]["transaction_count"]
         if len(rows) != expected:
@@ -60,7 +65,7 @@ def main() -> int:
     section_hits: Counter[str] = Counter()
     per_posting: list[int] = []
     for row in rows:
-        candidates = extract_candidates(row.get("raw_text") or "", stopwords, korean)
+        candidates = extract_candidates(row.get("raw_text") or "", stopwords, korean, compounds)
         per_posting.append(len(candidates))
         for candidate in candidates:
             occurrences[candidate.name] += 1
@@ -78,6 +83,7 @@ def main() -> int:
             "minimum_part_length": 3,
             "korean_spellings_version": json.loads(args.korean.read_text(encoding="utf-8"))["version"],
             "korean_spellings_registered": len(korean),
+            "registered_space_compounds": len(compounds),
         },
         "totals": {
             "candidate_occurrences": total,
