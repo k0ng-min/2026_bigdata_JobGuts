@@ -54,7 +54,7 @@ class DictionaryV2Tests(unittest.TestCase):
                 seen[key] = record["canonical"]
 
     def test_every_spelling_records_the_rule_that_admitted_it(self):
-        allowed = {"exact", "case", "punctuation", "curated"}
+        allowed = {"exact", "case", "punctuation", "curated", "korean"}
         for record in self.payload["technologies"]:
             for item in record["spellings"]:
                 self.assertIn(item["rule"], allowed)
@@ -111,3 +111,43 @@ class DictionaryV2LoadsWithTheExistingLoaderTests(unittest.TestCase):
         temp_dir = tempfile.TemporaryDirectory()
         self.addCleanup(temp_dir.cleanup)
         return temp_dir.name
+
+
+class KoreanDictionaryTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.payload = json.loads(DICTIONARY_PATH.read_text(encoding="utf-8"))
+        cls.entries = {record["canonical"]: record for record in cls.payload["technologies"]}
+        cls.korean = json.loads((ROOT / "configs" / "tech_dictionary_korean.json").read_text(encoding="utf-8"))
+
+    def test_every_korean_target_is_a_standard_name(self):
+        for target in self.korean["spellings"]:
+            self.assertIn(target, self.entries, f"korean target {target!r} is not in the dictionary")
+
+    def test_korean_spellings_carry_the_korean_rule_and_their_evidence(self):
+        registered = {s for v in self.korean["spellings"].values() for s in v}
+        recorded = {
+            item["spelling"]: item
+            for record in self.payload["technologies"]
+            for item in record["spellings"]
+            if item["rule"] == "korean"
+        }
+        self.assertEqual(set(recorded), registered)
+        for item in recorded.values():
+            self.assertIn("occurrences", item)
+            self.assertIn("section_occurrences", item)
+
+    def test_ambiguous_korean_words_are_excluded_with_a_reason(self):
+        excluded = self.korean["excluded_on_purpose"]
+        for word in ("뷰", "노드", "루비", "깃", "러스트", "펄", "레스트", "몽고"):
+            self.assertIn(word, excluded)
+            self.assertTrue(excluded[word].strip())
+        registered = {s for v in self.korean["spellings"].values() for s in v}
+        self.assertFalse(registered & set(excluded))
+
+    def test_korean_spelling_maps_to_exactly_one_standard_name(self):
+        seen: dict[str, str] = {}
+        for target, spellings in self.korean["spellings"].items():
+            for spelling in spellings:
+                self.assertNotIn(spelling, seen, f"{spelling!r} is registered twice")
+                seen[spelling] = target

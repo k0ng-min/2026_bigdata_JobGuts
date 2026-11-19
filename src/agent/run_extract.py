@@ -17,13 +17,14 @@ from pathlib import Path
 # Reused so the eligible posting set has one definition in the repository.
 from src.analysis.run_week14 import _eligible_rows
 
-from .extract import extract_candidates, load_stopwords
+from .extract import extract_candidates, load_korean_spellings, load_stopwords
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, default=Path("data/processed/postings_normalized.jsonl"))
     parser.add_argument("--stopwords", type=Path, default=Path("configs/extract_stopwords.json"))
+    parser.add_argument("--korean", type=Path, default=Path("configs/tech_dictionary_korean.json"))
     parser.add_argument("--comparison", type=Path, default=Path("artifacts/week12_rule_comparison.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     parser.add_argument("--field", default="normalized_techs")
@@ -41,6 +42,7 @@ def main() -> int:
         return 0
 
     stopwords = load_stopwords(args.stopwords)
+    korean = load_korean_spellings(args.korean)
     with args.input.open(encoding="utf-8") as handle:
         records = [json.loads(line) for line in handle if line.strip()]
     rows = _eligible_rows(records, args.field)
@@ -58,7 +60,7 @@ def main() -> int:
     section_hits: Counter[str] = Counter()
     per_posting: list[int] = []
     for row in rows:
-        candidates = extract_candidates(row.get("raw_text") or "", stopwords)
+        candidates = extract_candidates(row.get("raw_text") or "", stopwords, korean)
         per_posting.append(len(candidates))
         for candidate in candidates:
             occurrences[candidate.name] += 1
@@ -73,7 +75,9 @@ def main() -> int:
             "posting_count": len(rows),
             "source_field_for_eligibility": args.field,
             "stopwords_version": json.loads(args.stopwords.read_text(encoding="utf-8"))["version"],
-            "minimum_subpart_length": 3,
+            "minimum_part_length": 3,
+            "korean_spellings_version": json.loads(args.korean.read_text(encoding="utf-8"))["version"],
+            "korean_spellings_registered": len(korean),
         },
         "totals": {
             "candidate_occurrences": total,

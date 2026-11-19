@@ -3,7 +3,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.agent.extract import candidate_names, extract_candidates, load_stopwords, split_compound
+from src.agent.extract import (
+    candidate_names,
+    extract_candidates,
+    load_korean_spellings,
+    load_stopwords,
+    split_compound,
+)
 
 
 def _stopwords(words=("and", "based", "the", "with")):
@@ -110,3 +116,52 @@ class SectionLabelTests(unittest.TestCase):
 
     def test_empty_text_yields_no_candidates(self):
         self.assertEqual(extract_candidates("", self.stopwords), ())
+
+
+class KoreanSpellingTests(unittest.TestCase):
+    """Korean names are found by closed-list lookup, longest spelling first."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.korean = load_korean_spellings(Path(__file__).resolve().parents[1] / "configs" / "tech_dictionary_korean.json")
+
+    def setUp(self):
+        temp_dir, self.stopwords = _stopwords()
+        self.addCleanup(temp_dir.cleanup)
+
+    def _names(self, text):
+        return set(candidate_names(text, self.stopwords, self.korean))
+
+    def test_the_longest_spelling_wins_so_자바스크립트_is_not_자바(self):
+        self.assertEqual(self._names("자바스크립트"), {"자바스크립트"})
+
+    def test_a_longer_spelling_consumes_its_span(self):
+        self.assertEqual(self._names("리액트 네이티브 경험"), {"리액트 네이티브"})
+        self.assertEqual(self._names("생성형 인공지능 모델"), {"생성형 인공지능"})
+
+    def test_separate_occurrences_are_still_reported_separately(self):
+        self.assertEqual(self._names("자바스크립트 와 자바 둘 다"), {"자바스크립트", "자바"})
+
+    def test_a_spelling_inside_a_longer_hangul_run_does_not_count(self):
+        # 뷰 in 코드 리뷰, 루비 in 그루비, 장고 in 냉장고, 지라 in 할지라도,
+        # 러스트 in 일러스트, 깃 in 깃허브: all rejected by the boundary rule.
+        self.assertEqual(self._names("코드 리뷰 진행"), set())
+        self.assertEqual(self._names("그루비 스크립트"), set())
+        self.assertEqual(self._names("냉장고 유지보수"), set())
+        self.assertEqual(self._names("할지라도"), set())
+        self.assertEqual(self._names("일러스트 작업"), set())
+
+    def test_registered_spellings_are_found_at_a_boundary(self):
+        self.assertEqual(self._names("파이썬, 자바, 쿠버네티스"), {"파이썬", "자바", "쿠버네티스"})
+        self.assertEqual(self._names("딥러닝/머신러닝 경험"), {"딥러닝", "머신러닝"})
+        self.assertEqual(self._names("깃허브 사용"), {"깃허브"})
+
+    def test_unregistered_hangul_is_not_tokenised(self):
+        # No open Hangul tokenisation: ordinary Korean words never become candidates.
+        self.assertEqual(self._names("우대사항 협업 능력 커뮤니케이션"), set())
+
+    def test_latin_and_korean_spellings_coexist(self):
+        self.assertEqual(self._names("Python 과 파이썬 혼용"), {"Python", "파이썬"})
+
+    def test_korean_extraction_is_off_unless_spellings_are_passed(self):
+        self.assertEqual(set(candidate_names("파이썬", self.stopwords)), set())

@@ -29,6 +29,14 @@ Space-separated names such as ``Spring Boot`` are *not* assembled. Their
 boundaries cannot be found without a vocabulary, and guessing them produced
 three times as many tokenizer-artifact rules for two points of recall. Joining
 them is left to the agent, which has the surrounding context and a dictionary.
+
+Korean spellings are found by closed-list lookup, not by tokenising Hangul.
+Korean words carry no reliable boundaries, so an open tokeniser would flood the
+list; only spellings registered in configs/tech_dictionary_korean.json are
+searched for. Two rules keep those lookups honest: the longest spelling wins and
+its span is consumed, so 자바스크립트 is never reported as 자바; and a match must
+not sit inside a longer run of Hangul, without which 뷰 matches 코드 리뷰, 루비
+matches 그루비 and 장고 matches 냉장고.
 """
 
 from __future__ import annotations
@@ -57,7 +65,11 @@ SECTION_MARKERS = (
 #: How far past a section marker still counts as part of the technology list.
 SECTION_WINDOW = 400
 
+#: One Hangul syllable; used to require a boundary around a Korean spelling.
+_HANGUL = r"[\uac00-\ud7a3]"
+
 DEFAULT_STOPWORDS_PATH = Path("configs/extract_stopwords.json")
+DEFAULT_KOREAN_PATH = Path("configs/tech_dictionary_korean.json")
 
 
 @dataclass(frozen=True)
@@ -71,6 +83,21 @@ class Candidate:
 def load_stopwords(path: str | Path = DEFAULT_STOPWORDS_PATH) -> frozenset[str]:
     payload = json.loads(Path(path).read_text(encoding="utf-8"))
     return frozenset(word.casefold() for word in payload["stopwords"])
+
+
+def load_korean_spellings(path: str | Path = DEFAULT_KOREAN_PATH) -> tuple[tuple[str, re.Pattern[str]], ...]:
+    """Registered Korean spellings, longest first, each with a boundary-checked pattern."""
+    payload = json.loads(Path(path).read_text(encoding="utf-8"))
+    spellings = {
+        spelling
+        for variants in payload["spellings"].values()
+        for spelling in variants
+    }
+    ordered = sorted(spellings, key=lambda spelling: (-len(spelling), spelling))
+    return tuple(
+        (spelling, re.compile(rf"(?<!{_HANGUL}){re.escape(spelling)}(?!{_HANGUL})"))
+        for spelling in ordered
+    )
 
 
 def section_spans(text: str) -> tuple[tuple[int, int], ...]:
@@ -92,8 +119,12 @@ def _acceptable(name: str, stopwords: frozenset[str]) -> bool:
         return False
     if name.casefold() in stopwords:
         return False
-    if not re.search(r"[A-Za-z]", name):
+    if not re.search(rf"[A-Za-z]|{_HANGUL}", name):
         return False
+    # A registered Korean spelling has already been matched against the closed
+    # list, so the single-character rule below applies to Latin tokens only.
+    if re.search(_HANGUL, name):
+        return True
     # A single character is only a name when it is written as one (C, R, Q).
     if len(name) == 1:
         return name.isupper()
@@ -121,7 +152,11 @@ def split_compound(token: str) -> tuple[str, ...]:
     return (token,)
 
 
-def extract_candidates(text: str, stopwords: frozenset[str]) -> tuple[Candidate, ...]:
+def extract_candidates(
+    text: str,
+    stopwords: frozenset[str],
+    korean: tuple[tuple[str, re.Pattern[str]], ...] = (),
+) -> tuple[Candidate, ...]:
     """Return the ordered, de-duplicated candidate strings found in one posting."""
     if not text:
         return ()
@@ -149,9 +184,23 @@ def extract_candidates(text: str, stopwords: frozenset[str]) -> tuple[Candidate,
         for name in split_compound(match.group(0)):
             remember(name, match.start())
 
+    # Registered Korean spellings, longest first, each matched span consumed so a
+    # shorter spelling cannot also claim part of it.
+    if korean:
+        hangul = list(text)
+        for spelling, pattern in korean:
+            for match in pattern.finditer("".join(hangul)):
+                remember(spelling, match.start())
+                for index in range(match.start(), match.end()):
+                    hangul[index] = " "
+
     return tuple(Candidate(name, source) for name, source in found.items())
 
 
-def candidate_names(text: str, stopwords: frozenset[str]) -> tuple[str, ...]:
+def candidate_names(
+    text: str,
+    stopwords: frozenset[str],
+    korean: tuple[tuple[str, re.Pattern[str]], ...] = (),
+) -> tuple[str, ...]:
     """Candidate strings only, for callers that do not need the source label."""
-    return tuple(candidate.name for candidate in extract_candidates(text, stopwords))
+    return tuple(candidate.name for candidate in extract_candidates(text, stopwords, korean))

@@ -9,6 +9,7 @@ often the spelling occurs, so any entry can be traced back to the data.
     case         it differs from a standard name only in letter case
     punctuation  it differs only in dots, spaces or hyphens
     curated      a hand-checked entry in configs/tech_dictionary_curated.json
+    korean       a registered Korean spelling in configs/tech_dictionary_korean.json
 
 Anything else is left out and written to the review list, including spellings
 that are plainly technologies but absent from the vocabulary: adding them would
@@ -57,6 +58,7 @@ def main() -> int:
     parser.add_argument("--candidates", type=Path, default=Path("artifacts/agent_candidates.json"))
     parser.add_argument("--categories", type=Path, default=Path("configs/tech_categories.json"))
     parser.add_argument("--curated", type=Path, default=Path("configs/tech_dictionary_curated.json"))
+    parser.add_argument("--korean", type=Path, default=Path("configs/tech_dictionary_korean.json"))
     parser.add_argument("--output", type=Path, default=Path("configs/tech_dictionary_v2.json"))
     parser.add_argument("--artifact-dir", type=Path, default=Path("artifacts"))
     parser.add_argument("--minimum-occurrences", type=int, default=DEFAULT_MINIMUM_OCCURRENCES)
@@ -68,6 +70,7 @@ def main() -> int:
     standard = vocabulary(records)
     categories = json.loads(args.categories.read_text(encoding="utf-8"))
     curated = json.loads(args.curated.read_text(encoding="utf-8"))
+    korean = json.loads(args.korean.read_text(encoding="utf-8"))
     candidate_payload = json.loads(args.candidates.read_text(encoding="utf-8"))
     candidates = {entry["name"]: entry for entry in candidate_payload["candidates"]}
 
@@ -94,8 +97,20 @@ def main() -> int:
                 raise ValueError(f"curated spelling {spelling!r} points at both {previous!r} and {target!r}")
             curated_target[key] = target
 
+    korean_target: dict[str, str] = {}
+    for target, spellings in korean["spellings"].items():
+        if target not in standard:
+            raise ValueError(f"korean spelling target {target!r} is not a final_techs standard name")
+        for spelling in spellings:
+            previous = korean_target.get(spelling)
+            if previous and previous != target:
+                raise ValueError(f"korean spelling {spelling!r} points at both {previous!r} and {target!r}")
+            korean_target[spelling] = target
+
     def classify(name: str) -> tuple[str, str] | None:
         """Return (standard name, rule) or None when the spelling is undecided."""
+        if name in korean_target:
+            return korean_target[name], "korean"
         if name in standard:
             return name, "exact"
         key = canonical_key(name)
@@ -141,6 +156,25 @@ def main() -> int:
             "section_occurrences": entry["section_count"],
         })
 
+    # Registered Korean spellings join regardless of the occurrence floor: they
+    # are a closed list, and their counts are evidence rather than a filter.
+    for spelling, target in sorted(korean_target.items()):
+        record = entries.setdefault(target, {
+            "canonical": target,
+            "category": categories["categories"][target],
+            "standard_name_posting_count": standard[target],
+            "spellings": [],
+        })
+        if any(item["spelling"] == spelling for item in record["spellings"]):
+            continue
+        record["spellings"].append({
+            "spelling": spelling,
+            "rule": "korean",
+            "occurrences": candidates.get(spelling, {}).get("count", 0),
+            "section_occurrences": candidates.get(spelling, {}).get("section_count", 0),
+        })
+        rule_counts["korean"] += 1
+
     # Curated spellings that the data has not shown yet are still worth keeping,
     # but they are marked so the evidence columns are not mistaken for data.
     for key, target in sorted(curated_target.items()):
@@ -171,6 +205,7 @@ def main() -> int:
         "standard_name_count": len(standard),
         "minimum_occurrences_considered": args.minimum_occurrences,
         "category_labels": categories["labels"],
+        "korean_spellings_version": korean["version"],
         "rule_counts": dict(rule_counts),
         "technologies": [entries[name] for name in sorted(entries)],
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

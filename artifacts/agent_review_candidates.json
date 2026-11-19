@@ -3,13 +3,13 @@
   "basis": {
     "posting_count": 17796,
     "minimum_occurrences": 89,
-    "candidates_considered": 593
+    "candidates_considered": 608
   },
   "totals": {
-    "resolved_by_dictionary": 130,
+    "resolved_by_dictionary": 145,
     "needs_agent_judgement": 463,
-    "resolved_occurrence_share": 0.4072,
-    "review_occurrence_share": 0.5928
+    "resolved_occurrence_share": 0.4246,
+    "review_occurrence_share": 0.5754
   },
   "candidates": [
     {
