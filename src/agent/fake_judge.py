@@ -30,7 +30,6 @@ _CANONICAL = {
     "kubernetes": ("Kubernetes", 0.93),
     "restful": ("REST API", 0.85),
     "springboot": ("Spring Boot", 0.88),
-    "boot": ("Spring Boot", 0.55),
 }
 #: Spellings the table rejects, with the kind of term they are.
 _NOT_TECHNOLOGY = {
@@ -80,6 +79,11 @@ _NEEDS_REVIEW = {
     "data": "ordinary word",
     "cloud": "ordinary word in this context",
     "vision": "fragment of computer vision or an ordinary word",
+    # Mapping a bare Boot to Spring Boot is exactly what
+    # configs/tech_dictionary_curated.json refuses to do: it only means Spring
+    # Boot when Spring is nearby, which is a context judgement. The table said
+    # otherwise and produced 1,192 of the new in-vocabulary errors on its own.
+    "boot": "only means Spring Boot when Spring is nearby; that is a context judgement",
 }
 
 

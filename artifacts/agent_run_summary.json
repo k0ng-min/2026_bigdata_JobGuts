@@ -7,14 +7,14 @@
   "dictionary_version": "tech-dictionary.v2",
   "basis": {
     "posting_count": 17796,
-    "distinct_candidates": 27641,
-    "candidate_occurrences": 375677,
+    "distinct_candidates": 27787,
+    "candidate_occurrences": 373841,
     "minimum_occurrences_for_llm": 89,
-    "candidates_considered": 608
+    "candidates_considered": 607
   },
   "decisions": {
-    "canonical": 147,
-    "needs_review": 433,
+    "canonical": 145,
+    "needs_review": 434,
     "not_a_technology": 19,
     "new_technology": 9
   },
@@ -26,44 +26,40 @@
   },
   "routes": {
     "dictionary": 127,
-    "model": 448,
+    "model": 447,
     "cache": 33
   },
   "cost": {
     "cache_hits": 33,
     "dictionary_hits": 127,
     "learned_hits": 0,
-    "llm_calls": 448,
+    "llm_calls": 447,
     "llm_calls_skipped_by_budget": 0,
     "cache": {
-      "lookups": 608,
+      "lookups": 607,
       "hits": 33,
-      "misses": 575,
-      "hit_rate": 0.0543
+      "misses": 574,
+      "hit_rate": 0.0544
     },
-    "calls_avoided_by_cache_and_memory": 219163
+    "calls_avoided_by_cache_and_memory": 216796
   },
   "memory": {
     "confirmed_spellings": 296,
     "standard_names": 130,
-    "learned_mappings": 128,
+    "learned_mappings": 127,
     "rejected": 19,
     "new_technologies": 9,
     "undecided": 419
   },
-  "dropped_occurrences": 24351,
+  "dropped_occurrences": 22657,
   "dropped_top": [
-    {
-      "name": "D",
-      "count": 2729
-    },
     {
       "name": "SI",
       "count": 2584
     },
     {
       "name": "SW",
-      "count": 2335
+      "count": 2333
     },
     {
       "name": "PM",
@@ -79,7 +75,7 @@
     },
     {
       "name": "K",
-      "count": 1417
+      "count": 1414
     },
     {
       "name": "PO",
@@ -88,6 +84,10 @@
     {
       "name": "DBA",
       "count": 1259
+    },
+    {
+      "name": "D",
+      "count": 1184
     },
     {
       "name": "SaaS",
@@ -99,15 +99,11 @@
     },
     {
       "name": "QA",
-      "count": 911
+      "count": 910
     },
     {
       "name": "MD",
       "count": 832
-    },
-    {
-      "name": "B",
-      "count": 645
     },
     {
       "name": "SK",
@@ -119,7 +115,11 @@
     },
     {
       "name": "MS",
-      "count": 604
+      "count": 601
+    },
+    {
+      "name": "B",
+      "count": 506
     },
     {
       "name": "KORNIC",

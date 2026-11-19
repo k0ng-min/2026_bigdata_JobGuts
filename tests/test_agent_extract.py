@@ -99,6 +99,53 @@ class HyphenCompoundTests(unittest.TestCase):
         self.assertEqual(split_compound("Java/Objective-C"), ("Java", "Objective-C"))
         self.assertEqual(split_compound("Wi-Fi"), ("Wi-Fi",))
         self.assertEqual(split_compound("Python"), ("Python",))
+        self.assertEqual(split_compound("AI&ML/Data"), ("AI&ML", "Data"))
+
+
+class AmpersandCompoundTests(unittest.TestCase):
+    """R&D split into R and D, inflating R, which is a real language."""
+
+    def setUp(self):
+        temp_dir, self.stopwords = _stopwords()
+        self.addCleanup(temp_dir.cleanup)
+
+    def _names(self, text):
+        return set(candidate_names(text, self.stopwords))
+
+    def test_rd_stays_whole_and_never_yields_r_or_d(self):
+        names = self._names("연구 R&D 담당")
+
+        self.assertEqual(names, {"R&D"})
+        self.assertNotIn("R", names)
+        self.assertNotIn("D", names)
+
+    def test_other_ampersand_abbreviations_stay_whole(self):
+        for text, expected in (
+            ("Q&A 운영", "Q&A"),
+            ("F&B 매장", "F&B"),
+            ("O&M 데이터", "O&M"),
+            ("P&R 설계", "P&R"),
+            ("L&D 본부", "L&D"),
+            ("M&A 자문", "M&A"),
+            ("R&R 정의", "R&R"),
+        ):
+            self.assertEqual(self._names(text), {expected}, text)
+
+    def test_long_words_around_an_ampersand_still_yield_their_parts(self):
+        self.assertEqual(split_compound("Research&Development"), ("Research", "Development"))
+
+    def test_an_underscore_joins_rather_than_splits(self):
+        self.assertEqual(split_compound("AI_ML"), ("AI_ML",))
+
+    def test_an_en_dash_is_treated_like_a_hyphen(self):
+        self.assertEqual(split_compound("Wi\u2013Fi"), ("Wi\u2013Fi",))
+
+    def test_separators_that_divide_different_things_are_left_alone(self):
+        # A colon, comma, tilde, parenthesis and the Korean middle dot separate
+        # times, number groups, ranges and list items, not parts of one name.
+        self.assertEqual(self._names("09:00 ~ 18:00"), set())
+        self.assertEqual(self._names("솔루션·SI·CRM"), {"SI", "CRM"})
+        self.assertEqual(self._names("Python, Java"), {"Python", "Java"})
 
 
 class SectionLabelTests(unittest.TestCase):

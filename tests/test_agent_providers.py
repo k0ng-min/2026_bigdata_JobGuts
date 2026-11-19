@@ -152,3 +152,25 @@ class GLMCredentialTests(unittest.TestCase):
     def test_gitignore_excludes_env(self):
         root = Path(__file__).resolve().parents[1]
         self.assertIn(".env", (root / ".gitignore").read_text(encoding="utf-8").split())
+
+
+class FakeJudgeAgreesWithTheCuratedExclusionsTests(unittest.TestCase):
+    """The rule table must not assert what the dictionary refuses to assert."""
+
+    def setUp(self):
+        self.judge = FakeJudgeProvider()
+        root = Path(__file__).resolve().parents[1]
+        self.curated = json.loads((root / "configs" / "tech_dictionary_curated.json").read_text(encoding="utf-8"))
+
+    def test_boot_is_not_mapped_to_spring_boot(self):
+        # configs/tech_dictionary_curated.json excludes Boot because it only
+        # means Spring Boot when Spring is nearby. The table once mapped it
+        # anyway and produced 1,192 in-vocabulary errors on its own.
+        result = self.judge.judge("Boot", {})
+        self.assertEqual(result.decision, "needs_review")
+        self.assertIsNone(result.canonical)
+
+    def test_no_curated_exclusion_is_mapped_by_the_rule_table(self):
+        for spelling in self.curated["excluded_on_purpose"]:
+            result = self.judge.judge(spelling, {})
+            self.assertNotEqual(result.decision, "canonical", f"{spelling!r} is excluded on purpose")

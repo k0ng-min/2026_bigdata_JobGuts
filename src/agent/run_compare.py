@@ -28,8 +28,13 @@ from .extract import extract_candidates, load_korean_spellings, load_stopwords
 
 
 def comparison_key(value: str) -> str:
-    """Case-insensitive key that still tells C, C++ and C# apart."""
-    return re.sub(r"[^a-z0-9+#./\- ]", "", value.casefold()).strip()
+    """Case-insensitive key that still tells C, C++ and C# apart.
+
+    Hangul is kept. Stripping it collapsed every Korean spelling onto its Latin
+    remnant, so 생성형 AI compared equal to AI and 딥러닝 compared equal to the
+    empty string, which silently mixed Korean candidates into the wrong bucket.
+    """
+    return re.sub(r"[^a-z0-9+#./\-\u3131-\u318e\uac00-\ud7a3 ]", "", value.casefold()).strip()
 
 
 def score(predicted: list[set[str]], truth: list[set[str]], vocabulary: set[str]) -> dict:
@@ -65,6 +70,47 @@ def score(predicted: list[set[str]], truth: list[set[str]], vocabulary: set[str]
             **counts,
         }
     return result
+
+
+def bucket_migration(before: list[set[str]], after: list[set[str]], origins: list[dict], truth: list[set[str]], vocabulary: set[str]) -> dict:
+    """Split the in-vocabulary errors the cleanup adds into two kinds.
+
+    Cleanup moves a name from outside the vocabulary to inside it, so an error
+    that was already being counted outside reappears inside. That is a property
+    of the buckets, not a new mistake. An error whose source spelling was
+    correct, or absent, before is a new mistake and is reported separately.
+    """
+    vocabulary_keys = {comparison_key(name) for name in vocabulary}
+    migrated: Counter[str] = Counter()
+    introduced: Counter[str] = Counter()
+    lost: Counter[str] = Counter()
+    for guess_before, guess_after, origin, gold in zip(before, after, origins, truth):
+        gold_keys = {comparison_key(name) for name in gold}
+        inside_before = {comparison_key(name) for name in guess_before} & vocabulary_keys
+        inside_after = {comparison_key(name) for name in guess_after} & vocabulary_keys
+        origin_by_key = {comparison_key(name): source for name, source in origin.items()}
+        for key in (inside_after - inside_before) - gold_keys:
+            source = origin_by_key.get(key, key)
+            source_key = comparison_key(source)
+            was_outside_error = source_key not in vocabulary_keys and source_key not in gold_keys
+            (migrated if was_outside_error else introduced)[f"{key} <- {source}"] += 1
+        for key in (inside_before - inside_after) & gold_keys:
+            lost[key] += 1
+    total = sum(migrated.values()) + sum(introduced.values())
+    return {
+        "new_in_vocabulary_errors": total,
+        "migrated_from_outside_bucket": sum(migrated.values()),
+        "newly_introduced": sum(introduced.values()),
+        "migrated_share": round(sum(migrated.values()) / total, 4) if total else 0.0,
+        "correct_names_lost": sum(lost.values()),
+        "migrated_top": [{"mapping": name, "count": count} for name, count in migrated.most_common(15)],
+        "newly_introduced_top": [{"mapping": name, "count": count} for name, count in introduced.most_common(15)],
+        "note": (
+            "A migrated error was already counted in the outside_vocabulary bucket before cleanup, "
+            "where its precision is structurally near zero, so it lowers inside_vocabulary precision "
+            "without the cleanup having made a new mistake."
+        ),
+    }
 
 
 def main() -> int:
@@ -109,6 +155,7 @@ def main() -> int:
     before = [{candidate.name for candidate in extract_candidates(row.get("raw_text") or "", stopwords, korean)}
               for row in postings]
     after = [set(row["agent_techs"]) for row in cleaned_rows]
+    origins = [row.get("agent_origin", {}) for row in cleaned_rows]
     truth = [{str(item).strip() for item in (row.get("final_techs") or []) if str(item).strip()} for row in postings]
 
     experiments = {}
@@ -165,6 +212,7 @@ def main() -> int:
             "before_cleanup": score(before, truth, vocabulary),
             "after_agent": score(after, truth, vocabulary),
         },
+        "in_vocabulary_error_breakdown": bucket_migration(before, after, origins, truth, vocabulary),
         "evaluation_bias_note": (
             "Standard names come from final_techs and final_techs is the ground truth here, so the "
             "inside_vocabulary figures are structurally favourable. Read outside_vocabulary and the "

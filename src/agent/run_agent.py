@@ -118,20 +118,27 @@ def main() -> int:
     with args.cleaned_output.open("w", encoding="utf-8") as handle:
         for row, candidates in zip(postings, extracted):
             cleaned: list[str] = []
+            # Which spelling each cleaned name came from, so the comparison can
+            # tell a genuinely new error from one that only changed bucket.
+            origin: dict[str, str] = {}
             for candidate in candidates:
                 confirmed = memory.lookup_confirmed(candidate.name)
                 if confirmed:
                     cleaned.append(confirmed)
+                    origin.setdefault(confirmed, candidate.name)
                     continue
                 record = mapping.get(lookup_key(candidate.name))
                 if record is None:
                     cleaned.append(candidate.name)
+                    origin.setdefault(candidate.name, candidate.name)
                 elif record["decision"] == "canonical" and record["canonical"]:
                     cleaned.append(record["canonical"])
+                    origin.setdefault(record["canonical"], candidate.name)
                 elif record["decision"] == "not_a_technology":
                     dropped[candidate.name] += 1
                 else:
                     cleaned.append(candidate.name)
+                    origin.setdefault(candidate.name, candidate.name)
             handle.write(json.dumps({
                 "source": row.get("source"),
                 "job_id": row.get("job_id"),
@@ -141,6 +148,7 @@ def main() -> int:
                 "entry_eligible": row.get("entry_eligible"),
                 "final_techs": row.get("final_techs"),
                 "agent_techs": sorted(dict.fromkeys(cleaned)),
+                "agent_origin": {name: origin[name] for name in sorted(dict.fromkeys(cleaned))},
             }, ensure_ascii=False) + "\n")
 
     cache.save(cache_path)

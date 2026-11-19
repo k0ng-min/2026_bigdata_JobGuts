@@ -3,25 +3,19 @@
   "basis": {
     "posting_count": 17796,
     "minimum_occurrences": 89,
-    "candidates_considered": 608
+    "candidates_considered": 607
   },
   "totals": {
     "resolved_by_dictionary": 145,
-    "needs_agent_judgement": 463,
-    "resolved_occurrence_share": 0.4246,
-    "review_occurrence_share": 0.5754
+    "needs_agent_judgement": 462,
+    "resolved_occurrence_share": 0.4204,
+    "review_occurrence_share": 0.5796
   },
   "candidates": [
     {
       "name": "API",
-      "count": 3770,
-      "section_count": 953,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "D",
-      "count": 2729,
-      "section_count": 177,
+      "count": 3769,
+      "section_count": 952,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -32,7 +26,7 @@
     },
     {
       "name": "SW",
-      "count": 2335,
+      "count": 2333,
       "section_count": 159,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -56,13 +50,19 @@
     },
     {
       "name": "DB",
-      "count": 1927,
+      "count": 1926,
       "section_count": 262,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
+      "name": "R&D",
+      "count": 1767,
+      "section_count": 57,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
       "name": "PL",
-      "count": 1695,
+      "count": 1692,
       "section_count": 29,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -74,7 +74,7 @@
     },
     {
       "name": "K",
-      "count": 1417,
+      "count": 1414,
       "section_count": 2,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -98,8 +98,14 @@
     },
     {
       "name": "UI",
-      "count": 1219,
+      "count": 1216,
       "section_count": 151,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "D",
+      "count": 1184,
+      "section_count": 122,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -122,7 +128,7 @@
     },
     {
       "name": "Cloud",
-      "count": 1123,
+      "count": 1122,
       "section_count": 253,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -134,7 +140,7 @@
     },
     {
       "name": "Data",
-      "count": 1062,
+      "count": 1054,
       "section_count": 136,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -152,7 +158,7 @@
     },
     {
       "name": "QA",
-      "count": 911,
+      "count": 910,
       "section_count": 36,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -211,15 +217,15 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "UX",
-      "count": 708,
-      "section_count": 44,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "MT",
       "count": 707,
       "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "UX",
+      "count": 705,
+      "section_count": 44,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -259,12 +265,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "B",
-      "count": 645,
-      "section_count": 78,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "OJT",
       "count": 632,
       "section_count": 29,
@@ -284,8 +284,8 @@
     },
     {
       "name": "MS",
-      "count": 604,
-      "section_count": 37,
+      "count": 601,
+      "section_count": 35,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -316,6 +316,12 @@
       "name": "APP",
       "count": 533,
       "section_count": 54,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "B",
+      "count": 506,
+      "section_count": 74,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -368,7 +374,7 @@
     },
     {
       "name": "HW",
-      "count": 414,
+      "count": 412,
       "section_count": 56,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -445,15 +451,15 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "KT",
-      "count": 345,
-      "section_count": 4,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "WEB",
       "count": 344,
       "section_count": 28,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "KT",
+      "count": 343,
+      "section_count": 4,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -571,12 +577,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "F",
-      "count": 292,
-      "section_count": 19,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "ript",
       "count": 290,
       "section_count": 56,
@@ -631,27 +631,27 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "DX",
-      "count": 274,
-      "section_count": 9,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "ISO",
       "count": 274,
       "section_count": 19,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "CAD",
+      "name": "DX",
       "count": 270,
-      "section_count": 39,
+      "section_count": 9,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
       "name": "Studio",
       "count": 269,
       "section_count": 68,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "CAD",
+      "count": 269,
+      "section_count": 39,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -688,6 +688,12 @@
       "name": "Unix",
       "count": 257,
       "section_count": 74,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "recruit",
+      "count": 254,
+      "section_count": 3,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -763,12 +769,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "recruit",
-      "count": 238,
-      "section_count": 1,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "Agentic",
       "count": 236,
       "section_count": 16,
@@ -811,15 +811,15 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "Digital",
-      "count": 228,
-      "section_count": 18,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "ECS",
       "count": 227,
       "section_count": 76,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Digital",
+      "count": 227,
+      "section_count": 18,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -886,12 +886,6 @@
       "name": "Physical",
       "count": 207,
       "section_count": 19,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "M",
-      "count": 206,
-      "section_count": 3,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -997,12 +991,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "O",
-      "count": 189,
-      "section_count": 17,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "Edge",
       "count": 188,
       "section_count": 23,
@@ -1063,12 +1051,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "S",
-      "count": 183,
-      "section_count": 9,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "km",
       "count": 182,
       "section_count": 0,
@@ -1084,6 +1066,12 @@
       "name": "Analytics",
       "count": 180,
       "section_count": 34,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "F",
+      "count": 180,
+      "section_count": 17,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -1291,6 +1279,18 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
+      "name": "O",
+      "count": 156,
+      "section_count": 17,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "M",
+      "count": 155,
+      "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
       "name": "I2C",
       "count": 154,
       "section_count": 28,
@@ -1322,7 +1322,7 @@
     },
     {
       "name": "Y",
-      "count": 151,
+      "count": 150,
       "section_count": 1,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -1585,12 +1585,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "P",
-      "count": 133,
-      "section_count": 9,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "BigQuery",
       "count": 132,
       "section_count": 23,
@@ -1606,12 +1600,6 @@
       "name": "NPU",
       "count": 131,
       "section_count": 22,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "L",
-      "count": 131,
-      "section_count": 1,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -1651,6 +1639,12 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
+      "name": "S",
+      "count": 128,
+      "section_count": 4,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
       "name": "NH",
       "count": 128,
       "section_count": 5,
@@ -1659,12 +1653,6 @@
     {
       "name": "TOWER",
       "count": 127,
-      "section_count": 5,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "Z",
-      "count": 126,
       "section_count": 5,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
@@ -1684,6 +1672,12 @@
       "name": "Innovation",
       "count": 126,
       "section_count": 3,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "Z",
+      "count": 125,
+      "section_count": 5,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -2161,6 +2155,12 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
+      "name": "L",
+      "count": 107,
+      "section_count": 1,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
       "name": "NHN",
       "count": 106,
       "section_count": 19,
@@ -2170,12 +2170,6 @@
       "name": "jQuery",
       "count": 106,
       "section_count": 34,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "VC",
-      "count": 106,
-      "section_count": 2,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -2254,6 +2248,12 @@
       "name": "OpenSearch",
       "count": 104,
       "section_count": 29,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "VC",
+      "count": 104,
+      "section_count": 2,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -2386,12 +2386,6 @@
       "name": "PADS",
       "count": 99,
       "section_count": 17,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
-      "name": "H",
-      "count": 99,
-      "section_count": 3,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
@@ -2599,12 +2593,6 @@
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {
-      "name": "OOP",
-      "count": 93,
-      "section_count": 15,
-      "reason": "no standard name in the final_techs vocabulary matches this spelling"
-    },
-    {
       "name": "Collaboration",
       "count": 93,
       "section_count": 27,
@@ -2632,6 +2620,12 @@
       "name": "Function",
       "count": 93,
       "section_count": 7,
+      "reason": "no standard name in the final_techs vocabulary matches this spelling"
+    },
+    {
+      "name": "OOP",
+      "count": 92,
+      "section_count": 15,
       "reason": "no standard name in the final_techs vocabulary matches this spelling"
     },
     {

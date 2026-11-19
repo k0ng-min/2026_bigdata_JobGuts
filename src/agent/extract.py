@@ -9,8 +9,9 @@ Three defects are corrected here:
 
 * symbols that belong to a name are kept, so ``C++`` and ``C#`` stay distinct
   from ``C`` instead of collapsing into one item;
-* a hyphenated or slashed name is not blindly split, so ``Wi-Fi`` does not
-  become ``Wi`` plus ``Fi`` and ``CI/CD`` does not become ``CI`` plus ``CD``;
+* a name joined by a hyphen, slash, ampersand or underscore is not blindly
+  split, so ``Wi-Fi`` does not become ``Wi`` plus ``Fi``, ``CI/CD`` does not
+  become ``CI`` plus ``CD``, and ``R&D`` does not become ``R`` plus ``D``;
 * a compound and its own fragments are never emitted together, because two
   strings that co-occur by construction produce association rules with
   interest near 1 that describe the tokenizer rather than the job market.
@@ -22,8 +23,14 @@ alike and without consulting any vocabulary:
     otherwise                                              ->  emit the compound
 
 ``HTML/CSS`` therefore yields ``HTML`` and ``CSS``, while ``Wi-Fi``, ``CI/CD``,
-``TCP/IP`` and ``Objective-C`` stay whole. Keeping ``Objective-C`` whole also
-stops it from inflating the count of ``C``.
+``TCP/IP``, ``R&D`` and ``Objective-C`` stay whole. Keeping ``Objective-C``
+whole also stops it from inflating the count of ``C``, and keeping ``R&D``
+whole stops it from inflating ``R``, which is a real language, and ``D``.
+
+Only separators that join one name are treated this way. A colon, a comma, a
+tilde, a parenthesis and the Korean middle dot separate different things in
+these postings (times, number groups, ranges, lists), so splitting on them is
+correct and they are left alone.
 
 Space-separated names such as ``Spring Boot`` are *not* assembled. Their
 boundaries cannot be found without a vocabulary, and guessing them produced
@@ -49,7 +56,10 @@ from pathlib import Path
 # A technology token: optional leading dot (.NET), then letters, digits and the
 # symbols that belong to names. Internal dots and hyphens join the token instead
 # of ending it; a trailing dot or hyphen is left out of the match.
-_CORE = r"\.?[A-Za-z][A-Za-z0-9#+]*(?:[.\-][A-Za-z0-9#+]+)*"
+#: Separators that join a single name rather than divide two of them.
+#: The en and em dashes are included because postings use them as hyphens.
+_JOINERS = ".-&_\u2013\u2014"
+_CORE = r"\.?[A-Za-z][A-Za-z0-9#+]*(?:[.\-&_\u2013\u2014][A-Za-z0-9#+]+)*"
 _TOKEN_RE = re.compile(_CORE)
 _SLASH_RE = re.compile(rf"{_CORE}(?:/{_CORE})+")
 
@@ -134,10 +144,11 @@ def _acceptable(name: str, stopwords: frozenset[str]) -> bool:
 def split_compound(token: str) -> tuple[str, ...]:
     """Return either the parts of a compound or the compound itself, never both.
 
-    Slashes are resolved before hyphens, and the rule is applied again to each
-    slash part so that ``Java/Objective-C`` keeps ``Objective-C`` intact.
+    Separators are resolved outermost first, and the rule is applied again to
+    each part, so ``Java/Objective-C`` keeps ``Objective-C`` intact and
+    ``AI&ML/Data`` keeps ``AI&ML``.
     """
-    for separator in ("/", "-"):
+    for separator in ("/", "&", "_", "\u2013", "\u2014", "-"):
         if separator not in token:
             continue
         parts = [part for part in token.split(separator) if part]

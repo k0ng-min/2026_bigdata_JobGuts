@@ -77,7 +77,7 @@
           "spelling": "AI",
           "rule": "exact",
           "occurrences": 10773,
-          "section_occurrences": 995
+          "section_occurrences": 993
         },
         {
           "spelling": "인공지능",
@@ -310,8 +310,8 @@
         {
           "spelling": "C",
           "rule": "exact",
-          "occurrences": 1312,
-          "section_occurrences": 380
+          "occurrences": 1217,
+          "section_occurrences": 379
         }
       ]
     },
@@ -1254,7 +1254,7 @@
           "spelling": "LLM",
           "rule": "exact",
           "occurrences": 1957,
-          "section_occurrences": 253
+          "section_occurrences": 252
         },
         {
           "spelling": "대규모 언어모델",
@@ -1361,7 +1361,7 @@
         {
           "spelling": "ML",
           "rule": "exact",
-          "occurrences": 505,
+          "occurrences": 502,
           "section_occurrences": 43
         },
         {
@@ -1393,7 +1393,7 @@
         {
           "spelling": "MLflow",
           "rule": "exact",
-          "occurrences": 111,
+          "occurrences": 112,
           "section_occurrences": 25
         },
         {
@@ -1922,8 +1922,8 @@
         {
           "spelling": "R",
           "rule": "exact",
-          "occurrences": 1971,
-          "section_occurrences": 97
+          "occurrences": 153,
+          "section_occurrences": 35
         }
       ]
     },
@@ -2185,7 +2185,7 @@
         {
           "spelling": "SQL",
           "rule": "exact",
-          "occurrences": 1808,
+          "occurrences": 1807,
           "section_occurrences": 459
         }
       ]

@@ -11,9 +11,9 @@
   "experiments": {
     "before_cleanup": {
       "transaction_count": 17796,
-      "distinct_items": 27642,
-      "rule_count": 2757,
-      "distinct_antecedents": 434,
+      "distinct_items": 27788,
+      "rule_count": 2699,
+      "distinct_antecedents": 435,
       "top_rules": [
         {
           "antecedent": "GLORY",
@@ -34,7 +34,7 @@
           "consequent": "Y",
           "support": 0.007024,
           "confidence": 1.0,
-          "interest": 0.991515
+          "interest": 0.991571
         },
         {
           "antecedent": "GLORY",
@@ -89,16 +89,16 @@
     },
     "after_agent": {
       "transaction_count": 17796,
-      "distinct_items": 27219,
-      "rule_count": 2197,
-      "distinct_antecedents": 387,
+      "distinct_items": 27368,
+      "rule_count": 2191,
+      "distinct_antecedents": 390,
       "top_rules": [
         {
           "antecedent": "Cytiva",
           "consequent": "Y",
           "support": 0.007024,
           "confidence": 1.0,
-          "interest": 0.991515
+          "interest": 0.991571
         },
         {
           "antecedent": "Javasc",
@@ -246,80 +246,151 @@
   },
   "rule_overlap": {
     "before_cleanup__vs__after_agent": {
-      "shared": 1849,
-      "only_before_cleanup": 908,
-      "only_after_agent": 348,
-      "jaccard": 0.5955,
-      "top50_shared": 33
+      "shared": 1877,
+      "only_before_cleanup": 822,
+      "only_after_agent": 314,
+      "jaccard": 0.623,
+      "top50_shared": 34
     },
     "after_agent__vs__final_techs": {
       "shared": 563,
-      "only_after_agent": 1634,
+      "only_after_agent": 1628,
       "only_final_techs": 131,
-      "jaccard": 0.2418,
-      "top50_shared": 7
+      "jaccard": 0.2425,
+      "top50_shared": 6
     },
     "before_cleanup__vs__final_techs": {
       "shared": 486,
-      "only_before_cleanup": 2271,
+      "only_before_cleanup": 2213,
       "only_final_techs": 208,
-      "jaccard": 0.1639,
+      "jaccard": 0.1672,
       "top50_shared": 4
     }
   },
   "quality_against_final_techs": {
     "before_cleanup": {
       "overall": {
-        "precision": 0.1699,
-        "recall": 0.7518,
-        "f1": 0.2772,
-        "hit": 62100,
-        "predicted": 365427,
+        "precision": 0.1682,
+        "recall": 0.7464,
+        "f1": 0.2746,
+        "hit": 61654,
+        "predicted": 366478,
         "expected": 82604
       },
       "inside_vocabulary": {
-        "precision": 0.7375,
-        "recall": 0.7542,
-        "f1": 0.7458,
-        "hit": 61259,
-        "predicted": 83067,
+        "precision": 0.7494,
+        "recall": 0.7487,
+        "f1": 0.7491,
+        "hit": 60813,
+        "predicted": 81149,
         "expected": 81220
       },
       "outside_vocabulary": {
-        "precision": 0.003,
+        "precision": 0.0029,
         "recall": 0.6077,
         "f1": 0.0059,
         "hit": 841,
-        "predicted": 282360,
+        "predicted": 285329,
         "expected": 1384
       }
     },
     "after_agent": {
       "overall": {
-        "precision": 0.1947,
-        "recall": 0.8017,
-        "f1": 0.3133,
-        "hit": 66227,
-        "predicted": 340210,
+        "precision": 0.1934,
+        "recall": 0.7963,
+        "f1": 0.3112,
+        "hit": 65780,
+        "predicted": 340103,
         "expected": 82604
       },
       "inside_vocabulary": {
-        "precision": 0.71,
-        "recall": 0.805,
-        "f1": 0.7546,
-        "hit": 65386,
-        "predicted": 92088,
+        "precision": 0.7298,
+        "recall": 0.7995,
+        "f1": 0.7631,
+        "hit": 64939,
+        "predicted": 88986,
         "expected": 81220
       },
       "outside_vocabulary": {
-        "precision": 0.0034,
+        "precision": 0.0033,
         "recall": 0.6077,
         "f1": 0.0067,
         "hit": 841,
-        "predicted": 248122,
+        "predicted": 251117,
         "expected": 1384
       }
     }
+  },
+  "in_vocabulary_error_breakdown": {
+    "new_in_vocabulary_errors": 3711,
+    "migrated_from_outside_bucket": 3711,
+    "newly_introduced": 0,
+    "migrated_share": 1.0,
+    "correct_names_lost": 0,
+    "migrated_top": [
+      {
+        "mapping": "generative ai <- 생성형 AI",
+        "count": 849
+      },
+      {
+        "mapping": "deep learning <- 딥러닝",
+        "count": 437
+      },
+      {
+        "mapping": "vue.js <- Vue3",
+        "count": 364
+      },
+      {
+        "mapping": "ml <- 머신러닝",
+        "count": 277
+      },
+      {
+        "mapping": "computer vision <- 컴퓨터 비전",
+        "count": 190
+      },
+      {
+        "mapping": "mssql <- MS-SQL",
+        "count": 138
+      },
+      {
+        "mapping": "rest api <- RESTful",
+        "count": 117
+      },
+      {
+        "mapping": "nlp <- 자연어 처리",
+        "count": 97
+      },
+      {
+        "mapping": "notion <- 노션",
+        "count": 75
+      },
+      {
+        "mapping": "vue.js <- Vue",
+        "count": 64
+      },
+      {
+        "mapping": "android <- 안드로이드",
+        "count": 64
+      },
+      {
+        "mapping": "rdbms <- 관계형 데이터베이스",
+        "count": 61
+      },
+      {
+        "mapping": "generative ai <- GenAI",
+        "count": 61
+      },
+      {
+        "mapping": "computer vision <- 컴퓨터비전",
+        "count": 60
+      },
+      {
+        "mapping": "linux <- 리눅스",
+        "count": 58
+      }
+    ],
+    "newly_introduced_top": [],
+    "note": "A migrated error was already counted in the outside_vocabulary bucket before cleanup, where its precision is structurally near zero, so it lowers inside_vocabulary precision without the cleanup having made a new mistake."
   },
   "evaluation_bias_note": "Standard names come from final_techs and final_techs is the ground truth here, so the inside_vocabulary figures are structurally favourable. Read outside_vocabulary and the human review sheet alongside them."
 }

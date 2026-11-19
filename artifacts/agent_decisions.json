@@ -65,17 +65,6 @@
       "low_confidence": false
     },
     {
-      "name": "D",
-      "decision": "not_a_technology",
-      "canonical": null,
-      "confidence": 0.85,
-      "reason": "rule table: single letter with no technology meaning here",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "SI",
       "decision": "not_a_technology",
       "canonical": null,
@@ -164,17 +153,6 @@
       "low_confidence": false
     },
     {
-      "name": "R",
-      "decision": "canonical",
-      "canonical": "R",
-      "confidence": 1.0,
-      "reason": "confirmed dictionary entry",
-      "provider": "dictionary",
-      "is_mock": false,
-      "route": "dictionary",
-      "low_confidence": false
-    },
-    {
       "name": "ERP",
       "decision": "not_a_technology",
       "canonical": null,
@@ -227,6 +205,17 @@
       "provider": "dictionary",
       "is_mock": false,
       "route": "dictionary",
+      "low_confidence": false
+    },
+    {
+      "name": "R&D",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
@@ -329,17 +318,6 @@
       "low_confidence": false
     },
     {
-      "name": "C",
-      "decision": "canonical",
-      "canonical": "C",
-      "confidence": 1.0,
-      "reason": "confirmed dictionary entry",
-      "provider": "dictionary",
-      "is_mock": false,
-      "route": "dictionary",
-      "low_confidence": false
-    },
-    {
       "name": "MySQL",
       "decision": "canonical",
       "canonical": "MySQL",
@@ -384,11 +362,33 @@
       "low_confidence": false
     },
     {
+      "name": "C",
+      "decision": "canonical",
+      "canonical": "C",
+      "confidence": 1.0,
+      "reason": "confirmed dictionary entry",
+      "provider": "dictionary",
+      "is_mock": false,
+      "route": "dictionary",
+      "low_confidence": false
+    },
+    {
       "name": "UI",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
       "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "D",
+      "decision": "not_a_technology",
+      "canonical": null,
+      "confidence": 0.85,
+      "reason": "rule table: single letter with no technology meaning here",
       "provider": "fake",
       "is_mock": true,
       "route": "model",
@@ -407,14 +407,14 @@
     },
     {
       "name": "Boot",
-      "decision": "canonical",
-      "canonical": "Spring Boot",
-      "confidence": 0.55,
-      "reason": "rule table: known spelling",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.3,
+      "reason": "rule table: only means Spring Boot when Spring is nearby; that is a context judgement",
       "provider": "fake",
       "is_mock": true,
       "route": "model",
-      "low_confidence": true
+      "low_confidence": false
     },
     {
       "name": "SaaS",
@@ -780,7 +780,7 @@
       "low_confidence": false
     },
     {
-      "name": "UX",
+      "name": "MT",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -791,7 +791,7 @@
       "low_confidence": false
     },
     {
-      "name": "MT",
+      "name": "UX",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -928,17 +928,6 @@
       "canonical": null,
       "confidence": 0.0,
       "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
-      "name": "B",
-      "decision": "not_a_technology",
-      "canonical": null,
-      "confidence": 0.85,
-      "reason": "rule table: single letter with no technology meaning here",
       "provider": "fake",
       "is_mock": true,
       "route": "model",
@@ -1151,6 +1140,17 @@
       "provider": "dictionary",
       "is_mock": false,
       "route": "dictionary",
+      "low_confidence": false
+    },
+    {
+      "name": "B",
+      "decision": "not_a_technology",
+      "canonical": null,
+      "confidence": 0.85,
+      "reason": "rule table: single letter with no technology meaning here",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
@@ -1550,17 +1550,6 @@
       "low_confidence": false
     },
     {
-      "name": "KT",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "WEB",
       "decision": "needs_review",
       "canonical": null,
@@ -1569,6 +1558,17 @@
       "provider": "fake",
       "is_mock": true,
       "route": "cache",
+      "low_confidence": false
+    },
+    {
+      "name": "KT",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
@@ -1825,17 +1825,6 @@
       "low_confidence": false
     },
     {
-      "name": "F",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "ript",
       "decision": "needs_review",
       "canonical": null,
@@ -1968,17 +1957,6 @@
       "low_confidence": false
     },
     {
-      "name": "DX",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "ISO",
       "decision": "needs_review",
       "canonical": null,
@@ -1998,6 +1976,17 @@
       "provider": "dictionary",
       "is_mock": false,
       "route": "dictionary",
+      "low_confidence": false
+    },
+    {
+      "name": "DX",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
@@ -2127,6 +2116,17 @@
       "canonical": null,
       "confidence": 0.88,
       "reason": "rule table: a named operating system family",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "recruit",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
       "provider": "fake",
       "is_mock": true,
       "route": "model",
@@ -2309,17 +2309,6 @@
       "low_confidence": false
     },
     {
-      "name": "recruit",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "Agentic",
       "decision": "needs_review",
       "canonical": null,
@@ -2430,7 +2419,7 @@
       "low_confidence": false
     },
     {
-      "name": "Digital",
+      "name": "EC2",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -2441,7 +2430,7 @@
       "low_confidence": false
     },
     {
-      "name": "EC2",
+      "name": "Digital",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -2607,17 +2596,6 @@
     },
     {
       "name": "Physical",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
-      "name": "M",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -2826,17 +2804,6 @@
       "low_confidence": false
     },
     {
-      "name": "O",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "Edge",
       "decision": "needs_review",
       "canonical": null,
@@ -2958,17 +2925,6 @@
       "low_confidence": false
     },
     {
-      "name": "S",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "km",
       "decision": "needs_review",
       "canonical": null,
@@ -2992,6 +2948,17 @@
     },
     {
       "name": "Analytics",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "F",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -3475,6 +3442,28 @@
       "low_confidence": false
     },
     {
+      "name": "O",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "M",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
       "name": "I2C",
       "decision": "needs_review",
       "canonical": null,
@@ -3505,6 +3494,17 @@
       "provider": "fake",
       "is_mock": true,
       "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "R",
+      "decision": "canonical",
+      "canonical": "R",
+      "confidence": 1.0,
+      "reason": "confirmed dictionary entry",
+      "provider": "dictionary",
+      "is_mock": false,
+      "route": "dictionary",
       "low_confidence": false
     },
     {
@@ -3541,17 +3541,6 @@
       "low_confidence": false
     },
     {
-      "name": "Y",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "MyBatis",
       "decision": "canonical",
       "canonical": "MyBatis",
@@ -3560,6 +3549,17 @@
       "provider": "dictionary",
       "is_mock": false,
       "route": "dictionary",
+      "low_confidence": false
+    },
+    {
+      "name": "Y",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
@@ -4102,17 +4102,6 @@
       "low_confidence": false
     },
     {
-      "name": "P",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "Robotics",
       "decision": "needs_review",
       "canonical": null,
@@ -4147,17 +4136,6 @@
     },
     {
       "name": "ASAP",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
-      "name": "L",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -4267,6 +4245,17 @@
       "low_confidence": false
     },
     {
+      "name": "S",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
       "name": "gRPC",
       "decision": "canonical",
       "canonical": "gRPC",
@@ -4344,17 +4333,6 @@
       "low_confidence": false
     },
     {
-      "name": "Z",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "Cytiva",
       "decision": "needs_review",
       "canonical": null,
@@ -4389,6 +4367,17 @@
     },
     {
       "name": "Storage",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
+      "name": "Z",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -5015,6 +5004,17 @@
       "low_confidence": false
     },
     {
+      "name": "MLflow",
+      "decision": "canonical",
+      "canonical": "MLflow",
+      "confidence": 1.0,
+      "reason": "confirmed dictionary entry",
+      "provider": "dictionary",
+      "is_mock": false,
+      "route": "dictionary",
+      "low_confidence": false
+    },
+    {
       "name": "Perception",
       "decision": "needs_review",
       "canonical": null,
@@ -5056,17 +5056,6 @@
       "provider": "fake",
       "is_mock": true,
       "route": "model",
-      "low_confidence": false
-    },
-    {
-      "name": "MLflow",
-      "decision": "canonical",
-      "canonical": "MLflow",
-      "confidence": 1.0,
-      "reason": "confirmed dictionary entry",
-      "provider": "dictionary",
-      "is_mock": false,
-      "route": "dictionary",
       "low_confidence": false
     },
     {
@@ -5356,6 +5345,17 @@
       "low_confidence": false
     },
     {
+      "name": "L",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
       "name": "M365",
       "decision": "needs_review",
       "canonical": null,
@@ -5423,17 +5423,6 @@
     },
     {
       "name": "Splunk",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
-      "name": "VC",
       "decision": "needs_review",
       "canonical": null,
       "confidence": 0.0,
@@ -5642,6 +5631,17 @@
       "low_confidence": false
     },
     {
+      "name": "VC",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
+      "low_confidence": false
+    },
+    {
       "name": "Javasc",
       "decision": "needs_review",
       "canonical": null,
@@ -5840,17 +5840,6 @@
       "low_confidence": false
     },
     {
-      "name": "H",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "PADS",
       "decision": "needs_review",
       "canonical": null,
@@ -5874,10 +5863,10 @@
     },
     {
       "name": "boot",
-      "decision": "canonical",
-      "canonical": "Spring Boot",
-      "confidence": 0.55,
-      "reason": "rule table: known spelling",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.3,
+      "reason": "rule table: only means Spring Boot when Spring is nearby; that is a context judgement",
       "provider": "fake",
       "is_mock": true,
       "route": "cache",
@@ -6335,17 +6324,6 @@
       "low_confidence": false
     },
     {
-      "name": "OOP",
-      "decision": "needs_review",
-      "canonical": null,
-      "confidence": 0.0,
-      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
-      "provider": "fake",
-      "is_mock": true,
-      "route": "model",
-      "low_confidence": false
-    },
-    {
       "name": "TikTok",
       "decision": "needs_review",
       "canonical": null,
@@ -6387,6 +6365,17 @@
       "provider": "dictionary",
       "is_mock": false,
       "route": "cache",
+      "low_confidence": false
+    },
+    {
+      "name": "OOP",
+      "decision": "needs_review",
+      "canonical": null,
+      "confidence": 0.0,
+      "reason": "rule table has no entry for this spelling; the fake judge never guesses",
+      "provider": "fake",
+      "is_mock": true,
+      "route": "model",
       "low_confidence": false
     },
     {
