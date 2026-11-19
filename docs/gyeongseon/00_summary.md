@@ -229,46 +229,99 @@ git status --short -- artifacts/ configs/
 현재는 **fake 판단기**가 기본이고, 실제 모델은 연결되어 있지 않습니다.
 `src/llm/glm_provider.py`는 준비되어 있으며 `--provider glm` 일 때만 생성됩니다.
 
-## 5-1. 키 설정
+## 5-1. 키와 주소·모델 설정
+
+결제 상품은 **Z.ai GLM Coding Plan Pro** 입니다.
 
 ```bash
 cp .env.example .env
-# .env 를 열어 GLM_API_KEY 에 값을 넣습니다
+# .env 를 열어 세 값을 채웁니다
 ```
 
 ```
 GLM_API_KEY=<발급받은 키>
-GLM_BASE_URL=        # 비워 두면 기본값
-GLM_MODEL=           # 비워 두면 기본값
+GLM_BASE_URL=https://api.z.ai/api/coding/paas/v4
+GLM_MODEL=GLM-5.3-Flash
+```
+
+| 변수 | 값 | 비고 |
+| --- | --- | --- |
+| `GLM_API_KEY` | 발급받은 키 | 커밋 금지 |
+| `GLM_BASE_URL` | `https://api.z.ai/api/coding/paas/v4` | **API 루트만** 적습니다. 코드가 `/chat/completions` 를 붙입니다 |
+| `GLM_MODEL` | `GLM-5.3` 또는 `GLM-5.3-Flash` | 표본 실행은 빠르고 싼 `GLM-5.3-Flash` 로 시작하는 것을 권합니다 |
+
+**세 값 모두 기본값이 없습니다.** 코드에 주소나 모델을 박아 두면 팀이 고르지 않은 곳으로
+요청이 나가므로, 값이 비어 있으면 변수 이름을 알려 주고 멈춥니다.
+
+```
+GLM_BASE_URL is not set, so the GLM provider cannot run.
+  It has no default on purpose: a hardcoded value would send the request
+  somewhere the team did not choose.
+  Set GLM_BASE_URL to the API root, for example https://api.z.ai/api/coding/paas/v4
+  (the code appends /chat/completions itself).
+  ...
+  To run without a model, use --provider fake.
 ```
 
 | 규칙 | 내용 |
 | --- | --- |
-| `.env` 는 **커밋하지 않습니다** | `.gitignore`에 포함. `.env.example`만 커밋되어 있고 값은 비어 있음 |
-| 셸 export가 우선 | `export GLM_API_KEY=...` 가 `.env` 값을 덮습니다 |
-| 키 없이 실행하면 | **생성 시점에 즉시 중단**하고 설정 방법을 안내합니다 |
+| `.env` 는 **커밋하지 않습니다** | `.gitignore`에 포함. `.env.example` 만 커밋되어 있고 값은 모두 비어 있음 |
+| 셸 export 가 우선 | `export GLM_API_KEY=...` 가 `.env` 값을 덮습니다 |
+| 엔드포인트 결합은 한 곳 | `src/llm/glm_provider.py` 의 `chat_endpoint()`. 루트 뒤에 `/chat/completions` 를 붙이고, 이미 붙어 있으면 중복하지 않습니다 |
+
+## 5-2. 연결 확인 (요청 1회)
+
+표본 실행 전에 **한 번** 돌려 설정 오류를 한 번의 호출로 드러냅니다.
+
+```bash
+.venv/bin/python -m src.agent.check_glm
+```
+
+성공하면 이렇게 나옵니다. **키는 출력하지 않습니다** — 길이와 끝 두 글자만 보여 줍니다.
 
 ```
-GLM_API_KEY is not set, so the GLM provider cannot run.
-  Set it for this shell:  export GLM_API_KEY=<your key>
-  or copy .env.example to .env and fill in GLM_API_KEY.
-  .env is excluded from version control; never commit a key.
-  To run without a model, use --provider fake.
+GLM connection check — sends exactly one short request.
+  GLM_API_KEY: set (length 42, ends with ...7f)
+  GLM_BASE_URL: https://api.z.ai/api/coding/paas/v4
+  endpoint: https://api.z.ai/api/coding/paas/v4/chat/completions
+  GLM_MODEL: GLM-5.3-Flash
+  timeout: 20s
+
+Sending one request...
+
+OK
+  provider: glm
+  is_mock: False
+  reply: 'ok'
 ```
 
-## 5-2. 표본부터 돌리는 순서 (비용 관리)
+실패하면 **원인 유형별로** 알려 줍니다. 유형마다 고치는 곳이 다릅니다.
+
+| 유형 | 언제 | 고칠 곳 |
+| --- | --- | --- |
+| `configuration` | 세 값 중 하나가 비어 있음 | `.env` |
+| `authentication` | 401 / 403 | `GLM_API_KEY` |
+| `address` | 404 | `GLM_BASE_URL` (루트만 적었는지) |
+| `model or request` | 400 / 422 | `GLM_MODEL` |
+| `rate limit` | 429 | 잠시 후 재시도 |
+| `network` | 연결 실패 | 네트워크·호스트명 |
+| `response` | 응답 모양이 예상과 다름 | 모델 응답 형식 |
+| `server` | 그 밖의 HTTP 오류 | 서버 상태 |
+
+## 5-3. 표본부터 돌리는 순서 (비용 관리)
 
 전체를 바로 돌리지 않습니다. [03](03_agent_design.md) 9-3절의 순서입니다.
 
 | 순서 | 명령 | 예상 호출 | 통과 조건 |
 | --- | --- | ---: | --- |
+| 0 | `python -m src.agent.check_glm` | **1** | `OK` 출력 |
 | 1 | `run_agent --provider fake --limit 300` | 0 | 네 경로 모두 1건 이상, 두 번 돌려 결과 동일 |
-| 2 | `run_agent --provider glm --limit 187` | 약 100~200 | 판단 품질을 사람이 50건 직접 확인 |
-| 3 | `run_agent --provider glm --limit 939` | 약 400~600 | 1단계와 지표 차이 5%p 이내 |
-| 4 | `run_agent --provider glm` | **약 447** | 최종 산출물 |
+| 2 | `run_agent --provider glm --limit 187` (1%) | 약 100~200 | 판단 품질을 사람이 50건 직접 확인 |
+| 3 | `run_agent --provider glm --limit 939` (5%) | 약 400~600 | 2단계와 지표 차이 5%p 이내 |
+| 4 | `run_agent --provider glm` (전체) | **약 447** | 최종 산출물 |
 
 ```bash
-# 2단계 예시
+# 2단계 예시 — 기존 산출물을 덮지 않도록 별도 경로에 씁니다
 .venv/bin/python -m src.agent.run_agent --provider glm --limit 187 \
   --artifact-dir artifacts/glm_sample --cleaned-output data/processed/postings_glm_sample.jsonl
 ```
@@ -276,7 +329,7 @@ GLM_API_KEY is not set, so the GLM provider cannot run.
 2단계에서 품질이 목표에 크게 못 미치면 **3·4단계로 넘어가지 않습니다.**
 프롬프트(`src/agent/judge.py`)나 임계값(`configs/agent.json`)을 고치고 2단계를 다시 돌립니다.
 
-## 5-3. 비용 안전장치 (이미 들어 있음)
+### 비용 안전장치 (이미 들어 있음)
 
 | 장치 | 설정 | 효과 |
 | --- | --- | --- |

@@ -6,10 +6,20 @@ ways: nothing here runs at import time, the credential is read from the
 environment at call time and never from a file in the repository, and the agent
 only constructs it when ``--provider glm`` is passed explicitly.
 
-The credential comes from the ``GLM_API_KEY`` environment variable. A local
-``.env`` may set it; ``.env`` is excluded from version control and only
-``.env.example`` is committed. No third-party package is required: the request
-is made with the standard library.
+Three settings are required and none has a default: ``GLM_API_KEY``,
+``GLM_BASE_URL`` and ``GLM_MODEL``. Hardcoding a vendor address or a model name
+would silently send a request somewhere the team did not choose, so a missing
+value stops the run with a message naming the variable. A local ``.env`` may
+set them; ``.env`` is excluded from version control and only ``.env.example``
+is committed.
+
+The chat endpoint is assembled in one place, :func:`chat_endpoint`, which
+appends ``/chat/completions`` to the configured base URL. Callers therefore
+always set ``GLM_BASE_URL`` to the API root, never to a full endpoint, and a
+base URL that already ends in the path is accepted rather than doubled.
+
+No third-party package is required: the request is made with the standard
+library.
 """
 
 from __future__ import annotations
@@ -26,13 +36,29 @@ PROVIDER_NAME = "glm"
 API_KEY_VARIABLE = "GLM_API_KEY"
 BASE_URL_VARIABLE = "GLM_BASE_URL"
 MODEL_VARIABLE = "GLM_MODEL"
-DEFAULT_BASE_URL = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
-DEFAULT_MODEL = "glm-4-plus"
+#: Appended to the configured base URL; the only place this path is written.
+CHAT_COMPLETIONS_PATH = "/chat/completions"
 DEFAULT_TIMEOUT_SECONDS = 30
+
+#: Shown in the error message so the reader does not have to find the docs.
+EXAMPLE_BASE_URL = "https://api.z.ai/api/coding/paas/v4"
+EXAMPLE_MODELS = ("GLM-5.3", "GLM-5.3-Flash")
 
 
 class MissingCredentialError(RuntimeError):
     """Raised when the provider is asked to run without a credential."""
+
+
+class MissingSettingError(RuntimeError):
+    """Raised when a required GLM setting other than the key is absent."""
+
+
+def chat_endpoint(base_url: str) -> str:
+    """Return the chat completions URL for a configured API root."""
+    root = base_url.strip().rstrip("/")
+    if root.endswith(CHAT_COMPLETIONS_PATH):
+        return root
+    return root + CHAT_COMPLETIONS_PATH
 
 
 def load_dotenv(path: str | Path = ".env") -> None:
@@ -69,6 +95,28 @@ def read_api_key(dotenv_path: str | Path = ".env") -> str:
     return key
 
 
+def read_setting(variable: str, dotenv_path: str | Path = ".env") -> str:
+    """Read a required setting that has no default."""
+    load_dotenv(dotenv_path)
+    value = os.environ.get(variable, "").strip()
+    if value:
+        return value
+    hint = {
+        BASE_URL_VARIABLE: f"the API root, for example {EXAMPLE_BASE_URL} "
+                           f"(the code appends {CHAT_COMPLETIONS_PATH} itself)",
+        MODEL_VARIABLE: f"a model name, for example {' or '.join(EXAMPLE_MODELS)}",
+    }.get(variable, "a value")
+    raise MissingSettingError(
+        f"{variable} is not set, so the GLM provider cannot run.\n"
+        f"  It has no default on purpose: a hardcoded value would send the request\n"
+        f"  somewhere the team did not choose.\n"
+        f"  Set {variable} to {hint}.\n"
+        f"  Set it for this shell:  export {variable}=<value>\n"
+        f"  or copy .env.example to .env and fill in {variable}.\n"
+        f"  To run without a model, use --provider fake."
+    )
+
+
 class GLMProvider:
     """Calls GLM over HTTPS. Constructed only when the caller asks for it."""
 
@@ -83,11 +131,12 @@ class GLMProvider:
         timeout: int = DEFAULT_TIMEOUT_SECONDS,
         dotenv_path: str | Path = ".env",
     ) -> None:
-        # Reading the key here means constructing the provider is what fails
-        # when the credential is missing, before any candidate is processed.
+        # Reading the settings here means constructing the provider is what
+        # fails when one is missing, before any candidate is processed.
         self.api_key = api_key or read_api_key(dotenv_path)
-        self.base_url = base_url or os.environ.get(BASE_URL_VARIABLE, DEFAULT_BASE_URL)
-        self.model = model or os.environ.get(MODEL_VARIABLE, DEFAULT_MODEL)
+        self.base_url = base_url or read_setting(BASE_URL_VARIABLE, dotenv_path)
+        self.model = model or read_setting(MODEL_VARIABLE, dotenv_path)
+        self.endpoint = chat_endpoint(self.base_url)
         self.timeout = timeout
 
     def generate(self, request: LLMRequest) -> LLMResponse:
@@ -100,7 +149,7 @@ class GLMProvider:
             "temperature": float(request.context.get("temperature", 0.0)),
         }).encode("utf-8")
         http_request = urllib.request.Request(
-            self.base_url,
+            self.endpoint,
             data=payload,
             headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"},
             method="POST",

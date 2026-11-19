@@ -1,15 +1,35 @@
+import io
 import json
 import os
+import sys
 import tempfile
 import unittest
+import urllib.error
+import urllib.request
+from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import patch
+
+import src.llm.glm_provider
 
 from src.agent.fake_judge import FakeJudgeProvider
 from src.agent.judge import ModelJudge, build_request, parse_response
 from src.agent.judgement import DECISIONS, Judgement
 from src.llm.contracts import LLMResponse
-from src.llm.glm_provider import API_KEY_VARIABLE, GLMProvider, MissingCredentialError, load_dotenv
+from src.agent.check_glm import classify, redact
+from src.agent.check_glm import main as check_glm_main
+from src.llm.glm_provider import (
+    API_KEY_VARIABLE,
+    BASE_URL_VARIABLE,
+    EXAMPLE_BASE_URL,
+    EXAMPLE_MODELS,
+    MODEL_VARIABLE,
+    GLMProvider,
+    MissingCredentialError,
+    MissingSettingError,
+    chat_endpoint,
+    load_dotenv,
+)
 
 ALLOWED = {"JavaScript", "Java", "Python", "REST API", "Spring Boot"}
 
@@ -116,7 +136,8 @@ class GLMCredentialTests(unittest.TestCase):
         temp_dir = tempfile.TemporaryDirectory()
         self.addCleanup(temp_dir.cleanup)
         with patch.dict(os.environ, {}, clear=False):
-            os.environ.pop(API_KEY_VARIABLE, None)
+            for variable in (API_KEY_VARIABLE, BASE_URL_VARIABLE, MODEL_VARIABLE):
+                os.environ.pop(variable, None)
             with self.assertRaises(MissingCredentialError) as caught:
                 GLMProvider(dotenv_path=Path(temp_dir.name) / "absent.env")
 
@@ -129,10 +150,16 @@ class GLMCredentialTests(unittest.TestCase):
         temp_dir = tempfile.TemporaryDirectory()
         self.addCleanup(temp_dir.cleanup)
         dotenv = Path(temp_dir.name) / ".env"
-        dotenv.write_text(f'# comment\n{API_KEY_VARIABLE}="from-file"\n', encoding="utf-8")
+        dotenv.write_text(
+            f'# comment\n{API_KEY_VARIABLE}="from-file"\n'
+            f"{BASE_URL_VARIABLE}={EXAMPLE_BASE_URL}\n"
+            f"{MODEL_VARIABLE}={EXAMPLE_MODELS[0]}\n",
+            encoding="utf-8",
+        )
 
         with patch.dict(os.environ, {}, clear=False):
-            os.environ.pop(API_KEY_VARIABLE, None)
+            for variable in (API_KEY_VARIABLE, BASE_URL_VARIABLE, MODEL_VARIABLE):
+                os.environ.pop(variable, None)
             provider = GLMProvider(dotenv_path=dotenv)
             self.assertEqual(provider.api_key, "from-file")
 
@@ -174,3 +201,134 @@ class FakeJudgeAgreesWithTheCuratedExclusionsTests(unittest.TestCase):
         for spelling in self.curated["excluded_on_purpose"]:
             result = self.judge.judge(spelling, {})
             self.assertNotEqual(result.decision, "canonical", f"{spelling!r} is excluded on purpose")
+
+
+class GLMSettingsTests(unittest.TestCase):
+    """No vendor address or model name may be baked into the code."""
+
+    def setUp(self):
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        self.absent = Path(temp_dir.name) / "absent.env"
+
+    def _clear(self):
+        for variable in (API_KEY_VARIABLE, BASE_URL_VARIABLE, MODEL_VARIABLE):
+            os.environ.pop(variable, None)
+
+    def test_the_base_url_has_no_default(self):
+        with patch.dict(os.environ, {API_KEY_VARIABLE: "k"}, clear=False):
+            os.environ.pop(BASE_URL_VARIABLE, None)
+            os.environ.pop(MODEL_VARIABLE, None)
+            with self.assertRaises(MissingSettingError) as caught:
+                GLMProvider(dotenv_path=self.absent)
+        message = str(caught.exception)
+        self.assertIn(BASE_URL_VARIABLE, message)
+        self.assertIn("no default on purpose", message)
+        self.assertIn("--provider fake", message)
+
+    def test_the_model_has_no_default(self):
+        with patch.dict(os.environ, {API_KEY_VARIABLE: "k", BASE_URL_VARIABLE: EXAMPLE_BASE_URL}, clear=False):
+            os.environ.pop(MODEL_VARIABLE, None)
+            with self.assertRaises(MissingSettingError) as caught:
+                GLMProvider(dotenv_path=self.absent)
+        self.assertIn(MODEL_VARIABLE, str(caught.exception))
+
+    def test_no_vendor_host_or_model_is_written_in_the_source(self):
+        source = Path(src.llm.glm_provider.__file__).read_text(encoding="utf-8")
+        # The example constants are documentation; what must not exist is a
+        # fallback that would be used when the variable is unset.
+        self.assertNotIn("open.bigmodel.cn", source)
+        self.assertNotIn("glm-4-plus", source)
+        self.assertNotIn("DEFAULT_BASE_URL", source)
+        self.assertNotIn("DEFAULT_MODEL", source)
+
+    def test_the_chat_path_is_appended_in_exactly_one_place(self):
+        source = Path(src.llm.glm_provider.__file__).read_text(encoding="utf-8")
+        self.assertEqual(source.count('"/chat/completions"'), 1)
+
+    def test_the_endpoint_is_built_from_the_api_root(self):
+        self.assertEqual(chat_endpoint(EXAMPLE_BASE_URL), EXAMPLE_BASE_URL + "/chat/completions")
+        self.assertEqual(chat_endpoint(EXAMPLE_BASE_URL + "/"), EXAMPLE_BASE_URL + "/chat/completions")
+
+    def test_a_base_url_that_already_ends_in_the_path_is_not_doubled(self):
+        full = EXAMPLE_BASE_URL + "/chat/completions"
+        self.assertEqual(chat_endpoint(full), full)
+
+    def test_settings_come_from_dotenv_when_the_shell_has_none(self):
+        temp_dir = tempfile.TemporaryDirectory()
+        self.addCleanup(temp_dir.cleanup)
+        dotenv = Path(temp_dir.name) / ".env"
+        dotenv.write_text(
+            f"{API_KEY_VARIABLE}=key-from-file\n"
+            f"{BASE_URL_VARIABLE}={EXAMPLE_BASE_URL}\n"
+            f"{MODEL_VARIABLE}=GLM-5.3-Flash\n",
+            encoding="utf-8",
+        )
+        with patch.dict(os.environ, {}, clear=False):
+            self._clear()
+            provider = GLMProvider(dotenv_path=dotenv)
+
+        self.assertEqual(provider.model, "GLM-5.3-Flash")
+        self.assertEqual(provider.base_url, EXAMPLE_BASE_URL)
+        self.assertEqual(provider.endpoint, EXAMPLE_BASE_URL + "/chat/completions")
+
+
+class EnvExampleTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.root = Path(__file__).resolve().parents[1]
+        cls.example = (cls.root / ".env.example").read_text(encoding="utf-8")
+
+    def test_all_three_variables_are_listed_with_no_value(self):
+        for variable in (API_KEY_VARIABLE, BASE_URL_VARIABLE, MODEL_VARIABLE):
+            self.assertIn(f"{variable}=", self.example)
+            assigned = [line for line in self.example.splitlines() if line.startswith(f"{variable}=")]
+            self.assertEqual(assigned, [f"{variable}="], f"{variable} must ship without a value")
+
+    def test_the_documented_base_url_and_models_are_in_the_comments(self):
+        self.assertIn(EXAMPLE_BASE_URL, self.example)
+        for model in EXAMPLE_MODELS:
+            self.assertIn(model, self.example)
+
+    def test_the_example_says_the_base_url_is_a_root(self):
+        self.assertIn("appends /chat/completions", self.example)
+
+
+class CheckGlmTests(unittest.TestCase):
+    """The checker must be safe to read about without being run."""
+
+    def test_the_key_is_never_printed_in_full(self):
+        self.assertNotIn("secret-key-value", redact("secret-key-value"))
+        self.assertIn("length 16", redact("secret-key-value"))
+        self.assertIn("ue", redact("secret-key-value"))
+
+    def test_failures_are_classified_by_kind(self):
+        cases = {
+            MissingCredentialError("x"): "configuration",
+            MissingSettingError("x"): "configuration",
+            urllib.error.HTTPError("u", 401, "Unauthorized", {}, None): "authentication",
+            urllib.error.HTTPError("u", 404, "Not Found", {}, None): "address",
+            urllib.error.HTTPError("u", 429, "Too Many Requests", {}, None): "rate limit",
+            urllib.error.HTTPError("u", 400, "Bad Request", {}, None): "model or request",
+            urllib.error.HTTPError("u", 500, "Server Error", {}, None): "server",
+            urllib.error.URLError("no route"): "network",
+            RuntimeError("odd shape"): "response",
+        }
+        for error, expected in cases.items():
+            kind, advice = classify(error)
+            self.assertEqual(kind, expected, repr(error))
+            self.assertTrue(advice.strip(), repr(error))
+
+    def test_the_checker_stops_before_any_request_when_unconfigured(self):
+        with patch.dict(os.environ, {}, clear=False):
+            for variable in (API_KEY_VARIABLE, BASE_URL_VARIABLE, MODEL_VARIABLE):
+                os.environ.pop(variable, None)
+            argv = ["check_glm", "--dotenv", str(Path(tempfile.gettempdir()) / "definitely-absent.env")]
+            with (
+                patch.object(sys, "argv", argv),
+                patch.object(urllib.request, "urlopen") as opener,
+                redirect_stdout(io.StringIO()) as printed,
+            ):
+                self.assertEqual(check_glm_main(), 1)
+            opener.assert_not_called()
+            self.assertIn("FAILED (configuration)", printed.getvalue())
