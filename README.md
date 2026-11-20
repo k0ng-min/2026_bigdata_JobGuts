@@ -47,17 +47,21 @@ flowchart LR
 
 ## 실행 결과
 
+![JobGuts 로컬 추천 화면](docs/assets/local_ui_demo.png)
+
+*그림 1. 저장된 규칙과 근거 공고를 조회하는 로컬 화면. 사전 v2와 concept 제외 조건으로 다시 생성한 15,296개 트랜잭션, 670개 규칙, 150개 테스트 결과를 표시한다.*
+
 ![interest 기준 상위 연관규칙](docs/assets/top_rules_interest.png)
 
-*그림 1. `artifacts/week12_all_rules.json`의 정규화 규칙 670개 중 interest 상위 12개. 생성 조건: 최소 support 0.005, confidence 0.2, concept 범주 제외.*
+*그림 2. `artifacts/week12_all_rules.json`의 정규화 규칙 670개 중 interest 상위 12개. 생성 조건: 최소 support 0.005, confidence 0.2, concept 범주 제외.*
 
 ![support-confidence 분포](docs/assets/support_confidence_scatter.png)
 
-*그림 2. 같은 규칙의 support·confidence 분포. 색상은 interest를 나타낸다.*
+*그림 3. 같은 규칙의 support·confidence 분포. 색상은 interest를 나타낸다.*
 
 ![기술 연결 그래프](docs/assets/skill_graph_top_edges.png)
 
-*그림 3. `artifacts/week14_skill_graph.json`에서 interest 상위 60개 방향 규칙을 그린 그래프. 노드는 기술명, 화살표는 추천 방향, 선 굵기는 interest를 뜻한다.*
+*그림 4. `artifacts/week14_skill_graph.json`에서 interest 상위 60개 방향 규칙을 그린 그래프. 노드는 기술명, 화살표는 추천 방향, 선 굵기는 interest를 뜻한다.*
 
 <details>
 <summary>현재 산출물과 조건</summary>

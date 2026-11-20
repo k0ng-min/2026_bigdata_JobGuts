@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "blind_review_rule": "source_do_not_read_before_judging was preserved; scoring uses antecedent and consequent only",
+  "reviewer_a": {
+    "criterion": "strict registered-vocabulary criterion",
+    "reviewed_rows": 100,
+    "both_are_technologies_yes": 20,
+    "combination_is_plausible_yes": 20
+  },
+  "reviewer_b": {
+    "criterion": "registered vocabulary plus defined practical technology terms",
+    "reviewed_rows": 100,
+    "both_are_technologies_yes": 22,
+    "combination_is_plausible_yes": 22
+  },
+  "agreement": {
+    "rows": 100,
+    "disagreement_rows": 2,
+    "agreement_rate": 0.98
+  }
+}
