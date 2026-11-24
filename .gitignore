@@ -1,0 +1,17 @@
+# 비밀 키 — 절대 커밋 금지
+.env
+src/.env
+.env.*
+!.env.example
+
+# 대용량 데이터 전체 (원본/정제/결과는 코드로 재생성)
+data/
+
+# 파이썬 / 가상환경
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Streamlit
+.streamlit/secrets.toml

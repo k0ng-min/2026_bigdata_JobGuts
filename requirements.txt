@@ -1,0 +1,13 @@
+# JOBGUTS 실행 환경
+# Python 3.12
+pandas>=2.2
+pyarrow>=16.0
+requests>=2.31
+tqdm>=4.66
+
+# 3단계: Solar 에이전트 + Streamlit 웹 앱
+openai>=1.40
+streamlit>=1.36
+python-dotenv>=1.0
+networkx>=3.3
+plotly>=5.22
