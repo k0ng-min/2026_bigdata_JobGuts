@@ -32,10 +32,10 @@ The analysis focuses on two questions:
 
 | Member | Student ID | Role |
 | --- | --- | --- |
-| Donggyun Seo | 2021270664 | Team Lead |
-| Kyungseon Kim | 2022270656 | Team Member |
-| Biho Jeong | 2022270622 | Team Member |
-| Kyungmin Seol | 2022270643 | Team Member |
+| 서동균 | 2021270664 | Team Lead |
+| 김경선 | 2022270656 | Team Member |
+| 정비호 | 2022270622 | Team Member |
+| 설경민 | 2022270643 | Team Member |
 
 ## Weekly progress
 
